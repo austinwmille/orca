@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyannote.database
+Version: 5.1.0
+Summary: Interface to multimedia databases and experimental protocols
+Home-page: http://pyannote.github.io/
+Author: Hervé Bredin
+Author-email: bredin@limsi.fr
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
+Requires-Dist: pyannote.core >=4.1
+Requires-Dist: pyYAML >=3.12
+Requires-Dist: pandas >=0.19
+Requires-Dist: typer >=0.12.1
+Requires-Dist: typing-extensions >=3.7.4 ; python_version < "3.8"
+Provides-Extra: doc
+Requires-Dist: matplotlib >=2.0.0 ; extra == 'doc'
+Requires-Dist: Sphinx ==2.2.2 ; extra == 'doc'
+Requires-Dist: ipython ==7.16.3 ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ==0.4.3 ; extra == 'doc'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: flake8 ==3.7.9 ; extra == 'testing'
+

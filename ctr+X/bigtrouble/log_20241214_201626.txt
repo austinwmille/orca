@@ -1,0 +1,205 @@
+2024-12-14 20:16:26,954 - INFO - 
+==================================================
+
+2024-12-14 20:16:26,955 - INFO - 
+Welcome to nips' ctr+X script!
+
+2024-12-14 20:16:28,959 - INFO - 
+We are currently using clipmeV2
+
+
+Please press 'Enter' when you're ready to continue.
+... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\Importing, one moment please
+... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\You're about to see a bunch of text..
+Also, it may take a few minutes
+
+... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\2024-12-14 20:17:00,744 - INFO - 
+===============================================================================
+
+2024-12-14 20:17:22,619 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2024-12-14 20:17:22,620 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2024-12-14 20:17:25,956 - INFO - 
+===============================================================================
+
+2024-12-14 20:17:25,957 - INFO - 
+We're past the first hurdle! Wasn't that fun??
+
+2024-12-14 20:17:27,961 - INFO - Ensuring existence of Danny Devito..
+
+2024-12-14 20:17:28,972 - INFO - 'temp' directory named 'imthetrashman'
+
+2024-12-14 20:17:29,978 - INFO - setting up our folders...
+
+2024-12-14 20:17:30,985 - INFO - folder to put your long videos in: 'C:\Users\austi\Desktop\ctr+X\processmesempai'
+
+2024-12-14 20:17:30,986 - INFO - clips created will be stored in 'C:\Users\austi\Desktop\ctr+X\ctrs'
+
+2024-12-14 20:17:30,986 - INFO - after processing, og video files will move from 'C:\Users\austi\Desktop\ctr+X\processmesempai' to 'C:\Users\austi\Desktop\ctr+X\done'
+
+
+Please read those paths.. you don't have to remember them
+... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\2024-12-14 20:17:37,343 - INFO - loading some conditions for the AI model (you can play around with the values in the script)
+
+2024-12-14 20:17:39,346 - INFO - whisper_arch = '{whisper_arch}'
+device = '{device}' 
+compute_type = '{compute_type}'
+language = '{language}'
+
+2024-12-14 20:17:40,682 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2024-12-14 20:17:40,712 - INFO - 
+uhhh, just ignore that btw. mine always says that ;)
+
+
+2024-12-14 20:17:40,712 - INFO - ALRIGHT! we are going to load our pyannote token now
+
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+it gives errors often, so please read and debug the following log if it kicks you out
+
+try renewing your huggingface.co token
+OR you can try just copy/paste into chatgpt... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\core\io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:43: UserWarning: torchaudio._backend.get_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  backend = torchaudio.get_audio_backend()
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:45: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  from speechbrain.pretrained import (
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:53: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend(backend)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\tasks\segmentation\mixins.py:37: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.
+  from torchaudio.backend.common import AudioMetaData
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\austi\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+press enter when ready2024-12-14 20:18:36,506 - INFO - 
+===================================================================
+
+2024-12-14 20:18:38,101 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2024-12-14 20:18:38,179 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-14 20:18:38,268 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-14 20:18:38,617 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-14 20:18:38,693 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-14 20:18:38,824 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-14 20:18:38,903 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-14 20:18:38,963 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2024-12-14 20:18:39,212 - INFO - 
+===================================================================
+
+2024-12-14 20:18:39,213 - INFO - success!! you've done great so far
+
+
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Counting video files in '{input_folder}'...
+... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\2024-12-14 20:18:44,564 - INFO - Total videos found: 1
+2024-12-14 20:18:45,566 - INFO - 
+===============================
+
+2024-12-14 20:18:45,567 - INFO - sweet! the next part will take FOREVER, be warned!
+
+2024-12-14 20:18:46,577 - INFO - if this is your first time using this script,
+then you should probably make sure
+only ONE video is in the C:\Users\austi\Desktop\ctr+X\processmesempaifolder
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\speechbrain\utils\fetching.py:151: UserWarning: Using SYMLINK strategy on Windows for fetching potentially requires elevated privileges and is not recommended. See `LocalStrategy` documentation.
+  warnings.warn(
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(
+okay, then, press 'enter' if you wanna go for it...Loading... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\2024-12-14 20:20:09,990 - INFO - 
+===============================
+
+2024-12-14 20:20:09,992 - INFO - Processing video/audio file: C:\Users\austi\Desktop\ctr+X\processmesempai\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University.mp4
+2024-12-14 20:20:16,907 - INFO - Audio extracted to: imthetrashman\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_audio.wav
+2024-12-14 20:20:16,907 - ERROR - Error during diarization: 'SpeakerDiarization' object has no attribute 'diarize'
+2024-12-14 20:20:18,013 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2024-12-14 20:28:07,419 - INFO - Use pytorch device_name: cpu
+2024-12-14 20:28:07,419 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\huggingface_hub\file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|                                                            | 0/7 [00:00<?, ?it/s]Batches:  14%|#######4                                            | 1/7 [00:32<03:14, 32.41s/it]Batches:  29%|##############8                                     | 2/7 [00:37<01:21, 16.35s/it]Batches:  43%|######################2                             | 3/7 [00:41<00:43, 10.82s/it]Batches:  57%|#############################7                      | 4/7 [00:45<00:23,  7.93s/it]Batches:  71%|#####################################1              | 5/7 [00:47<00:11,  5.96s/it]Batches:  86%|############################################5       | 6/7 [00:49<00:04,  4.60s/it]Batches: 100%|####################################################| 7/7 [00:50<00:00,  3.23s/it]Batches: 100%|####################################################| 7/7 [00:50<00:00,  7.16s/it]2024-12-14 20:29:00,903 - INFO - Clip 1: Start=3.522, End=48.104
+2024-12-14 20:29:00,903 - INFO - Clip 2: Start=44.583, End=110.017
+2024-12-14 20:29:00,904 - INFO - Clip 3: Start=96.934, End=155.109
+2024-12-14 20:29:00,904 - INFO - Clip 4: Start=142.565, End=167.073
+2024-12-14 20:29:00,904 - INFO - Clip 5: Start=161.831, End=220.915
+2024-12-14 20:29:00,904 - INFO - Clip 6: Start=220.735, End=249.209
+2024-12-14 20:29:00,904 - INFO - Clip 7: Start=245.447, End=290.621
+2024-12-14 20:29:00,904 - INFO - Clip 8: Start=287.357, End=337.491
+2024-12-14 20:29:00,904 - INFO - Clip 9: Start=333.609, End=411.704
+2024-12-14 20:29:00,905 - INFO - Clip 10: Start=410.683, End=479.359
+2024-12-14 20:29:00,905 - INFO - Clip 11: Start=473.252, End=615.939
+2024-12-14 20:29:00,905 - INFO - Clip 12: Start=610.316, End=761.542
+2024-12-14 20:29:00,905 - INFO - Clip 13: Start=755.617, End=792.846
+2024-12-14 20:29:00,905 - INFO - Clip 14: Start=787.162, End=864.355
+2024-12-14 20:29:00,905 - INFO - Clip 15: Start=858.508, End=902.286
+2024-12-14 20:29:00,905 - INFO - Clip 16: Start=899.604, End=984.411
+2024-12-14 20:29:00,906 - INFO - Clip 17: Start=976.308, End=1031.928
+2024-12-14 20:29:00,906 - INFO - Clip 18: Start=1031.547, End=1063.777
+2024-12-14 20:29:00,906 - INFO - Clip 19: Start=3.522, End=411.704
+2024-12-14 20:29:00,906 - INFO - Clip 20: Start=333.609, End=1063.777
+2024-12-14 20:29:00,906 - INFO - Clip 21: Start=468.366, End=723.433
+2024-12-14 20:29:00,906 - INFO - Clip 22: Start=697.59, End=761.542
+2024-12-14 20:29:00,906 - INFO - Clip 23: Start=755.617, End=858.027
+2024-12-14 20:29:00,906 - INFO - Clip 24: Start=410.683, End=647.374
+2024-12-14 20:29:00,907 - INFO - Clip 25: Start=121.073, End=411.704
+2024-12-14 20:29:00,907 - INFO - Clip 26: Start=647.394, End=906.598
+2024-12-14 20:29:00,907 - INFO - Processing clip 1: (3.522, 48.104) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip1.mp4
+2024-12-14 20:29:00,907 - INFO - Resized clip 1 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip1.mp4
+2024-12-14 20:29:00,907 - INFO - Processing clip 2: (44.583, 110.017) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip2.mp4
+2024-12-14 20:29:00,907 - INFO - Resized clip 2 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip2.mp4
+2024-12-14 20:29:00,908 - INFO - Processing clip 3: (96.934, 155.109) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip3.mp4
+2024-12-14 20:29:00,908 - INFO - Resized clip 3 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip3.mp4
+2024-12-14 20:29:00,908 - INFO - Processing clip 4: (142.565, 167.073) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip4.mp4
+2024-12-14 20:29:00,908 - INFO - Resized clip 4 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip4.mp4
+2024-12-14 20:29:00,908 - INFO - Processing clip 5: (161.831, 220.915) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip5.mp4
+2024-12-14 20:29:00,908 - INFO - Resized clip 5 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip5.mp4
+2024-12-14 20:29:00,909 - INFO - Processing clip 6: (220.735, 249.209) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip6.mp4
+2024-12-14 20:29:00,909 - INFO - Resized clip 6 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip6.mp4
+2024-12-14 20:29:00,909 - INFO - Processing clip 7: (245.447, 290.621) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip7.mp4
+2024-12-14 20:29:00,909 - INFO - Resized clip 7 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip7.mp4
+2024-12-14 20:29:00,909 - INFO - Processing clip 8: (287.357, 337.491) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip8.mp4
+2024-12-14 20:29:00,909 - INFO - Resized clip 8 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip8.mp4
+2024-12-14 20:29:00,909 - INFO - Processing clip 9: (333.609, 411.704) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip9.mp4
+2024-12-14 20:29:00,910 - INFO - Resized clip 9 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip9.mp4
+2024-12-14 20:29:00,910 - INFO - Processing clip 10: (410.683, 479.359) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip10.mp4
+2024-12-14 20:29:00,910 - INFO - Resized clip 10 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip10.mp4
+2024-12-14 20:29:00,910 - INFO - Processing clip 11: (473.252, 615.939) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip11.mp4
+2024-12-14 20:29:00,910 - INFO - Resized clip 11 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip11.mp4
+2024-12-14 20:29:00,910 - INFO - Processing clip 12: (610.316, 761.542) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip12.mp4
+2024-12-14 20:29:00,911 - INFO - Resized clip 12 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip12.mp4
+2024-12-14 20:29:00,911 - INFO - Processing clip 13: (755.617, 792.846) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip13.mp4
+2024-12-14 20:29:00,911 - INFO - Resized clip 13 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip13.mp4
+2024-12-14 20:29:00,911 - INFO - Processing clip 14: (787.162, 864.355) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip14.mp4
+2024-12-14 20:29:00,911 - INFO - Resized clip 14 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip14.mp4
+2024-12-14 20:29:00,911 - INFO - Processing clip 15: (858.508, 902.286) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip15.mp4
+2024-12-14 20:29:00,911 - INFO - Resized clip 15 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip15.mp4
+2024-12-14 20:29:00,912 - INFO - Processing clip 16: (899.604, 984.411) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip16.mp4
+2024-12-14 20:29:00,912 - INFO - Resized clip 16 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip16.mp4
+2024-12-14 20:29:00,912 - INFO - Processing clip 17: (976.308, 1031.928) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip17.mp4
+2024-12-14 20:29:00,912 - INFO - Resized clip 17 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip17.mp4
+2024-12-14 20:29:00,912 - INFO - Processing clip 18: (1031.547, 1063.777) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip18.mp4
+2024-12-14 20:29:00,912 - INFO - Resized clip 18 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip18.mp4
+2024-12-14 20:29:00,913 - INFO - Processing clip 19: (3.522, 411.704) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip19.mp4
+2024-12-14 20:29:00,913 - INFO - Resized clip 19 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip19.mp4
+2024-12-14 20:29:00,913 - INFO - Processing clip 20: (333.609, 1063.777) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip20.mp4
+2024-12-14 20:29:00,913 - INFO - Resized clip 20 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip20.mp4
+2024-12-14 20:29:00,913 - INFO - Processing clip 21: (468.366, 723.433) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip21.mp4
+2024-12-14 20:29:00,913 - INFO - Resized clip 21 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip21.mp4
+2024-12-14 20:29:00,913 - INFO - Processing clip 22: (697.59, 761.542) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip22.mp4
+2024-12-14 20:29:00,914 - INFO - Resized clip 22 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip22.mp4
+2024-12-14 20:29:00,914 - INFO - Processing clip 23: (755.617, 858.027) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip23.mp4
+2024-12-14 20:29:00,914 - INFO - Resized clip 23 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip23.mp4
+2024-12-14 20:29:00,914 - INFO - Processing clip 24: (410.683, 647.374) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip24.mp4
+2024-12-14 20:29:00,914 - INFO - Resized clip 24 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip24.mp4
+2024-12-14 20:29:00,914 - INFO - Processing clip 25: (121.073, 411.704) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip25.mp4
+2024-12-14 20:29:00,914 - INFO - Resized clip 25 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip25.mp4
+2024-12-14 20:29:00,915 - INFO - Processing clip 26: (647.394, 906.598) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip26.mp4
+2024-12-14 20:29:00,915 - INFO - Resized clip 26 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip26.mp4
+2024-12-14 20:29:00,916 - INFO - Moved processed file to: C:\Users\austi\Desktop\ctr+X\done\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University.mp4
+2024-12-14 20:29:00,917 - INFO - 
+Script Completed!
+2024-12-14 20:29:00,917 - INFO - Total files processed: 1
+2024-12-14 20:29:00,917 - INFO - Processed files saved in: C:\Users\austi\Desktop\ctr+X\ctrs
+2024-12-14 20:29:00,917 - INFO - Original files moved to: C:\Users\austi\Desktop\ctr+X\done
+Okay then, press 'Enter' to quit, I guess?... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\
+

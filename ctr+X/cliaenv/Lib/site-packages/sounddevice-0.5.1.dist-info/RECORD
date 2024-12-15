@@ -1,0 +1,15 @@
+__pycache__/_sounddevice.cpython-311.pyc,,
+__pycache__/sounddevice.cpython-311.pyc,,
+_sounddevice.py,sha256=m4qYSysnaB7Pv8RzJup_OKQGpN5zBpNE88cC39_ZRyo,13751
+_sounddevice_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_sounddevice_data/__pycache__/__init__.cpython-311.pyc,,
+_sounddevice_data/portaudio-binaries/README.md,sha256=s8sFNWa284w4vfSCLlP4-KKjd-BcUD_dacUuXRxsEEw,974
+_sounddevice_data/portaudio-binaries/libportaudio64bit-asio.dll,sha256=aAgzbMeYSv-Vp-BguswzAs6gjvCOdJ3WxDJ3E_pljTU,340992
+_sounddevice_data/portaudio-binaries/libportaudio64bit.dll,sha256=Qzt3gR7WolCc0V2a-CYzXEWM0O9fQksCuXWXx04XBGI,306688
+sounddevice-0.5.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+sounddevice-0.5.1.dist-info/LICENSE,sha256=4hfwcsKL6vfQaHk2bcPyMElViYJa98Z1CQQ9y_14EuU,1063
+sounddevice-0.5.1.dist-info/METADATA,sha256=7MAad0lSItWX6LRuNEM2WzM7RXmKMjVfSPGbKJirKKo,1356
+sounddevice-0.5.1.dist-info/RECORD,,
+sounddevice-0.5.1.dist-info/WHEEL,sha256=at4xwl6JdXdkZHxdo5ixTwJ7ENtVftSy2wqmsdmo_4U,98
+sounddevice-0.5.1.dist-info/top_level.txt,sha256=4x_9IJSWMb6StbHBe-jbHWC1cJf_unhQwxaMBghH_L4,43
+sounddevice.py,sha256=yvN1dwdiczRMLzhFbauySZYPvKWJJ-VRYMQRGYJda7g,109827

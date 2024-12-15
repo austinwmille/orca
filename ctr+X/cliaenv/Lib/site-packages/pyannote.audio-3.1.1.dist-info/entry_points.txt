@@ -1,0 +1,3 @@
+[console_scripts]
+pyannote-audio-eval = pyannote.audio.cli.evaluate:evaluate
+pyannote-audio-train = pyannote.audio.cli.train:train
