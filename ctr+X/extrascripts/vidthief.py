@@ -38,10 +38,23 @@ def main():
     downloaded_urls = load_downloaded_urls()
 
     # List of video URLs (replace or extend as needed)
+    # don't forget to put a comma after them!!
     video_urls = [
-        "https://www.youtube.com/watch?v=abc123",  # Example YouTube URL
-        "https://vimeo.com/12345678",  # Example Vimeo URL
-        "https://dailymotion.com/video/x7abcd",  # Example Dailymotion URL
+        "https://www.youtube.com/watch?v=qu8X8UxBjjM",  # Example YouTube URL
+        "https://www.youtube.com/watch?v=9B4sRTtgxrU",  # Example Vimeo URL
+        "https://www.youtube.com/watch?v=DAxgrVpP2ns",  # Example Dailymotion URL
+        "https://www.youtube.com/watch?v=Zj0VvXZXDb4",
+        "https://www.youtube.com/watch?v=3QxNpaQHYk0",
+        "https://www.youtube.com/watch?v=MzP9FRAP2tM",
+        "https://www.youtube.com/watch?v=wNgQwf618FY",
+        "https://www.youtube.com/watch?v=PtMia6k5gGY",
+        "https://www.youtube.com/watch?v=ZCwmWayHj64",
+        "https://www.youtube.com/watch?v=SUQ0p9FWznE",
+        "https://www.youtube.com/watch?v=6FfD4Ims198",
+        "https://www.youtube.com/watch?v=E_Z9lvWbfFU",
+        "https://www.youtube.com/watch?v=SaIhokN-WD0",
+        "https://www.youtube.com/watch?v=wqpYIrP_IRc",
+        
         # Add more video URLs here
     ]
 

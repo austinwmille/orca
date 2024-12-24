@@ -70,7 +70,7 @@ animated_loading("You're about to see a bunch of text..\nAlso, it may take a few
 consoledivide(79)
 
 #leaving here in plain text for now; will fix later
-pyannote_auth_token = "your pyannote access token goes here"
+pyannote_auth_token = "your pyannote token goes here :)"
 
 import shutil
 import whisperx
@@ -129,7 +129,7 @@ custom_model = whisperx.load_model(
 )
 logging.info("\nuhhh, just ignore that btw. mine always says that ;)\n\n")
 logging.info("ALRIGHT! we are going to load our pyannote token now\n")
-animated_loading("it gives errors often, so please read and debug the following log if it kicks you out\n\ntry renewing your huggingface.co token\nOR you can try just copy/paste into chatgpt")
+animated_loading("it gives errors often, so please read and debug the following log if it kicks you out\n\ntry renewing your huggingface.co token\nOR you can try just copy/paste into chatgpt\n")
 time.sleep(3)
 logged_input("press enter when ready")
 consoledivide(67)
@@ -159,7 +159,7 @@ logging.info("sweet! the next part will take FOREVER, be warned!\n")
 time.sleep(1)
 logging.info("if this is your first time using this script,\nthen you should probably make sure\nonly ONE video is in the "+input_folder+" folder")
 time.sleep(2)
-input("okay, then, press 'enter' if you wanna go for it...")
+logged_input("okay, then, press 'enter' if you wanna go for it...")
 animated_loading()
 consoledivide(31)
 
@@ -187,9 +187,10 @@ for video_file in os.listdir(input_folder):
     logging.info(f"Audio extracted to: {extracted_audio_path}")
 
     # Diarize the extracted audio
-    # Adjust this logic based on pyannote's actual return structure.
+    # Adjusted this logic based on pyannote's actual return structure.
     try:
-        speaker_groups = diarizer.diarize(extracted_audio_path)
+        diarization_result = pipeline(extracted_audio_path)
+        speaker_groups = diarization_result.get_labels()
         for speaker, segments in speaker_groups.items():
             output_dir = os.path.join(output_video_folder, f"Speaker_{speaker}")
             os.makedirs(output_dir, exist_ok=True)
@@ -229,30 +230,30 @@ for video_file in os.listdir(input_folder):
         try:
             # Commenting out resizing for now to resolve issues
             # Perform resizing for the clip
-            #crops = resize(
-            #    video_file_path=input_video_path,
-            #    pyannote_auth_token=pyannote_auth_token,
+            crops = resize(
+                video_file_path=input_video_path,
+                pyannote_auth_token=pyannote_auth_token,
             #    aspect_ratio=(9, 16),
-            #    min_segment_duration=clip.end_time - clip.start_time,
-            #    samples_per_segment=9,
-            #)
+                min_segment_duration=clip.end_time - clip.start_time,
+                samples_per_segment=9,
+            )
 
-            #media_editor = MediaEditor()
-            #media_editor.resize_video(
-            #    original_video_file=media_file,
-            #    resized_video_file_path=clip_output_path,
-            #    width=crops.crop_width,
-            #    height=crops.crop_height,
-            #    segments=[
-            #        {
-            #            "start_time": clip.start_time,
-            #            "end_time": clip.end_time,
-            #            "x": segment.x,
-            #            "y": segment.y,
-            #        }
-            #        for segment in crops.segments
-            #    ],
-            #)
+            media_editor = MediaEditor()
+            media_editor.resize_video(
+                original_video_file=media_file,
+                resized_video_file_path=clip_output_path,
+                width=crops.crop_width,
+                height=crops.crop_height,
+                segments=[
+                    {
+                        "start_time": clip.start_time,
+                        "end_time": clip.end_time,
+                        "x": segment.x,
+                        "y": segment.y,
+                    }
+                    for segment in crops.segments
+                ],
+            )
 
             logging.info(f"Resized clip {i + 1} saved to: {clip_output_path}")
 
@@ -272,7 +273,7 @@ def ending_sequence(file_count, output_folder, processed_folder):
     logging.info(f"Processed files saved in: {output_folder}")
     logging.info(f"Original files moved to: {processed_folder}")
     animated_loading("Okay then, press 'Enter' to quit, I guess?")
-    input()  # Wait for user confirmation to quit
+    logged_input()  # Wait for user confirmation to quit
 
 # Call the ending sequence
 ending_sequence(file_count, output_folder, processed_folder)
