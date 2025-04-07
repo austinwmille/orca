@@ -1,0 +1,85 @@
+2025-04-05 03:03:36,331 - INFO - 
+==================================================
+
+2025-04-05 03:03:36,331 - INFO - 
+nips' brainrot generator
+
+2025-04-05 03:03:38,332 - INFO - 
+===============================================================================
+
+2025-04-05 03:03:51,781 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-04-05 03:03:51,781 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-05 03:03:54,401 - INFO - 
+===============================================================================
+
+2025-04-05 03:03:54,401 - INFO - 
+packages are ready
+
+2025-04-05 03:03:56,411 - INFO - setting up folders...
+
+2025-04-05 03:03:57,431 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-05 03:03:58,431 - INFO - folder to store un-processed videos: 'C:\Users\austi\Desktop\ctrx\processmesempai'
+
+2025-04-05 03:03:58,431 - INFO - processed clips will be stored in 'C:\Users\austi\Desktop\ctrx\ctrs'
+
+2025-04-05 03:03:58,433 - INFO - after processing, og video files will move from 'C:\Users\austi\Desktop\ctrx\processmesempai' to 'C:\Users\austi\Desktop\ctrx\done'
+
+
+2025-04-05 03:04:00,441 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-05 03:04:02,445 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-05 03:04:10,056 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2025-04-05 03:04:10,151 - INFO - next section loads pyannote auth token
+
+2025-04-05 03:04:13,151 - INFO - 
+===================================================================
+
+2025-04-05 03:04:16,168 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2025-04-05 03:04:16,236 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:04:16,681 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:04:17,121 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:04:17,301 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:04:17,421 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:04:17,671 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:04:17,821 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-05 03:04:18,301 - INFO - 
+===================================================================
+
+2025-04-05 03:04:18,301 - INFO - setup completed.
+
+2025-04-05 03:04:19,311 - INFO - we will now begin processing 0 videos
+2025-04-05 03:04:20,321 - INFO - The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-05 03:04:20,321 - INFO - Godspeed
+
+2025-04-05 03:04:20,321 - INFO - 
+===============================
+
+2025-04-05 03:04:20,321 - INFO - 
+Processing complete
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\core\io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:43: UserWarning: torchaudio._backend.get_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  backend = torchaudio.get_audio_backend()
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:45: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  from speechbrain.pretrained import (
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:53: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend(backend)
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\tasks\segmentation\mixins.py:37: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.
+  from torchaudio.backend.common import AudioMetaData
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\austi\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\speechbrain\utils\fetching.py:151: UserWarning: Using SYMLINK strategy on Windows for fetching potentially requires elevated privileges and is not recommended. See `LocalStrategy` documentation.
+  warnings.warn(
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+2025-04-05 03:06:17,700 - INFO - User input: 

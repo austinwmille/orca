@@ -1,0 +1,260 @@
+2025-04-05 03:17:38,729 - INFO - 
+==================================================
+
+2025-04-05 03:17:38,729 - INFO - 
+nips' brainrot generator
+
+2025-04-05 03:17:38,731 - INFO - 
+===============================================================================
+
+2025-04-05 03:17:51,550 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-04-05 03:17:51,550 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-05 03:17:55,591 - INFO - 
+===============================================================================
+
+2025-04-05 03:17:55,601 - INFO - 
+packages are ready
+
+2025-04-05 03:17:57,611 - INFO - setting up folders...
+
+2025-04-05 03:17:58,625 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-05 03:17:59,628 - INFO - folder to store un-processed videos: 'C:\Users\austi\Desktop\ctrx\processmesempai'
+
+2025-04-05 03:17:59,629 - INFO - processed clips will be stored in 'C:\Users\austi\Desktop\ctrx\ctrs'
+
+2025-04-05 03:17:59,629 - INFO - after processing, og video files will move from 'C:\Users\austi\Desktop\ctrx\processmesempai' to 'C:\Users\austi\Desktop\ctrx\done'
+
+
+2025-04-05 03:18:01,631 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-05 03:18:03,650 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-05 03:18:10,540 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2025-04-05 03:18:10,581 - INFO - next section loads pyannote auth token
+
+2025-04-05 03:18:13,588 - INFO - 
+===================================================================
+
+2025-04-05 03:18:15,160 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2025-04-05 03:18:15,225 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:18:15,340 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:18:15,710 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:18:15,830 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:18:16,081 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:18:16,240 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-05 03:18:16,439 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-05 03:18:16,806 - INFO - 
+===================================================================
+
+2025-04-05 03:18:16,831 - INFO - setup completed.
+
+2025-04-05 03:18:17,839 - INFO - we will now begin processing 1 videos
+2025-04-05 03:18:18,846 - INFO - The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-05 03:18:18,846 - INFO - Godspeed
+
+2025-04-05 03:18:18,847 - INFO - 
+===============================
+
+2025-04-05 03:18:18,849 - INFO - Processing video/audio file: C:\Users\austi\Desktop\ctrx\processmesempai\Donald Trump Interview on Lex Fridman Podcast #442.mp4
+2025-04-05 03:18:39,003 - INFO - Audio extracted to: imthetrashman\Donald Trump Interview on Lex Fridman Podcast #442_audio.wav
+2025-04-05 04:43:24,886 - ERROR - Error during diarization: get_labels() missing 1 required positional argument: 'segment'
+2025-04-05 04:43:29,118 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2025-04-05 06:09:04,211 - INFO - Use pytorch device_name: cpu
+2025-04-05 06:09:04,211 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\core\io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:43: UserWarning: torchaudio._backend.get_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  backend = torchaudio.get_audio_backend()
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:45: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  from speechbrain.pretrained import (
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:53: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend(backend)
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\tasks\segmentation\mixins.py:37: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.
+  from torchaudio.backend.common import AudioMetaData
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\austi\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\speechbrain\utils\fetching.py:151: UserWarning: Using SYMLINK strategy on Windows for fetching potentially requires elevated privileges and is not recommended. See `LocalStrategy` documentation.
+  warnings.warn(
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\huggingface_hub\file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|                                                                                  | 0/27 [00:00<?, ?it/s]Batches:   4%|##7                                                                       | 1/27 [00:21<09:29, 21.90s/it]Batches:   7%|#####4                                                                    | 2/27 [00:28<05:18, 12.72s/it]Batches:  11%|########2                                                                 | 3/27 [00:33<03:41,  9.24s/it]Batches:  15%|##########9                                                               | 4/27 [00:38<02:53,  7.56s/it]Batches:  19%|#############7                                                            | 5/27 [00:42<02:21,  6.41s/it]Batches:  22%|################4                                                         | 6/27 [00:46<01:58,  5.66s/it]Batches:  26%|###################1                                                      | 7/27 [00:51<01:44,  5.22s/it]Batches:  30%|#####################9                                                    | 8/27 [00:54<01:28,  4.68s/it]Batches:  33%|########################6                                                 | 9/27 [00:58<01:18,  4.35s/it]Batches:  37%|###########################                                              | 10/27 [01:01<01:08,  4.00s/it]Batches:  41%|#############################7                                           | 11/27 [01:04<00:59,  3.70s/it]Batches:  44%|################################4                                        | 12/27 [01:07<00:50,  3.38s/it]Batches:  48%|###################################1                                     | 13/27 [01:09<00:44,  3.15s/it]Batches:  52%|#####################################8                                   | 14/27 [01:12<00:38,  2.95s/it]Batches:  56%|########################################5                                | 15/27 [01:14<00:33,  2.79s/it]Batches:  59%|###########################################2                             | 16/27 [01:17<00:29,  2.71s/it]Batches:  63%|#############################################9                           | 17/27 [01:19<00:25,  2.58s/it]Batches:  67%|################################################6                        | 18/27 [01:21<00:22,  2.50s/it]Batches:  70%|###################################################3                     | 19/27 [01:23<00:18,  2.32s/it]Batches:  74%|######################################################                   | 20/27 [01:25<00:15,  2.25s/it]Batches:  78%|########################################################7                | 21/27 [01:27<00:12,  2.15s/it]Batches:  81%|###########################################################4             | 22/27 [01:29<00:10,  2.01s/it]Batches:  85%|##############################################################1          | 23/27 [01:30<00:07,  1.86s/it]Batches:  89%|################################################################8        | 24/27 [01:32<00:05,  1.77s/it]Batches:  93%|###################################################################5     | 25/27 [01:33<00:03,  1.69s/it]Batches:  96%|######################################################################2  | 26/27 [01:35<00:01,  1.50s/it]Batches: 100%|#########################################################################| 27/27 [01:35<00:00,  1.11s/it]Batches: 100%|#########################################################################| 27/27 [01:35<00:00,  3.53s/it]2025-04-05 06:13:45,710 - INFO - Clip 1: Start=0.049, End=68.406
+2025-04-05 06:13:45,710 - INFO - Clip 2: Start=63.339, End=111.4
+2025-04-05 06:13:45,710 - INFO - Clip 3: Start=107.097, End=310.264
+2025-04-05 06:13:45,710 - INFO - Clip 4: Start=308.024, End=327.352
+2025-04-05 06:13:45,710 - INFO - Clip 5: Start=325.511, End=404.593
+2025-04-05 06:13:45,710 - INFO - Clip 6: Start=394.287, End=434.467
+2025-04-05 06:13:45,710 - INFO - Clip 7: Start=433.207, End=449.05
+2025-04-05 06:13:45,710 - INFO - Clip 8: Start=446.209, End=483.757
+2025-04-05 06:13:45,710 - INFO - Clip 9: Start=482.696, End=540.35
+2025-04-05 06:13:45,710 - INFO - Clip 10: Start=533.886, End=588.855
+2025-04-05 06:13:45,710 - INFO - Clip 11: Start=585.693, End=652.491
+2025-04-05 06:13:45,710 - INFO - Clip 12: Start=651.23, End=685.526
+2025-04-05 06:13:45,710 - INFO - Clip 13: Start=671.374, End=752.332
+2025-04-05 06:13:45,710 - INFO - Clip 14: Start=749.37, End=793.824
+2025-04-05 06:13:45,710 - INFO - Clip 15: Start=787.702, End=829.182
+2025-04-05 06:13:45,710 - INFO - Clip 16: Start=824.858, End=879.912
+2025-04-05 06:13:45,710 - INFO - Clip 17: Start=878.85, End=1100.605
+2025-04-05 06:13:45,710 - INFO - Clip 18: Start=1076.114, End=1136.659
+2025-04-05 06:13:45,710 - INFO - Clip 19: Start=1134.497, End=1252.301
+2025-04-05 06:13:45,710 - INFO - Clip 20: Start=1249.519, End=1293.29
+2025-04-05 06:13:45,710 - INFO - Clip 21: Start=1301.915, End=1348.56
+2025-04-05 06:13:45,710 - INFO - Clip 22: Start=1341.377, End=1359.068
+2025-04-05 06:13:45,710 - INFO - Clip 23: Start=1355.586, End=1383.644
+2025-04-05 06:13:45,710 - INFO - Clip 24: Start=1378.522, End=1446.074
+2025-04-05 06:13:45,710 - INFO - Clip 25: Start=1444.113, End=1554.252
+2025-04-05 06:13:45,710 - INFO - Clip 26: Start=1552.131, End=1608.763
+2025-04-05 06:13:45,710 - INFO - Clip 27: Start=1604.96, End=1633.5
+2025-04-05 06:13:45,710 - INFO - Clip 28: Start=1629.757, End=1681.365
+2025-04-05 06:13:45,710 - INFO - Clip 29: Start=1676.22, End=1698.238
+2025-04-05 06:13:45,710 - INFO - Clip 30: Start=1694.495, End=1725.463
+2025-04-05 06:13:45,710 - INFO - Clip 31: Start=1716.601, End=1779.828
+2025-04-05 06:13:45,710 - INFO - Clip 32: Start=1770.845, End=1856.184
+2025-04-05 06:13:45,710 - INFO - Clip 33: Start=1852.883, End=1904.218
+2025-04-05 06:13:45,710 - INFO - Clip 34: Start=1900.993, End=2006.176
+2025-04-05 06:13:45,710 - INFO - Clip 35: Start=2003.954, End=2068.172
+2025-04-05 06:13:45,710 - INFO - Clip 36: Start=2067.331, End=2124.539
+2025-04-05 06:13:45,710 - INFO - Clip 37: Start=2103.61, End=2154.144
+2025-04-05 06:13:45,710 - INFO - Clip 38: Start=2147.421, End=2246.416
+2025-04-05 06:13:45,710 - INFO - Clip 39: Start=2239.413, End=2278.639
+2025-04-05 06:13:45,710 - INFO - Clip 40: Start=2276.417, End=2341.697
+2025-04-05 06:13:45,710 - INFO - Clip 41: Start=2340.395, End=2402.446
+2025-04-05 06:13:45,710 - INFO - Clip 42: Start=2384.126, End=2439.234
+2025-04-05 06:13:45,710 - INFO - Clip 43: Start=2429.169, End=2467.073
+2025-04-05 06:13:45,710 - INFO - Clip 44: Start=2466.072, End=2519.188
+2025-04-05 06:13:45,726 - INFO - Clip 45: Start=2517.526, End=2549.417
+2025-04-05 06:13:45,726 - INFO - Clip 46: Start=2545.676, End=2582.231
+2025-04-05 06:13:45,726 - INFO - Clip 47: Start=2580.649, End=2603.11
+2025-04-05 06:13:45,726 - INFO - Clip 48: Start=2600.109, End=2637.198
+2025-04-05 06:13:45,726 - INFO - Clip 49: Start=2629.588, End=2661.731
+2025-04-05 06:13:45,726 - INFO - Clip 50: Start=2656.588, End=2699.384
+2025-04-05 06:13:45,726 - INFO - Clip 51: Start=2697.183, End=2739.556
+2025-04-05 06:13:45,726 - INFO - Clip 52: Start=2737.555, End=2792.826
+2025-04-05 06:13:45,726 - INFO - Clip 53: Start=2791.024, End=2828.772
+2025-04-05 06:13:45,726 - INFO - Clip 54: Start=2824.989, End=2843.595
+2025-04-05 06:13:45,726 - INFO - Clip 55: Start=2843.294, End=2918.964
+2025-04-05 06:13:45,726 - INFO - Clip 56: Start=2910.277, End=2986.343
+2025-04-05 06:13:45,726 - INFO - Clip 57: Start=2983.08, End=3068.336
+2025-04-05 06:13:45,726 - INFO - Clip 58: Start=3051.648, End=3115.692
+2025-04-05 06:13:45,726 - INFO - Clip 59: Start=3112.569, End=3170.531
+2025-04-05 06:13:45,726 - INFO - Clip 60: Start=3169.911, End=3220.846
+2025-04-05 06:13:45,726 - INFO - Clip 61: Start=3216.205, End=3279.352
+2025-04-05 06:13:45,726 - INFO - Clip 62: Start=3273.148, End=3333.736
+2025-04-05 06:13:45,726 - INFO - Clip 63: Start=3328.872, End=3409.257
+2025-04-05 06:13:45,726 - INFO - Clip 64: Start=3399.832, End=3530.651
+2025-04-05 06:13:45,726 - INFO - Clip 65: Start=3523.084, End=3572.524
+2025-04-05 06:13:45,726 - INFO - Clip 66: Start=3569.241, End=3652.843
+2025-04-05 06:13:45,726 - INFO - Clip 67: Start=3649.082, End=3724.093
+2025-04-05 06:13:45,726 - INFO - Clip 68: Start=3713.55, End=3843.409
+2025-04-05 06:13:45,726 - INFO - Clip 69: Start=0.049, End=449.05
+2025-04-05 06:13:45,726 - INFO - Clip 70: Start=1552.131, End=1779.828
+2025-04-05 06:13:45,726 - INFO - Clip 71: Start=303.542, End=406.755
+2025-04-05 06:13:45,726 - INFO - Clip 72: Start=527.543, End=577.427
+2025-04-05 06:13:45,726 - INFO - Clip 73: Start=573.004, End=588.855
+2025-04-05 06:13:45,726 - INFO - Clip 74: Start=585.693, End=685.526
+2025-04-05 06:13:45,726 - INFO - Clip 75: Start=787.702, End=846.939
+2025-04-05 06:13:45,726 - INFO - Clip 76: Start=845.598, End=879.912
+2025-04-05 06:13:45,726 - INFO - Clip 77: Start=878.85, End=938.65
+2025-04-05 06:13:45,726 - INFO - Clip 78: Start=937.549, End=1100.605
+2025-04-05 06:13:45,726 - INFO - Clip 79: Start=1076.114, End=1169.337
+2025-04-05 06:13:45,726 - INFO - Clip 80: Start=1168.337, End=1260.945
+2025-04-05 06:13:45,726 - INFO - Clip 81: Start=1444.113, End=1491.191
+2025-04-05 06:13:45,726 - INFO - Clip 82: Start=1487.549, End=1554.252
+2025-04-05 06:13:45,726 - INFO - Clip 83: Start=1629.757, End=1725.463
+2025-04-05 06:13:45,726 - INFO - Clip 84: Start=2067.331, End=2102.91
+2025-04-05 06:13:45,726 - INFO - Clip 85: Start=2155.024, End=2210.179
+2025-04-05 06:13:45,726 - INFO - Clip 86: Start=2208.838, End=2246.416
+2025-04-05 06:13:45,726 - INFO - Clip 87: Start=2613.374, End=2661.731
+2025-04-05 06:13:45,726 - INFO - Clip 88: Start=3051.648, End=3170.531
+2025-04-05 06:13:45,726 - INFO - Clip 89: Start=3328.872, End=3353.984
+2025-04-05 06:13:45,726 - INFO - Clip 90: Start=3353.163, End=3424.424
+2025-04-05 06:13:45,726 - INFO - Clip 91: Start=3649.082, End=3843.409
+2025-04-05 06:13:45,726 - INFO - Clip 92: Start=104.835, End=501.502
+2025-04-05 06:13:45,726 - INFO - Clip 93: Start=1996.026, End=2220.527
+2025-04-05 06:13:45,726 - INFO - Clip 94: Start=2983.08, End=3170.531
+2025-04-05 06:13:45,726 - INFO - Clip 95: Start=0.049, End=251.262
+2025-04-05 06:13:45,726 - INFO - Clip 96: Start=816.23, End=1019.861
+2025-04-05 06:13:45,726 - INFO - Clip 97: Start=1008.472, End=1189.561
+2025-04-05 06:13:45,726 - INFO - Clip 98: Start=1301.915, End=1501.626
+2025-04-05 06:13:45,726 - INFO - Clip 99: Start=1852.883, End=2213.862
+2025-04-05 06:13:45,726 - INFO - Clip 100: Start=2210.439, End=2402.446
+2025-04-05 06:13:45,726 - INFO - Clip 101: Start=2904.913, End=3175.617
+2025-04-05 06:13:45,726 - INFO - Clip 102: Start=3172.034, End=3367.358
+2025-04-05 06:13:45,726 - INFO - Clip 103: Start=2629.588, End=3367.358
+2025-04-05 06:13:45,726 - INFO - Processing clip 1: (0.049, 68.406) -> C:\Users\austi\Desktop\ctrx\ctrs\Donald Trump Interview on Lex Fridman Podcast #442\Donald Trump Interview on Lex Fridman Podcast #442_clip1.mp4
+2025-04-05 07:39:00,024 - INFO - Detecting scenes...
+2025-04-05 10:11:53,519 - INFO - Resized clip 1 saved to: C:\Users\austi\Desktop\ctrx\ctrs\Donald Trump Interview on Lex Fridman Podcast #442\Donald Trump Interview on Lex Fridman Podcast #442_clip1.mp4
+2025-04-05 10:11:53,519 - INFO - Processing clip 2: (63.339, 111.4) -> C:\Users\austi\Desktop\ctrx\ctrs\Donald Trump Interview on Lex Fridman Podcast #442\Donald Trump Interview on Lex Fridman Podcast #442_clip2.mp4
+2025-04-05 11:34:52,591 - INFO - Detecting scenes...
+2025-04-05 12:02:33,985 - ERROR - Error processing clip 2: [enforce fail at alloc_cpu.cpp:114] data. DefaultCPUAllocator: not enough memory: you tried to allocate 12933043200 bytes.
+2025-04-05 12:03:12,348 - INFO - Processing clip 3: (107.097, 310.264) -> C:\Users\austi\Desktop\ctrx\ctrs\Donald Trump Interview on Lex Fridman Podcast #442\Donald Trump Interview on Lex Fridman Podcast #442_clip3.mp4
+
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Traceback (most recent call last):
+  File "C:\Users\austi\Desktop\ctrx\clipmev2.py", line 247, in <module>
+    # Commenting out resizing for now to resolve issues
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\clipsai\resize\resize.py", line 78, in resize
+    diarized_segments = diarizer.diarize(media, min_segment_duration, time_precision)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\clipsai\diarize\pyannote.py", line 107, in diarize
+    pyannote_segments: Annotation = self.pipeline({"audio": wav_file.path})
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\core\pipeline.py", line 325, in __call__
+    return self.apply(file, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_diarization.py", line 514, in apply
+    embeddings = self.get_embeddings(
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_diarization.py", line 349, in get_embeddings
+    embedding_batch: np.ndarray = self._embedding(
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py", line 706, in __call__
+    embeddings = self.model_(
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\__init__.py", line 112, in forward
+    return self.resnet(fbank, weights=weights)[1]
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\resnet.py", line 212, in forward
+    out = self.layer2(out)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\resnet.py", line 102, in forward
+    out = self.bn2(self.conv2(out))
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

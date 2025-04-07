@@ -3,6 +3,7 @@ import sys
 import os
 import time
 import subprocess
+import threading
 
 log_filename = f"bigtrouble/log_{time.strftime('%Y%m%d_%H%M%S')}.txt"  # Unique filename with timestamp
 logging.basicConfig(
@@ -41,36 +42,59 @@ def consoledivide(x):
 consoledivide(50)
 
 # Simple animated loading spinner
-def animated_loading(message="Loading"):
-    """Displays an animated spinner in the console only."""
-    spinner = "|/-\\"
+# Global flag to control the spinner
+spinner_running = False
+
+# Save the original logging.info function
+original_logging_info = logging.info
+
+def stop_spinner():
+    global spinner_running
+    spinner_running = False
+
+# Monkey-patch logging.info to stop the spinner before logging
+def new_logging_info(*args, **kwargs):
+    stop_spinner()  # Stop any active spinner
+    original_logging_info(*args, **kwargs)
+
+logging.info = new_logging_info
+
+def spinner(message="Loading"):
+    spinner_chars = "|/-\\"
+    i = 0
+    # Write the initial message to the original console output
     original_stdout.write(f"\r{message}... ")
-    for _ in range(10):  # Control the length of the animation
-        for frame in spinner:
-            original_stdout.write(frame)
-            original_stdout.flush()
-            time.sleep(0.1)
-            original_stdout.write("\b")  # Erase the spinner character
+    original_stdout.flush()
+    while spinner_running:
+        original_stdout.write(spinner_chars[i % len(spinner_chars)])
+        original_stdout.flush()
+        time.sleep(0.1)
+        original_stdout.write("\b")
+        i += 1
+    # Clear the spinner line once stopped
+    original_stdout.write("\r" + " " * (len(message) + 10) + "\r")
+    original_stdout.flush()
+
+def animated_loading(message="Loading"):
+    global spinner_running
+    spinner_running = True
+    # Start the spinner in a separate daemon thread
+    threading.Thread(target=spinner, args=(message,), daemon=True).start()
+    # Return immediately without blocking
 
 # Starting page with print statements and delay
-logging.info("\nWelcome to nips' ctr+X script!\n")
-time.sleep(2)
-logging.info("\nWe are currently using clipmeV2\n")
+logging.info("\nnips' brainrot generator\n")
 
 # Animated loading with interactivity
-animated_loading("\nPlease press 'Enter' when you're ready to continue.\n")
-logged_input()  # Wait for user input
-
-animated_loading("Importing, one moment please\n")
-time.sleep(1)
-
-# Animated loading with interactivity
-animated_loading("You're about to see a bunch of text..\nAlso, it may take a few minutes\n\n")
+animated_loading("The initial loading may take a while...\n\n")
 
 consoledivide(79)
 
+animated_loading("***Importing, one moment please\n")
+time.sleep(1)
+
 #leaving here in plain text for now; will fix later
-pyannote_auth_token = "your pyannote token goes here :)"
+pyannote_auth_token = "pyannote auth token goes here"
 
 import shutil
 import whisperx
@@ -79,19 +103,18 @@ from clipsai import ClipFinder, Transcriber, MediaEditor, AudioVideoFile, resize
 from pyannote.audio import Pipeline
 
 consoledivide(79)
-logging.info("\nWe're past the first hurdle! Wasn't that fun??\n")
+logging.info("packages loaded\n")
 time.sleep(2)
 
-logging.info(f"Ensuring existence of Danny Devito..\n")
+logging.info(f"setting up folders...\n")
 time.sleep(1)
+
 # Temporary directory for intermediate files (ensure it exists)
 temp_folder = "imthetrashman"
 os.makedirs(temp_folder, exist_ok=True)
 logging.info(f"'temp' directory named '{temp_folder}'\n")
 time.sleep(1)
 
-logging.info(f"setting up our folders...\n")
-time.sleep(1)
 # Input and output directories (use absolute paths)
 input_folder = os.path.abspath("processmesempai")  
 processed_folder = os.path.abspath("done")
@@ -105,38 +128,34 @@ os.makedirs(output_folder, exist_ok=True)
 # right now we are using temp_folder but we can change later
 extracted_audio_path = os.path.join(temp_folder, "extracted_audio.wav")
 
-logging.info(f"folder to put your long videos in: '{input_folder}'\n")
-logging.info(f"clips created will be stored in '{output_folder}'\n")
+logging.info(f"folder to store un-processed videos: '{input_folder}'\n")
+logging.info(f"processed clips will be stored in '{output_folder}'\n")
 logging.info(f"after processing, og video files will move from '{input_folder}' to '{processed_folder}'\n\n")
 time.sleep(2)
 
-animated_loading("Please read those paths.. you don't have to remember them\n")
-
-logging.info(f"loading some conditions for the AI model (you can play around with the values in the script)\n")
+logging.info("Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX")
 time.sleep(2)
 
 # Set up custom whisperx model
-whisper_arch = "base"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
+whisper_arch = "medium"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
 device = "cpu"         # Device for computation: Options include "cpu", "cuda" (for GPU)
 compute_type = "int8"  # Data type for computation: Options include "float16", "float32", "int8"
 language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
-#batch_size = "4, 8, 16, others?"  this parameter gave me trouble but i think it's available
+#batch_size = "4, 8, 16, others?"  this parameter gave me trouble but i think it may be useful
 
 logging.info(f"whisper_arch = '{whisper_arch}'\ndevice = '{device}' \ncompute_type = '{compute_type}'\nlanguage = '{language}'\n")
 
 custom_model = whisperx.load_model(
     whisper_arch=whisper_arch, device=device, compute_type=compute_type, language="en"
 )
-logging.info("\nuhhh, just ignore that btw. mine always says that ;)\n\n")
-logging.info("ALRIGHT! we are going to load our pyannote token now\n")
-animated_loading("it gives errors often, so please read and debug the following log if it kicks you out\n\ntry renewing your huggingface.co token\nOR you can try just copy/paste into chatgpt\n")
+logging.info("next section loads pyannote auth token\n")
+animated_loading("it gives errors often. to begin debug, maybe try checking your huggingface.co token\n")
 time.sleep(3)
-logged_input("press enter when ready")
 consoledivide(67)
 
 # Load diarization pipelines
 pipeline = Pipeline.from_pretrained(
-    "pyannote/speaker-diarization-3.1",
+    "pyannote/speaker-diarization@2.1",
     use_auth_token=pyannote_auth_token
 )
 diarizer = Pipeline.from_pretrained(
@@ -146,22 +165,20 @@ diarizer = Pipeline.from_pretrained(
 
 consoledivide(67)
 
-logging.info("success!! you've done great so far\n\n")
+logging.info("setup completed.\n")
 animated_loading(f"Counting video files in '{input_folder}'...\n")
-time.sleep(1)
+time.sleep(2)
 # Count all video and (audio=not yet!) files in the input folder
 file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')))
-logging.info(f"Total videos found: {file_count}")
+logging.info(f"\nwe will now begin processing {file_count} videos\n")
 time.sleep(1)
 
+logging.info("\nThe time required varies hugely on your computing hardware and selected parameters.\n")
+logging.info("Good luck ;/\n")
 consoledivide(31)
-logging.info("sweet! the next part will take FOREVER, be warned!\n")
-time.sleep(1)
-logging.info("if this is your first time using this script,\nthen you should probably make sure\nonly ONE video is in the "+input_folder+" folder")
-time.sleep(2)
-logged_input("okay, then, press 'enter' if you wanna go for it...")
-animated_loading()
-consoledivide(31)
+
+# this next line is for debugging the diarization pipeline step in the 'try' block'
+logging.getLogger('pyannote').setLevel(logging.DEBUG)
 
 # Process each video/audio file in the input folder
 for video_file in os.listdir(input_folder):
@@ -187,9 +204,10 @@ for video_file in os.listdir(input_folder):
     logging.info(f"Audio extracted to: {extracted_audio_path}")
 
     # Diarize the extracted audio
-    # Adjusted this logic based on pyannote's actual return structure.
     try:
-        diarization_result = pipeline(extracted_audio_path)
+        animated_loading("starting diarization... this may take a while")
+        diarization_result = pipeline({"uri": video_base_name, "audio": extracted_audio_path})
+        logging.info("Diarization completed.")
         speaker_groups = diarization_result.get_labels()
         for speaker, segments in speaker_groups.items():
             output_dir = os.path.join(output_video_folder, f"Speaker_{speaker}")
@@ -228,12 +246,11 @@ for video_file in os.listdir(input_folder):
         logging.info(f"Processing clip {i + 1}: {clip_key} -> {clip_output_path}")
 
         try:
-            # Commenting out resizing for now to resolve issues
             # Perform resizing for the clip
             crops = resize(
                 video_file_path=input_video_path,
                 pyannote_auth_token=pyannote_auth_token,
-            #    aspect_ratio=(9, 16),
+                aspect_ratio=(9, 16),
                 min_segment_duration=clip.end_time - clip.start_time,
                 samples_per_segment=9,
             )
@@ -268,11 +285,11 @@ for video_file in os.listdir(input_folder):
 
 
 def ending_sequence(file_count, output_folder, processed_folder):
-    logging.info("\nScript Completed!")
-    logging.info(f"Total files processed: {file_count}")
-    logging.info(f"Processed files saved in: {output_folder}")
-    logging.info(f"Original files moved to: {processed_folder}")
-    animated_loading("Okay then, press 'Enter' to quit, I guess?")
+    logging.info("\nProcessing complete")
+    #logging.info(f"Total files processed: {file_count}")
+    #logging.info(f"Processed files saved in: {output_folder}")
+    #logging.info(f"Original files moved to: {processed_folder}")
+    animated_loading("please press 'Enter' to quit")
     logged_input()  # Wait for user confirmation to quit
 
 # Call the ending sequence

@@ -1,0 +1,106 @@
+2024-12-15 22:15:55,723 - INFO - 
+==================================================
+
+2024-12-15 22:15:55,723 - INFO - 
+Welcome to nips' ctr+X script!
+
+2024-12-15 22:15:57,734 - INFO - 
+We are currently using clipmeV2
+
+2024-12-15 22:16:26,513 - INFO - User input: 
+2024-12-15 22:16:36,225 - INFO - 
+===============================================================================
+
+2024-12-15 22:16:48,009 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2024-12-15 22:16:48,010 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2024-12-15 22:16:49,707 - INFO - 
+===============================================================================
+
+2024-12-15 22:16:49,707 - INFO - 
+We're past the first hurdle! Wasn't that fun??
+
+2024-12-15 22:16:51,715 - INFO - Ensuring existence of Danny Devito..
+
+2024-12-15 22:16:52,731 - INFO - 'temp' directory named 'imthetrashman'
+
+2024-12-15 22:16:53,735 - INFO - setting up our folders...
+
+2024-12-15 22:16:54,747 - INFO - folder to put your long videos in: 'C:\Users\austi\Desktop\ctr+X\processmesempai'
+
+2024-12-15 22:16:54,748 - INFO - clips created will be stored in 'C:\Users\austi\Desktop\ctr+X\ctrs'
+
+2024-12-15 22:16:54,749 - INFO - after processing, og video files will move from 'C:\Users\austi\Desktop\ctr+X\processmesempai' to 'C:\Users\austi\Desktop\ctr+X\done'
+
+
+2024-12-15 22:17:01,108 - INFO - loading some conditions for the AI model (you can play around with the values in the script)
+
+2024-12-15 22:17:03,118 - INFO - whisper_arch = 'base'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2024-12-15 22:17:04,284 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2024-12-15 22:17:04,310 - INFO - 
+uhhh, just ignore that btw. mine always says that ;)
+
+
+2024-12-15 22:17:04,311 - INFO - ALRIGHT! we are going to load our pyannote token now
+
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\core\io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:43: UserWarning: torchaudio._backend.get_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  backend = torchaudio.get_audio_backend()
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:45: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  from speechbrain.pretrained import (
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:53: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend(backend)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\tasks\segmentation\mixins.py:37: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.
+  from torchaudio.backend.common import AudioMetaData
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\austi\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+2024-12-15 22:17:11,674 - INFO - User input: 
+2024-12-15 22:17:11,675 - INFO - 
+===================================================================
+
+2024-12-15 22:17:12,602 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2024-12-15 22:17:12,677 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:17:12,737 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:17:13,127 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:17:13,198 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:17:13,261 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:17:13,340 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:17:13,403 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2024-12-15 22:17:13,576 - INFO - 
+===================================================================
+
+2024-12-15 22:17:13,576 - INFO - success!! you've done great so far
+
+
+2024-12-15 22:17:18,954 - INFO - Total videos found: 0
+2024-12-15 22:17:19,967 - INFO - 
+===============================
+
+2024-12-15 22:17:19,967 - INFO - sweet! the next part will take FOREVER, be warned!
+
+2024-12-15 22:17:20,983 - INFO - if this is your first time using this script,
+then you should probably make sure
+only ONE video is in the C:\Users\austi\Desktop\ctr+X\processmesempai folder
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\speechbrain\utils\fetching.py:151: UserWarning: Using SYMLINK strategy on Windows for fetching potentially requires elevated privileges and is not recommended. See `LocalStrategy` documentation.
+  warnings.warn(
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+2024-12-15 22:17:30,702 - INFO - User input: 
+2024-12-15 22:17:35,060 - INFO - 
+===============================
+
+2024-12-15 22:17:35,061 - INFO - 
+Script Completed!
+2024-12-15 22:17:35,062 - INFO - Total files processed: 0
+2024-12-15 22:17:35,062 - INFO - Processed files saved in: C:\Users\austi\Desktop\ctr+X\ctrs
+2024-12-15 22:17:35,063 - INFO - Original files moved to: C:\Users\austi\Desktop\ctr+X\done
+2024-12-15 22:17:40,469 - INFO - User input: 

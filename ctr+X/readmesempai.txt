@@ -17,13 +17,13 @@ This project is mostly for myself, and maybe a few interested friends. Feel free
 Last note: almost all of it is broken so be ready to debug (i am literally so sorry)
 
 -------------------------------------------
-Okay, then, here's how to get started -- Godspeed:
+Okay, then, here's how to get started -- good luck:
   ( please note, it's VERY picky and a wip )
   ( still mostly optimized for my computer, sorry! )
 
 0. Before anything, open a console and install ffmpeg and libmagic. idk if you have to do this since I am trying to include them in the environment one day, but if you are a person who would read this far then you should have them installed anyway apart from this project.
 
-1. Install python3.8 on your machine. Really any version of python should work and idk why this isn't the case. Anyway, if you're on windows and have never used python (that's weird) i'd try: winget install python3.8
+1. Install python3.8 on your machine. Really any version of python should work and idk why this isn't the case. Anyway, if you're on windows and have never used python (that's weird) you can download it online.
 (likely you'll have to download it online and install it)
 
 2. Go to (huggingface.co). This is a website which allows free access to open source large language models. You will have to create an account, but you can just log in with google. Many of the models we are going to use are 'gated'. I am guessing this just means that they kinda want a real person to use them and not just used 24/7 at max by automated things. Anyway, you'll have to 'request access' by just pushing a button once you have a HF account. Here are some of them that i've had to access in the process of getting the script to work:
@@ -50,4 +50,4 @@ activate env, type: ./cliaenv/scripts/activate
 LETSGO, type: python ./clipmev2.py
   (maybe python38, py, it might be different! to test before running type: python --version, or py --version, or python38 --version, etc to see what command gives version 3.8. then use that one in this line)
 
-5.  best of fucking luck, bro. hitme up if you want :shrug
+5.  best of fucking luck, friend. hit me up if you want

@@ -1,0 +1,384 @@
+2024-12-15 22:18:14,475 - INFO - 
+==================================================
+
+2024-12-15 22:18:14,475 - INFO - 
+Welcome to nips' ctr+X script!
+
+2024-12-15 22:18:16,486 - INFO - 
+We are currently using clipmeV2
+
+2024-12-15 22:18:20,840 - INFO - User input: 
+2024-12-15 22:18:30,565 - INFO - 
+===============================================================================
+
+2024-12-15 22:18:41,882 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2024-12-15 22:18:41,883 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2024-12-15 22:18:43,513 - INFO - 
+===============================================================================
+
+2024-12-15 22:18:43,514 - INFO - 
+We're past the first hurdle! Wasn't that fun??
+
+2024-12-15 22:18:45,522 - INFO - Ensuring existence of Danny Devito..
+
+2024-12-15 22:18:46,525 - INFO - 'temp' directory named 'imthetrashman'
+
+2024-12-15 22:18:47,535 - INFO - setting up our folders...
+
+2024-12-15 22:18:48,550 - INFO - folder to put your long videos in: 'C:\Users\austi\Desktop\ctr+X\processmesempai'
+
+2024-12-15 22:18:48,551 - INFO - clips created will be stored in 'C:\Users\austi\Desktop\ctr+X\ctrs'
+
+2024-12-15 22:18:48,551 - INFO - after processing, og video files will move from 'C:\Users\austi\Desktop\ctr+X\processmesempai' to 'C:\Users\austi\Desktop\ctr+X\done'
+
+
+2024-12-15 22:18:54,916 - INFO - loading some conditions for the AI model (you can play around with the values in the script)
+
+2024-12-15 22:18:56,917 - INFO - whisper_arch = 'base'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2024-12-15 22:18:58,116 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2024-12-15 22:18:58,142 - INFO - 
+uhhh, just ignore that btw. mine always says that ;)
+
+
+2024-12-15 22:18:58,142 - INFO - ALRIGHT! we are going to load our pyannote token now
+
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\core\io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:43: UserWarning: torchaudio._backend.get_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  backend = torchaudio.get_audio_backend()
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:45: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  from speechbrain.pretrained import (
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:53: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend(backend)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\tasks\segmentation\mixins.py:37: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.
+  from torchaudio.backend.common import AudioMetaData
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\austi\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+2024-12-15 22:19:07,032 - INFO - User input: 
+2024-12-15 22:19:07,033 - INFO - 
+===================================================================
+
+2024-12-15 22:19:07,965 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2024-12-15 22:19:08,042 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:19:08,111 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:19:08,418 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:19:08,485 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:19:08,548 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:19:08,614 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2024-12-15 22:19:08,682 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2024-12-15 22:19:08,851 - INFO - 
+===================================================================
+
+2024-12-15 22:19:08,852 - INFO - success!! you've done great so far
+
+
+2024-12-15 22:19:14,204 - INFO - Total videos found: 2
+2024-12-15 22:19:15,214 - INFO - 
+===============================
+
+2024-12-15 22:19:15,214 - INFO - sweet! the next part will take FOREVER, be warned!
+
+2024-12-15 22:19:16,225 - INFO - if this is your first time using this script,
+then you should probably make sure
+only ONE video is in the C:\Users\austi\Desktop\ctr+X\processmesempai folder
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\speechbrain\utils\fetching.py:151: UserWarning: Using SYMLINK strategy on Windows for fetching potentially requires elevated privileges and is not recommended. See `LocalStrategy` documentation.
+  warnings.warn(
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+2024-12-15 22:19:19,409 - INFO - User input: 
+2024-12-15 22:19:23,772 - INFO - 
+===============================
+
+2024-12-15 22:19:23,774 - INFO - Processing video/audio file: C:\Users\austi\Desktop\ctr+X\processmesempai\Brainwashed College Kid In Denial He is WRONG Despite the Facts.mp4
+2024-12-15 22:19:27,480 - INFO - Audio extracted to: imthetrashman\Brainwashed College Kid In Denial He is WRONG Despite the Facts_audio.wav
+2024-12-15 22:31:27,090 - ERROR - Error during diarization: get_labels() missing 1 required positional argument: 'segment'
+2024-12-15 22:31:28,230 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2024-12-15 22:34:53,289 - INFO - Use pytorch device_name: cpu
+2024-12-15 22:34:53,289 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\huggingface_hub\file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|                                                                                   | 0/6 [00:00<?, ?it/s]Batches:  17%|############5                                                              | 1/6 [00:10<00:52, 10.50s/it]Batches:  33%|#########################                                                  | 2/6 [00:13<00:23,  5.96s/it]Batches:  50%|#####################################5                                     | 3/6 [00:15<00:12,  4.20s/it]Batches:  67%|##################################################                         | 4/6 [00:16<00:06,  3.18s/it]Batches:  83%|##############################################################5            | 5/6 [00:18<00:02,  2.48s/it]Batches: 100%|###########################################################################| 6/6 [00:19<00:00,  1.94s/it]Batches: 100%|###########################################################################| 6/6 [00:19<00:00,  3.19s/it]2024-12-15 22:35:14,919 - INFO - Clip 1: Start=0, End=471.985
+2024-12-15 22:35:14,920 - INFO - Clip 2: Start=0.369, End=41.659
+2024-12-15 22:35:14,920 - INFO - Clip 3: Start=52.307, End=78.935
+2024-12-15 22:35:14,920 - INFO - Clip 4: Start=78.655, End=164.877
+2024-12-15 22:35:14,920 - INFO - Clip 5: Start=162.236, End=212.787
+2024-12-15 22:35:14,920 - INFO - Clip 6: Start=211.946, End=238.119
+2024-12-15 22:35:14,920 - INFO - Clip 7: Start=245.445, End=274.627
+2024-12-15 22:35:14,921 - INFO - Clip 8: Start=280.113, End=387.928
+2024-12-15 22:35:14,921 - INFO - Clip 9: Start=387.168, End=420.878
+2024-12-15 22:35:14,921 - INFO - Clip 10: Start=418.597, End=471.985
+2024-12-15 22:35:14,921 - INFO - Clip 11: Start=0.369, End=420.878
+2024-12-15 22:35:14,921 - INFO - Clip 12: Start=387.168, End=471.985
+2024-12-15 22:35:14,921 - INFO - Clip 13: Start=0.369, End=78.555
+2024-12-15 22:35:14,921 - INFO - Clip 14: Start=162.236, End=389.468
+2024-12-15 22:35:14,922 - INFO - Clip 15: Start=184.227, End=389.468
+2024-12-15 22:35:14,922 - INFO - Processing clip 1: (0, 471.985) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip1.mp4
+2024-12-15 22:46:53,027 - INFO - Detecting scenes...
+2024-12-15 23:29:30,720 - INFO - Resized clip 1 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip1.mp4
+2024-12-15 23:29:30,720 - INFO - Processing clip 2: (0.369, 41.659) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip2.mp4
+2024-12-15 23:39:14,755 - INFO - Detecting scenes...
+2024-12-15 23:45:38,577 - INFO - Resized clip 2 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip2.mp4
+2024-12-15 23:45:38,577 - INFO - Processing clip 3: (52.307, 78.935) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip3.mp4
+2024-12-15 23:55:16,754 - INFO - Detecting scenes...
+2024-12-16 00:01:10,150 - INFO - Resized clip 3 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip3.mp4
+2024-12-16 00:01:10,150 - INFO - Processing clip 4: (78.655, 164.877) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip4.mp4
+2024-12-16 00:10:47,719 - INFO - Detecting scenes...
+2024-12-16 00:20:31,404 - INFO - Resized clip 4 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip4.mp4
+2024-12-16 00:20:31,404 - INFO - Processing clip 5: (162.236, 212.787) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip5.mp4
+2024-12-16 00:30:09,101 - INFO - Detecting scenes...
+2024-12-16 00:36:32,193 - INFO - Resized clip 5 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip5.mp4
+2024-12-16 00:36:32,193 - INFO - Processing clip 6: (211.946, 238.119) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip6.mp4
+2024-12-16 00:46:11,356 - INFO - Detecting scenes...
+2024-12-16 00:54:25,086 - INFO - Resized clip 6 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip6.mp4
+2024-12-16 00:54:25,086 - INFO - Processing clip 7: (245.445, 274.627) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip7.mp4
+2024-12-16 01:04:01,994 - INFO - Detecting scenes...
+2024-12-16 01:12:59,171 - INFO - Resized clip 7 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip7.mp4
+2024-12-16 01:12:59,171 - INFO - Processing clip 8: (280.113, 387.928) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip8.mp4
+2024-12-16 01:22:36,290 - INFO - Detecting scenes...
+2024-12-16 01:37:07,239 - INFO - Resized clip 8 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip8.mp4
+2024-12-16 01:37:07,254 - INFO - Processing clip 9: (387.168, 420.878) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip9.mp4
+2024-12-16 01:46:44,174 - INFO - Detecting scenes...
+2024-12-16 01:57:43,538 - INFO - Resized clip 9 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip9.mp4
+2024-12-16 01:57:43,538 - INFO - Processing clip 10: (418.597, 471.985) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip10.mp4
+2024-12-16 02:07:20,443 - INFO - Detecting scenes...
+2024-12-16 02:18:58,685 - INFO - Resized clip 10 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip10.mp4
+2024-12-16 02:18:58,685 - INFO - Processing clip 11: (0.369, 420.878) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip11.mp4
+2024-12-16 02:28:36,057 - INFO - Detecting scenes...
+2024-12-16 03:02:15,002 - INFO - Resized clip 11 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip11.mp4
+2024-12-16 03:02:15,002 - INFO - Processing clip 12: (387.168, 471.985) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip12.mp4
+2024-12-16 03:11:52,145 - INFO - Detecting scenes...
+2024-12-16 03:26:31,200 - INFO - Resized clip 12 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip12.mp4
+2024-12-16 03:26:31,200 - INFO - Processing clip 13: (0.369, 78.555) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip13.mp4
+2024-12-16 03:36:10,051 - INFO - Detecting scenes...
+2024-12-16 03:45:41,279 - INFO - Resized clip 13 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip13.mp4
+2024-12-16 03:45:41,279 - INFO - Processing clip 14: (162.236, 389.468) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip14.mp4
+2024-12-16 03:55:18,710 - INFO - Detecting scenes...
+2024-12-16 04:19:34,518 - INFO - Resized clip 14 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip14.mp4
+2024-12-16 04:19:34,518 - INFO - Processing clip 15: (184.227, 389.468) -> C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip15.mp4
+2024-12-16 04:29:11,858 - INFO - Detecting scenes...
+2024-12-16 04:52:16,382 - INFO - Resized clip 15 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Brainwashed College Kid In Denial He is WRONG Despite the Facts\Brainwashed College Kid In Denial He is WRONG Despite the Facts_clip15.mp4
+2024-12-16 04:52:16,382 - INFO - Moved processed file to: C:\Users\austi\Desktop\ctr+X\done\Brainwashed College Kid In Denial He is WRONG Despite the Facts.mp4
+2024-12-16 04:52:16,382 - INFO - Processing video/audio file: C:\Users\austi\Desktop\ctr+X\processmesempai\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University.mp4
+2024-12-16 04:52:21,658 - INFO - Audio extracted to: imthetrashman\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_audio.wav
+2024-12-16 05:13:33,053 - ERROR - Error during diarization: get_labels() missing 1 required positional argument: 'segment'
+2024-12-16 05:13:33,949 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2024-12-16 05:19:19,841 - INFO - Use pytorch device_name: cpu
+2024-12-16 05:19:19,841 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\huggingface_hub\file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|                                                                                   | 0/7 [00:00<?, ?it/s]Batches:  14%|##########7                                                                | 1/7 [00:26<02:39, 26.55s/it]Batches:  29%|#####################4                                                     | 2/7 [00:30<01:06, 13.23s/it]Batches:  43%|################################1                                          | 3/7 [00:33<00:34,  8.71s/it]Batches:  57%|##########################################8                                | 4/7 [00:36<00:19,  6.35s/it]Batches:  71%|#####################################################5                     | 5/7 [00:38<00:09,  4.79s/it]Batches:  86%|################################################################2          | 6/7 [00:40<00:03,  3.67s/it]Batches: 100%|###########################################################################| 7/7 [00:40<00:00,  2.58s/it]Batches: 100%|###########################################################################| 7/7 [00:40<00:00,  5.77s/it]2024-12-16 05:20:02,801 - INFO - Clip 1: Start=3.522, End=48.104
+2024-12-16 05:20:02,801 - INFO - Clip 2: Start=44.583, End=110.017
+2024-12-16 05:20:02,801 - INFO - Clip 3: Start=96.934, End=155.109
+2024-12-16 05:20:02,801 - INFO - Clip 4: Start=142.565, End=167.073
+2024-12-16 05:20:02,801 - INFO - Clip 5: Start=161.831, End=220.915
+2024-12-16 05:20:02,801 - INFO - Clip 6: Start=220.735, End=249.209
+2024-12-16 05:20:02,801 - INFO - Clip 7: Start=245.447, End=290.621
+2024-12-16 05:20:02,801 - INFO - Clip 8: Start=287.357, End=337.491
+2024-12-16 05:20:02,801 - INFO - Clip 9: Start=333.609, End=411.704
+2024-12-16 05:20:02,801 - INFO - Clip 10: Start=410.683, End=479.359
+2024-12-16 05:20:02,801 - INFO - Clip 11: Start=473.252, End=615.939
+2024-12-16 05:20:02,801 - INFO - Clip 12: Start=610.316, End=761.542
+2024-12-16 05:20:02,801 - INFO - Clip 13: Start=755.617, End=792.846
+2024-12-16 05:20:02,801 - INFO - Clip 14: Start=787.162, End=864.355
+2024-12-16 05:20:02,801 - INFO - Clip 15: Start=858.508, End=902.286
+2024-12-16 05:20:02,801 - INFO - Clip 16: Start=899.604, End=984.411
+2024-12-16 05:20:02,801 - INFO - Clip 17: Start=976.308, End=1031.928
+2024-12-16 05:20:02,801 - INFO - Clip 18: Start=1031.547, End=1063.777
+2024-12-16 05:20:02,801 - INFO - Clip 19: Start=3.522, End=411.704
+2024-12-16 05:20:02,801 - INFO - Clip 20: Start=333.609, End=1063.777
+2024-12-16 05:20:02,801 - INFO - Clip 21: Start=468.366, End=723.433
+2024-12-16 05:20:02,801 - INFO - Clip 22: Start=697.59, End=761.542
+2024-12-16 05:20:02,801 - INFO - Clip 23: Start=755.617, End=858.027
+2024-12-16 05:20:02,801 - INFO - Clip 24: Start=410.683, End=647.374
+2024-12-16 05:20:02,801 - INFO - Clip 25: Start=121.073, End=411.704
+2024-12-16 05:20:02,801 - INFO - Clip 26: Start=647.394, End=906.598
+2024-12-16 05:20:02,801 - INFO - Processing clip 1: (3.522, 48.104) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip1.mp4
+2024-12-16 05:41:35,207 - INFO - Detecting scenes...
+2024-12-16 05:53:31,472 - INFO - Resized clip 1 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip1.mp4
+2024-12-16 05:53:31,472 - INFO - Processing clip 2: (44.583, 110.017) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip2.mp4
+2024-12-16 06:15:03,888 - INFO - Detecting scenes...
+2024-12-16 06:30:02,159 - INFO - Resized clip 2 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip2.mp4
+2024-12-16 06:30:02,159 - INFO - Processing clip 3: (96.934, 155.109) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip3.mp4
+2024-12-16 06:51:32,076 - INFO - Detecting scenes...
+2024-12-16 07:07:04,168 - INFO - Resized clip 3 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip3.mp4
+2024-12-16 07:07:04,168 - INFO - Processing clip 4: (142.565, 167.073) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip4.mp4
+2024-12-16 07:28:31,543 - INFO - Detecting scenes...
+2024-12-16 07:40:06,530 - INFO - Resized clip 4 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip4.mp4
+2024-12-16 07:40:06,530 - INFO - Processing clip 5: (161.831, 220.915) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip5.mp4
+2024-12-16 08:01:33,155 - INFO - Detecting scenes...
+2024-12-16 08:18:49,342 - INFO - Resized clip 5 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip5.mp4
+2024-12-16 08:18:49,345 - INFO - Processing clip 6: (220.735, 249.209) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip6.mp4
+2024-12-16 08:40:18,614 - INFO - Detecting scenes...
+2024-12-16 08:53:52,876 - INFO - Resized clip 6 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip6.mp4
+2024-12-16 08:53:52,876 - INFO - Processing clip 7: (245.447, 290.621) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip7.mp4
+2024-12-16 09:15:18,856 - INFO - Detecting scenes...
+2024-12-16 09:31:57,814 - INFO - Resized clip 7 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip7.mp4
+2024-12-16 09:31:57,814 - INFO - Processing clip 8: (287.357, 337.491) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip8.mp4
+2024-12-16 09:54:40,299 - INFO - Detecting scenes...
+2024-12-16 10:18:45,757 - INFO - Resized clip 8 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip8.mp4
+2024-12-16 10:18:45,757 - INFO - Processing clip 9: (333.609, 411.704) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip9.mp4
+2024-12-16 10:47:17,247 - INFO - Detecting scenes...
+2024-12-16 11:17:19,445 - INFO - Resized clip 9 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip9.mp4
+2024-12-16 11:17:19,446 - INFO - Processing clip 10: (410.683, 479.359) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip10.mp4
+2024-12-16 11:46:15,838 - INFO - Detecting scenes...
+2024-12-16 12:22:10,315 - INFO - Resized clip 10 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip10.mp4
+2024-12-16 12:22:10,315 - INFO - Processing clip 11: (473.252, 615.939) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip11.mp4
+2024-12-16 12:51:18,689 - INFO - Detecting scenes...
+2024-12-16 13:30:57,572 - INFO - Resized clip 11 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip11.mp4
+2024-12-16 13:30:57,572 - INFO - Processing clip 12: (610.316, 761.542) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip12.mp4
+2024-12-16 14:00:09,365 - INFO - Detecting scenes...
+2024-12-16 14:49:09,147 - INFO - Resized clip 12 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip12.mp4
+2024-12-16 14:49:09,147 - INFO - Processing clip 13: (755.617, 792.846) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip13.mp4
+2024-12-16 15:14:27,910 - INFO - Detecting scenes...
+2024-12-16 15:49:10,199 - INFO - Resized clip 13 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip13.mp4
+2024-12-16 15:49:10,200 - INFO - Processing clip 14: (787.162, 864.355) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip14.mp4
+2024-12-16 16:19:42,596 - INFO - Detecting scenes...
+2024-12-16 17:02:58,299 - INFO - Resized clip 14 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip14.mp4
+2024-12-16 17:02:58,299 - INFO - Processing clip 15: (858.508, 902.286) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip15.mp4
+2024-12-16 17:34:06,768 - INFO - Detecting scenes...
+2024-12-16 18:10:13,389 - INFO - Resized clip 15 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip15.mp4
+2024-12-16 18:10:13,389 - INFO - Processing clip 16: (899.604, 984.411) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip16.mp4
+2024-12-16 18:37:21,242 - INFO - Detecting scenes...
+2024-12-16 19:11:21,379 - INFO - Resized clip 16 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip16.mp4
+2024-12-16 19:11:21,380 - INFO - Processing clip 17: (976.308, 1031.928) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip17.mp4
+2024-12-16 19:32:56,853 - INFO - Detecting scenes...
+2024-12-16 20:04:23,502 - INFO - Resized clip 17 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip17.mp4
+2024-12-16 20:04:23,502 - INFO - Processing clip 18: (1031.547, 1063.777) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip18.mp4
+2024-12-16 20:26:04,190 - INFO - Detecting scenes...
+2024-12-16 20:55:26,360 - INFO - Resized clip 18 saved to: C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip18.mp4
+2024-12-16 20:55:26,361 - INFO - Processing clip 19: (3.522, 411.704) -> C:\Users\austi\Desktop\ctr+X\ctrs\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University\Lex Fridman and Coffeezilla on Andrew Tate and Hustlers University_clip19.mp4
+
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Traceback (most recent call last):
+  File "C:\Users\austi\Desktop\ctr+X\clipmev2.py", line 233, in <module>
+    crops = resize(
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\clipsai\resize\resize.py", line 78, in resize
+    diarized_segments = diarizer.diarize(media, min_segment_duration, time_precision)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\clipsai\diarize\pyannote.py", line 107, in diarize
+    pyannote_segments: Annotation = self.pipeline({"audio": wav_file.path})
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\core\pipeline.py", line 325, in __call__
+    return self.apply(file, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_diarization.py", line 514, in apply
+    embeddings = self.get_embeddings(
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_diarization.py", line 349, in get_embeddings
+    embedding_batch: np.ndarray = self._embedding(
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py", line 706, in __call__
+    embeddings = self.model_(
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\__init__.py", line 112, in forward
+    return self.resnet(fbank, weights=weights)[1]
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\resnet.py", line 211, in forward
+    out = self.layer1(out)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\resnet.py", line 101, in forward
+    out = F.relu(self.bn1(self.conv1(x)))
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\austi\Desktop\ctr+X\cliaenv\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
