@@ -117,7 +117,7 @@ class PyannoteDiarizer:
             time_precision=time_precision,
         )
 
-        wav_file.delete()
+        #wav_file.delete()
 
         return adjusted_speaker_segments
 
@@ -229,18 +229,18 @@ class PyannoteDiarizer:
 
     # this function added by me and not included in open source clipsai repo
     def _group_segments_by_speaker(self, adjusted_speaker_segments):
-    """
-    Groups speaker segments by speaker ID.
-    """
-    speaker_groups = {}
-    for segment in adjusted_speaker_segments:
-        for speaker in segment["speakers"]:
-            if speaker not in speaker_groups:
-                speaker_groups[speaker] = []
-            speaker_groups[speaker].append(segment)
-    return speaker_groups
+        """
+        Groups speaker segments by speaker ID.
+        """
+        speaker_groups = {}
+        for segment in adjusted_speaker_segments:
+            for speaker in segment["speakers"]:
+                if speaker not in speaker_groups:
+                    speaker_groups[speaker] = []
+                speaker_groups[speaker].append(segment)
+        return speaker_groups
 
-    speaker_groups = self._group_segments_by_speaker(adjusted_speaker_segments)
+        speaker_groups = self._group_segments_by_speaker(adjusted_speaker_segments)
     
     def _relabel_speakers(
         self, speaker_segments: list[dict], unique_speakers: set[int]

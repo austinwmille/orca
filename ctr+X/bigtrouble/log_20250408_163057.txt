@@ -1,0 +1,144 @@
+2025-04-08 16:30:57,448 - INFO - 
+==================================================
+
+2025-04-08 16:30:57,448 - INFO - 
+nips' brainrot generator
+
+2025-04-08 16:30:57,450 - INFO - 
+===============================================================================
+
+2025-04-08 16:31:12,793 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-04-08 16:31:12,793 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-08 16:31:14,983 - INFO - 
+===============================================================================
+
+2025-04-08 16:31:14,983 - INFO - packages loaded
+
+2025-04-08 16:31:16,992 - INFO - setting up folders...
+
+2025-04-08 16:31:17,995 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-08 16:31:18,998 - INFO - folder to store un-processed videos: 'C:\Users\austi\Desktop\ctrx\processmesempai'
+
+2025-04-08 16:31:18,998 - INFO - processed clips will be stored in 'C:\Users\austi\Desktop\ctrx\ctrs'
+
+2025-04-08 16:31:18,998 - INFO - after processing, og video files will move from 'C:\Users\austi\Desktop\ctrx\processmesempai' to 'C:\Users\austi\Desktop\ctrx\done'
+
+
+2025-04-08 16:31:21,013 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-08 16:31:23,029 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-08 16:31:29,596 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\whisperx-vad-segmentation.bin`
+2025-04-08 16:31:29,626 - INFO - next section loads pyannote auth token
+
+2025-04-08 16:31:32,630 - INFO - 
+===================================================================
+
+2025-04-08 16:31:32,908 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2025-04-08 16:31:33,042 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:33,145 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:33,528 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:33,719 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:33,804 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:33,887 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:33,963 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-08 16:31:34,671 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint C:\Users\austi\.cache\torch\pyannote\models--pyannote--segmentation\snapshots\c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b\pytorch_model.bin`
+2025-04-08 16:31:34,794 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:34,888 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:35,241 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:35,385 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:35,527 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:35,606 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-08 16:31:35,705 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-08 16:31:35,897 - INFO - 
+===================================================================
+
+2025-04-08 16:31:35,897 - INFO - setup completed.
+
+2025-04-08 16:31:37,907 - INFO - 
+we will now begin processing 1 videos
+
+2025-04-08 16:31:38,910 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-08 16:31:38,910 - INFO - Good luck ;/
+
+2025-04-08 16:31:38,910 - INFO - 
+===============================
+
+2025-04-08 16:31:38,912 - INFO - Processing video/audio file: C:\Users\austi\Desktop\ctrx\processmesempai\Donald Trump Interview  Lex Fridman Podcast 442.mp4
+2025-04-08 16:31:57,884 - INFO - Audio extracted to: imthetrashman\Donald Trump Interview  Lex Fridman Podcast 442_audio.wav
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\core\io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:43: UserWarning: torchaudio._backend.get_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  backend = torchaudio.get_audio_backend()
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:45: UserWarning: Module 'speechbrain.pretrained' was deprecated, redirecting to 'speechbrain.inference'. Please update your script. This is a change from SpeechBrain 1.0. See: https://github.com/speechbrain/speechbrain/releases/tag/v1.0.0
+  from speechbrain.pretrained import (
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py:53: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend(backend)
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\tasks\segmentation\mixins.py:37: UserWarning: `torchaudio.backend.common.AudioMetaData` has been moved to `torchaudio.AudioMetaData`. Please update the import path.
+  from torchaudio.backend.common import AudioMetaData
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\austi\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\speechbrain\utils\fetching.py:151: UserWarning: Using SYMLINK strategy on Windows for fetching potentially requires elevated privileges and is not recommended. See `LocalStrategy` documentation.
+  warnings.warn(
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+  warnings.warn(
+C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\blocks\pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.1.1. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cpu. Bad things might happen unless you revert torch to 1.x.
+Traceback (most recent call last):
+  File "C:\Users\austi\Desktop\ctrx\clipmev2.py", line 230, in <module>
+    speaker_segments = diarizer.diarize(
+  File "cliaenv\clipsai\clipsai\diarize\pyannote.py", line 111, in diarize
+    pyannote_segments: Annotation = self.pipeline({"audio": wav_file.path})
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\core\pipeline.py", line 325, in __call__
+    return self.apply(file, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_diarization.py", line 514, in apply
+    embeddings = self.get_embeddings(
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_diarization.py", line 349, in get_embeddings
+    embedding_batch: np.ndarray = self._embedding(
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\pipelines\speaker_verification.py", line 706, in __call__
+    embeddings = self.model_(
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\__init__.py", line 112, in forward
+    return self.resnet(fbank, weights=weights)[1]
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\resnet.py", line 211, in forward
+    out = self.layer1(out)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\pyannote\audio\models\embedding\wespeaker\resnet.py", line 101, in forward
+    out = F.relu(self.bn1(self.conv1(x)))
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\austi\Desktop\ctrx\cliaenv\lib\site-packages\torch\nn\modules\conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

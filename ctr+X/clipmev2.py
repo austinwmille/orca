@@ -94,7 +94,7 @@ animated_loading("***Importing, one moment please\n")
 time.sleep(1)
 
 #leaving here in plain text for now; will fix later
-pyannote_auth_token = "pyannote auth token goes here"
+pyannote_auth_token = "pyannote auth token here"
 
 import shutil
 import whisperx
@@ -158,8 +158,9 @@ pipeline = Pipeline.from_pretrained(
     "pyannote/speaker-diarization@2.1",
     use_auth_token=pyannote_auth_token
 )
+
 diarizer = Pipeline.from_pretrained(
-    "pyannote/speaker-diarization",
+    "pyannote/speaker-diarization@2.1",
     use_auth_token=pyannote_auth_token
 )
 
@@ -203,17 +204,47 @@ for video_file in os.listdir(input_folder):
     )
     logging.info(f"Audio extracted to: {extracted_audio_path}")
 
-    # Diarize the extracted audio
+    # Diarize the extracted audio using the custom PyannoteDiarizer
+    import importlib.util
+
+    # Specify the path to your local file, e.g. if it's in the current directory:
+    local_diarizer_path = os.path.join("cliaenv", "clipsai", "clipsai", "diarize", "pyannote.py")
+
+    spec = importlib.util.spec_from_file_location("local_pyannote", local_diarizer_path)
+    local_pyannote = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(local_pyannote)
+
+    # Now get your custom diarizer class
+    PyannoteDiarizer = local_pyannote.PyannoteDiarizer
+
     try:
         animated_loading("starting diarization... this may take a while")
-        diarization_result = pipeline({"uri": video_base_name, "audio": extracted_audio_path})
-        logging.info("Diarization completed.")
-        speaker_groups = diarization_result.get_labels()
+        
+        diarizer = PyannoteDiarizer(auth_token=pyannote_auth_token, device=device)
+        
+        # Wrap your extracted audio into an AudioFile object. For example:
+        from clipsai.media.audio_file import AudioFile  # Make sure this class exists.
+        audio_file_obj = AudioFile(extracted_audio_path)
+        
+        # Call the diarize method, which returns a list of segment dictionaries.
+        speaker_segments = diarizer.diarize(
+            audio_file=audio_file_obj,
+            min_segment_duration=1.5,
+            time_precision=6,
+        )
+        logging.info("Diarization completed. Retrieved speaker segments.")
+        
+        # Optionally, group segments by speaker if desired:
+        speaker_groups = diarizer._group_segments_by_speaker(speaker_segments)
+        
+        # Now, iterate over the grouped segments. For example:
         for speaker, segments in speaker_groups.items():
             output_dir = os.path.join(output_video_folder, f"Speaker_{speaker}")
             os.makedirs(output_dir, exist_ok=True)
             for segment in segments:
+                # Replace save_clip with your defined function that saves a clip for a given segment.
                 save_clip(extracted_audio_path, segment, output_dir)
+    
     except Exception as e:
         logging.error(f"Error during diarization: {e}")
 
@@ -225,6 +256,11 @@ for video_file in os.listdir(input_folder):
     # Step 2: Find Engaging Clips
     clipfinder = ClipFinder()
     clips = clipfinder.find_clips(transcription=transcription)
+
+    # this is a fast and loose limit of the clip size to 5mins max (we should fix later!!)
+    max_clip_duration = 300  # maximum clip duration in seconds (5 minutes)
+    filtered_clips = [clip for clip in clips if (clip.end_time - clip.start_time) <= max_clip_duration]
+    clips = filtered_clips
 
     # Output the results of the clipfinder
     for i, clip in enumerate(clips):
@@ -252,7 +288,7 @@ for video_file in os.listdir(input_folder):
                 pyannote_auth_token=pyannote_auth_token,
                 aspect_ratio=(9, 16),
                 min_segment_duration=clip.end_time - clip.start_time,
-                samples_per_segment=9,
+                samples_per_segment=13,
             )
 
             media_editor = MediaEditor()
@@ -263,12 +299,13 @@ for video_file in os.listdir(input_folder):
                 height=crops.crop_height,
                 segments=[
                     {
-                        "start_time": clip.start_time,
-                        "end_time": clip.end_time,
+                        "start_time": segment.start_time,
+                        "end_time": segment.end_time,
                         "x": segment.x,
                         "y": segment.y,
                     }
                     for segment in crops.segments
+                    if segment.start_time >= clip.start_time and segment.end_time <= clip.end_time
                 ],
             )
 
