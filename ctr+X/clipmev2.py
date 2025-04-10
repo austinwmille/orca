@@ -94,7 +94,7 @@ animated_loading("***Importing, one moment please\n")
 time.sleep(1)
 
 #leaving here in plain text for now; will fix later
-pyannote_auth_token = "pyannote auth token here"
+pyannote_auth_token = "PYANNOTE AUTH TOKEN HERE"
 
 import shutil
 import whisperx
