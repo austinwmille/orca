@@ -21,7 +21,7 @@ def download_video(url):
     ydl_opts = {
         'format': 'bestvideo+bestaudio/best',  # Prioritize separate streams, fallback to single best
         'merge_output_format': 'mp4',  # Ensure output is always MP4
-        'outtmpl': '%(uploader)s/%(upload_date)s-%(title)s.%(ext)s',  # Metadata-rich filenames
+        'outtmpl': '%(upload_date)s-%(title)s.%(ext)s',  # Metadata-rich filenames
         'sanitize_filename': True,  # Remove special characters from filenames
         'quiet': False,  # Show progress
     }
@@ -40,30 +40,8 @@ def main():
     # List of video URLs (replace or extend as needed)
     # don't forget to put a comma after them!!
     video_urls = [
-        "https://www.youtube.com/watch?v=ZN5PoW7_kdA",  # Example YouTube URL
-        "https://www.youtube.com/watch?v=2yJgwwDcgV8",  # Example Vimeo URL
-        "https://www.youtube.com/shorts/2RnO2WnSTQ0",  # Example Dailymotion URL
-        "https://www.youtube.com/shorts/n3x8clbCY9A",
-        "https://www.youtube.com/watch?v=Cqd1Gvq-RBY",
-        "https://www.youtube.com/watch?v=mLyOj_QD4a4",
-        "https://www.youtube.com/watch?v=k1BneeJTDcU",
-        "https://www.youtube.com/shorts/aFisWf9PNu8",
-        "https://www.youtube.com/shorts/aFisWf9PNu8",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "https://www.youtube.com/watch?v=hnqlQrwP0q4&list=PLO7ChEvlE6fcM2DFeoizuaTMa4u1Y9eRR&index=26",  # Example YouTube URL
+        
         # Add more video URLs here
     ]
 
