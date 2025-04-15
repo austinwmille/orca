@@ -1,0 +1,1 @@
+any created clips are found in this folder
