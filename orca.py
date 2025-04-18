@@ -2,9 +2,16 @@ import logging
 import sys
 import os
 import time
+from tqdm import tqdm
 import subprocess
 import threading
 import shutil
+
+from dotenv import load_dotenv
+load_dotenv()
+pyannote_auth_token = os.getenv("PYANNOTE_AUTH_TOKEN")
+if not pyannote_auth_token:
+    raise RuntimeError("Missing PYANNOTE_AUTH_TOKEN – make sure it’s set in your .env file")
 
 # Read folder paths from environment variables or use defaults
 input_folder = os.path.abspath(os.environ.get("INPUT_FOLDER", "processmesempai"))
@@ -94,16 +101,19 @@ animated_loading("The initial loading may take a while...\n\n")
 
 consoledivide(79)
 
-animated_loading("***Importing, one moment please\n")
+animated_loading("***The following import block may take a while.\n")
 time.sleep(1)
-
-# leaving here in plain text for now; will fix later
-pyannote_auth_token = "PYANNOTE AUTH TOKEN HERE"
 
 import whisperx
 import nltk
 from clipsai import ClipFinder, Transcriber, MediaEditor, AudioVideoFile, resize
 from pyannote.audio import Pipeline
+
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+from nltk.data import find
+
+punkt_pickle = find('tokenizers/punkt/english.pickle')
 
 consoledivide(79)
 logging.info("packages loaded\n")
@@ -134,8 +144,12 @@ language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
 logging.info(f"whisper_arch = '{whisper_arch}'\ndevice = '{device}' \ncompute_type = '{compute_type}'\nlanguage = '{language}'\n")
 
 custom_model = whisperx.load_model(
-    whisper_arch=whisper_arch, device=device, compute_type=compute_type, language="en"
+    whisper_arch=whisper_arch,
+    device=device,
+    compute_type=compute_type,
+    language=language,
 )
+
 logging.info("next section loads pyannote auth token\n")
 animated_loading("it gives errors often. to begin debug, maybe try checking your huggingface.co token\n")
 time.sleep(3)
@@ -222,8 +236,11 @@ for video_file in os.listdir(input_folder):
         )
         logging.info("Diarization completed. Retrieved speaker segments.")
         
-        # Optionally, group segments by speaker if desired:
         speaker_groups = diarizer._group_segments_by_speaker(speaker_segments)
+
+        for segment in tqdm(speaker_segments, desc="Segmenting audio"):
+            # nothing here, it just steps the bar for each segment
+            pass
         
         # Now, iterate over the grouped segments. For example:
         for speaker, segments in speaker_groups.items():

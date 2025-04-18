@@ -1,4 +1,0 @@
-docker run --rm -it -v "/c/Users/austi/Desktop/orca-app/processmesempai:/app/processmesempai" -v "/c/Users/austi/Desktop/orca-app/bigtrouble:/app/bigtrouble" -v "/c/Users/austi/Desktop/orca-app/clips:/app/clips" orca:alpha
-
-
-not so much instructions as an example. still haven't really worked on this because i haven't deployed to the rest of the cluster yet (only testing locally rn, although cluster IS up and ready ;)
