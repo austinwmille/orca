@@ -6,6 +6,7 @@ from tqdm import tqdm
 import subprocess
 import threading
 import shutil
+import re
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -171,6 +172,7 @@ consoledivide(67)
 logging.info("setup completed.\n")
 animated_loading(f"Counting video files in '{input_folder}'...\n")
 time.sleep(2)
+
 # Count all video and (audio=not yet!) files in the input folder
 file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')))
 logging.info(f"\nwe will now begin processing {file_count} videos\n")
@@ -183,6 +185,23 @@ consoledivide(31)
 # this next line is for debugging the diarization pipeline step in the 'try' block'
 logging.getLogger('pyannote').setLevel(logging.DEBUG)
 
+def sanitize(name: str) -> str:
+    # replace any character that isn’t alphanumeric, dash, dot, or underscore with underscore
+    return re.sub(r'[^A-Za-z0-9\-\._]', '_', name)
+
+# 1) scan your input folder
+for original in os.listdir(input_folder):
+    # only touch media files
+    if not original.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')):
+        continue
+
+    safe_name = sanitize(original)
+    if safe_name != original:
+        os.rename(
+            os.path.join(input_folder, original),
+            os.path.join(input_folder, safe_name)
+        )
+
 # Process each video/audio file in the input folder
 for video_file in os.listdir(input_folder):
     if not video_file.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')):
@@ -190,9 +209,9 @@ for video_file in os.listdir(input_folder):
 
     # Define paths for each video/audio file
     input_video_path = os.path.join(input_folder, video_file)
-    video_base_name = os.path.splitext(os.path.basename(input_video_path))[0]
-    extracted_audio_path = os.path.join(temp_folder, f"{video_base_name}_audio.wav")
-    output_video_folder = os.path.join(output_folder, video_base_name)
+    base, _ext = os.path.splitext(video_file)
+    extracted_audio_path = os.path.join(temp_folder, f"{base}_audio.wav")
+    output_video_folder = os.path.join(output_folder, base)
     os.makedirs(output_video_folder, exist_ok=True)
 
     logging.info(f"Processing video/audio file: {input_video_path}")
@@ -278,7 +297,7 @@ for video_file in os.listdir(input_folder):
         #    continue
         #seen_clips.add(clip_key)
 
-        clip_filename = f"{video_base_name}_clip{i + 1}.mp4"
+        clip_filename = f"{safe_base}_clip{i + 1}.mp4"
         clip_output_path = os.path.join(output_video_folder, clip_filename)
 
         logging.info(f"Processing clip {i + 1}: {clip_key} -> {clip_output_path}")
