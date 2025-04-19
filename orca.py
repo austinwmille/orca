@@ -297,7 +297,7 @@ for video_file in os.listdir(input_folder):
         #    continue
         #seen_clips.add(clip_key)
 
-        clip_filename = f"{safe_base}_clip{i + 1}.mp4"
+        clip_filename = f"{base}_clip{i + 1}.mp4"
         clip_output_path = os.path.join(output_video_folder, clip_filename)
 
         logging.info(f"Processing clip {i + 1}: {clip_key} -> {clip_output_path}")
