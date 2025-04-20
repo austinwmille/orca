@@ -278,6 +278,14 @@ for video_file in os.listdir(input_folder):
     clipfinder = ClipFinder()
     clips = clipfinder.find_clips(transcription=transcription)
 
+    crops = resize(
+                video_file_path=input_video_path,
+                pyannote_auth_token=pyannote_auth_token,
+                aspect_ratio=(9, 16),
+                min_segment_duration=1.5,
+                samples_per_segment=11, # 13 is standard. lower numbers are faster at cost of accuracy
+            )
+
     # this is a fast and loose limit of the clip size to 5mins max (we should fix later!!)
     max_clip_duration = 300  # maximum clip duration in seconds (5 minutes)
     filtered_clips = [clip for clip in clips if (clip.end_time - clip.start_time) <= max_clip_duration]
@@ -297,44 +305,32 @@ for video_file in os.listdir(input_folder):
         #    continue
         #seen_clips.add(clip_key)
 
+        segs = [
+                  {
+                    "start_time": s.start_time,
+                    "end_time":   s.end_time,
+                    "x":          s.x,
+                    "y":          s.y,
+                  }
+                  for s in crops.segments
+                  if s.start_time >= clip.start_time and s.end_time <= clip.end_time
+                ]
+
         clip_filename = f"{base}_clip{i + 1}.mp4"
         clip_output_path = os.path.join(output_video_folder, clip_filename)
 
         logging.info(f"Processing clip {i + 1}: {clip_key} -> {clip_output_path}")
 
-        try:
-            # Perform resizing for the clip
-            crops = resize(
-                video_file_path=input_video_path,
-                pyannote_auth_token=pyannote_auth_token,
-                aspect_ratio=(9, 16),
-                min_segment_duration=clip.end_time - clip.start_time,
-                samples_per_segment=11, # 13 is standard. lower numbers are faster at cost of accuracy
-            )
+        media_editor = MediaEditor()
+        media_editor.resize_video(
+            original_video_file=media_file,
+            resized_video_file_path=clip_output_path,
+            width=crops.crop_width,
+            height=crops.crop_height,
+            segments=segs,
+        )
 
-            media_editor = MediaEditor()
-            media_editor.resize_video(
-                original_video_file=media_file,
-                resized_video_file_path=clip_output_path,
-                width=crops.crop_width,
-                height=crops.crop_height,
-                segments=[
-                    {
-                        "start_time": segment.start_time,
-                        "end_time": segment.end_time,
-                        "x": segment.x,
-                        "y": segment.y,
-                    }
-                    for segment in crops.segments
-                    if segment.start_time >= clip.start_time and segment.end_time <= clip.end_time
-                ],
-            )
-
-            logging.info(f"Resized clip {i + 1} saved to: {clip_output_path}")
-
-        except Exception as e:
-            logging.error(f"Error processing clip {i + 1}: {e}")
-            continue
+        logging.info(f"Resized clip {i + 1} saved to: {clip_output_path}")
 
     # Instead of moving the processed file to a separate folder, we leave it in place.
     logging.info("Processing complete for this video.")
