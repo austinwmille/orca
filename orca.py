@@ -282,7 +282,7 @@ for video_file in os.listdir(input_folder):
                 video_file_path=input_video_path,
                 pyannote_auth_token=pyannote_auth_token,
                 aspect_ratio=(9, 16),
-                min_segment_duration=1.5,
+                min_segment_duration=clip.end_time - clip.start_time,
                 samples_per_segment=11, # 13 is standard. lower numbers are faster at cost of accuracy
             )
 
@@ -305,6 +305,13 @@ for video_file in os.listdir(input_folder):
         #    continue
         #seen_clips.add(clip_key)
 
+        logging.info(f"Clip {i+1}: {clip.start_time:.3f}–{clip.end_time:.3f}")
+
+        for j, s in enumerate(crops.segments):
+            logging.info(
+              f"  Seg {j}: {s.start_time:.3f}–{s.end_time:.3f} @ ({s.x},{s.y})"
+            )
+        EPS = 0.05  # 50 ms of tolerance
         segs = [
                   {
                     "start_time": s.start_time,
@@ -313,13 +320,15 @@ for video_file in os.listdir(input_folder):
                     "y":          s.y,
                   }
                   for s in crops.segments
-                  if s.start_time >= clip.start_time and s.end_time <= clip.end_time
+                  if s.start_time >= clip.start_time - EPS and s.end_time <= clip.end_time + EPS
                 ]
 
         clip_filename = f"{base}_clip{i + 1}.mp4"
         clip_output_path = os.path.join(output_video_folder, clip_filename)
 
         logging.info(f"Processing clip {i + 1}: {clip_key} -> {clip_output_path}")
+        logging.info(f"Segments for clip {i+1}: {segs}")
+        logging.info(f"FFmpeg will write to: {clip_output_path}")
 
         media_editor = MediaEditor()
         media_editor.resize_video(

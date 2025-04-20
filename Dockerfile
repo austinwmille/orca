@@ -30,6 +30,14 @@ RUN cp /tmp/patched_asr.py \
 # clean up
 RUN rm /tmp/patched_asr.py
 
+# Copy patched editor.py into the container
+COPY cliaenv/editor.py /tmp/patched_editor.py
+
+# Overwrite the installed clipsai/media/editor.py then clean up
+RUN cp /tmp/patched_editor.py \
+     $(python3 -c "import clipsai, os; print(os.path.join(os.path.dirname(clipsai.__file__), 'media', 'editor.py'))") \
+    && rm /tmp/patched_editor.py
+
 # Copy the rest of the project into the container.
 COPY . .
 
