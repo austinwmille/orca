@@ -170,12 +170,12 @@ diarizer = Pipeline.from_pretrained(
 consoledivide(67)
 
 logging.info("setup completed.\n")
-animated_loading(f"Counting video files in '{input_folder}'...\n")
+animated_loading(f"Counting files in '{input_folder}'...\n")
 time.sleep(2)
 
 # Count all video and (audio=not yet!) files in the input folder
 file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')))
-logging.info(f"\nwe will now begin processing {file_count} videos\n")
+logging.info(f"\nwe will now begin processing {file_count} media files\n")
 time.sleep(1)
 
 logging.info("\nThe time required varies hugely on your computing hardware and selected parameters.\n")
@@ -278,14 +278,6 @@ for video_file in os.listdir(input_folder):
     clipfinder = ClipFinder()
     clips = clipfinder.find_clips(transcription=transcription)
 
-    crops = resize(
-                video_file_path=input_video_path,
-                pyannote_auth_token=pyannote_auth_token,
-                aspect_ratio=(9, 16),
-                min_segment_duration=clip.end_time - clip.start_time,
-                samples_per_segment=11, # 13 is standard. lower numbers are faster at cost of accuracy
-            )
-
     # this is a fast and loose limit of the clip size to 5mins max (we should fix later!!)
     max_clip_duration = 300  # maximum clip duration in seconds (5 minutes)
     filtered_clips = [clip for clip in clips if (clip.end_time - clip.start_time) <= max_clip_duration]
@@ -296,50 +288,62 @@ for video_file in os.listdir(input_folder):
         logging.info(f"Clip {i + 1}: Start={clip.start_time}, End={clip.end_time}")
 
     # Step 3: Resize each clip based on speaker focus
-    seen_clips = set()
-
     for i, clip in enumerate(clips):
-        clip_key = (clip.start_time, clip.end_time)
-        #if clip_key in seen_clips:
-        #    logging.info(f"Skipping duplicate clip: {clip_key}")
-        #    continue
-        #seen_clips.add(clip_key)
+        clip_filename = f"{base}_clip{i + 1}.mp4"
+        clip_output_path = os.path.join(output_video_folder, clip_filename)
+        logging.info(f"Processing clip {i + 1}: -> {clip_output_path}")
 
-        logging.info(f"Clip {i+1}: {clip.start_time:.3f}–{clip.end_time:.3f}")
-
-        for j, s in enumerate(crops.segments):
-            logging.info(
-              f"  Seg {j}: {s.start_time:.3f}–{s.end_time:.3f} @ ({s.x},{s.y})"
+        try:
+            # 1) figure out face‐focused crops for exactly this clip
+            crops = resize(
+                video_file_path=input_video_path,
+                pyannote_auth_token=pyannote_auth_token,
+                aspect_ratio=(9, 16),
+                min_segment_duration=clip.end_time - clip.start_time,
+                samples_per_segment=11, # 13 is standard. lower numbers are faster at cost of accuracy
             )
-        EPS = 0.05  # 50 ms of tolerance
-        segs = [
-                  {
+
+            # 2) build a proper list of segments (segs) within the clip bounds
+            segs = [
+                {
                     "start_time": s.start_time,
                     "end_time":   s.end_time,
                     "x":          s.x,
                     "y":          s.y,
-                  }
-                  for s in crops.segments
-                  if s.start_time >= clip.start_time - EPS and s.end_time <= clip.end_time + EPS
-                ]
+                }
+                for s in crops.segments
+                # small epsilon in case of off‑by‑ms
+                if s.start_time >= clip.start_time - 0.05
+                and s.end_time   <= clip.end_time   + 0.05
+            ]
+            logging.info(f"Segments for clip {i+1}: {segs}")
 
-        clip_filename = f"{base}_clip{i + 1}.mp4"
-        clip_output_path = os.path.join(output_video_folder, clip_filename)
+            media_editor = MediaEditor()
+            if not segs:
+                # no face boxes found ⇒ just trim the original media
+                media_editor.trim(
+                    media_file,
+                    clip.start_time,
+                    clip.end_time,
+                    clip_output_path,
+                    overwrite=True,
+                )
+            else:
+                # crop+concatenate the face‐focused sub‐segments
+                media_editor.resize_video(
+                    original_video_file=media_file,
+                    resized_video_file_path=clip_output_path,
+                    width=crops.crop_width,
+                    height=crops.crop_height,
+                    segments=segs,
+                    overwrite=True,
+                )
 
-        logging.info(f"Processing clip {i + 1}: {clip_key} -> {clip_output_path}")
-        logging.info(f"Segments for clip {i+1}: {segs}")
-        logging.info(f"FFmpeg will write to: {clip_output_path}")
+            logging.info(f"Resized clip {i + 1} saved to: {clip_output_path}")
 
-        media_editor = MediaEditor()
-        media_editor.resize_video(
-            original_video_file=media_file,
-            resized_video_file_path=clip_output_path,
-            width=crops.crop_width,
-            height=crops.crop_height,
-            segments=segs,
-        )
-
-        logging.info(f"Resized clip {i + 1} saved to: {clip_output_path}")
+        except Exception as e:
+            logging.error(f"Error processing clip {i + 1}: {e}")
+            continue
 
     # Instead of moving the processed file to a separate folder, we leave it in place.
     logging.info("Processing complete for this video.")
