@@ -940,9 +940,11 @@ class MediaEditor:
                 "-i",
                 media_paths_file.path,
                 # add to remove blank screen at beginning of output
-                "-vf",
-                "setpts=PTS-STARTPTS",
-                "-c", "copy",
+                "-vf", "setpts=PTS-STARTPTS",
+                "-c:v", "libx264",
+                "-crf", "18",
+                "-preset", "veryfast",
+                "-c:a", "aac",
                 concatenated_media_file_path,
             ],
             capture_output=True,
@@ -1368,7 +1370,7 @@ class MediaEditor:
         if start_time < 0:
             return "Start second ({} seconds) cannot be negative.".format(start_time)
         if end_time < 0:
-            return "End second ({} seconds) cannot be negative.".format
+            return "End second ({} seconds) cannot be negative.".format(end_time)
         if start_time > end_time:
             return (
                 "Start second ({} seconds) cannot exceed end second ({} seconds)."
