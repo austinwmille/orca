@@ -188,7 +188,7 @@ animated_loading(f"Counting files in '{input_folder}'...\n")
 time.sleep(2)
 
 # Count all video and (audio=not yet!) files in the input folder
-file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')))
+file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')))
 logging.info(f"\nwe will now begin processing {file_count} media files\n")
 time.sleep(1)
 
@@ -209,7 +209,7 @@ def ending_sequence(file_count, output_folder):
 # 1) scan your input folder
 for original in os.listdir(input_folder):
     # only touch media files
-    if not original.lower().endswith(('.mp4', '.mov', '.avi', '.mp3', '.wav')):
+    if not original.lower().endswith(('.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')):
         continue
 
     safe_name = sanitize(original)
@@ -222,7 +222,7 @@ for original in os.listdir(input_folder):
 try:
     # Process each video/audio file in the input folder
     for video_file in os.listdir(input_folder):
-        if not video_file.lower().endswith(('.mp4', '.mov', '.avi')):
+        if not video_file.lower().endswith(('.mp4', '.mov', '.avi', '.mkv')):
             continue
 
         # Define paths for each video/audio file
@@ -298,7 +298,7 @@ try:
         clips = clipfinder.find_clips(transcription=transcription)
 
         # this is a fast and loose limit of the clip size to 5mins max (we should fix later!!)
-        max_clip_duration = 300  # maximum clip duration in seconds (5 minutes)
+        max_clip_duration = 120  # maximum clip duration in seconds (5 minutes)
         filtered_clips = [clip for clip in clips if (clip.end_time - clip.start_time) <= max_clip_duration]
         clips = filtered_clips
 
@@ -308,7 +308,7 @@ try:
 
         # Step 3: Resize each clip based on speaker focus
         for i, clip in enumerate(clips):
-            clip_filename = f"{base}_clip{i + 1}.mp4"
+            clip_filename = f"{base}_clip{i + 1}{_ext}"
             clip_output_path = os.path.join(output_video_folder, clip_filename)
             logging.info(f"Processing clip {i + 1}: -> {clip_output_path}")
 
