@@ -29,7 +29,7 @@ os.makedirs(output_folder, exist_ok=True)
 # Create a log file in the log directory with a timestamped name
 log_filename = os.path.join(log_dir, f"log_{time.strftime('%Y%m%d_%H%M%S')}.txt")
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler(log_filename),  # Log to file
@@ -44,7 +44,7 @@ original_stdout = sys.stdout
 sys.stdout = open(log_filename, "a")
 sys.stderr = open(log_filename, "a")
 
-logging.getLogger().setLevel(logging.INFO)
+logging.getLogger().setLevel(logging.DEBUG)
 
 def on_exit():
     logging.info(">>> SCRIPT IS EXITING NOW <<<")
