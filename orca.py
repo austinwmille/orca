@@ -294,7 +294,7 @@ try:
         transcription = transcriber.transcribe(audio_file_path=extracted_audio_path)
 
         # Step 2: Find Engaging Clips
-        clipfinder = ClipFinder()
+        clipfinder = ClipFinder(model=st_model)
         clips = clipfinder.find_clips(transcription=transcription)
 
         # this is a fast and loose limit of the clip size to 5mins max (we should fix later!!)

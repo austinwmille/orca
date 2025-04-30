@@ -1,11 +1,11 @@
-line to run docker container. please edit in your own paths
+current line used to run docker container. please edit with your own paths
 
-docker run --rm -it --env-file "${PWD}\.env" -v "${PWD}\processmesempai:/app/processmesempai" -v "${PWD}\bigtrouble:/app/bigtrouble" -v "${PWD}\clips:/app/clips" -e INPUT_FOLDER=/app/processmesempai -e LOG_DIR=/app/bigtrouble -e OUTPUT_FOLDER=/app/clips orca:beta
+docker run --rm -it --env-file "${PWD}\.env" -v "${PWD}\processmesempai:/app/processmesempai" -v "${PWD}\bigtrouble:/app/bigtrouble" -v "${PWD}\clips:/app/clips" -v "${HOME}\.cache\huggingface:/root/.cache/huggingface" -v "${HOME}\.cache\torch:/root/.cache/torch" -e INPUT_FOLDER=/app/processmesempai -e LOG_DIR=/app/bigtrouble -e OUTPUT_FOLDER=/app/clips orca:beta
 
 --------------------------------------------
 nips' orca script (previously ctr+x)
 
-This application takes a video and extracts the audio. Using whisperX (https://github.com/m-bain/whisperX and https://arxiv.org/abs/2303.00747) it transcribes the audio. It then uses clipsai to analyze the transcript in an attempt to determine shifts in topic and segments which could function as stand-alone, coherent clips (https://www.clipsai.com/references/clip and this arxiv paper https://arxiv.org/abs/2106.12978). After this it performs diarization using pyannote (https://github.com/pyannote/pyannote-audio) to determine speakers in the audio file. This data is stored in a dictionary containing speaker_number and timestamps. It will (i'm not an expert on this; please see the arxiv papers) use the audio, its transcription, arbitrary frames, changes in content and subject matter, voice inflections/pauses, et cetera, to trim the video into clips AND resize the clips to a given aspect ratio while keeping the speaker in the frame.
+This application takes a video and extracts the audio. Using whisperX (https://github.com/m-bain/whisperX and https://arxiv.org/abs/2303.00747) it transcribes the audio. It then uses clipsai to analyze the transcript in an attempt to determine shifts in topic and segments which could function as stand-alone, coherent clips (https://www.clipsai.com/references/clip and this arxiv paper https://arxiv.org/abs/2106.12978). After this it performs diarization using pyannote (https://github.com/pyannote/pyannote-audio) to determine speakers in the audio file. This data is stored in a dictionary containing speaker_number and timestamps. It will (i'm not an expert on this; please see the arxiv papers or literally anyone else who knows what llm diarization means) use the audio, its transcription, arbitrary frames, changes in content and subject matter, voice inflections/pauses, et cetera, to trim the video into clips AND resize the clips to a given aspect ratio while keeping the speaker in the frame.
 
 This is pretty awesome that it works at all. And after playing with it a lot it works pretty fucking well actually, so don't give up. 
 
