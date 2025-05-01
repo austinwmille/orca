@@ -100,7 +100,7 @@ def animated_loading(msg="Loading"):
     spinner_running = True
     threading.Thread(target=spinner, args=(msg,), daemon=True).start()
 
-logging.info("\nscript codename: orca\n")
+logging.info("\nscript codename: orca v.gamma\n")
 
 # Animated loading with interactivity
 animated_loading("The initial loading may take a while...\n\n")
@@ -142,7 +142,7 @@ logging.info("Selecting LLMs and parameters. For more details, visit: https://gi
 time.sleep(2)
 
 # Set up custom whisperx model
-whisper_arch = "medium"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
+whisper_arch = "small"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
 device = "cpu"         # Device for computation: Options include "cpu", "cuda" (for GPU)
 compute_type = "int8"  # Data type for computation: Options include "float16", "float32", "int8"
 language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
@@ -157,12 +157,21 @@ custom_model = whisperx.load_model(
 )
 
 from sentence_transformers import SentenceTransformer
+import torch
+from clipsai.clip.text_embedder import TextEmbedder
 
-#st_model = SentenceTransformer("all-roberta-large-v1", device=device) # the larger model was the one used in the package by default
+#large_model = SentenceTransformer("all-roberta-large-v1", device=device) # the larger model was the one used in the package by default
 small_name = "all-MiniLM-L6-v2"   # ~80 MB vs 1.9 GB
 st_model = SentenceTransformer(small_name, device=device)
-# Later, hand this model to ClipFinder
-# clipfinder = ClipFinder(model=st_model)
+
+# override the embed_sentences method to use your MiniLM
+def embed_with_minilm(self, sentences: list[str]) -> torch.Tensor:
+    # encode with your small model, then wrap in torch.Tensor
+    return torch.tensor(st_model.encode(sentences))
+
+TextEmbedder.embed_sentences = embed_with_minilm
+
+logging.info(f"patched TextEmbedder now uses: {TextEmbedder().__class__.__name__}, embed_sentences from {TextEmbedder.embed_sentences.__qualname__}")
 
 logging.info("next section loads pyannote auth token\n")
 animated_loading("it gives errors often. to begin debug, maybe try checking your huggingface.co token\n")
@@ -269,7 +278,7 @@ try:
             # Call the diarize method, which returns a list of segment dictionaries.
             speaker_segments = diarizer.diarize(
                 audio_file=audio_file_obj,
-                min_segment_duration=1.5,
+                min_segment_duration=2,
                 time_precision=6,
             )
             logging.info("Diarization completed. Retrieved speaker segments.")
@@ -294,11 +303,11 @@ try:
         transcription = transcriber.transcribe(audio_file_path=extracted_audio_path)
 
         # Step 2: Find Engaging Clips
-        clipfinder = ClipFinder(model=st_model)
+        clipfinder = ClipFinder(device=device)
         clips = clipfinder.find_clips(transcription=transcription)
 
         # this is a fast and loose limit of the clip size to 5mins max (we should fix later!!)
-        max_clip_duration = 120  # maximum clip duration in seconds (5 minutes)
+        max_clip_duration = 180  # maximum clip duration in seconds (5 minutes)
         filtered_clips = [clip for clip in clips if (clip.end_time - clip.start_time) <= max_clip_duration]
         clips = filtered_clips
 
