@@ -4,6 +4,7 @@ FROM python:3.9-slim
 # Install system dependencies (ffmpeg and ffprobe are essential).
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
+    libavutil-dev \
     libsm6 \
     libxext6 \
     libmagic1 \
@@ -36,7 +37,7 @@ COPY . .
 # Expose any ports required for OAuth; for example, port 8080.
 EXPOSE 8080
 
-# Set an environment variable to prevent buffering.
+# Set an environment variable to prevent buffering. This allows immediate print to console during run.
 ENV PYTHONUNBUFFERED=1
 
 # Command to run your ctrx script.

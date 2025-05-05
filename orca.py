@@ -387,7 +387,9 @@ try:
         # Instead of moving the processed file to a separate folder, we leave it in place.
         logging.info("Processing complete for this video.")
 
-        
+        if os.path.exists(input_video_path):
+            os.remove(input_video_path)
+            logging.info(f"Deleted original video: {input_video_path}")
 
 except Exception as e:
     logging.error("Uncaught exception, dumping traceback:")

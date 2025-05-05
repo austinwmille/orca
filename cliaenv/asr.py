@@ -326,15 +326,18 @@ def load_model(whisper_arch,
         "hallucination_silence_threshold": None,
         "multilingual":True,
         "hotwords":[
-                "truth", "woke", "freedom", "agenda", "secret", "cancel culture",
-                "triggered", "destroyed", "identity", "socialism", "leftist",
-                "liberal", "America", "China", "border", "winning", "crypto",
-                "gender", "race", "media", "censorship", "AI", "Elon Musk",
-                "Big Tech", "aliens", "MAGA", "debate", "facts", "propaganda",
-                "patriotism", "personal growth", "feminism", "masculinity",
-                "chaos", "order", "discipline", "shocking", "mind-blowing",
-                "outrage", "breaking", "revealed", "bombshell", "ultimate truth"
+                "chaos", "mind-blowing", "winning", "destroyed"
             ]
+#        "hotwords":[
+#                "truth", "woke", "freedom", "agenda", "secret", "cancel culture",
+#                "triggered", "destroyed", "identity", "socialism", "leftist",
+#                "liberal", "America", "China", "border", "winning", "crypto",
+#                "gender", "race", "media", "censorship", "AI", "Elon Musk",
+#                "Big Tech", "aliens", "MAGA", "debate", "facts", "propaganda",
+#                "patriotism", "personal growth", "feminism", "masculinity",
+#                "chaos", "order", "discipline", "shocking", "mind-blowing",
+#                "outrage", "breaking", "revealed", "bombshell", "ultimate truth"
+#            ]
     }
 
     if asr_options is not None:
