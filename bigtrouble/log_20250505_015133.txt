@@ -1,0 +1,193 @@
+2025-05-05 01:51:33,024 - INFO - 
+==================================================
+
+2025-05-05 01:51:33,025 - INFO - 
+script codename: orca v.gamma
+
+2025-05-05 01:51:33,026 - INFO - 
+===============================================================================
+
+2025-05-05 01:51:38,088 - DEBUG - Loading FFmpeg6
+2025-05-05 01:51:38,095 - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/usr/local/lib/python3.9/site-packages/torch/_ops.py", line 933, in load_library
+    ctypes.CDLL(path)
+  File "/usr/local/lib/python3.9/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-05-05 01:51:38,099 - DEBUG - Loading FFmpeg5
+2025-05-05 01:51:39,445 - DEBUG - Successfully loaded FFmpeg5
+2025-05-05 01:51:54,528 - DEBUG - matplotlib data path: /usr/local/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-05 01:51:54,557 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-05-05 01:51:54,565 - DEBUG - interactive is False
+2025-05-05 01:51:54,567 - DEBUG - platform is linux
+2025-05-05 01:52:00,066 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-05-05 01:52:00,070 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+2025-05-05 01:52:06,984 - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2025-05-05 01:52:06,985 - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2025-05-05 01:52:06,986 - DEBUG - Registered checkpoint save hook for save
+2025-05-05 01:52:06,987 - DEBUG - Registered checkpoint load hook for load
+2025-05-05 01:52:07,403 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-05-05 01:52:07,404 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-05-05 01:52:07,405 - DEBUG - Registered checkpoint save hook for _save
+2025-05-05 01:52:07,406 - DEBUG - Registered checkpoint load hook for _recover
+2025-05-05 01:52:23,022 - INFO - 
+===============================================================================
+
+2025-05-05 01:52:23,023 - INFO - packages loaded
+
+2025-05-05 01:52:25,033 - INFO - setting up folders...
+
+2025-05-05 01:52:26,038 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-05-05 01:52:27,043 - INFO - Input folder set to '/app/processmesempai'
+2025-05-05 01:52:27,044 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-05-05 01:52:29,048 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-05-05 01:52:31,052 - INFO - whisper_arch = 'small'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-05-05 01:52:31,060 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-05 01:52:31,804 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-small/revision/main HTTP/11" 200 1906
+2025-05-05 01:52:48,187 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-05 01:52:48,468 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-05 01:52:48,497 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-05-05 01:52:48,587 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-05 01:52:48,751 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-05-05 01:52:48,870 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-05 01:52:48,986 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+2025-05-05 01:52:49,123 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-05-05 01:52:49,260 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-05 01:52:49,366 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-05 01:52:49,531 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+2025-05-05 01:52:59,147 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-05 01:52:59,729 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6739
+2025-05-05 01:52:59,835 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6739
+2025-05-05 01:52:59,856 - INFO - Use pytorch device_name: cpu
+2025-05-05 01:52:59,856 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-05-05 01:52:59,908 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-05 01:53:00,035 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-05 01:53:00,149 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-05-05 01:53:00,294 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-05 01:53:00,419 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-05 01:53:00,554 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-05 01:53:00,662 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-05-05 01:54:16,048 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-05 01:54:16,433 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3793
+2025-05-05 01:54:16,559 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3793
+2025-05-05 01:54:16,577 - INFO - patched TextEmbedder now uses: TextEmbedder, embed_sentences from embed_with_minilm
+2025-05-05 01:54:16,578 - INFO - next section loads pyannote auth token
+
+2025-05-05 01:54:19,579 - INFO - 
+===================================================================
+
+2025-05-05 01:54:20,122 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-05-05 01:54:20,262 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-05-05 01:54:20,359 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-05-05 01:54:20,385 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-05 01:54:20,618 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-05 01:54:20,755 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-05-05 01:54:20,795 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:20,854 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-05-05 01:54:20,893 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-05-05 01:54:20,904 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:20,977 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-05-05 01:54:21,101 - DEBUG - Registered checkpoint save hook for _save
+2025-05-05 01:54:21,101 - DEBUG - Registered checkpoint load hook for _load
+2025-05-05 01:54:21,102 - DEBUG - Registered parameter transfer hook for _load
+2025-05-05 01:54:21,324 - DEBUG - Registered checkpoint save hook for save
+2025-05-05 01:54:21,325 - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-05-05 01:54:21,328 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-05-05 01:54:21,342 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:21,544 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-05-05 01:54:21,572 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-05-05 01:54:21,578 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-05 01:54:21,591 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:21,654 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-05-05 01:54:21,703 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-05-05 01:54:21,709 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-05 01:54:21,721 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:21,832 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-05-05 01:54:21,863 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-05-05 01:54:21,869 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-05 01:54:21,882 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:21,942 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-05-05 01:54:21,969 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-05-05 01:54:21,975 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-05 01:54:21,976 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-05-05 01:54:21,977 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-05 01:54:21,977 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-05 01:54:21,978 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-05 01:54:21,978 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-05 01:54:23,122 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-05 01:54:23,228 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-05-05 01:54:23,370 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-05-05 01:54:23,479 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-05-05 01:54:23,540 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-05 01:54:23,671 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-05 01:54:23,806 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-05-05 01:54:23,845 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:23,909 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-05-05 01:54:23,955 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-05-05 01:54:23,965 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:24,043 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-05-05 01:54:24,343 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-05-05 01:54:24,356 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:24,410 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-05-05 01:54:24,454 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-05-05 01:54:24,460 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-05 01:54:24,469 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:24,525 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-05-05 01:54:24,578 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-05-05 01:54:24,586 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-05 01:54:24,599 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:24,653 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-05-05 01:54:24,703 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-05-05 01:54:24,710 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-05 01:54:24,719 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-05 01:54:24,780 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-05-05 01:54:24,829 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-05-05 01:54:24,835 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-05 01:54:24,836 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-05-05 01:54:24,836 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-05 01:54:24,837 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-05 01:54:24,838 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-05 01:54:24,838 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-05 01:54:25,692 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-05 01:54:25,698 - INFO - 
+===================================================================
+
+2025-05-05 01:54:25,699 - INFO - setup completed.
+
+2025-05-05 01:54:27,707 - INFO - 
+we will now begin processing 0 media files
+
+2025-05-05 01:54:28,709 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-05-05 01:54:28,710 - INFO - Good luck ;/
+
+2025-05-05 01:54:28,711 - INFO - 
+===============================
+
+2025-05-05 01:54:28,722 - INFO - 
+Processing complete
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+2025-05-05 01:54:28,742 - INFO - >>> SCRIPT IS EXITING NOW <<<

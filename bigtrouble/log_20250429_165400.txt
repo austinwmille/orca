@@ -1,0 +1,551 @@
+2025-04-29 16:54:00,654 - INFO - 
+==================================================
+
+2025-04-29 16:54:00,655 - INFO - 
+script codename: orca
+
+2025-04-29 16:54:00,656 - INFO - 
+===============================================================================
+
+2025-04-29 16:54:47,242 - DEBUG - Loading FFmpeg6
+2025-04-29 16:54:47,300 - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/usr/local/lib/python3.9/site-packages/torch/_ops.py", line 933, in load_library
+    ctypes.CDLL(path)
+  File "/usr/local/lib/python3.9/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-04-29 16:54:47,305 - DEBUG - Loading FFmpeg5
+2025-04-29 16:54:51,372 - DEBUG - Successfully loaded FFmpeg5
+2025-04-29 16:55:07,071 - DEBUG - matplotlib data path: /usr/local/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-04-29 16:55:07,141 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-04-29 16:55:07,204 - DEBUG - interactive is False
+2025-04-29 16:55:07,205 - DEBUG - platform is linux
+2025-04-29 16:55:12,385 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-04-29 16:55:12,389 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+2025-04-29 16:55:24,840 - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2025-04-29 16:55:24,841 - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2025-04-29 16:55:24,843 - DEBUG - Registered checkpoint save hook for save
+2025-04-29 16:55:24,843 - DEBUG - Registered checkpoint load hook for load
+2025-04-29 16:55:25,214 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-04-29 16:55:25,215 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-29 16:55:25,217 - DEBUG - Registered checkpoint save hook for _save
+2025-04-29 16:55:25,217 - DEBUG - Registered checkpoint load hook for _recover
+2025-04-29 16:55:39,837 - INFO - 
+===============================================================================
+
+2025-04-29 16:55:39,838 - INFO - packages loaded
+
+2025-04-29 16:55:41,840 - INFO - setting up folders...
+
+2025-04-29 16:55:42,842 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-29 16:55:43,844 - INFO - Input folder set to '/app/processmesempai'
+2025-04-29 16:55:43,845 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-29 16:55:45,848 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-29 16:55:47,850 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-29 16:55:47,855 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 16:55:48,056 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-medium/revision/main HTTP/11" 200 2140
+2025-04-29 16:55:48,129 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 16:55:48,133 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 16:55:48,139 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 16:55:48,146 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 16:55:48,238 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/vocabulary.txt HTTP/11" 200 0
+2025-04-29 16:55:48,239 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/model.bin HTTP/11" 302 0
+2025-04-29 16:55:48,254 - DEBUG - Attempting to acquire lock 140558699617632 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 16:55:48,254 - DEBUG - Attempting to acquire lock 140558699651856 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae.lock
+2025-04-29 16:55:48,255 - DEBUG - Lock 140558699617632 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 16:55:48,255 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/tokenizer.json HTTP/11" 200 0
+2025-04-29 16:55:48,256 - DEBUG - Lock 140558699651856 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae.lock
+2025-04-29 16:55:48,260 - DEBUG - Attempting to acquire lock 140558699653920 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 16:55:48,264 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-04-29 16:55:48,265 - DEBUG - Lock 140558699653920 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 16:55:48,304 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/config.json HTTP/11" 200 0
+2025-04-29 16:55:48,306 - DEBUG - Attempting to acquire lock 140554474811008 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/242aa06a480a7b5509375c645097e87af5136774.lock
+2025-04-29 16:55:48,306 - DEBUG - Lock 140554474811008 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/242aa06a480a7b5509375c645097e87af5136774.lock
+2025-04-29 16:55:48,313 - DEBUG - https://huggingface.co:443 "GET /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/tokenizer.json HTTP/11" 200 2203239
+2025-04-29 16:55:48,360 - DEBUG - https://huggingface.co:443 "GET /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/config.json HTTP/11" 200 2257
+2025-04-29 16:55:48,372 - DEBUG - Attempting to release lock 140554474811008 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/242aa06a480a7b5509375c645097e87af5136774.lock
+2025-04-29 16:55:48,373 - DEBUG - Lock 140554474811008 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/242aa06a480a7b5509375c645097e87af5136774.lock
+2025-04-29 16:55:48,413 - DEBUG - https://huggingface.co:443 "GET /Systran/faster-whisper-medium/resolve/08e178d48790749d25932bbc082711ddcfdfbc4f/vocabulary.txt HTTP/11" 200 459861
+2025-04-29 16:55:48,464 - DEBUG - Attempting to release lock 140558699653920 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 16:55:48,464 - DEBUG - Lock 140558699653920 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 16:55:48,485 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/655f20aef4be8787c8e44ca2/4f4fbde9ef3dc7957f5a4474dd7399bf1d4f87ff951e6e4ce5c366d2ad91f427?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250429%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250429T163917Z&X-Amz-Expires=3600&X-Amz-Signature=16df1bc3d51fc04ac09a3662a52f3fb4694b028213b75c61aad435719f60c77b&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&response-content-type=application%2Foctet-stream&x-id=GetObject&Expires=1745948357&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0ODM1N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NTVmMjBhZWY0YmU4Nzg3YzhlNDRjYTIvNGY0ZmJkZTllZjNkYzc5NTdmNWE0NDc0ZGQ3Mzk5YmYxZDRmODdmZjk1MWU2ZTRjZTVjMzY2ZDJhZDkxZjQyNyoifV19&Signature=S-sO0lihzr2QqEoZqs2K03mOkMxP5MzmRB28GqgkPUhk7G6hflB9T89UQ1Ac-~PLlJRPmBQxdvEWePgyJn8ybxxzhVHR4uvXMm8IVXdcbYAXpYjyepKLQkXXTPWo71Cgp0LBFREal3U9TP3Rk6V1pXg25A-pyJnqi5jCIxYx3cuSU8Gbad3mTwUbSb2Pncfu3L23PxQFPp94T9KcAfyTA8DVc24XlqYubRGMppA5P86xNAb2FP3uQvDI5uZ22FpaymZaE-clob1ypjesm9xM~gt8KmBLyRrYPjpcV4BpgtnsQymxEkvQztKVRtWZaCOXt-e2V4akllnRphsj~9cXwA__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/11" 200 1527906378
+2025-04-29 16:55:48,543 - DEBUG - Attempting to release lock 140558699617632 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 16:55:48,544 - DEBUG - Lock 140558699617632 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 16:57:17,606 - DEBUG - Attempting to release lock 140558699651856 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae.lock
+2025-04-29 16:57:17,606 - DEBUG - Lock 140558699651856 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-medium/9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae.lock
+2025-04-29 16:57:20,180 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-04-29 16:57:20,643 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-04-29 16:57:20,676 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-29 16:57:20,931 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-29 16:57:20,979 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-04-29 16:57:20,989 - DEBUG - Attempting to acquire lock 140558696723456 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 16:57:20,991 - DEBUG - Lock 140558696723456 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 16:57:21,040 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 349
+2025-04-29 16:57:21,044 - DEBUG - Attempting to release lock 140558696723456 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 16:57:21,045 - DEBUG - Lock 140558696723456 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 16:57:21,086 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-04-29 16:57:21,088 - DEBUG - Attempting to acquire lock 140558696723120 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 16:57:21,089 - DEBUG - Lock 140558696723120 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 16:57:21,136 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 116
+2025-04-29 16:57:21,138 - DEBUG - Attempting to release lock 140558696723120 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 16:57:21,139 - DEBUG - Lock 140558696723120 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 16:57:21,183 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+2025-04-29 16:57:21,185 - DEBUG - Attempting to acquire lock 140558696723696 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/58d4a9a45664eb9e12de9549c548c09b6134c17f.lock
+2025-04-29 16:57:21,186 - DEBUG - Lock 140558696723696 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/58d4a9a45664eb9e12de9549c548c09b6134c17f.lock
+2025-04-29 16:57:21,237 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 10454
+2025-04-29 16:57:21,239 - DEBUG - Attempting to release lock 140558696723696 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/58d4a9a45664eb9e12de9549c548c09b6134c17f.lock
+2025-04-29 16:57:21,240 - DEBUG - Lock 140558696723696 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/58d4a9a45664eb9e12de9549c548c09b6134c17f.lock
+2025-04-29 16:57:21,286 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-04-29 16:57:21,332 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-04-29 16:57:21,334 - DEBUG - Attempting to acquire lock 140558697207936 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 16:57:21,335 - DEBUG - Lock 140558697207936 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 16:57:21,379 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 53
+2025-04-29 16:57:21,392 - DEBUG - Attempting to release lock 140558697207936 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 16:57:21,393 - DEBUG - Lock 140558697207936 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 16:57:21,442 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-04-29 16:57:21,530 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+2025-04-29 16:57:21,532 - DEBUG - Attempting to acquire lock 140558697209472 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+2025-04-29 16:57:21,532 - DEBUG - Lock 140558697209472 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+2025-04-29 16:57:21,578 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 612
+2025-04-29 16:57:21,580 - DEBUG - Attempting to release lock 140558697209472 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+2025-04-29 16:57:21,581 - DEBUG - Lock 140558697209472 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/72b987fd805cfa2b58c4c8c952b274a11bfd5a00.lock
+2025-04-29 16:57:23,303 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors HTTP/11" 302 0
+2025-04-29 16:57:23,305 - DEBUG - Attempting to acquire lock 140558695643648 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+2025-04-29 16:57:23,306 - DEBUG - Lock 140558695643648 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+2025-04-29 16:57:23,309 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-04-29 16:57:23,567 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/621ffdc136468d709f180294/789fdf16a3e59f4fbfb6002967ecee539a198dadb5be74ca549aa7dc9b1b55fb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250429%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250429T163842Z&X-Amz-Expires=3600&X-Amz-Signature=7e3343cdfa1f067174664f60433d34a87d55c745a0ab9ede4d3118fe1f056663&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-id=GetObject&Expires=1745948322&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0ODMyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MjFmZmRjMTM2NDY4ZDcwOWYxODAyOTQvNzg5ZmRmMTZhM2U1OWY0ZmJmYjYwMDI5NjdlY2VlNTM5YTE5OGRhZGI1YmU3NGNhNTQ5YWE3ZGM5YjFiNTVmYioifV19&Signature=fb2IWikyfNG~8ACYKy9Ccz54rHDZ5lnGuhql6PeOsYpQEqgSSG5hEya1wLon~6WMJ9Ugg8-tB9GypzBA6NpMpwnIYJlIL7Nv4f7Auuj8D0JZqxx6JRTLBER0Dh3~wijOtJrOlliJRv8buyYYPlXej741WqkgpVaNtFOFTasaQ5gUzyOfCYkb5BjjtED3G0r8Zp0H14su63j-RyHk30ccBdhFJ8kui-d4-z7PAi4kSdvKw6XrJOvWs0-Uykv2jnWIRdoO2zU0ZPAtfTYWvNy1TUYuvoJaR2poQF-ee~ARoJdaQaedImB1NLrx52GWncuUlK~8WatuX9R2Ruzkrmpu8g__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/11" 200 90868376
+2025-04-29 16:57:27,082 - DEBUG - Attempting to release lock 140558695643648 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+2025-04-29 16:57:27,082 - DEBUG - Lock 140558695643648 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db.lock
+2025-04-29 16:57:27,263 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-04-29 16:57:27,265 - DEBUG - Attempting to acquire lock 140558695643648 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+2025-04-29 16:57:27,265 - DEBUG - Lock 140558695643648 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+2025-04-29 16:57:27,331 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 350
+2025-04-29 16:57:27,333 - DEBUG - Attempting to release lock 140558695643648 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+2025-04-29 16:57:27,334 - DEBUG - Lock 140558695643648 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/c79f2b6a0cea6f4b564fed1938984bace9d30ff0.lock
+2025-04-29 16:57:27,379 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/11" 200 0
+2025-04-29 16:57:27,380 - DEBUG - Attempting to acquire lock 140558694136416 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2025-04-29 16:57:27,381 - DEBUG - Lock 140558694136416 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2025-04-29 16:57:27,430 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt HTTP/11" 200 231508
+2025-04-29 16:57:27,475 - DEBUG - Attempting to release lock 140558694136416 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2025-04-29 16:57:27,476 - DEBUG - Lock 140558694136416 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/fb140275c155a9c7c5a3b3e0e77a9e839594a938.lock
+2025-04-29 16:57:27,527 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/11" 200 0
+2025-04-29 16:57:27,528 - DEBUG - Attempting to acquire lock 140558693393840 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+2025-04-29 16:57:27,529 - DEBUG - Lock 140558693393840 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+2025-04-29 16:57:27,578 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json HTTP/11" 200 466247
+2025-04-29 16:57:27,611 - DEBUG - Attempting to release lock 140558693393840 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+2025-04-29 16:57:27,611 - DEBUG - Lock 140558693393840 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/cb202bfe2e3c98645018a6d12f182a434c9d3e02.lock
+2025-04-29 16:57:27,659 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json HTTP/11" 404 0
+2025-04-29 16:57:27,701 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/11" 200 0
+2025-04-29 16:57:27,702 - DEBUG - Attempting to acquire lock 140558693393456 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+2025-04-29 16:57:27,703 - DEBUG - Lock 140558693393456 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+2025-04-29 16:57:27,749 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json HTTP/11" 200 112
+2025-04-29 16:57:27,752 - DEBUG - Attempting to release lock 140558693393456 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+2025-04-29 16:57:27,752 - DEBUG - Lock 140558693393456 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/e7b0375001f109a6b8873d756ad4f7bbb15fbaa5.lock
+2025-04-29 16:57:27,840 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6766
+2025-04-29 16:57:27,844 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 16:57:27,974 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling/config.json HTTP/11" 200 0
+2025-04-29 16:57:27,976 - DEBUG - Attempting to acquire lock 140558694337744 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+2025-04-29 16:57:27,977 - DEBUG - Lock 140558694337744 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+2025-04-29 16:57:28,020 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-MiniLM-L6-v2/resolve/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling/config.json HTTP/11" 200 190
+2025-04-29 16:57:28,025 - DEBUG - Attempting to release lock 140558694337744 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+2025-04-29 16:57:28,026 - DEBUG - Lock 140558694337744 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-MiniLM-L6-v2/d1514c3162bbe87b343f565fadc62e6c06f04f03.lock
+2025-04-29 16:57:28,078 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6766
+2025-04-29 16:57:28,083 - INFO - next section loads pyannote auth token
+
+2025-04-29 16:57:34,421 - INFO - 
+===================================================================
+
+2025-04-29 16:57:34,508 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-04-29 16:57:34,564 - DEBUG - Attempting to acquire lock 140558696723696 on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization/f9e1fc93c4458ec26993785b4b43c7e309bad03f.lock
+2025-04-29 16:57:34,565 - DEBUG - Lock 140558696723696 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization/f9e1fc93c4458ec26993785b4b43c7e309bad03f.lock
+2025-04-29 16:57:34,635 - DEBUG - https://huggingface.co:443 "GET /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 500
+2025-04-29 16:57:34,674 - DEBUG - Attempting to release lock 140558696723696 on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization/f9e1fc93c4458ec26993785b4b43c7e309bad03f.lock
+2025-04-29 16:57:34,675 - DEBUG - Lock 140558696723696 released on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization/f9e1fc93c4458ec26993785b4b43c7e309bad03f.lock
+2025-04-29 16:57:34,740 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-04-29 16:57:34,748 - DEBUG - Attempting to acquire lock 140558693395616 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/0b5b3216d60a2d32fc086b47ea8c67589aaeb26b7e07fcbe620d6d0b83e209ea.lock
+2025-04-29 16:57:34,748 - DEBUG - Lock 140558693395616 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/0b5b3216d60a2d32fc086b47ea8c67589aaeb26b7e07fcbe620d6d0b83e209ea.lock
+2025-04-29 16:57:34,753 - DEBUG - Starting new HTTPS connection (1): cdn-lfs.hf.co:443
+2025-04-29 16:57:35,021 - DEBUG - https://cdn-lfs.hf.co:443 "GET /pyannote/segmentation/0b5b3216d60a2d32fc086b47ea8c67589aaeb26b7e07fcbe620d6d0b83e209ea?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1745948555&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0ODU1NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9weWFubm90ZS9zZWdtZW50YXRpb24vMGI1YjMyMTZkNjBhMmQzMmZjMDg2YjQ3ZWE4YzY3NTg5YWFlYjI2YjdlMDdmY2JlNjIwZDZkMGI4M2UyMDllYT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=itmIPeA~DHejEHvklsMAImPaSMn7h6RZ0EWr3z6Tq6VCf1IhpZP1na6kWWJDUa9uZ6AwTWnJVDgxlF~CvRZuwD8St9GKhV~~F0eacp5oTDH~amgQgmehXGe8muT7jrfe4EB-UM~Wk-Hiw3W4esvDpO~3Tp73RjardblPj7BPrhSlfdPxEAck~MD2HZttRKG1rGFxaNQmmYD66ewm5-~LhOBN0v9hOsJCOW6hwqqcvllo5rS~cL1w8lrAN-j2jekWBkxOj5D03jxHtKE-HsJx9dyKeRNSiMkOBnUt2yl35xqP3Cb1OAh~GVgQM8N2u8piTqYRk105jT4Ox6-tAQdZeA__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/11" 200 17719103
+2025-04-29 16:57:35,852 - DEBUG - Attempting to release lock 140558693395616 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/0b5b3216d60a2d32fc086b47ea8c67589aaeb26b7e07fcbe620d6d0b83e209ea.lock
+2025-04-29 16:57:35,853 - DEBUG - Lock 140558693395616 released on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/0b5b3216d60a2d32fc086b47ea8c67589aaeb26b7e07fcbe620d6d0b83e209ea.lock
+2025-04-29 16:57:35,904 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-04-29 16:57:35,905 - DEBUG - Attempting to acquire lock 140558693395760 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/3ad7b756881851b5ed1e58231cd3fac2b35bbfd8.lock
+2025-04-29 16:57:35,906 - DEBUG - Lock 140558693395760 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/3ad7b756881851b5ed1e58231cd3fac2b35bbfd8.lock
+2025-04-29 16:57:35,958 - DEBUG - https://huggingface.co:443 "GET /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 318
+2025-04-29 16:57:35,960 - DEBUG - Attempting to release lock 140558693395760 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/3ad7b756881851b5ed1e58231cd3fac2b35bbfd8.lock
+2025-04-29 16:57:35,961 - DEBUG - Lock 140558693395760 released on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation/3ad7b756881851b5ed1e58231cd3fac2b35bbfd8.lock
+2025-04-29 16:57:35,962 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-04-29 16:57:35,986 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-04-29 16:57:36,012 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-29 16:57:36,035 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:36,079 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-04-29 16:57:36,153 - DEBUG - Attempting to acquire lock 140558693393024 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/70e4cd0beb74ca08a2df9de6bd79d938670a4d15.lock
+2025-04-29 16:57:36,154 - DEBUG - Lock 140558693393024 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/70e4cd0beb74ca08a2df9de6bd79d938670a4d15.lock
+2025-04-29 16:57:36,213 - DEBUG - https://huggingface.co:443 "GET /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 1919
+2025-04-29 16:57:36,217 - DEBUG - Attempting to release lock 140558693393024 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/70e4cd0beb74ca08a2df9de6bd79d938670a4d15.lock
+2025-04-29 16:57:36,218 - DEBUG - Lock 140558693393024 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/70e4cd0beb74ca08a2df9de6bd79d938670a4d15.lock
+2025-04-29 16:57:36,218 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-04-29 16:57:36,220 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:36,268 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-04-29 16:57:36,330 - DEBUG - Registered checkpoint save hook for _save
+2025-04-29 16:57:36,330 - DEBUG - Registered checkpoint load hook for _load
+2025-04-29 16:57:36,331 - DEBUG - Registered parameter transfer hook for _load
+2025-04-29 16:57:36,637 - DEBUG - Registered checkpoint save hook for save
+2025-04-29 16:57:36,638 - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-29 16:57:36,641 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-04-29 16:57:36,641 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:36,693 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-04-29 16:57:36,695 - DEBUG - Attempting to acquire lock 140558693395184 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2.lock
+2025-04-29 16:57:36,695 - DEBUG - Lock 140558693395184 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2.lock
+2025-04-29 16:57:36,711 - DEBUG - https://cdn-lfs.hf.co:443 "GET /speechbrain/spkrec-ecapa-voxceleb/0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27embedding_model.ckpt%3B+filename%3D%22embedding_model.ckpt%22%3B&Expires=1745949456&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0OTQ1Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zcGVlY2hicmFpbi9zcGtyZWMtZWNhcGEtdm94Y2VsZWIvMDU3NWNiNjQ4NDVlNmI5YTEwZGI5YmNiNzRkNWFjMzJiMzI2YjhkYzkwMzUyNjcxZDM0NWUyZWUzZDAxMjZhMj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=PsHF34xu5c7kSJ7B4iSW8pyGQ3w2uZBdLk9bf7hv4Op70pHV-JB7lC~CQQLjIYiBqU4X-plRSvfBR-i1vJg3wt7lys75SLaZGQ93bGpktzvGRM3zFeFADFeMm~aEihQIT2BMmluidTPVLi98f0ZhfTSJYZFahqLngui5Bd~E3li2ZIy0udg77yp5LneYeBUGOteWsP4melQxiJM4RQapRTqBjI21OY1UxOF0lE8F0G65twoF2nv4PWHKFlDkVxZH9InpIB4tY5mZ22j9QZquJMSciODP0aPmMpuAJparqhQV1oVANEsfEly8qzG2yJmzg9wF4e5FGvPi-xVETI129A__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/11" 200 83316686
+2025-04-29 16:57:39,983 - DEBUG - Attempting to release lock 140558693395184 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2.lock
+2025-04-29 16:57:39,983 - DEBUG - Lock 140558693395184 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2.lock
+2025-04-29 16:57:39,984 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-04-29 16:57:40,042 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-04-29 16:57:40,043 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:40,089 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-04-29 16:57:40,091 - DEBUG - Attempting to acquire lock 140558691618880 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/1978c5e7f20d5ffd14c8a932a7e85a09816f3da9.lock
+2025-04-29 16:57:40,092 - DEBUG - Lock 140558691618880 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/1978c5e7f20d5ffd14c8a932a7e85a09816f3da9.lock
+2025-04-29 16:57:40,138 - DEBUG - https://huggingface.co:443 "GET /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 1921
+2025-04-29 16:57:40,140 - DEBUG - Attempting to release lock 140558691618880 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/1978c5e7f20d5ffd14c8a932a7e85a09816f3da9.lock
+2025-04-29 16:57:40,140 - DEBUG - Lock 140558691618880 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/1978c5e7f20d5ffd14c8a932a7e85a09816f3da9.lock
+2025-04-29 16:57:40,141 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-04-29 16:57:40,143 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-04-29 16:57:40,143 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:40,189 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-04-29 16:57:40,191 - DEBUG - Attempting to acquire lock 140558691619456 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535.lock
+2025-04-29 16:57:40,192 - DEBUG - Lock 140558691619456 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535.lock
+2025-04-29 16:57:40,223 - DEBUG - https://cdn-lfs.hf.co:443 "GET /speechbrain/spkrec-ecapa-voxceleb/fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27classifier.ckpt%3B+filename%3D%22classifier.ckpt%22%3B&Expires=1745948698&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0ODY5OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zcGVlY2hicmFpbi9zcGtyZWMtZWNhcGEtdm94Y2VsZWIvZmQ5ZTM2MzRmZTY4YmQwYTQyN2M5NWUzNTRjMGM2NzczNzRmNjJiM2Y0MzRlNDViNzg1OTk5NTBkODYwZDUzNT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=gh3Oas4344~0e76SRkaXQU71CGmrUPDl-x9nTG0VB9RiSwIq~WNyvYIea9npRhCrG-G9UE8Mt-zvIXsNJ8HkMioV5YRZTg6S68cllGP7sCYG9TwqUOhJOaOCvd3pQY0h1Nmk8N63okjv1FRo7IQj8OXWcPa2pmmvtvVVxI86xCtGTLaopDJPLDkihcH5f8NvJ4JrvPsJNi0Vo995vgejSNAQBxcDPjeDiFQ3I3HtfioTjWxXJYvqVoGJA6ZXxQQINM5rc2r-9qRPdqjrMGNP308a1uaU8s1OndwDZb4e6ngltVIWzrNaR8YcjBXnqZd6I3URz7LCeRnzmzFmmqb6Ow__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/11" 200 5534328
+2025-04-29 16:57:40,448 - DEBUG - Attempting to release lock 140558691619456 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535.lock
+2025-04-29 16:57:40,448 - DEBUG - Lock 140558691619456 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535.lock
+2025-04-29 16:57:40,448 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-04-29 16:57:40,450 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-04-29 16:57:40,452 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:40,499 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-04-29 16:57:40,500 - DEBUG - Attempting to acquire lock 140558691619264 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/72c6fa7b170cbfd169df5e09326cd97febdf086a.lock
+2025-04-29 16:57:40,501 - DEBUG - Lock 140558691619264 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/72c6fa7b170cbfd169df5e09326cd97febdf086a.lock
+2025-04-29 16:57:40,549 - DEBUG - https://huggingface.co:443 "GET /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 128619
+2025-04-29 16:57:40,560 - DEBUG - Attempting to release lock 140558691619264 on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/72c6fa7b170cbfd169df5e09326cd97febdf086a.lock
+2025-04-29 16:57:40,560 - DEBUG - Lock 140558691619264 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--spkrec-ecapa-voxceleb/72c6fa7b170cbfd169df5e09326cd97febdf086a.lock
+2025-04-29 16:57:40,561 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-04-29 16:57:40,614 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-04-29 16:57:40,615 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-29 16:57:40,616 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-04-29 16:57:40,616 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-04-29 16:57:40,617 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-04-29 16:57:40,617 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-04-29 16:57:40,741 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-04-29 16:57:40,792 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-04-29 16:57:40,845 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-04-29 16:57:40,897 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-04-29 16:57:40,898 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-04-29 16:57:40,915 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-04-29 16:57:40,942 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-29 16:57:40,967 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:41,013 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-04-29 16:57:41,014 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-04-29 16:57:41,028 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:41,077 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-04-29 16:57:41,287 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-04-29 16:57:41,288 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:41,334 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-04-29 16:57:41,336 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-04-29 16:57:41,351 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-04-29 16:57:41,352 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:41,404 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-04-29 16:57:41,405 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-04-29 16:57:41,408 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-04-29 16:57:41,408 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:41,454 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-04-29 16:57:41,456 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-04-29 16:57:41,458 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-04-29 16:57:41,459 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-29 16:57:41,507 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-04-29 16:57:41,508 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-04-29 16:57:41,510 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-04-29 16:57:41,510 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-29 16:57:41,510 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-04-29 16:57:41,511 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-04-29 16:57:41,511 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-04-29 16:57:41,512 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-04-29 16:57:41,658 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-04-29 16:57:41,664 - INFO - 
+===================================================================
+
+2025-04-29 16:57:41,665 - INFO - setup completed.
+
+2025-04-29 16:57:43,675 - INFO - 
+we will now begin processing 3 media files
+
+2025-04-29 16:57:44,677 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-29 16:57:44,678 - INFO - Good luck ;/
+
+2025-04-29 16:57:44,679 - INFO - 
+===============================
+
+2025-04-29 16:57:44,701 - INFO - Processing video/audio file: /app/processmesempai/part_000.mp4
+2025-04-29 16:58:17,155 - INFO - Audio extracted to: imthetrashman/part_000_audio.wav
+2025-04-29 16:58:17,205 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-04-29 16:58:17,262 - DEBUG - Attempting to acquire lock 140554446740304 on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization-3.1/5402e3ca79b6cfa5b0ec283eed920cafe45ee39b.lock
+2025-04-29 16:58:17,266 - DEBUG - Lock 140554446740304 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization-3.1/5402e3ca79b6cfa5b0ec283eed920cafe45ee39b.lock
+2025-04-29 16:58:17,320 - DEBUG - https://huggingface.co:443 "GET /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 469
+2025-04-29 16:58:17,325 - DEBUG - Attempting to release lock 140554446740304 on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization-3.1/5402e3ca79b6cfa5b0ec283eed920cafe45ee39b.lock
+2025-04-29 16:58:17,325 - DEBUG - Lock 140554446740304 released on /root/.cache/torch/pyannote/.locks/models--pyannote--speaker-diarization-3.1/5402e3ca79b6cfa5b0ec283eed920cafe45ee39b.lock
+2025-04-29 16:58:17,378 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-04-29 16:58:17,385 - DEBUG - Attempting to acquire lock 140554446720688 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/da85c29829d4002daedd676e012936488234d9255e65e86dfab9bec6b1729298.lock
+2025-04-29 16:58:17,386 - DEBUG - Lock 140554446720688 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/da85c29829d4002daedd676e012936488234d9255e65e86dfab9bec6b1729298.lock
+2025-04-29 16:58:17,405 - DEBUG - https://cdn-lfs.hf.co:443 "GET /repos/7b/d5/7bd5f045564c2b38cd3285162e3dcfd183e25a85cfe876b0d50f23601f65885e/da85c29829d4002daedd676e012936488234d9255e65e86dfab9bec6b1729298?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1745947943&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0Nzk0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9yZXBvcy83Yi9kNS83YmQ1ZjA0NTU2NGMyYjM4Y2QzMjg1MTYyZTNkY2ZkMTgzZTI1YTg1Y2ZlODc2YjBkNTBmMjM2MDFmNjU4ODVlL2RhODVjMjk4MjlkNDAwMmRhZWRkNjc2ZTAxMjkzNjQ4ODIzNGQ5MjU1ZTY1ZTg2ZGZhYjliZWM2YjE3MjkyOTg~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=V9y-bz6j38OkTI~AjCYgYY9I6SWlgk2EZ562wpaWmeiHJZM9LMAR1WKcrhL5U3FgFX41JDbpfODcFvubDH0xLhFMkwnSoGgLD-oa8L0Oq5~4OPvymSDyZ4DyQGrZF-1bdGJUf57CJReC1CO1lysVMGlqbd1aSa6t8ouBHtJjatgfdOHBZtuD9h2UH7vaZ8tZpgB4oJQY0TTOWhlP~m3J6I2rm38r-UB7coxiK9mJJTijdE04m7SZMgjDPDW8aFXgvI4brOwQTPmi6u7ZxUOSSVGGCZomDkPbMN27sNqn-s1nqbqDC2rBxEjMNuMdfgtVQN~KQRPnWtOVFB~qJDMlUw__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/11" 200 5905440
+2025-04-29 16:58:17,901 - DEBUG - Attempting to release lock 140554446720688 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/da85c29829d4002daedd676e012936488234d9255e65e86dfab9bec6b1729298.lock
+2025-04-29 16:58:17,902 - DEBUG - Lock 140554446720688 released on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/da85c29829d4002daedd676e012936488234d9255e65e86dfab9bec6b1729298.lock
+2025-04-29 16:58:18,032 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-04-29 16:58:18,033 - DEBUG - Attempting to acquire lock 140554446720400 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/c3a7a5be5e67d6d1b1d95af32a4c77d0fe9d6e55.lock
+2025-04-29 16:58:18,034 - DEBUG - Lock 140554446720400 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/c3a7a5be5e67d6d1b1d95af32a4c77d0fe9d6e55.lock
+2025-04-29 16:58:18,082 - DEBUG - https://huggingface.co:443 "GET /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 399
+2025-04-29 16:58:18,084 - DEBUG - Attempting to release lock 140554446720400 on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/c3a7a5be5e67d6d1b1d95af32a4c77d0fe9d6e55.lock
+2025-04-29 16:58:18,085 - DEBUG - Lock 140554446720400 released on /root/.cache/torch/pyannote/.locks/models--pyannote--segmentation-3.0/c3a7a5be5e67d6d1b1d95af32a4c77d0fe9d6e55.lock
+2025-04-29 16:58:18,085 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-04-29 16:58:18,192 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-04-29 16:58:18,295 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-04-29 16:58:18,314 - DEBUG - Attempting to acquire lock 140554446759440 on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/366edf44f4c80889a3eb7a9d7bdf02c4aede3127f7dd15e274dcdb826b143c56.lock
+2025-04-29 16:58:18,315 - DEBUG - Lock 140554446759440 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/366edf44f4c80889a3eb7a9d7bdf02c4aede3127f7dd15e274dcdb826b143c56.lock
+2025-04-29 16:58:18,319 - DEBUG - Starting new HTTPS connection (1): cdn-lfs-us-1.hf.co:443
+2025-04-29 16:58:18,464 - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/a8/15/a815c42b286b896065b421fbb0bce4cb711c667348e8113cdb1cae0df05754e6/366edf44f4c80889a3eb7a9d7bdf02c4aede3127f7dd15e274dcdb826b143c56?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1745948250&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk0ODI1MH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2E4LzE1L2E4MTVjNDJiMjg2Yjg5NjA2NWI0MjFmYmIwYmNlNGNiNzExYzY2NzM0OGU4MTEzY2RiMWNhZTBkZjA1NzU0ZTYvMzY2ZWRmNDRmNGM4MDg4OWEzZWI3YTlkN2JkZjAyYzRhZWRlMzEyN2Y3ZGQxNWUyNzRkY2RiODI2YjE0M2M1Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=jcc0VRVlafmi~VMWA~GoeZt1Qt5cyHvNCsqC~ueZcpuTslGZ4hxPX1uJckOm6giqDxoxmKvJNaK4~h-7OKNF85gZ7g8e-nPRhw30YumhSwdDqqcddotG-DLRGXBttuBVaJ~HeQUeQMPZHEWo6Ep-ZQqEPMhXiqKbQ5dWff-cJJJn0yjEmJ8G9etc3rJi9qSp2lCtaJIoLmqTmfKED6y~kaHVUdsIUO0pbuNJQSVvEZM5mfiF0tEx4yoI4s31DFVTz9No5H5yLD4eSSZ~A4OuSGezl6tVjwRFyjuDm1WWTLrNRl03z7~rZeZu7YT1iVpzOJ~V9YGP9PCpwXlaI3GglA__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 26645418
+2025-04-29 16:58:19,634 - DEBUG - Attempting to release lock 140554446759440 on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/366edf44f4c80889a3eb7a9d7bdf02c4aede3127f7dd15e274dcdb826b143c56.lock
+2025-04-29 16:58:19,635 - DEBUG - Lock 140554446759440 released on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/366edf44f4c80889a3eb7a9d7bdf02c4aede3127f7dd15e274dcdb826b143c56.lock
+2025-04-29 16:58:19,679 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-04-29 16:58:19,681 - DEBUG - Attempting to acquire lock 140554446739488 on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/f6508f3ba9be494115516d34cab74943714b9460.lock
+2025-04-29 16:58:19,682 - DEBUG - Lock 140554446739488 acquired on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/f6508f3ba9be494115516d34cab74943714b9460.lock
+2025-04-29 16:58:19,729 - DEBUG - https://huggingface.co:443 "GET /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 221
+2025-04-29 16:58:19,732 - DEBUG - Attempting to release lock 140554446739488 on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/f6508f3ba9be494115516d34cab74943714b9460.lock
+2025-04-29 16:58:19,732 - DEBUG - Lock 140554446739488 released on /root/.cache/torch/pyannote/.locks/models--pyannote--wespeaker-voxceleb-resnet34-LM/f6508f3ba9be494115516d34cab74943714b9460.lock
+2025-04-29 16:58:19,733 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-04-29 16:58:19,777 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-04-29 16:58:19,909 - DEBUG - Pyannote using device: cpu
+2025-04-29 17:27:38,103 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/64 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 64/64 [00:00<00:00, 581029.13it/s]2025-04-29 17:27:38,155 - DEBUG - Resetting dropped connection: huggingface.co
+2025-04-29 17:27:38,290 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/11" 200 1889
+2025-04-29 17:27:38,304 - DEBUG - Resetting dropped connection: huggingface.co
+2025-04-29 17:27:38,308 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 17:27:38,313 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 17:27:38,321 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-29 17:27:38,395 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/tokenizer.json HTTP/11" 200 0
+2025-04-29 17:27:38,400 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/config.json HTTP/11" 200 0
+2025-04-29 17:27:38,406 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/model.bin HTTP/11" 302 0
+2025-04-29 17:27:38,410 - DEBUG - Attempting to acquire lock 140554747649376 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 17:27:38,410 - DEBUG - Attempting to acquire lock 140558691681088 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/3baa18e2b321a2f489614607852a729fcd516480.lock
+2025-04-29 17:27:38,410 - DEBUG - Attempting to acquire lock 140554465920768 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/dcb76c6586fc06cbdac6dd21f14cfd129cc4cdd9dce19bf4ffa62e59cbe6e6d1.lock
+2025-04-29 17:27:38,411 - DEBUG - Lock 140554747649376 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 17:27:38,411 - DEBUG - Lock 140558691681088 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/3baa18e2b321a2f489614607852a729fcd516480.lock
+2025-04-29 17:27:38,412 - DEBUG - Lock 140554465920768 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/dcb76c6586fc06cbdac6dd21f14cfd129cc4cdd9dce19bf4ffa62e59cbe6e6d1.lock
+2025-04-29 17:27:38,419 - DEBUG - Starting new HTTPS connection (1): cdn-lfs-us-1.hf.co:443
+2025-04-29 17:27:38,420 - DEBUG - https://huggingface.co:443 "HEAD /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/vocabulary.txt HTTP/11" 200 0
+2025-04-29 17:27:38,421 - DEBUG - Attempting to acquire lock 140554446739056 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 17:27:38,422 - DEBUG - Lock 140554446739056 acquired on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 17:27:38,459 - DEBUG - https://huggingface.co:443 "GET /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/config.json HTTP/11" 200 2249
+2025-04-29 17:27:38,465 - DEBUG - Attempting to release lock 140558691681088 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/3baa18e2b321a2f489614607852a729fcd516480.lock
+2025-04-29 17:27:38,465 - DEBUG - Lock 140558691681088 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/3baa18e2b321a2f489614607852a729fcd516480.lock
+2025-04-29 17:27:38,471 - DEBUG - https://huggingface.co:443 "GET /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/vocabulary.txt HTTP/11" 200 459861
+2025-04-29 17:27:38,505 - DEBUG - https://huggingface.co:443 "GET /Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/tokenizer.json HTTP/11" 200 2203239
+2025-04-29 17:27:38,512 - DEBUG - Attempting to release lock 140554446739056 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 17:27:38,512 - DEBUG - Lock 140554446739056 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/c9074644d9d1205686f16d411564729461324b75.lock
+2025-04-29 17:27:38,609 - DEBUG - Attempting to release lock 140554747649376 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 17:27:38,609 - DEBUG - Lock 140554747649376 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/7818adb6de9fa3064d3ff81226fdd675be1f6344.lock
+2025-04-29 17:27:38,689 - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/c3/94/c394d9c1034405d7a5fe191992713275237434c7e3bffc5d1345b8134541707f/dcb76c6586fc06cbdac6dd21f14cfd129cc4cdd9dce19bf4ffa62e59cbe6e6d1?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.bin%3B+filename%3D%22model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1745951137&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk1MTEzN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2MzLzk0L2MzOTRkOWMxMDM0NDA1ZDdhNWZlMTkxOTkyNzEzMjc1MjM3NDM0YzdlM2JmZmM1ZDEzNDViODEzNDU0MTcwN2YvZGNiNzZjNjU4NmZjMDZjYmRhYzZkZDIxZjE0Y2ZkMTI5Y2M0Y2RkOWRjZTE5YmY0ZmZhNjJlNTljYmU2ZTZkMT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=CJC01LmGlKMOvCqGsciUMH5tCgmocNn6KjvIQTCo0Ay-NeZa2HIm8WaMWdjyfiu5wey2ERbhCtFGGlOV5htZbqivBtq76Y5EIpXwbYqRO7wJWOongY2Jmzj8HTg~WWMtzoMKdTaFO7ey~Xdk3kElhM72ZhAkUVe-EYof-pckJ1DNrmrqmAnn8w593WB-geqjKmliWAQ~J3gOh~kEuyO4k8pXcfiyfxvKwmZYEVyMDeekWdqTmlkDZwAxoLnBOg7P55E3owbBiojz7iLlMtP7NlMKMUt1IEHXeYEYqr11-0i9FGjjIR2w8kOIyOZB4Xsqut0jKuIpLVHEX2e5ejtSQw__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 75538270
+2025-04-29 17:27:41,361 - DEBUG - Attempting to release lock 140554465920768 on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/dcb76c6586fc06cbdac6dd21f14cfd129cc4cdd9dce19bf4ffa62e59cbe6e6d1.lock
+2025-04-29 17:27:41,361 - DEBUG - Lock 140554465920768 released on /root/.cache/huggingface/hub/.locks/models--Systran--faster-whisper-tiny/dcb76c6586fc06cbdac6dd21f14cfd129cc4cdd9dce19bf4ffa62e59cbe6e6d1.lock
+2025-04-29 17:27:41,595 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-04-29 17:27:41,628 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-04-29 17:27:41,652 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+
+Downloading: "https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth" to /root/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+  0%|          | 0.00/360M [00:00<?, ?B/s]  0%|          | 392k/360M [00:00<01:34, 3.99MB/s]  0%|          | 872k/360M [00:00<01:24, 4.46MB/s]  0%|          | 1.61M/360M [00:00<01:02, 6.02MB/s]  1%|          | 3.43M/360M [00:00<00:33, 11.0MB/s]  1%|          | 4.48M/360M [00:00<00:35, 10.5MB/s]  2%|▏         | 5.51M/360M [00:00<00:35, 10.5MB/s]  2%|▏         | 7.45M/360M [00:00<00:27, 13.6MB/s]  2%|▏         | 8.75M/360M [00:00<00:29, 12.5MB/s]  3%|▎         | 9.97M/360M [00:00<00:29, 12.6MB/s]  3%|▎         | 11.5M/360M [00:01<00:27, 13.4MB/s]  4%|▎         | 13.1M/360M [00:01<00:25, 14.2MB/s]  4%|▍         | 14.8M/360M [00:01<00:23, 15.2MB/s]  5%|▍         | 16.3M/360M [00:01<00:23, 15.1MB/s]  5%|▍         | 17.8M/360M [00:01<00:24, 14.7MB/s]  5%|▌         | 19.2M/360M [00:01<00:25, 14.3MB/s]  6%|▌         | 20.6M/360M [00:01<00:24, 14.4MB/s]  6%|▌         | 22.0M/360M [00:01<00:26, 13.5MB/s]  7%|▋         | 23.9M/360M [00:01<00:22, 15.5MB/s]  7%|▋         | 25.4M/360M [00:02<00:23, 15.2MB/s]  7%|▋         | 26.9M/360M [00:02<00:23, 15.2MB/s]  8%|▊         | 28.4M/360M [00:02<00:22, 15.3MB/s]  8%|▊         | 29.9M/360M [00:02<00:22, 15.2MB/s]  9%|▊         | 31.5M/360M [00:02<00:21, 15.7MB/s]  9%|▉         | 33.0M/360M [00:02<00:21, 15.6MB/s] 10%|▉         | 34.5M/360M [00:02<00:21, 15.6MB/s] 10%|█         | 36.5M/360M [00:02<00:20, 16.9MB/s] 11%|█         | 38.1M/360M [00:02<00:20, 16.6MB/s] 11%|█         | 39.7M/360M [00:02<00:21, 15.9MB/s] 12%|█▏        | 41.7M/360M [00:03<00:19, 17.3MB/s] 12%|█▏        | 43.7M/360M [00:03<00:18, 18.2MB/s] 13%|█▎        | 45.4M/360M [00:03<00:18, 17.4MB/s] 13%|█▎        | 47.4M/360M [00:03<00:18, 18.2MB/s] 14%|█▎        | 49.4M/360M [00:03<00:17, 19.0MB/s] 14%|█▍        | 51.2M/360M [00:03<00:17, 18.9MB/s] 15%|█▍        | 53.0M/360M [00:03<00:17, 18.0MB/s] 15%|█▌        | 54.7M/360M [00:04<00:28, 11.4MB/s] 16%|█▌        | 56.3M/360M [00:04<00:26, 12.1MB/s] 16%|█▌        | 58.1M/360M [00:04<00:23, 13.5MB/s] 17%|█▋        | 60.0M/360M [00:04<00:21, 14.9MB/s] 17%|█▋        | 61.8M/360M [00:04<00:19, 15.9MB/s] 18%|█▊        | 63.4M/360M [00:04<00:20, 15.5MB/s] 18%|█▊        | 65.6M/360M [00:04<00:17, 17.3MB/s] 19%|█▊        | 67.4M/360M [00:04<00:17, 17.8MB/s] 19%|█▉        | 69.2M/360M [00:04<00:17, 17.3MB/s] 20%|█▉        | 70.9M/360M [00:04<00:17, 17.5MB/s] 20%|██        | 72.6M/360M [00:05<00:17, 16.8MB/s] 21%|██        | 74.4M/360M [00:05<00:17, 17.2MB/s] 21%|██        | 76.4M/360M [00:05<00:16, 18.2MB/s] 22%|██▏       | 78.8M/360M [00:05<00:14, 20.2MB/s] 23%|██▎       | 81.2M/360M [00:05<00:13, 21.5MB/s] 23%|██▎       | 83.3M/360M [00:05<00:13, 21.3MB/s] 24%|██▎       | 85.4M/360M [00:05<00:13, 21.3MB/s] 24%|██▍       | 87.5M/360M [00:05<00:14, 20.0MB/s] 25%|██▍       | 89.4M/360M [00:05<00:15, 18.2MB/s] 25%|██▌       | 91.2M/360M [00:06<00:15, 17.7MB/s] 26%|██▌       | 92.9M/360M [00:06<00:15, 17.6MB/s] 26%|██▋       | 94.6M/360M [00:06<00:15, 17.5MB/s] 27%|██▋       | 96.3M/360M [00:06<00:16, 16.7MB/s] 27%|██▋       | 98.0M/360M [00:06<00:16, 16.9MB/s] 28%|██▊       | 99.9M/360M [00:06<00:15, 17.7MB/s] 28%|██▊       | 102M/360M [00:06<00:14, 18.2MB/s]  29%|██▉       | 104M/360M [00:06<00:14, 18.7MB/s] 29%|██▉       | 105M/360M [00:06<00:14, 18.7MB/s] 30%|██▉       | 107M/360M [00:07<00:14, 18.6MB/s] 30%|███       | 109M/360M [00:07<00:14, 18.1MB/s] 31%|███       | 111M/360M [00:07<00:15, 17.3MB/s] 31%|███       | 112M/360M [00:07<00:15, 16.9MB/s] 32%|███▏      | 114M/360M [00:07<00:14, 17.8MB/s] 32%|███▏      | 116M/360M [00:07<00:14, 17.4MB/s] 33%|███▎      | 118M/360M [00:07<00:14, 17.6MB/s] 33%|███▎      | 120M/360M [00:07<00:13, 18.0MB/s] 34%|███▎      | 121M/360M [00:07<00:14, 17.3MB/s] 34%|███▍      | 123M/360M [00:07<00:14, 17.7MB/s] 35%|███▍      | 125M/360M [00:08<00:13, 18.4MB/s] 35%|███▌      | 127M/360M [00:08<00:14, 17.0MB/s] 36%|███▌      | 129M/360M [00:08<00:13, 17.5MB/s] 36%|███▋      | 131M/360M [00:08<00:12, 18.9MB/s] 37%|███▋      | 133M/360M [00:08<00:12, 19.2MB/s] 37%|███▋      | 135M/360M [00:08<00:13, 18.1MB/s] 38%|███▊      | 137M/360M [00:08<00:13, 18.0MB/s] 38%|███▊      | 138M/360M [00:08<00:12, 18.1MB/s] 39%|███▉      | 140M/360M [00:08<00:12, 18.2MB/s] 40%|███▉      | 142M/360M [00:09<00:11, 19.6MB/s] 40%|████      | 144M/360M [00:09<00:11, 19.0MB/s] 41%|████      | 146M/360M [00:09<00:12, 18.6MB/s] 41%|████      | 148M/360M [00:09<00:12, 17.3MB/s] 42%|████▏     | 150M/360M [00:09<00:13, 16.6MB/s] 42%|████▏     | 151M/360M [00:09<00:13, 16.4MB/s] 42%|████▏     | 153M/360M [00:09<00:13, 16.6MB/s] 43%|████▎     | 154M/360M [00:09<00:13, 16.1MB/s] 43%|████▎     | 156M/360M [00:09<00:13, 16.2MB/s] 44%|████▍     | 158M/360M [00:10<00:11, 17.8MB/s] 44%|████▍     | 160M/360M [00:10<00:12, 17.3MB/s] 45%|████▍     | 162M/360M [00:10<00:11, 17.5MB/s] 45%|████▌     | 164M/360M [00:10<00:11, 18.3MB/s] 46%|████▌     | 165M/360M [00:10<00:11, 18.3MB/s] 46%|████▋     | 167M/360M [00:10<00:11, 17.3MB/s] 47%|████▋     | 169M/360M [00:10<00:11, 17.6MB/s] 47%|████▋     | 171M/360M [00:10<00:11, 17.4MB/s] 48%|████▊     | 172M/360M [00:10<00:11, 17.3MB/s] 48%|████▊     | 174M/360M [00:10<00:10, 17.7MB/s] 49%|████▉     | 176M/360M [00:11<00:10, 18.4MB/s] 49%|████▉     | 178M/360M [00:11<00:10, 17.9MB/s] 50%|████▉     | 180M/360M [00:11<00:10, 17.6MB/s] 50%|█████     | 182M/360M [00:11<00:10, 18.5MB/s] 51%|█████     | 184M/360M [00:11<00:09, 19.2MB/s] 52%|█████▏    | 186M/360M [00:11<00:11, 16.1MB/s] 52%|█████▏    | 187M/360M [00:11<00:10, 16.7MB/s] 53%|█████▎    | 189M/360M [00:11<00:10, 17.2MB/s] 53%|█████▎    | 191M/360M [00:12<00:10, 16.6MB/s] 53%|█████▎    | 193M/360M [00:12<00:10, 16.7MB/s] 54%|█████▍    | 194M/360M [00:12<00:10, 16.9MB/s] 54%|█████▍    | 196M/360M [00:12<00:09, 17.3MB/s] 55%|█████▍    | 198M/360M [00:12<00:09, 17.8MB/s] 55%|█████▌    | 200M/360M [00:12<00:09, 17.8MB/s] 56%|█████▌    | 201M/360M [00:12<00:09, 16.9MB/s] 56%|█████▋    | 203M/360M [00:12<00:09, 18.2MB/s] 57%|█████▋    | 206M/360M [00:12<00:08, 19.1MB/s] 58%|█████▊    | 207M/360M [00:12<00:08, 18.9MB/s] 58%|█████▊    | 209M/360M [00:13<00:08, 17.8MB/s] 59%|█████▊    | 211M/360M [00:13<00:08, 18.0MB/s] 59%|█████▉    | 213M/360M [00:13<00:08, 18.7MB/s] 60%|█████▉    | 215M/360M [00:13<00:08, 18.9MB/s] 60%|██████    | 217M/360M [00:13<00:07, 18.9MB/s] 61%|██████    | 219M/360M [00:13<00:07, 18.8MB/s] 61%|██████    | 220M/360M [00:13<00:08, 18.2MB/s] 62%|██████▏   | 222M/360M [00:13<00:08, 16.1MB/s] 62%|██████▏   | 224M/360M [00:13<00:08, 17.2MB/s] 63%|██████▎   | 226M/360M [00:14<00:08, 17.5MB/s] 63%|██████▎   | 228M/360M [00:14<00:08, 17.2MB/s] 64%|██████▎   | 229M/360M [00:14<00:07, 17.1MB/s] 64%|██████▍   | 231M/360M [00:14<00:07, 18.0MB/s] 65%|██████▍   | 233M/360M [00:14<00:07, 17.8MB/s] 65%|██████▌   | 235M/360M [00:14<00:07, 17.4MB/s] 66%|██████▌   | 237M/360M [00:14<00:08, 16.2MB/s] 66%|██████▌   | 238M/360M [00:14<00:07, 16.5MB/s] 67%|██████▋   | 240M/360M [00:15<00:09, 12.9MB/s] 68%|██████▊   | 244M/360M [00:15<00:06, 19.9MB/s] 68%|██████▊   | 246M/360M [00:15<00:05, 20.6MB/s] 69%|██████▉   | 248M/360M [00:15<00:05, 19.9MB/s] 70%|██████▉   | 250M/360M [00:15<00:05, 20.2MB/s] 70%|███████   | 253M/360M [00:15<00:05, 20.3MB/s] 71%|███████   | 255M/360M [00:15<00:05, 18.5MB/s] 71%|███████   | 256M/360M [00:15<00:05, 18.5MB/s] 72%|███████▏  | 258M/360M [00:15<00:05, 18.5MB/s] 72%|███████▏  | 260M/360M [00:16<00:05, 18.1MB/s] 73%|███████▎  | 262M/360M [00:16<00:05, 18.1MB/s] 73%|███████▎  | 264M/360M [00:16<00:05, 19.3MB/s] 74%|███████▍  | 266M/360M [00:16<00:05, 19.5MB/s] 74%|███████▍  | 268M/360M [00:16<00:05, 17.9MB/s] 75%|███████▍  | 270M/360M [00:16<00:05, 17.5MB/s] 75%|███████▌  | 271M/360M [00:16<00:05, 17.7MB/s] 76%|███████▌  | 273M/360M [00:16<00:05, 17.0MB/s] 76%|███████▋  | 275M/360M [00:16<00:05, 17.4MB/s] 77%|███████▋  | 277M/360M [00:16<00:04, 17.9MB/s] 77%|███████▋  | 279M/360M [00:17<00:04, 19.2MB/s] 78%|███████▊  | 281M/360M [00:17<00:04, 18.2MB/s] 78%|███████▊  | 283M/360M [00:17<00:04, 19.2MB/s] 79%|███████▉  | 285M/360M [00:17<00:04, 19.2MB/s] 80%|███████▉  | 286M/360M [00:17<00:04, 18.3MB/s] 80%|████████  | 289M/360M [00:17<00:03, 21.0MB/s] 81%|████████  | 291M/360M [00:17<00:03, 21.1MB/s] 81%|████████▏ | 293M/360M [00:17<00:03, 21.4MB/s] 82%|████████▏ | 296M/360M [00:17<00:03, 22.4MB/s] 83%|████████▎ | 298M/360M [00:18<00:02, 22.1MB/s] 83%|████████▎ | 300M/360M [00:18<00:02, 22.9MB/s] 84%|████████▍ | 303M/360M [00:18<00:02, 23.7MB/s] 85%|████████▍ | 305M/360M [00:18<00:02, 23.5MB/s] 85%|████████▌ | 307M/360M [00:18<00:02, 23.5MB/s] 86%|████████▌ | 310M/360M [00:18<00:02, 23.7MB/s] 87%|████████▋ | 312M/360M [00:18<00:02, 24.0MB/s] 87%|████████▋ | 314M/360M [00:18<00:01, 24.5MB/s] 88%|████████▊ | 317M/360M [00:18<00:01, 23.1MB/s] 89%|████████▊ | 319M/360M [00:18<00:01, 22.1MB/s] 89%|████████▉ | 321M/360M [00:19<00:01, 22.6MB/s] 90%|████████▉ | 323M/360M [00:19<00:01, 21.5MB/s] 90%|█████████ | 326M/360M [00:19<00:01, 22.4MB/s] 91%|█████████ | 329M/360M [00:19<00:01, 24.1MB/s] 92%|█████████▏| 331M/360M [00:19<00:01, 22.7MB/s] 93%|█████████▎| 333M/360M [00:19<00:01, 23.5MB/s] 93%|█████████▎| 336M/360M [00:19<00:01, 22.4MB/s] 94%|█████████▍| 338M/360M [00:19<00:00, 23.5MB/s] 95%|█████████▍| 341M/360M [00:19<00:00, 24.3MB/s] 95%|█████████▌| 343M/360M [00:20<00:00, 24.6MB/s] 96%|█████████▌| 346M/360M [00:20<00:00, 25.7MB/s] 97%|█████████▋| 348M/360M [00:20<00:00, 24.3MB/s] 97%|█████████▋| 351M/360M [00:20<00:00, 25.1MB/s] 98%|█████████▊| 353M/360M [00:20<00:00, 25.4MB/s] 99%|█████████▉| 356M/360M [00:20<00:00, 25.4MB/s]100%|█████████▉| 358M/360M [00:20<00:00, 25.8MB/s]100%|██████████| 360M/360M [00:20<00:00, 18.2MB/s]2025-04-29 17:52:06,607 - INFO - Use pytorch device_name: cpu
+2025-04-29 17:52:06,607 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-04-29 17:52:06,610 - DEBUG - Resetting dropped connection: huggingface.co
+2025-04-29 17:52:06,859 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-04-29 17:52:06,865 - DEBUG - Attempting to acquire lock 140553585747472 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 17:52:06,866 - DEBUG - Lock 140553585747472 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 17:52:06,920 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 349
+2025-04-29 17:52:06,924 - DEBUG - Attempting to release lock 140553585747472 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 17:52:06,925 - DEBUG - Lock 140553585747472 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2025-04-29 17:52:06,974 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-04-29 17:52:06,976 - DEBUG - Attempting to acquire lock 140553585746128 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 17:52:06,977 - DEBUG - Lock 140553585746128 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 17:52:07,051 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 116
+2025-04-29 17:52:07,054 - DEBUG - Attempting to release lock 140553585746128 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 17:52:07,055 - DEBUG - Lock 140553585746128 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/fd1b291129c607e5d49799f87cb219b27f98acdf.lock
+2025-04-29 17:52:07,102 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-04-29 17:52:07,104 - DEBUG - Attempting to acquire lock 140553585749728 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/0631ecad6163689b6c9fecebb0ab639ade64ecde.lock
+2025-04-29 17:52:07,104 - DEBUG - Lock 140553585749728 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/0631ecad6163689b6c9fecebb0ab639ade64ecde.lock
+2025-04-29 17:52:07,160 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 9681
+2025-04-29 17:52:07,163 - DEBUG - Attempting to release lock 140553585749728 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/0631ecad6163689b6c9fecebb0ab639ade64ecde.lock
+2025-04-29 17:52:07,164 - DEBUG - Lock 140553585749728 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/0631ecad6163689b6c9fecebb0ab639ade64ecde.lock
+2025-04-29 17:52:07,217 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-04-29 17:52:07,267 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-04-29 17:52:07,269 - DEBUG - Attempting to acquire lock 140553585747952 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 17:52:07,270 - DEBUG - Lock 140553585747952 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 17:52:07,334 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 53
+2025-04-29 17:52:07,339 - DEBUG - Attempting to release lock 140553585747952 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 17:52:07,341 - DEBUG - Lock 140553585747952 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/59d594003bf59880a884c574bf88ef7555bb0202.lock
+2025-04-29 17:52:07,406 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-04-29 17:52:07,461 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-04-29 17:52:07,463 - DEBUG - Attempting to acquire lock 140553585748288 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8398b51490268ddfbfcdd7d8df6daafb31518ef4.lock
+2025-04-29 17:52:07,464 - DEBUG - Lock 140553585748288 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8398b51490268ddfbfcdd7d8df6daafb31518ef4.lock
+2025-04-29 17:52:07,513 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 650
+2025-04-29 17:52:07,516 - DEBUG - Attempting to release lock 140553585748288 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8398b51490268ddfbfcdd7d8df6daafb31518ef4.lock
+2025-04-29 17:52:07,517 - DEBUG - Lock 140553585748288 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8398b51490268ddfbfcdd7d8df6daafb31518ef4.lock
+2025-04-29 17:52:07,589 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/model.safetensors HTTP/11" 302 0
+2025-04-29 17:52:07,592 - DEBUG - Attempting to acquire lock 140553578235792 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8d01238e458e40095fb242e75dfc2fa18ff14f6825d7e8e065dc9de414010743.lock
+2025-04-29 17:52:07,593 - DEBUG - Lock 140553578235792 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8d01238e458e40095fb242e75dfc2fa18ff14f6825d7e8e065dc9de414010743.lock
+2025-04-29 17:52:07,597 - DEBUG - Resetting dropped connection: cas-bridge.xethub.hf.co
+2025-04-29 17:52:07,784 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/621ffdc136468d709f180298/1d24087f970b13557d9d340beb6fa3a0081a10ab1b6b8de1441a6165f752e969?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250429%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250429T175207Z&X-Amz-Expires=3600&X-Amz-Signature=ca636ebc4027661a84f9484eb9f68d59f83c7d59a5179912770c826e286075cd&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-id=GetObject&Expires=1745952727&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTk1MjcyN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MjFmZmRjMTM2NDY4ZDcwOWYxODAyOTgvMWQyNDA4N2Y5NzBiMTM1NTdkOWQzNDBiZWI2ZmEzYTAwODFhMTBhYjFiNmI4ZGUxNDQxYTYxNjVmNzUyZTk2OSoifV19&Signature=Ph3RoeSJ16xt6nFJ8Uqw24adfXAYRW4GSrC5qbc-aUGpOf0BPszSou4yLZHlkXMdkOFu2r71M6Hc~VBSMEoFumBpsQPCKZBofwRpQ9f0L5oWL1YOBrktzLreZE4YzUFZ-tGBhVzgVqhvYb6bBaPd~~~ESQlnqbs9rcx8HRA0E4jou0UxKdGS7eFhjdl25K3wdXwGUuaAaYkrOqRvlfxPb-IDgZqtP9hnPemgIuHJ-rxaAoHtyV82jUgibBXDh-3mPsbtQpyqZz~drDt83Bhj~kh0aMldSViqD6-ON7eZckL4GuJ5-26NVRz2Hl9E2aInIbdqZBrEzUUuT2o~~5bQYw__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/11" 200 1421488104
+2025-04-29 17:53:13,005 - DEBUG - Attempting to release lock 140553578235792 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8d01238e458e40095fb242e75dfc2fa18ff14f6825d7e8e065dc9de414010743.lock
+2025-04-29 17:53:13,006 - DEBUG - Lock 140553578235792 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/8d01238e458e40095fb242e75dfc2fa18ff14f6825d7e8e065dc9de414010743.lock
+2025-04-29 17:53:13,725 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-04-29 17:53:13,728 - DEBUG - Attempting to acquire lock 140553478694080 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/dc55089a1401e33737f2e73f5b331c0ce77fc2ce.lock
+2025-04-29 17:53:13,755 - DEBUG - Lock 140553478694080 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/dc55089a1401e33737f2e73f5b331c0ce77fc2ce.lock
+2025-04-29 17:53:13,807 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 328
+2025-04-29 17:53:13,810 - DEBUG - Attempting to release lock 140553478694080 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/dc55089a1401e33737f2e73f5b331c0ce77fc2ce.lock
+2025-04-29 17:53:13,811 - DEBUG - Lock 140553478694080 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/dc55089a1401e33737f2e73f5b331c0ce77fc2ce.lock
+2025-04-29 17:53:13,999 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/vocab.json HTTP/11" 200 0
+2025-04-29 17:53:14,003 - DEBUG - Attempting to acquire lock 140554465886368 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2025-04-29 17:53:14,004 - DEBUG - Lock 140554465886368 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2025-04-29 17:53:14,059 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/vocab.json HTTP/11" 200 798293
+2025-04-29 17:53:14,115 - DEBUG - Attempting to release lock 140554465886368 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2025-04-29 17:53:14,121 - DEBUG - Lock 140554465886368 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/4ebe4bb3f3114daf2e4cc349f24873a1175a35d7.lock
+2025-04-29 17:53:14,171 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/merges.txt HTTP/11" 200 0
+2025-04-29 17:53:14,173 - DEBUG - Attempting to acquire lock 140554465889248 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2025-04-29 17:53:14,174 - DEBUG - Lock 140554465889248 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2025-04-29 17:53:14,239 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/merges.txt HTTP/11" 200 456356
+2025-04-29 17:53:14,301 - DEBUG - Attempting to release lock 140554465889248 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2025-04-29 17:53:14,302 - DEBUG - Lock 140554465889248 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/6636bda4a1fd7a63653dffb22683b8162c8de956.lock
+2025-04-29 17:53:14,516 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer.json HTTP/11" 200 0
+2025-04-29 17:53:14,519 - DEBUG - Attempting to acquire lock 140554465889056 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/7a7f517f71e7a3286b03572ece4fb2e5a0571db6.lock
+2025-04-29 17:53:14,520 - DEBUG - Lock 140554465889056 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/7a7f517f71e7a3286b03572ece4fb2e5a0571db6.lock
+2025-04-29 17:53:14,956 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer.json HTTP/11" 200 1356047
+2025-04-29 17:53:15,166 - DEBUG - Attempting to release lock 140554465889056 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/7a7f517f71e7a3286b03572ece4fb2e5a0571db6.lock
+2025-04-29 17:53:15,169 - DEBUG - Lock 140554465889056 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/7a7f517f71e7a3286b03572ece4fb2e5a0571db6.lock
+2025-04-29 17:53:15,225 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/added_tokens.json HTTP/11" 404 0
+2025-04-29 17:53:15,448 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/special_tokens_map.json HTTP/11" 200 0
+2025-04-29 17:53:15,459 - DEBUG - Attempting to acquire lock 140554017408048 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2025-04-29 17:53:15,484 - DEBUG - Lock 140554017408048 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2025-04-29 17:53:15,589 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/main/special_tokens_map.json HTTP/11" 200 239
+2025-04-29 17:53:15,595 - DEBUG - Attempting to release lock 140554017408048 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2025-04-29 17:53:15,597 - DEBUG - Lock 140554017408048 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/2ea7ad0e45a9d1d1591782ba7e29a703d0758831.lock
+2025-04-29 17:53:15,902 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3839
+2025-04-29 17:53:15,907 - DEBUG - Resetting dropped connection: huggingface.co
+2025-04-29 17:53:16,114 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/cf74d8acd4f198de950bf004b262e6accfed5d2c/1_Pooling/config.json HTTP/11" 200 0
+2025-04-29 17:53:16,135 - DEBUG - Attempting to acquire lock 140553548609472 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/c95142ea6a1227bc1f5c082261148479ebc4677d.lock
+2025-04-29 17:53:16,136 - DEBUG - Lock 140553548609472 acquired on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/c95142ea6a1227bc1f5c082261148479ebc4677d.lock
+2025-04-29 17:53:16,197 - DEBUG - https://huggingface.co:443 "GET /sentence-transformers/all-roberta-large-v1/resolve/cf74d8acd4f198de950bf004b262e6accfed5d2c/1_Pooling/config.json HTTP/11" 200 191
+2025-04-29 17:53:16,200 - DEBUG - Attempting to release lock 140553548609472 on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/c95142ea6a1227bc1f5c082261148479ebc4677d.lock
+2025-04-29 17:53:16,201 - DEBUG - Lock 140553548609472 released on /root/.cache/huggingface/hub/.locks/models--sentence-transformers--all-roberta-large-v1/c95142ea6a1227bc1f5c082261148479ebc4677d.lock
+2025-04-29 17:53:16,362 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3839
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches:   0%|          | 0/8 [00:00<?, ?it/s]Batches:  12%|█▎        | 1/8 [00:20<02:21, 20.15s/it]Batches:  25%|██▌       | 2/8 [00:27<01:17, 12.84s/it]Batches:  38%|███▊      | 3/8 [00:32<00:46,  9.22s/it]Batches:  50%|█████     | 4/8 [00:36<00:28,  7.15s/it]Batches:  62%|██████▎   | 5/8 [00:39<00:16,  5.53s/it]Batches:  75%|███████▌  | 6/8 [00:42<00:09,  4.55s/it]Batches:  88%|████████▊ | 7/8 [00:44<00:03,  3.87s/it]Batches: 100%|██████████| 8/8 [00:45<00:00,  3.02s/it]Batches: 100%|██████████| 8/8 [00:45<00:00,  5.71s/it]2025-04-29 17:54:03,856 - INFO - Clip 1: Start=160.009, End=206.157
+2025-04-29 17:54:03,857 - INFO - Clip 2: Start=205.156, End=250.681
+2025-04-29 17:54:03,857 - INFO - Clip 3: Start=248.62, End=290.954
+2025-04-29 17:54:03,858 - INFO - Clip 4: Start=297.219, End=314.282
+2025-04-29 17:54:03,858 - INFO - Clip 5: Start=312.141, End=337.552
+2025-04-29 17:54:03,861 - INFO - Clip 6: Start=336.751, End=361.027
+2025-04-29 17:54:03,861 - INFO - Clip 7: Start=360.066, End=401.263
+2025-04-29 17:54:03,862 - INFO - Clip 8: Start=399.422, End=437.561
+2025-04-29 17:54:03,862 - INFO - Clip 9: Start=435.58, End=484.033
+2025-04-29 17:54:03,862 - INFO - Clip 10: Start=476.349, End=528.05
+2025-04-29 17:54:03,863 - INFO - Clip 11: Start=519.302, End=613.637
+2025-04-29 17:54:03,863 - INFO - Clip 12: Start=609.134, End=629.149
+2025-04-29 17:54:03,864 - INFO - Clip 13: Start=627.848, End=675.014
+2025-04-29 17:54:03,864 - INFO - Clip 14: Start=670.55, End=698.995
+2025-04-29 17:54:03,865 - INFO - Clip 15: Start=686.325, End=739.743
+2025-04-29 17:54:03,865 - INFO - Clip 16: Start=737.742, End=855.746
+2025-04-29 17:54:03,866 - INFO - Clip 17: Start=853.724, End=886.311
+2025-04-29 17:54:03,866 - INFO - Clip 18: Start=884.25, End=950.05
+2025-04-29 17:54:03,868 - INFO - Clip 19: Start=947.25, End=1002.016
+2025-04-29 17:54:03,870 - INFO - Clip 20: Start=997.673, End=1024.741
+2025-04-29 17:54:03,870 - INFO - Clip 21: Start=1021.437, End=1050.719
+2025-04-29 17:54:03,871 - INFO - Clip 22: Start=997.673, End=1050.719
+2025-04-29 17:54:03,871 - INFO - Clip 23: Start=11.816, End=65.334
+2025-04-29 17:54:03,872 - INFO - Clip 24: Start=63.173, End=163.312
+2025-04-29 17:54:03,873 - INFO - Clip 25: Start=160.009, End=259.974
+2025-04-29 17:54:03,873 - INFO - Clip 26: Start=667.828, End=711.788
+2025-04-29 17:54:03,874 - INFO - Clip 27: Start=884.25, End=1002.016
+2025-04-29 17:54:03,875 - INFO - Processing clip 1: -> /app/clips/part_000/part_000_clip1.mp4
+2025-04-29 17:54:03,875 - INFO - → About to call resize() for clip 1
+2025-04-29 17:54:16,158 - DEBUG - DIARIZING VIDEO (part_000.mp4)
+2025-04-29 17:54:16,216 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-04-29 17:54:16,280 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-04-29 17:54:16,561 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-04-29 17:54:16,564 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-04-29 17:54:16,589 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-04-29 17:54:16,690 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-04-29 17:54:16,755 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-04-29 17:54:16,758 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-04-29 17:54:16,799 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-04-29 17:54:16,956 - DEBUG - Pyannote using device: cpu
+2025-04-29 18:27:48,897 - DEBUG - File '/app/processmesempai/part_0009cd2c48cfbb14e139931347c30b13083.wav' successfully deleted.
+2025-04-29 18:27:48,898 - DEBUG - DETECTING SCENES IN VIDEO (part_000.mp4)
+2025-04-29 18:27:51,221 - INFO - Detecting scenes...
+2025-04-29 18:31:12,096 - DEBUG - RESIZING VIDEO) (part_000.mp4)
+2025-04-29 18:31:12,097 - DEBUG - FaceNet using device: cpu
+2025-04-29 18:31:17,035 - DEBUG - Video Resolution: 1920x1080
+2025-04-29 18:31:17,036 - DEBUG - Merging 57 speaker segments with 230 scene changes.
+2025-04-29 18:31:17,038 - DEBUG - Video has 273 distinct segments.
+2025-04-29 18:31:17,038 - DEBUG - Determining the first second with a face for each segment.
+2025-04-29 18:31:17,040 - DEBUG - Need 1.582 GiB to extract (at most) 273 frames
+2025-04-29 18:31:17,040 - DEBUG - Face detection dimensions: 540x960
+2025-04-29 18:31:17,041 - DEBUG - Need 0.395 GiB to detect faces from (at most) 273 frames
+2025-04-29 18:31:17,042 - DEBUG - Using 1 batches to extract and detect frames. Need 1.977 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-04-29 18:32:30,794 - DEBUG - Detecting faces in 273 frames.
+2025-04-29 18:35:32,706 - DEBUG - Detected faces in 273 frames.
+2025-04-29 18:35:32,712 - DEBUG - Need 0.353 GiB to extract (at most) 61 frames
+2025-04-29 18:35:32,713 - DEBUG - Face detection dimensions: 540x960
+2025-04-29 18:35:32,713 - DEBUG - Need 0.088 GiB to detect faces from (at most) 61 frames
+2025-04-29 18:35:32,714 - DEBUG - Using 1 batches to extract and detect frames. Need 0.442 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-04-29 18:36:01,162 - DEBUG - Detecting faces in 61 frames.
+2025-04-29 18:36:12,933 - DEBUG - Detected faces in 61 frames.
+2025-04-29 18:36:12,934 - DEBUG - Need 0.023 GiB to extract (at most) 4 frames
+2025-04-29 18:36:12,934 - DEBUG - Face detection dimensions: 540x960
+2025-04-29 18:36:12,935 - DEBUG - Need 0.006 GiB to detect faces from (at most) 4 frames
+2025-04-29 18:36:12,936 - DEBUG - Using 1 batches to extract and detect frames. Need 0.029 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-04-29 18:36:20,136 - DEBUG - Detecting faces in 4 frames.
+2025-04-29 18:36:25,434 - DEBUG - Detected faces in 4 frames.
+2025-04-29 18:36:25,436 - DEBUG - Determining the region of interest for 273 segments.
+2025-04-29 18:36:25,437 - DEBUG - Need 17.398 GiB to extract (at most) 3003 frames
+2025-04-29 18:36:25,438 - DEBUG - Face detection dimensions: 540x960
+2025-04-29 18:36:25,438 - DEBUG - Need 4.350 GiB to detect faces from (at most) 3003 frames
+2025-04-29 18:36:25,439 - DEBUG - Using 5 batches to extract and detect frames. Need 4.350 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-04-29 18:36:25,440 - DEBUG - Analyzing batch 0 of 5.
+2025-04-29 18:36:25,622 - DEBUG - Extracting 363 frames
+2025-04-29 18:38:50,520 - DEBUG - Extracted 363 frames
+2025-04-29 18:38:50,521 - DEBUG - Detecting faces in 363 frames.

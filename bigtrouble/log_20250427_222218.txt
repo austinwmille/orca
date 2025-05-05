@@ -1,0 +1,180 @@
+2025-04-27 22:22:18,775 - INFO - 
+==================================================
+
+2025-04-27 22:22:18,776 - INFO - 
+script codename: orca
+
+2025-04-27 22:22:18,778 - INFO - 
+===============================================================================
+
+2025-04-27 22:23:15,750 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-04-27 22:23:15,751 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-27 22:23:24,987 - INFO - 
+===============================================================================
+
+2025-04-27 22:23:24,987 - INFO - packages loaded
+
+2025-04-27 22:23:26,990 - INFO - setting up folders...
+
+2025-04-27 22:23:27,993 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-27 22:23:29,011 - INFO - Input folder set to '/app/processmesempai'
+2025-04-27 22:23:29,012 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-27 22:23:31,015 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-27 22:23:33,018 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-27 22:24:50,826 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-27 22:24:51,365 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-27 22:24:59,733 - INFO - next section loads pyannote auth token
+
+2025-04-27 22:25:02,737 - INFO - 
+===================================================================
+
+2025-04-27 22:25:04,471 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-27 22:25:04,507 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:04,638 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:05,259 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:09,541 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:09,648 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:10,034 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:10,186 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-27 22:25:10,576 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-27 22:25:10,605 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:10,661 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:10,952 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:11,042 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:11,143 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:11,195 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-27 22:25:11,249 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-27 22:25:11,402 - INFO - 
+===================================================================
+
+2025-04-27 22:25:11,403 - INFO - setup completed.
+
+2025-04-27 22:25:13,409 - INFO - 
+we will now begin processing 1 media files
+
+2025-04-27 22:25:14,412 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-27 22:25:14,413 - INFO - Good luck ;/
+
+2025-04-27 22:25:14,414 - INFO - 
+===============================
+
+2025-04-27 22:25:14,430 - INFO - Processing video/audio file: /app/processmesempai/20250426-Jon_Stewart__John_Oliver__Trevor_Noah___60_Minutes_Full_Episodes.mp4
+2025-04-27 22:26:25,011 - INFO - Audio extracted to: imthetrashman/20250426-Jon_Stewart__John_Oliver__Trevor_Noah___60_Minutes_Full_Episodes_audio.wav
+2025-04-27 23:50:59,310 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/221 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 221/221 [00:00<00:00, 1142960.77it/s]2025-04-27 23:51:03,389 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+
+Downloading: "https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth" to /root/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+  0%|          | 0.00/360M [00:00<?, ?B/s]  0%|          | 1.74M/360M [00:00<00:20, 18.1MB/s]  1%|▏         | 4.77M/360M [00:00<00:15, 24.8MB/s]  2%|▏         | 7.34M/360M [00:00<00:14, 25.7MB/s]  3%|▎         | 10.3M/360M [00:00<00:13, 27.8MB/s]  4%|▎         | 13.1M/360M [00:00<00:12, 28.1MB/s]  4%|▍         | 15.8M/360M [00:00<00:13, 27.1MB/s]  5%|▌         | 18.6M/360M [00:00<00:12, 27.9MB/s]  6%|▌         | 21.3M/360M [00:00<00:12, 27.7MB/s]  7%|▋         | 23.9M/360M [00:00<00:12, 27.3MB/s]  8%|▊         | 27.0M/360M [00:01<00:12, 28.2MB/s]  8%|▊         | 29.7M/360M [00:01<00:14, 24.4MB/s]  9%|▉         | 32.1M/360M [00:01<00:14, 23.5MB/s] 10%|▉         | 34.4M/360M [00:01<00:15, 22.4MB/s] 10%|█         | 36.6M/360M [00:01<00:15, 22.3MB/s] 11%|█         | 38.8M/360M [00:01<00:15, 21.6MB/s] 11%|█▏        | 41.0M/360M [00:01<00:15, 22.0MB/s] 12%|█▏        | 44.2M/360M [00:01<00:13, 25.3MB/s] 13%|█▎        | 46.6M/360M [00:01<00:13, 24.5MB/s] 14%|█▎        | 49.0M/360M [00:02<00:13, 24.0MB/s] 14%|█▍        | 51.3M/360M [00:02<00:13, 23.4MB/s] 15%|█▍        | 53.6M/360M [00:02<00:15, 21.2MB/s] 15%|█▌        | 55.7M/360M [00:02<00:14, 21.5MB/s] 16%|█▌        | 57.8M/360M [00:02<00:14, 21.5MB/s] 17%|█▋        | 59.9M/360M [00:02<00:14, 21.5MB/s] 17%|█▋        | 62.4M/360M [00:02<00:13, 22.8MB/s] 18%|█▊        | 64.6M/360M [00:02<00:13, 23.0MB/s] 19%|█▊        | 66.9M/360M [00:02<00:13, 22.1MB/s] 19%|█▉        | 69.0M/360M [00:03<00:13, 22.2MB/s] 20%|█▉        | 71.1M/360M [00:03<00:14, 21.4MB/s] 20%|██        | 73.2M/360M [00:03<00:14, 20.6MB/s] 21%|██        | 75.2M/360M [00:03<00:17, 17.5MB/s] 22%|██▏       | 77.5M/360M [00:03<00:15, 19.2MB/s] 22%|██▏       | 80.0M/360M [00:03<00:13, 21.2MB/s] 23%|██▎       | 82.4M/360M [00:03<00:13, 22.0MB/s] 24%|██▎       | 85.0M/360M [00:03<00:12, 23.5MB/s] 24%|██▍       | 87.5M/360M [00:03<00:11, 24.1MB/s] 25%|██▌       | 90.1M/360M [00:04<00:11, 23.9MB/s] 26%|██▌       | 92.4M/360M [00:04<00:11, 23.8MB/s] 26%|██▋       | 94.7M/360M [00:04<00:12, 23.2MB/s] 27%|██▋       | 96.9M/360M [00:04<00:12, 21.4MB/s] 28%|██▊       | 99.2M/360M [00:04<00:12, 22.1MB/s] 28%|██▊       | 101M/360M [00:04<00:12, 22.0MB/s]  29%|██▊       | 103M/360M [00:04<00:12, 21.4MB/s] 29%|██▉       | 106M/360M [00:04<00:12, 22.2MB/s] 30%|███       | 108M/360M [00:04<00:11, 22.7MB/s] 31%|███       | 110M/360M [00:05<00:11, 22.5MB/s] 31%|███       | 112M/360M [00:05<00:11, 22.5MB/s] 32%|███▏      | 115M/360M [00:05<00:11, 21.5MB/s] 33%|███▎      | 117M/360M [00:05<00:10, 23.7MB/s] 33%|███▎      | 120M/360M [00:05<00:10, 24.3MB/s] 34%|███▍      | 122M/360M [00:05<00:13, 19.1MB/s] 34%|███▍      | 124M/360M [00:05<00:13, 18.6MB/s] 35%|███▍      | 126M/360M [00:05<00:13, 17.8MB/s] 36%|███▌      | 128M/360M [00:05<00:13, 18.4MB/s] 36%|███▌      | 130M/360M [00:06<00:13, 18.4MB/s] 37%|███▋      | 132M/360M [00:06<00:12, 18.8MB/s] 37%|███▋      | 134M/360M [00:06<00:13, 17.7MB/s] 38%|███▊      | 136M/360M [00:06<00:12, 18.8MB/s] 38%|███▊      | 138M/360M [00:06<00:12, 18.8MB/s] 39%|███▊      | 139M/360M [00:06<00:12, 18.5MB/s] 39%|███▉      | 141M/360M [00:06<00:12, 18.7MB/s] 40%|███▉      | 143M/360M [00:06<00:12, 18.3MB/s] 40%|████      | 145M/360M [00:06<00:11, 19.3MB/s] 41%|████      | 147M/360M [00:07<00:11, 19.4MB/s] 41%|████▏     | 149M/360M [00:07<00:10, 20.6MB/s] 42%|████▏     | 151M/360M [00:07<00:11, 18.7MB/s] 43%|████▎     | 153M/360M [00:07<00:10, 20.0MB/s] 43%|████▎     | 156M/360M [00:07<00:10, 20.7MB/s] 44%|████▍     | 158M/360M [00:07<00:10, 19.7MB/s] 44%|████▍     | 160M/360M [00:07<00:10, 19.9MB/s] 45%|████▍     | 162M/360M [00:07<00:10, 20.7MB/s] 45%|████▌     | 164M/360M [00:07<00:10, 20.1MB/s] 46%|████▌     | 166M/360M [00:08<00:10, 19.4MB/s] 47%|████▋     | 168M/360M [00:08<00:09, 21.7MB/s] 47%|████▋     | 170M/360M [00:08<00:09, 20.4MB/s] 48%|████▊     | 173M/360M [00:08<00:09, 21.4MB/s] 49%|████▊     | 175M/360M [00:08<00:08, 22.1MB/s] 49%|████▉     | 177M/360M [00:08<00:08, 21.7MB/s] 50%|████▉     | 179M/360M [00:08<00:08, 21.2MB/s] 50%|█████     | 181M/360M [00:08<00:08, 21.1MB/s] 51%|█████     | 183M/360M [00:08<00:08, 20.8MB/s] 52%|█████▏    | 186M/360M [00:08<00:08, 22.2MB/s] 52%|█████▏    | 188M/360M [00:09<00:08, 20.7MB/s] 53%|█████▎    | 190M/360M [00:09<00:08, 22.1MB/s] 54%|█████▎    | 193M/360M [00:09<00:07, 22.6MB/s] 54%|█████▍    | 195M/360M [00:09<00:08, 21.6MB/s] 55%|█████▍    | 197M/360M [00:09<00:07, 22.1MB/s] 55%|█████▌    | 200M/360M [00:09<00:07, 22.9MB/s] 56%|█████▌    | 202M/360M [00:09<00:07, 21.7MB/s] 57%|█████▋    | 204M/360M [00:09<00:07, 23.1MB/s] 57%|█████▋    | 207M/360M [00:09<00:06, 23.2MB/s] 58%|█████▊    | 209M/360M [00:10<00:07, 22.0MB/s] 59%|█████▊    | 211M/360M [00:10<00:07, 22.3MB/s] 59%|█████▉    | 213M/360M [00:10<00:06, 22.1MB/s] 60%|█████▉    | 215M/360M [00:10<00:06, 21.9MB/s] 60%|██████    | 218M/360M [00:10<00:06, 21.6MB/s] 61%|██████    | 220M/360M [00:10<00:07, 21.0MB/s] 62%|██████▏   | 222M/360M [00:10<00:06, 22.8MB/s] 62%|██████▏   | 225M/360M [00:10<00:05, 23.9MB/s] 63%|██████▎   | 227M/360M [00:10<00:06, 22.2MB/s] 64%|██████▎   | 229M/360M [00:11<00:06, 21.7MB/s] 64%|██████▍   | 231M/360M [00:11<00:06, 21.4MB/s] 65%|██████▍   | 234M/360M [00:11<00:06, 21.8MB/s] 66%|██████▌   | 236M/360M [00:11<00:05, 22.3MB/s] 66%|██████▌   | 238M/360M [00:11<00:06, 20.4MB/s] 67%|██████▋   | 240M/360M [00:11<00:05, 21.2MB/s] 67%|██████▋   | 243M/360M [00:11<00:05, 21.6MB/s] 68%|██████▊   | 245M/360M [00:11<00:05, 21.2MB/s] 68%|██████▊   | 247M/360M [00:11<00:05, 21.2MB/s] 69%|██████▉   | 249M/360M [00:11<00:05, 21.0MB/s] 70%|██████▉   | 251M/360M [00:12<00:05, 19.1MB/s] 70%|███████   | 253M/360M [00:12<00:05, 20.1MB/s] 71%|███████   | 255M/360M [00:12<00:05, 20.4MB/s] 71%|███████▏  | 257M/360M [00:12<00:04, 21.8MB/s] 72%|███████▏  | 260M/360M [00:12<00:04, 22.7MB/s] 73%|███████▎  | 262M/360M [00:12<00:04, 23.7MB/s] 73%|███████▎  | 265M/360M [00:12<00:04, 22.4MB/s] 74%|███████▍  | 267M/360M [00:12<00:04, 23.1MB/s] 75%|███████▍  | 269M/360M [00:12<00:04, 22.9MB/s] 75%|███████▌  | 271M/360M [00:13<00:04, 22.2MB/s] 76%|███████▌  | 274M/360M [00:13<00:04, 22.3MB/s] 77%|███████▋  | 276M/360M [00:13<00:03, 22.3MB/s] 77%|███████▋  | 278M/360M [00:13<00:03, 21.6MB/s] 78%|███████▊  | 280M/360M [00:13<00:03, 22.1MB/s] 78%|███████▊  | 282M/360M [00:13<00:03, 21.6MB/s] 79%|███████▉  | 284M/360M [00:13<00:03, 20.2MB/s] 80%|███████▉  | 287M/360M [00:13<00:03, 21.5MB/s] 80%|████████  | 289M/360M [00:13<00:03, 22.8MB/s] 81%|████████  | 292M/360M [00:14<00:03, 21.3MB/s] 82%|████████▏ | 294M/360M [00:14<00:03, 20.8MB/s] 82%|████████▏ | 296M/360M [00:14<00:03, 19.3MB/s] 83%|████████▎ | 298M/360M [00:14<00:03, 19.6MB/s] 83%|████████▎ | 300M/360M [00:14<00:02, 21.4MB/s] 84%|████████▍ | 302M/360M [00:14<00:02, 21.1MB/s] 84%|████████▍ | 304M/360M [00:14<00:02, 21.2MB/s] 85%|████████▌ | 307M/360M [00:14<00:02, 22.4MB/s] 86%|████████▌ | 309M/360M [00:14<00:02, 21.5MB/s] 86%|████████▋ | 311M/360M [00:15<00:02, 21.5MB/s] 87%|████████▋ | 313M/360M [00:15<00:02, 21.9MB/s] 88%|████████▊ | 315M/360M [00:15<00:02, 20.6MB/s] 88%|████████▊ | 317M/360M [00:15<00:02, 21.1MB/s] 89%|████████▊ | 319M/360M [00:15<00:02, 20.5MB/s] 89%|████████▉ | 321M/360M [00:15<00:02, 19.5MB/s] 90%|████████▉ | 324M/360M [00:15<00:01, 20.2MB/s] 90%|█████████ | 326M/360M [00:15<00:01, 21.0MB/s] 91%|█████████ | 328M/360M [00:15<00:01, 19.0MB/s] 92%|█████████▏| 331M/360M [00:16<00:01, 22.5MB/s] 92%|█████████▏| 333M/360M [00:16<00:01, 22.2MB/s] 93%|█████████▎| 335M/360M [00:16<00:01, 22.2MB/s] 94%|█████████▎| 337M/360M [00:16<00:01, 19.6MB/s] 94%|█████████▍| 340M/360M [00:16<00:01, 20.7MB/s] 95%|█████████▍| 342M/360M [00:16<00:00, 21.5MB/s] 96%|█████████▌| 344M/360M [00:16<00:00, 22.0MB/s] 96%|█████████▋| 347M/360M [00:16<00:00, 23.2MB/s] 97%|█████████▋| 349M/360M [00:16<00:00, 22.9MB/s] 98%|█████████▊| 351M/360M [00:16<00:00, 23.2MB/s] 98%|█████████▊| 354M/360M [00:17<00:00, 24.5MB/s] 99%|█████████▉| 356M/360M [00:17<00:00, 21.9MB/s]100%|█████████▉| 359M/360M [00:17<00:00, 22.5MB/s]100%|██████████| 360M/360M [00:17<00:00, 21.7MB/s]2025-04-28 00:41:53,722 - INFO - Use pytorch device_name: cpu
+2025-04-28 00:41:53,723 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches:   0%|          | 0/25 [00:00<?, ?it/s]Batches:   4%|▍         | 1/25 [00:08<03:20,  8.36s/it]Batches:   8%|▊         | 2/25 [00:13<02:24,  6.27s/it]Batches:  12%|█▏        | 3/25 [00:18<02:05,  5.69s/it]Batches:  16%|█▌        | 4/25 [00:22<01:45,  5.02s/it]Batches:  20%|██        | 5/25 [00:25<01:29,  4.48s/it]Batches:  24%|██▍       | 6/25 [00:29<01:19,  4.20s/it]Batches:  28%|██▊       | 7/25 [00:32<01:08,  3.80s/it]Batches:  32%|███▏      | 8/25 [00:34<00:58,  3.42s/it]Batches:  36%|███▌      | 9/25 [00:37<00:49,  3.12s/it]Batches:  40%|████      | 10/25 [00:39<00:43,  2.89s/it]Batches:  44%|████▍     | 11/25 [00:41<00:37,  2.65s/it]Batches:  48%|████▊     | 12/25 [00:43<00:31,  2.45s/it]Batches:  52%|█████▏    | 13/25 [00:45<00:27,  2.31s/it]Batches:  56%|█████▌    | 14/25 [00:47<00:23,  2.18s/it]Batches:  60%|██████    | 15/25 [00:49<00:20,  2.08s/it]Batches:  64%|██████▍   | 16/25 [00:51<00:18,  2.03s/it]Batches:  68%|██████▊   | 17/25 [00:53<00:16,  2.09s/it]Batches:  72%|███████▏  | 18/25 [00:55<00:13,  1.98s/it]Batches:  76%|███████▌  | 19/25 [00:56<00:10,  1.82s/it]Batches:  80%|████████  | 20/25 [00:58<00:08,  1.66s/it]Batches:  84%|████████▍ | 21/25 [00:59<00:06,  1.59s/it]Batches:  88%|████████▊ | 22/25 [01:01<00:04,  1.54s/it]Batches:  92%|█████████▏| 23/25 [01:02<00:02,  1.42s/it]Batches:  96%|█████████▌| 24/25 [01:03<00:01,  1.27s/it]Batches: 100%|██████████| 25/25 [01:03<00:00,  1.02s/it]Batches: 100%|██████████| 25/25 [01:03<00:00,  2.54s/it]2025-04-28 00:43:57,565 - INFO - Clip 1: Start=160.009, End=250.681
+2025-04-28 00:43:57,566 - INFO - Clip 2: Start=248.62, End=290.954
+2025-04-28 00:43:57,566 - INFO - Clip 3: Start=297.219, End=314.282
+2025-04-28 00:43:57,567 - INFO - Clip 4: Start=312.141, End=337.552
+2025-04-28 00:43:57,567 - INFO - Clip 5: Start=336.751, End=361.027
+2025-04-28 00:43:57,568 - INFO - Clip 6: Start=360.066, End=401.263
+2025-04-28 00:43:57,568 - INFO - Clip 7: Start=399.422, End=437.561
+2025-04-28 00:43:57,569 - INFO - Clip 8: Start=435.58, End=484.033
+2025-04-28 00:43:57,570 - INFO - Clip 9: Start=476.349, End=528.05
+2025-04-28 00:43:57,571 - INFO - Clip 10: Start=519.302, End=613.637
+2025-04-28 00:43:57,571 - INFO - Clip 11: Start=609.134, End=629.149
+2025-04-28 00:43:57,572 - INFO - Clip 12: Start=627.848, End=675.014
+2025-04-28 00:43:57,573 - INFO - Clip 13: Start=670.55, End=698.995
+2025-04-28 00:43:57,573 - INFO - Clip 14: Start=686.325, End=739.743
+2025-04-28 00:43:57,574 - INFO - Clip 15: Start=737.742, End=855.746
+2025-04-28 00:43:57,574 - INFO - Clip 16: Start=853.724, End=886.311
+2025-04-28 00:43:57,575 - INFO - Clip 17: Start=884.25, End=950.05
+2025-04-28 00:43:57,575 - INFO - Clip 18: Start=947.25, End=1002.016
+2025-04-28 00:43:57,576 - INFO - Clip 19: Start=997.673, End=1024.741
+2025-04-28 00:43:57,576 - INFO - Clip 20: Start=1167.733, End=1217.741
+2025-04-28 00:43:57,576 - INFO - Clip 21: Start=1211.676, End=1239.014
+2025-04-28 00:43:57,577 - INFO - Clip 22: Start=1228.069, End=1271.572
+2025-04-28 00:43:57,577 - INFO - Clip 23: Start=1267.409, End=1328.278
+2025-04-28 00:43:57,578 - INFO - Clip 24: Start=1326.578, End=1356.938
+2025-04-28 00:43:57,578 - INFO - Clip 25: Start=1354.376, End=1390.633
+2025-04-28 00:43:57,579 - INFO - Clip 26: Start=1385.266, End=1423.415
+2025-04-28 00:43:57,579 - INFO - Clip 27: Start=1423.075, End=1488.458
+2025-04-28 00:43:57,580 - INFO - Clip 28: Start=1484.937, End=1522.294
+2025-04-28 00:43:57,580 - INFO - Clip 29: Start=1521.654, End=1616.219
+2025-04-28 00:43:57,581 - INFO - Clip 30: Start=1612.978, End=1665.916
+2025-04-28 00:43:57,582 - INFO - Clip 31: Start=1659.752, End=1689.391
+2025-04-28 00:43:57,582 - INFO - Clip 32: Start=1688.231, End=1747.425
+2025-04-28 00:43:57,583 - INFO - Clip 33: Start=1743.202, End=1829.823
+2025-04-28 00:43:57,583 - INFO - Clip 34: Start=1824.239, End=1859.778
+2025-04-28 00:43:57,584 - INFO - Clip 35: Start=1858.157, End=1892.442
+2025-04-28 00:43:57,584 - INFO - Clip 36: Start=1887.3, End=1967.11
+2025-04-28 00:43:57,585 - INFO - Clip 37: Start=2103.617, End=2129.023
+2025-04-28 00:43:57,586 - INFO - Clip 38: Start=2128.522, End=2157.88
+2025-04-28 00:43:57,586 - INFO - Clip 39: Start=2154.878, End=2177.449
+2025-04-28 00:43:57,586 - INFO - Clip 40: Start=2175.528, End=2232.379
+2025-04-28 00:43:57,587 - INFO - Clip 41: Start=2223.912, End=2257.098
+2025-04-28 00:43:57,587 - INFO - Clip 42: Start=2254.736, End=2279.857
+2025-04-28 00:43:57,588 - INFO - Clip 43: Start=2276.494, End=2309.698
+2025-04-28 00:43:57,588 - INFO - Clip 44: Start=2427.005, End=2496.799
+2025-04-28 00:43:57,590 - INFO - Clip 45: Start=2494.297, End=2539.518
+2025-04-28 00:43:57,590 - INFO - Clip 46: Start=2536.794, End=2583.148
+2025-04-28 00:43:57,590 - INFO - Clip 47: Start=2579.545, End=2647.333
+2025-04-28 00:43:57,591 - INFO - Clip 48: Start=2643.009, End=2683.982
+2025-04-28 00:43:57,591 - INFO - Clip 49: Start=2679.799, End=2748.174
+2025-04-28 00:43:57,591 - INFO - Clip 50: Start=2746.353, End=2769.382
+2025-04-28 00:43:57,592 - INFO - Clip 51: Start=2766.641, End=2801.083
+2025-04-28 00:43:57,592 - INFO - Clip 52: Start=2799.682, End=2844.525
+2025-04-28 00:43:57,593 - INFO - Clip 53: Start=2851.587, End=2871.356
+2025-04-28 00:43:57,593 - INFO - Clip 54: Start=2869.515, End=2889.638
+2025-04-28 00:43:57,594 - INFO - Clip 55: Start=2888.497, End=2928.484
+2025-04-28 00:43:57,594 - INFO - Clip 56: Start=2926.623, End=2954.822
+2025-04-28 00:43:57,595 - INFO - Clip 57: Start=2952.1, End=2989.955
+2025-04-28 00:43:57,596 - INFO - Clip 58: Start=2983.69, End=3042.845
+2025-04-28 00:43:57,596 - INFO - Clip 59: Start=3040.503, End=3088.04
+2025-04-28 00:43:57,597 - INFO - Clip 60: Start=3086.999, End=3117.756
+2025-04-28 00:43:57,597 - INFO - Clip 61: Start=11.816, End=65.334
+2025-04-28 00:43:57,598 - INFO - Clip 62: Start=63.173, End=163.312
+2025-04-28 00:43:57,598 - INFO - Clip 63: Start=290.273, End=337.552
+2025-04-28 00:43:57,599 - INFO - Clip 64: Start=395.92, End=489.496
+2025-04-28 00:43:57,600 - INFO - Clip 65: Start=667.828, End=711.788
+2025-04-28 00:43:57,600 - INFO - Clip 66: Start=884.25, End=1002.016
+2025-04-28 00:43:57,601 - INFO - Clip 67: Start=1021.437, End=1125.982
+2025-04-28 00:43:57,601 - INFO - Clip 68: Start=1125.762, End=1163.02
+2025-04-28 00:43:57,601 - INFO - Clip 69: Start=1239.974, End=1265.408
+2025-04-28 00:43:57,602 - INFO - Clip 70: Start=1324.688, End=1384.245
+2025-04-28 00:43:57,602 - INFO - Clip 71: Start=1521.654, End=1584.772
+2025-04-28 00:43:57,603 - INFO - Clip 72: Start=1575.185, End=1665.916
+2025-04-28 00:43:57,603 - INFO - Clip 73: Start=1743.202, End=1800.998
+2025-04-28 00:43:57,604 - INFO - Clip 74: Start=1797.396, End=1829.823
+2025-04-28 00:43:57,604 - INFO - Clip 75: Start=1963.507, End=2035.479
+2025-04-28 00:43:57,605 - INFO - Clip 76: Start=2032.797, End=2111.732
+2025-04-28 00:43:57,605 - INFO - Clip 77: Start=2107.769, End=2157.88
+2025-04-28 00:43:57,606 - INFO - Clip 78: Start=2223.912, End=2279.857
+2025-04-28 00:43:57,606 - INFO - Clip 79: Start=2432.312, End=2451.397
+2025-04-28 00:43:57,607 - INFO - Clip 80: Start=2450.277, End=2496.799
+2025-04-28 00:43:57,607 - INFO - Clip 81: Start=2869.515, End=2961.889
+2025-04-28 00:43:57,607 - INFO - Clip 82: Start=2955.622, End=3042.845
+2025-04-28 00:43:57,608 - INFO - Clip 83: Start=3040.503, End=3122.439
+2025-04-28 00:43:57,609 - INFO - Processing clip 1: -> /app/clips/20250426-Jon_Stewart__John_Oliver__Trevor_Noah___60_Minutes_Full_Episodes/20250426-Jon_Stewart__John_Oliver__Trevor_Noah___60_Minutes_Full_Episodes_clip1.mp4
+2025-04-28 00:43:57,609 - INFO - → About to call resize() for clip 1
+2025-04-28 02:07:13,724 - INFO - Detecting scenes...

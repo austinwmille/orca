@@ -1,0 +1,220 @@
+2025-04-23 02:42:15,407 - INFO - 
+==================================================
+
+2025-04-23 02:42:15,407 - INFO - 
+script codename: orca
+
+2025-04-23 02:42:15,408 - INFO - 
+===============================================================================
+
+2025-04-23 02:43:07,078 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-04-23 02:43:07,079 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-23 02:43:18,577 - INFO - 
+===============================================================================
+
+2025-04-23 02:43:18,578 - INFO - packages loaded
+
+2025-04-23 02:43:20,581 - INFO - setting up folders...
+
+2025-04-23 02:43:21,583 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-23 02:43:22,584 - INFO - Input folder set to '/app/processmesempai'
+2025-04-23 02:43:22,585 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-23 02:43:24,587 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-23 02:43:29,001 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-23 02:45:28,792 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-23 02:45:29,467 - INFO - next section loads pyannote auth token
+
+2025-04-23 02:45:32,471 - INFO - 
+===================================================================
+
+2025-04-23 02:45:38,846 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-23 02:45:38,904 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:45:39,076 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:45:40,048 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:12,021 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:12,195 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:13,004 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:13,240 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-23 02:46:13,745 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-23 02:46:13,784 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:13,853 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:14,237 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:14,296 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:14,359 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:14,419 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-23 02:46:14,475 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-23 02:46:14,644 - INFO - 
+===================================================================
+
+2025-04-23 02:46:14,644 - INFO - setup completed.
+
+2025-04-23 02:46:16,647 - INFO - 
+we will now begin processing 2 media files
+
+2025-04-23 02:46:17,649 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-23 02:46:17,650 - INFO - Good luck ;/
+
+2025-04-23 02:46:17,650 - INFO - 
+===============================
+
+2025-04-23 02:46:17,659 - INFO - Processing video/audio file: /app/processmesempai/Jordan_Peterson_on_Andrew_Tate___Lex_Fridman_Podcast_Clips.mp4
+2025-04-23 02:46:24,566 - INFO - Audio extracted to: imthetrashman/Jordan_Peterson_on_Andrew_Tate___Lex_Fridman_Podcast_Clips_audio.wav
+2025-04-23 02:59:15,276 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/12 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 12/12 [00:00<00:00, 157286.40it/s]2025-04-23 02:59:21,035 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+
+Downloading: "https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth" to /root/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+  0%|          | 0.00/360M [00:00<?, ?B/s]  0%|          | 840k/360M [00:00<00:44, 8.48MB/s]  0%|          | 1.65M/360M [00:00<00:44, 8.52MB/s]  1%|          | 2.75M/360M [00:00<00:38, 9.82MB/s]  1%|          | 3.69M/360M [00:00<00:41, 8.97MB/s]  1%|▏         | 4.66M/360M [00:00<00:40, 9.21MB/s]  2%|▏         | 5.78M/360M [00:00<00:38, 9.68MB/s]  2%|▏         | 6.71M/360M [00:00<00:38, 9.69MB/s]  2%|▏         | 7.64M/360M [00:01<01:00, 6.15MB/s]  2%|▏         | 8.49M/360M [00:01<00:54, 6.74MB/s]  3%|▎         | 9.45M/360M [00:01<00:48, 7.51MB/s]  3%|▎         | 10.6M/360M [00:01<00:42, 8.57MB/s]  3%|▎         | 11.7M/360M [00:01<00:38, 9.42MB/s]  4%|▎         | 12.7M/360M [00:01<00:38, 9.53MB/s]  4%|▍         | 13.7M/360M [00:01<00:39, 9.28MB/s]  4%|▍         | 14.6M/360M [00:01<00:44, 8.08MB/s]  4%|▍         | 15.6M/360M [00:01<00:41, 8.72MB/s]  5%|▍         | 16.5M/360M [00:02<00:40, 8.89MB/s]  5%|▍         | 17.4M/360M [00:02<00:46, 7.79MB/s]  5%|▌         | 18.4M/360M [00:02<00:42, 8.41MB/s]  5%|▌         | 19.4M/360M [00:02<00:40, 8.88MB/s]  6%|▌         | 20.5M/360M [00:02<00:37, 9.52MB/s]  6%|▌         | 21.4M/360M [00:02<00:37, 9.45MB/s]  6%|▌         | 22.3M/360M [00:02<00:44, 7.90MB/s]  6%|▋         | 23.2M/360M [00:02<00:44, 7.95MB/s]  7%|▋         | 24.6M/360M [00:02<00:35, 9.84MB/s]  7%|▋         | 25.8M/360M [00:03<00:33, 10.5MB/s]  7%|▋         | 27.0M/360M [00:03<00:31, 11.1MB/s]  8%|▊         | 28.3M/360M [00:03<00:30, 11.6MB/s]  8%|▊         | 29.5M/360M [00:03<00:29, 11.9MB/s]  9%|▊         | 30.6M/360M [00:03<00:28, 12.0MB/s]  9%|▉         | 31.8M/360M [00:03<00:32, 10.6MB/s]  9%|▉         | 33.1M/360M [00:03<00:30, 11.3MB/s] 10%|▉         | 34.3M/360M [00:03<00:29, 11.5MB/s] 10%|▉         | 35.4M/360M [00:03<00:29, 11.4MB/s] 10%|█         | 36.5M/360M [00:04<00:30, 11.3MB/s] 10%|█         | 37.6M/360M [00:04<00:30, 11.1MB/s] 11%|█         | 38.7M/360M [00:04<00:32, 10.3MB/s] 11%|█         | 40.0M/360M [00:04<00:30, 10.9MB/s] 11%|█▏        | 41.0M/360M [00:04<00:35, 9.51MB/s] 12%|█▏        | 42.0M/360M [00:05<01:55, 2.88MB/s] 12%|█▏        | 42.7M/360M [00:07<04:05, 1.35MB/s] 12%|█▏        | 44.0M/360M [00:07<02:43, 2.02MB/s] 13%|█▎        | 45.2M/360M [00:07<01:58, 2.78MB/s] 13%|█▎        | 46.0M/360M [00:07<01:45, 3.11MB/s] 13%|█▎        | 47.1M/360M [00:07<01:21, 4.05MB/s] 13%|█▎        | 48.5M/360M [00:07<01:00, 5.38MB/s] 14%|█▍        | 50.2M/360M [00:07<00:43, 7.39MB/s] 14%|█▍        | 51.4M/360M [00:07<00:39, 8.12MB/s] 15%|█▍        | 52.8M/360M [00:08<00:33, 9.54MB/s] 15%|█▌        | 54.2M/360M [00:08<00:30, 10.6MB/s] 15%|█▌        | 55.5M/360M [00:08<00:28, 11.3MB/s] 16%|█▌        | 56.8M/360M [00:08<00:26, 11.9MB/s] 16%|█▌        | 58.0M/360M [00:08<00:27, 11.7MB/s] 17%|█▋        | 59.6M/360M [00:08<00:24, 13.0MB/s] 17%|█▋        | 61.0M/360M [00:08<00:23, 13.5MB/s] 17%|█▋        | 62.4M/360M [00:08<00:23, 13.5MB/s] 18%|█▊        | 63.7M/360M [00:08<00:26, 11.7MB/s] 18%|█▊        | 64.9M/360M [00:09<00:26, 11.8MB/s] 18%|█▊        | 66.2M/360M [00:09<00:25, 12.1MB/s] 19%|█▉        | 67.6M/360M [00:09<00:23, 12.9MB/s] 19%|█▉        | 68.9M/360M [00:09<00:24, 12.6MB/s] 19%|█▉        | 70.1M/360M [00:09<00:24, 12.5MB/s] 20%|█▉        | 71.6M/360M [00:09<00:22, 13.4MB/s] 20%|██        | 73.2M/360M [00:09<00:21, 14.2MB/s] 21%|██        | 74.6M/360M [00:09<00:23, 12.8MB/s] 21%|██        | 75.9M/360M [00:09<00:22, 13.0MB/s] 21%|██▏       | 77.2M/360M [00:09<00:23, 12.8MB/s] 22%|██▏       | 78.5M/360M [00:10<00:22, 12.9MB/s] 22%|██▏       | 79.7M/360M [00:10<00:24, 12.1MB/s] 22%|██▏       | 80.9M/360M [00:10<00:26, 11.2MB/s] 23%|██▎       | 82.4M/360M [00:10<00:23, 12.3MB/s] 23%|██▎       | 83.7M/360M [00:10<00:23, 12.4MB/s] 24%|██▎       | 84.9M/360M [00:10<00:26, 10.7MB/s] 24%|██▍       | 85.9M/360M [00:10<00:27, 10.3MB/s] 24%|██▍       | 87.0M/360M [00:10<00:27, 10.4MB/s] 24%|██▍       | 88.0M/360M [00:11<00:27, 10.5MB/s] 25%|██▍       | 89.7M/360M [00:11<00:22, 12.3MB/s] 25%|██▌       | 91.3M/360M [00:11<00:20, 13.6MB/s] 26%|██▌       | 93.0M/360M [00:11<00:19, 14.6MB/s] 26%|██▌       | 94.4M/360M [00:11<00:19, 14.6MB/s] 27%|██▋       | 95.8M/360M [00:11<00:19, 13.9MB/s] 27%|██▋       | 97.2M/360M [00:11<00:20, 13.2MB/s] 27%|██▋       | 98.7M/360M [00:11<00:19, 13.9MB/s] 28%|██▊       | 100M/360M [00:11<00:18, 14.4MB/s]  28%|██▊       | 102M/360M [00:12<00:18, 14.9MB/s] 29%|██▊       | 103M/360M [00:12<00:19, 13.8MB/s] 29%|██▉       | 105M/360M [00:12<00:18, 14.3MB/s] 30%|██▉       | 106M/360M [00:12<00:17, 15.4MB/s] 30%|██▉       | 108M/360M [00:12<00:18, 14.2MB/s] 30%|███       | 109M/360M [00:12<00:19, 13.6MB/s] 31%|███       | 111M/360M [00:12<00:19, 13.4MB/s] 31%|███       | 113M/360M [00:12<00:17, 14.6MB/s] 32%|███▏      | 114M/360M [00:12<00:18, 13.8MB/s] 32%|███▏      | 115M/360M [00:13<00:18, 13.8MB/s] 32%|███▏      | 117M/360M [00:13<00:17, 14.5MB/s] 33%|███▎      | 119M/360M [00:13<00:16, 15.5MB/s] 33%|███▎      | 120M/360M [00:13<00:16, 14.9MB/s] 34%|███▎      | 122M/360M [00:13<00:16, 14.7MB/s] 34%|███▍      | 123M/360M [00:13<00:16, 15.0MB/s] 35%|███▍      | 124M/360M [00:13<00:16, 14.7MB/s] 35%|███▍      | 126M/360M [00:13<00:16, 14.5MB/s] 35%|███▌      | 127M/360M [00:13<00:16, 14.6MB/s] 36%|███▌      | 129M/360M [00:13<00:15, 15.5MB/s] 36%|███▌      | 131M/360M [00:14<00:15, 15.6MB/s] 37%|███▋      | 132M/360M [00:14<00:14, 16.3MB/s] 37%|███▋      | 134M/360M [00:14<00:15, 15.6MB/s] 38%|███▊      | 135M/360M [00:14<00:16, 14.0MB/s] 38%|███▊      | 137M/360M [00:14<00:16, 13.8MB/s] 38%|███▊      | 138M/360M [00:14<00:15, 15.1MB/s] 39%|███▉      | 140M/360M [00:14<00:14, 15.7MB/s] 39%|███▉      | 142M/360M [00:14<00:17, 12.7MB/s] 40%|████      | 144M/360M [00:15<00:13, 16.7MB/s] 41%|████      | 146M/360M [00:15<00:14, 15.8MB/s] 41%|████      | 148M/360M [00:15<00:13, 16.3MB/s] 41%|████▏     | 149M/360M [00:15<00:14, 15.1MB/s] 42%|████▏     | 151M/360M [00:15<00:13, 15.7MB/s] 42%|████▏     | 153M/360M [00:15<00:14, 15.1MB/s] 43%|████▎     | 154M/360M [00:15<00:14, 15.0MB/s] 43%|████▎     | 156M/360M [00:15<00:15, 13.7MB/s] 44%|████▎     | 157M/360M [00:15<00:16, 13.1MB/s] 44%|████▍     | 158M/360M [00:16<00:17, 11.9MB/s] 44%|████▍     | 159M/360M [00:16<00:18, 11.5MB/s] 45%|████▍     | 161M/360M [00:16<00:23, 8.88MB/s] 45%|████▍     | 162M/360M [00:16<00:20, 10.0MB/s] 45%|████▌     | 163M/360M [00:16<00:18, 11.1MB/s] 46%|████▌     | 164M/360M [00:16<00:19, 10.4MB/s] 46%|████▌     | 166M/360M [00:16<00:24, 8.26MB/s] 46%|████▋     | 167M/360M [00:17<00:21, 9.50MB/s] 47%|████▋     | 168M/360M [00:17<00:20, 9.94MB/s] 47%|████▋     | 169M/360M [00:17<00:21, 9.22MB/s] 47%|████▋     | 170M/360M [00:17<00:27, 7.34MB/s] 48%|████▊     | 173M/360M [00:17<00:16, 12.0MB/s] 48%|████▊     | 174M/360M [00:17<00:19, 9.80MB/s] 49%|████▊     | 175M/360M [00:18<00:24, 7.90MB/s] 49%|████▉     | 176M/360M [00:18<00:25, 7.60MB/s] 49%|████▉     | 177M/360M [00:18<00:23, 8.07MB/s] 50%|████▉     | 179M/360M [00:18<00:20, 9.42MB/s] 50%|████▉     | 180M/360M [00:18<00:20, 9.38MB/s] 50%|█████     | 181M/360M [00:18<00:21, 8.86MB/s] 50%|█████     | 182M/360M [00:18<00:19, 9.82MB/s] 51%|█████     | 183M/360M [00:18<00:18, 10.2MB/s] 51%|█████     | 184M/360M [00:19<00:18, 9.90MB/s] 51%|█████▏    | 185M/360M [00:19<00:17, 10.3MB/s] 52%|█████▏    | 187M/360M [00:19<00:15, 11.6MB/s] 52%|█████▏    | 188M/360M [00:19<00:14, 12.6MB/s] 53%|█████▎    | 189M/360M [00:19<00:14, 12.5MB/s] 53%|█████▎    | 190M/360M [00:19<00:14, 11.9MB/s] 53%|█████▎    | 192M/360M [00:19<00:13, 13.3MB/s] 54%|█████▎    | 193M/360M [00:19<00:13, 13.4MB/s] 54%|█████▍    | 195M/360M [00:19<00:15, 11.0MB/s] 54%|█████▍    | 196M/360M [00:20<00:15, 11.4MB/s] 55%|█████▍    | 197M/360M [00:20<00:15, 10.9MB/s] 55%|█████▌    | 198M/360M [00:20<00:14, 12.0MB/s] 55%|█████▌    | 200M/360M [00:20<00:14, 11.5MB/s] 56%|█████▌    | 201M/360M [00:20<00:15, 10.9MB/s] 56%|█████▌    | 202M/360M [00:20<00:14, 11.2MB/s] 57%|█████▋    | 204M/360M [00:20<00:12, 12.6MB/s] 57%|█████▋    | 205M/360M [00:20<00:13, 12.3MB/s] 57%|█████▋    | 206M/360M [00:20<00:12, 13.4MB/s] 58%|█████▊    | 208M/360M [00:21<00:11, 14.0MB/s] 58%|█████▊    | 209M/360M [00:21<00:10, 14.5MB/s] 59%|█████▊    | 211M/360M [00:21<00:10, 15.1MB/s] 59%|█████▉    | 213M/360M [00:21<00:09, 15.7MB/s] 60%|█████▉    | 215M/360M [00:21<00:08, 18.0MB/s] 60%|██████    | 217M/360M [00:21<00:08, 17.1MB/s] 61%|██████    | 218M/360M [00:21<00:09, 16.4MB/s] 61%|██████    | 220M/360M [00:21<00:09, 14.9MB/s] 61%|██████▏   | 221M/360M [00:21<00:09, 15.2MB/s] 62%|██████▏   | 223M/360M [00:22<00:09, 15.1MB/s] 62%|██████▏   | 224M/360M [00:22<00:09, 15.3MB/s] 63%|██████▎   | 226M/360M [00:22<00:09, 15.1MB/s] 63%|██████▎   | 227M/360M [00:22<00:09, 15.4MB/s] 64%|██████▎   | 229M/360M [00:22<00:08, 15.9MB/s] 64%|██████▍   | 231M/360M [00:22<00:07, 17.3MB/s] 65%|██████▍   | 233M/360M [00:22<00:07, 17.1MB/s] 65%|██████▌   | 234M/360M [00:22<00:09, 14.2MB/s] 65%|██████▌   | 236M/360M [00:22<00:09, 13.5MB/s] 66%|██████▌   | 238M/360M [00:23<00:08, 14.9MB/s] 66%|██████▋   | 239M/360M [00:23<00:08, 14.9MB/s] 67%|██████▋   | 240M/360M [00:23<00:08, 14.3MB/s] 67%|██████▋   | 242M/360M [00:23<00:08, 14.8MB/s] 68%|██████▊   | 243M/360M [00:23<00:09, 13.3MB/s] 68%|██████▊   | 245M/360M [00:23<00:09, 13.3MB/s] 68%|██████▊   | 246M/360M [00:23<00:08, 13.8MB/s] 69%|██████▊   | 248M/360M [00:23<00:09, 12.1MB/s] 69%|██████▉   | 249M/360M [00:23<00:08, 13.3MB/s] 70%|██████▉   | 251M/360M [00:24<00:08, 13.3MB/s] 70%|███████   | 252M/360M [00:24<00:07, 14.9MB/s] 70%|███████   | 254M/360M [00:24<00:07, 14.1MB/s] 71%|███████   | 256M/360M [00:24<00:07, 14.6MB/s] 71%|███████▏  | 257M/360M [00:24<00:07, 13.9MB/s] 72%|███████▏  | 258M/360M [00:24<00:07, 14.3MB/s] 72%|███████▏  | 260M/360M [00:24<00:07, 14.4MB/s] 73%|███████▎  | 261M/360M [00:24<00:06, 15.0MB/s] 73%|███████▎  | 263M/360M [00:24<00:06, 15.9MB/s] 74%|███████▎  | 265M/360M [00:25<00:06, 15.7MB/s] 74%|███████▍  | 266M/360M [00:25<00:06, 15.6MB/s] 74%|███████▍  | 268M/360M [00:25<00:05, 16.3MB/s] 75%|███████▍  | 270M/360M [00:25<00:05, 16.8MB/s] 75%|███████▌  | 271M/360M [00:25<00:06, 14.9MB/s] 76%|███████▌  | 273M/360M [00:25<00:06, 14.6MB/s] 76%|███████▌  | 274M/360M [00:25<00:05, 15.2MB/s] 77%|███████▋  | 276M/360M [00:25<00:05, 15.6MB/s] 77%|███████▋  | 278M/360M [00:25<00:05, 15.9MB/s] 78%|███████▊  | 279M/360M [00:26<00:05, 15.2MB/s] 78%|███████▊  | 281M/360M [00:26<00:05, 15.3MB/s] 78%|███████▊  | 282M/360M [00:26<00:05, 15.4MB/s] 79%|███████▊  | 284M/360M [00:26<00:05, 14.7MB/s] 79%|███████▉  | 285M/360M [00:26<00:05, 14.8MB/s] 80%|███████▉  | 287M/360M [00:26<00:04, 15.5MB/s] 80%|████████  | 289M/360M [00:26<00:04, 16.3MB/s] 81%|████████  | 290M/360M [00:26<00:04, 16.1MB/s] 81%|████████  | 292M/360M [00:26<00:04, 16.2MB/s] 81%|████████▏ | 293M/360M [00:26<00:04, 16.6MB/s] 82%|████████▏ | 295M/360M [00:27<00:04, 16.5MB/s] 82%|████████▏ | 297M/360M [00:27<00:04, 15.7MB/s] 83%|████████▎ | 298M/360M [00:27<00:04, 14.2MB/s] 83%|████████▎ | 300M/360M [00:27<00:04, 14.6MB/s] 84%|████████▎ | 301M/360M [00:27<00:03, 15.6MB/s] 84%|████████▍ | 303M/360M [00:27<00:03, 15.7MB/s] 85%|████████▍ | 304M/360M [00:27<00:03, 15.1MB/s] 85%|████████▍ | 306M/360M [00:27<00:03, 14.9MB/s] 85%|████████▌ | 308M/360M [00:27<00:03, 16.5MB/s] 86%|████████▌ | 310M/360M [00:28<00:03, 17.4MB/s] 86%|████████▋ | 311M/360M [00:28<00:03, 16.5MB/s] 87%|████████▋ | 313M/360M [00:28<00:03, 15.7MB/s] 87%|████████▋ | 314M/360M [00:28<00:03, 15.6MB/s] 88%|████████▊ | 316M/360M [00:28<00:03, 15.4MB/s] 88%|████████▊ | 318M/360M [00:28<00:02, 15.5MB/s] 89%|████████▊ | 319M/360M [00:28<00:02, 15.3MB/s] 89%|████████▉ | 321M/360M [00:28<00:02, 15.8MB/s] 89%|████████▉ | 322M/360M [00:28<00:02, 15.3MB/s] 90%|████████▉ | 324M/360M [00:29<00:02, 14.7MB/s] 90%|█████████ | 325M/360M [00:29<00:02, 13.2MB/s] 91%|█████████ | 326M/360M [00:29<00:03, 11.8MB/s] 91%|█████████ | 328M/360M [00:29<00:02, 13.3MB/s] 91%|█████████▏| 329M/360M [00:29<00:02, 13.1MB/s] 92%|█████████▏| 331M/360M [00:29<00:02, 13.3MB/s] 92%|█████████▏| 333M/360M [00:29<00:01, 15.2MB/s] 93%|█████████▎| 334M/360M [00:29<00:01, 16.1MB/s] 93%|█████████▎| 336M/360M [00:29<00:01, 17.1MB/s] 94%|█████████▍| 338M/360M [00:30<00:01, 15.9MB/s] 94%|█████████▍| 340M/360M [00:30<00:01, 12.8MB/s] 95%|█████████▍| 341M/360M [00:30<00:01, 11.9MB/s] 95%|█████████▌| 342M/360M [00:30<00:01, 12.3MB/s] 95%|█████████▌| 343M/360M [00:30<00:01, 12.3MB/s] 96%|█████████▌| 345M/360M [00:30<00:01, 12.0MB/s] 96%|█████████▌| 346M/360M [00:30<00:01, 9.83MB/s] 96%|█████████▋| 347M/360M [00:31<00:01, 8.27MB/s] 97%|█████████▋| 348M/360M [00:31<00:01, 7.96MB/s] 97%|█████████▋| 349M/360M [00:31<00:01, 8.22MB/s] 97%|█████████▋| 349M/360M [00:31<00:01, 8.27MB/s] 97%|█████████▋| 350M/360M [00:31<00:01, 7.90MB/s] 98%|█████████▊| 351M/360M [00:31<00:01, 8.87MB/s] 98%|█████████▊| 353M/360M [00:31<00:00, 9.95MB/s] 98%|█████████▊| 354M/360M [00:31<00:00, 11.3MB/s] 99%|█████████▊| 355M/360M [00:31<00:00, 11.5MB/s] 99%|█████████▉| 357M/360M [00:32<00:00, 12.7MB/s] 99%|█████████▉| 358M/360M [00:32<00:00, 13.2MB/s]100%|█████████▉| 360M/360M [00:32<00:00, 13.8MB/s]100%|██████████| 360M/360M [00:32<00:00, 11.7MB/s]2025-04-23 03:09:25,445 - INFO - Use pytorch device_name: cpu
+2025-04-23 03:09:25,446 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:09<00:09,  9.94s/it]Batches: 100%|██████████| 2/2 [00:13<00:00,  5.99s/it]Batches: 100%|██████████| 2/2 [00:13<00:00,  6.58s/it]2025-04-23 03:11:21,285 - INFO - Clip 1: Start=2.97, End=56.196
+2025-04-23 03:11:21,285 - INFO - Clip 2: Start=54.796, End=134.09
+2025-04-23 03:11:21,286 - INFO - Clip 3: Start=139.794, End=216.214
+2025-04-23 03:11:21,286 - INFO - Clip 4: Start=220.42, End=277.8
+2025-04-23 03:11:21,287 - INFO - Clip 5: Start=273.558, End=322.612
+2025-04-23 03:11:21,288 - INFO - Clip 6: Start=126.465, End=206.744
+2025-04-23 03:11:21,288 - INFO - Clip 7: Start=203.343, End=224.185
+2025-04-23 03:11:21,289 - INFO - Processing clip 1: -> /app/clips/Jordan_Peterson_on_Andrew_Tate___Lex_Fridman_Podcast_Clips/Jordan_Peterson_on_Andrew_Tate___Lex_Fridman_Podcast_Clips_clip1.mp4
+2025-04-23 03:11:21,291 - INFO - → About to call resize() for clip 1
+2025-04-23 03:23:56,484 - INFO - Detecting scenes...
+2025-04-23 03:30:05,496 - INFO - ← resize() returned in 1124.2s
+2025-04-23 03:30:05,498 - INFO - Segments for clip 1: [{'start_time': 0.0, 'end_time': 7.06666, 'x': 268, 'y': 0}, {'start_time': 7.06666, 'end_time': 11.599989, 'x': 1059, 'y': 0}, {'start_time': 11.599989, 'end_time': 14.13332, 'x': 364, 'y': 0}, {'start_time': 14.13332, 'end_time': 115.466554, 'x': 1041, 'y': 0}, {'start_time': 115.466554, 'end_time': 126.266544, 'x': 362, 'y': 0}, {'start_time': 126.266544, 'end_time': 151.06652, 'x': 997, 'y': 0}, {'start_time': 151.06652, 'end_time': 158.633179, 'x': 657, 'y': 0}, {'start_time': 158.633179, 'end_time': 203.099802, 'x': 1055, 'y': 0}, {'start_time': 203.099802, 'end_time': 207.099799, 'x': 306, 'y': 0}, {'start_time': 207.099799, 'end_time': 210.466462, 'x': 1066, 'y': 0}, {'start_time': 210.466462, 'end_time': 216.266456, 'x': 323, 'y': 0}, {'start_time': 216.266456, 'end_time': 220.466452, 'x': 1077, 'y': 11}, {'start_time': 220.466452, 'end_time': 220.975344, 'x': 1180, 'y': 11}, {'start_time': 220.975344, 'end_time': 251.233089, 'x': 320, 'y': 0}, {'start_time': 251.233089, 'end_time': 256.133084, 'x': 987, 'y': 0}, {'start_time': 256.133084, 'end_time': 265.933075, 'x': 334, 'y': 0}, {'start_time': 265.933075, 'end_time': 271.499736, 'x': 1046, 'y': 0}, {'start_time': 271.499736, 'end_time': 273.166401, 'x': 355, 'y': 0}, {'start_time': 273.166401, 'end_time': 306.299702, 'x': 1015, 'y': 0}, {'start_time': 306.299702, 'end_time': 317.233025, 'x': 313, 'y': 0}, {'start_time': 317.233025, 'end_time': 318.766357, 'x': 1022, 'y': 0}, {'start_time': 318.766357, 'end_time': 321.066354, 'x': 342, 'y': 0}, {'start_time': 321.066354, 'end_time': 342.741, 'x': 109, 'y': 143}]
+2025-04-23 03:42:34,321 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x55d0d8d72540] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from '/usr/local/lib/python3.9/site-packages/clipsai/media/f9e04d97981842b89f1dc8348e0fb825_media_file_paths.txt':
+  Duration: N/A, start: -0.014833, bitrate: 1150 kb/s
+  Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 606x1080 [SAR 1:1 DAR 101:180], 1074 kb/s, 30 fps, 30 tbr, 15360 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc59.37.100 libx264
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 75 kb/s
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Filtergraph 'setpts=PTS-STARTPTS' was defined for video output stream 0:0 but codec copy was selected.
+Filtering and streamcopy cannot be used together.
+'
+
+2025-04-23 03:55:15,694 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x561788da1540] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from '/usr/local/lib/python3.9/site-packages/clipsai/media/0d0b012a66b44c7d879c072044bb53dd_media_file_paths.txt':
+  Duration: N/A, start: -0.014833, bitrate: 1150 kb/s
+  Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 606x1080 [SAR 1:1 DAR 101:180], 1074 kb/s, 30 fps, 30 tbr, 15360 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc59.37.100 libx264
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 75 kb/s
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Filtergraph 'setpts=PTS-STARTPTS' was defined for video output stream 0:0 but codec copy was selected.
+Filtering and streamcopy cannot be used together.
+'
+
+2025-04-23 03:56:00,525 - ERROR - resize_video() failed – skipping this clip.
+2025-04-23 03:56:00,526 - INFO - Processing clip 2: -> /app/clips/Jordan_Peterson_on_Andrew_Tate___Lex_Fridman_Podcast_Clips/Jordan_Peterson_on_Andrew_Tate___Lex_Fridman_Podcast_Clips_clip2.mp4
+2025-04-23 03:56:00,526 - INFO - → About to call resize() for clip 2
+
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Traceback (most recent call last):
+  File "/app/orca.py", line 310, in <module>
+    crops = resize(
+  File "/usr/local/lib/python3.9/site-packages/clipsai/resize/resize.py", line 78, in resize
+    diarized_segments = diarizer.diarize(media, min_segment_duration, time_precision)
+  File "/usr/local/lib/python3.9/site-packages/clipsai/diarize/pyannote.py", line 107, in diarize
+    pyannote_segments: Annotation = self.pipeline({"audio": wav_file.path})
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/core/pipeline.py", line 327, in __call__
+    return self.apply(file, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/pipelines/speaker_diarization.py", line 523, in apply
+    embeddings = self.get_embeddings(
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/pipelines/speaker_diarization.py", line 348, in get_embeddings
+    embedding_batch: np.ndarray = self._embedding(
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/pipelines/speaker_verification.py", line 702, in __call__
+    embeddings = self.model_(
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/models/embedding/wespeaker/__init__.py", line 343, in forward
+    return self.resnet(fbank, weights=weights)[1]
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/models/embedding/wespeaker/resnet.py", line 417, in forward
+    out = self.layer2(out)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/models/embedding/wespeaker/resnet.py", line 142, in forward
+    out = self.bn2(self.conv2(out))
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
+2025-04-23 03:57:57,319 - INFO - >>> SCRIPT IS EXITING NOW <<<

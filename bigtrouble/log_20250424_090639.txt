@@ -1,0 +1,42 @@
+2025-04-24 09:06:39,518 - INFO - 
+==================================================
+
+2025-04-24 09:06:39,519 - INFO - 
+script codename: orca
+
+2025-04-24 09:06:39,520 - INFO - 
+===============================================================================
+
+2025-04-24 09:07:35,087 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-04-24 09:07:35,088 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-24 09:07:56,667 - INFO - 
+===============================================================================
+
+2025-04-24 09:07:56,667 - INFO - packages loaded
+
+2025-04-24 09:07:58,670 - INFO - setting up folders...
+
+2025-04-24 09:07:59,671 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-24 09:08:00,673 - INFO - Input folder set to '/app/processmesempai'
+2025-04-24 09:08:00,674 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-24 09:08:02,675 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-24 09:08:04,677 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-24 09:09:18,324 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-24 09:09:18,713 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Traceback (most recent call last):
+  File "/app/orca.py", line 165, in <module>
+    clipfinder = ClipFinder(embedding_model=st_model)
+TypeError: __init__() got an unexpected keyword argument 'embedding_model'
+2025-04-24 09:09:26,967 - INFO - >>> SCRIPT IS EXITING NOW <<<

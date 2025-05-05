@@ -1,0 +1,96 @@
+2025-04-20 20:42:04,762 - INFO - 
+==================================================
+
+2025-04-20 20:42:04,763 - INFO - 
+script codename: orca
+
+2025-04-20 20:42:04,763 - INFO - 
+===============================================================================
+
+2025-04-20 20:42:19,994 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-04-20 20:42:19,995 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-20 20:42:28,339 - INFO - 
+===============================================================================
+
+2025-04-20 20:42:28,340 - INFO - packages loaded
+
+2025-04-20 20:42:30,342 - INFO - setting up folders...
+
+2025-04-20 20:42:31,344 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-20 20:42:32,346 - INFO - Input folder set to '/app/processmesempai'
+2025-04-20 20:42:32,347 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-20 20:42:34,350 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-20 20:42:36,354 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-20 20:43:54,910 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-20 20:43:55,166 - INFO - next section loads pyannote auth token
+
+2025-04-20 20:43:58,170 - INFO - 
+===================================================================
+
+2025-04-20 20:43:59,632 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-20 20:43:59,658 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:43:59,804 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:00,339 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:03,991 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:04,225 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:04,631 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:04,796 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-20 20:44:05,194 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-20 20:44:05,221 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:05,294 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:05,577 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:05,651 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:05,707 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:05,774 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 20:44:05,844 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-20 20:44:06,010 - INFO - 
+===================================================================
+
+2025-04-20 20:44:06,011 - INFO - setup completed.
+
+2025-04-20 20:44:08,016 - INFO - 
+we will now begin processing 2 videos
+
+2025-04-20 20:44:09,018 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-20 20:44:09,019 - INFO - Good luck ;/
+
+2025-04-20 20:44:09,019 - INFO - 
+===============================
+
+2025-04-20 20:44:09,030 - INFO - Processing video/audio file: /app/processmesempai/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy.mp4
+2025-04-20 20:44:25,903 - INFO - Audio extracted to: imthetrashman/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_audio.wav
+2025-04-20 21:21:48,916 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/1 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 1/1 [00:00<00:00, 15650.39it/s]2025-04-20 21:21:53,841 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+
+Downloading: "https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth" to /root/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+  0%|          | 0.00/360M [00:00<?, ?B/s]  0%|          | 512k/360M [00:00<01:12, 5.21MB/s]  1%|          | 2.94M/360M [00:00<00:21, 17.1MB/s]  2%|▏         | 5.59M/360M [00:00<00:16, 22.0MB/s]  2%|▏         | 8.25M/360M [00:00<00:15, 24.2MB/s]  3%|▎         | 11.1M/360M [00:00<00:13, 26.3MB/s]  4%|▍         | 13.6M/360M [00:00<00:14, 25.7MB/s]  4%|▍         | 16.1M/360M [00:00<00:14, 25.0MB/s]  5%|▌         | 18.5M/360M [00:00<00:14, 25.0MB/s]  6%|▌         | 21.0M/360M [00:00<00:14, 25.4MB/s]  7%|▋         | 24.0M/360M [00:01<00:13, 27.1MB/s]  7%|▋         | 26.7M/360M [00:01<00:13, 26.8MB/s]  8%|▊         | 29.3M/360M [00:01<00:12, 27.0MB/s]  9%|▉         | 32.0M/360M [00:01<00:12, 27.3MB/s] 10%|▉         | 34.6M/360M [00:01<00:12, 26.6MB/s] 10%|█         | 37.2M/360M [00:01<00:12, 26.7MB/s] 11%|█         | 39.7M/360M [00:01<00:13, 25.4MB/s] 12%|█▏        | 42.2M/360M [00:01<00:13, 25.2MB/s] 12%|█▏        | 44.9M/360M [00:01<00:12, 26.1MB/s] 13%|█▎        | 47.4M/360M [00:01<00:12, 26.0MB/s] 14%|█▍        | 49.9M/360M [00:02<00:12, 26.0MB/s] 15%|█▍        | 52.4M/360M [00:02<00:12, 26.0MB/s] 15%|█▌        | 55.6M/360M [00:02<00:11, 28.2MB/s] 16%|█▌        | 58.5M/360M [00:02<00:11, 27.7MB/s] 17%|█▋        | 61.4M/360M [00:02<00:10, 28.6MB/s] 18%|█▊        | 64.2M/360M [00:02<00:11, 27.7MB/s] 19%|█▊        | 66.8M/360M [00:02<00:11, 26.8MB/s] 19%|█▉        | 69.4M/360M [00:02<00:11, 26.9MB/s] 20%|█▉        | 72.0M/360M [00:02<00:11, 26.7MB/s] 21%|██        | 75.2M/360M [00:03<00:10, 28.6MB/s] 22%|██▏       | 77.9M/360M [00:03<00:10, 28.5MB/s] 22%|██▏       | 80.8M/360M [00:03<00:10, 29.0MB/s] 23%|██▎       | 83.6M/360M [00:03<00:10, 28.8MB/s] 24%|██▍       | 86.5M/360M [00:03<00:09, 29.4MB/s] 25%|██▍       | 89.4M/360M [00:03<00:09, 29.0MB/s] 26%|██▌       | 92.2M/360M [00:03<00:09, 28.8MB/s] 26%|██▋       | 95.3M/360M [00:03<00:09, 29.8MB/s] 27%|██▋       | 98.1M/360M [00:03<00:10, 27.3MB/s] 28%|██▊       | 101M/360M [00:03<00:10, 27.1MB/s]  29%|██▊       | 103M/360M [00:04<00:10, 25.1MB/s] 29%|██▉       | 106M/360M [00:04<00:10, 24.4MB/s] 30%|███       | 108M/360M [00:04<00:11, 23.8MB/s] 31%|███       | 111M/360M [00:04<00:10, 24.8MB/s] 32%|███▏      | 114M/360M [00:04<00:09, 26.3MB/s] 32%|███▏      | 116M/360M [00:04<00:09, 26.2MB/s] 33%|███▎      | 119M/360M [00:04<00:10, 24.6MB/s] 34%|███▍      | 122M/360M [00:04<00:09, 26.0MB/s] 34%|███▍      | 124M/360M [00:04<00:10, 24.2MB/s] 35%|███▌      | 126M/360M [00:05<00:10, 24.2MB/s] 36%|███▌      | 129M/360M [00:05<00:10, 22.5MB/s] 36%|███▋      | 131M/360M [00:05<00:10, 22.8MB/s] 37%|███▋      | 134M/360M [00:05<00:10, 23.7MB/s] 38%|███▊      | 136M/360M [00:05<00:09, 24.0MB/s] 38%|███▊      | 138M/360M [00:05<00:09, 23.4MB/s] 39%|███▉      | 141M/360M [00:05<00:09, 23.6MB/s] 40%|███▉      | 143M/360M [00:05<00:09, 23.1MB/s] 40%|████      | 145M/360M [00:05<00:09, 22.7MB/s] 41%|████      | 147M/360M [00:06<00:09, 22.5MB/s] 42%|████▏     | 150M/360M [00:06<00:09, 22.7MB/s] 42%|████▏     | 152M/360M [00:06<00:09, 23.0MB/s] 43%|████▎     | 154M/360M [00:06<00:09, 22.8MB/s] 43%|████▎     | 156M/360M [00:06<00:10, 20.9MB/s] 44%|████▍     | 158M/360M [00:06<00:10, 20.4MB/s] 44%|████▍     | 160M/360M [00:06<00:10, 20.2MB/s] 45%|████▌     | 162M/360M [00:06<00:09, 20.8MB/s] 46%|████▌     | 165M/360M [00:06<00:09, 21.3MB/s] 46%|████▋     | 167M/360M [00:06<00:09, 21.9MB/s] 47%|████▋     | 169M/360M [00:07<00:08, 23.0MB/s] 48%|████▊     | 172M/360M [00:07<00:08, 24.4MB/s] 48%|████▊     | 174M/360M [00:07<00:08, 24.2MB/s] 49%|████▉     | 177M/360M [00:07<00:07, 26.3MB/s] 50%|█████     | 180M/360M [00:07<00:06, 27.4MB/s] 51%|█████     | 183M/360M [00:07<00:07, 26.1MB/s] 51%|█████▏    | 185M/360M [00:07<00:07, 25.1MB/s] 52%|█████▏    | 188M/360M [00:07<00:07, 25.6MB/s] 53%|█████▎    | 191M/360M [00:07<00:06, 26.8MB/s] 54%|█████▍    | 194M/360M [00:08<00:06, 27.8MB/s] 55%|█████▍    | 197M/360M [00:08<00:05, 29.3MB/s] 56%|█████▌    | 200M/360M [00:08<00:05, 29.8MB/s] 56%|█████▋    | 203M/360M [00:08<00:05, 30.9MB/s] 57%|█████▋    | 206M/360M [00:08<00:05, 28.9MB/s] 58%|█████▊    | 209M/360M [00:08<00:05, 28.1MB/s] 59%|█████▉    | 212M/360M [00:08<00:05, 28.2MB/s] 60%|█████▉    | 214M/360M [00:08<00:05, 28.4MB/s] 60%|██████    | 217M/360M [00:08<00:05, 26.9MB/s] 61%|██████    | 220M/360M [00:08<00:05, 29.2MB/s] 62%|██████▏   | 223M/360M [00:09<00:04, 29.6MB/s] 63%|██████▎   | 227M/360M [00:09<00:04, 30.7MB/s] 64%|██████▎   | 230M/360M [00:09<00:04, 29.5MB/s] 65%|██████▍   | 233M/360M [00:09<00:04, 30.6MB/s] 65%|██████▌   | 236M/360M [00:09<00:04, 29.4MB/s] 66%|██████▋   | 239M/360M [00:09<00:04, 30.5MB/s] 67%|██████▋   | 242M/360M [00:09<00:04, 29.6MB/s] 68%|██████▊   | 245M/360M [00:09<00:04, 29.6MB/s] 69%|██████▊   | 248M/360M [00:09<00:04, 29.0MB/s] 70%|██████▉   | 251M/360M [00:10<00:03, 29.7MB/s] 70%|███████   | 253M/360M [00:10<00:03, 29.1MB/s] 71%|███████   | 256M/360M [00:10<00:03, 28.4MB/s] 72%|███████▏  | 259M/360M [00:10<00:03, 28.1MB/s] 73%|███████▎  | 262M/360M [00:10<00:03, 28.3MB/s] 73%|███████▎  | 265M/360M [00:10<00:03, 28.1MB/s] 74%|███████▍  | 267M/360M [00:10<00:03, 27.6MB/s] 75%|███████▌  | 270M/360M [00:10<00:03, 28.5MB/s] 76%|███████▌  | 273M/360M [00:10<00:03, 27.2MB/s] 77%|███████▋  | 276M/360M [00:11<00:03, 28.6MB/s] 77%|███████▋  | 279M/360M [00:11<00:03, 28.4MB/s] 78%|███████▊  | 281M/360M [00:11<00:02, 27.5MB/s] 79%|███████▉  | 284M/360M [00:11<00:02, 27.5MB/s] 80%|███████▉  | 287M/360M [00:11<00:02, 26.8MB/s] 80%|████████  | 289M/360M [00:11<00:03, 24.4MB/s] 81%|████████  | 292M/360M [00:11<00:02, 26.1MB/s] 82%|████████▏ | 295M/360M [00:11<00:02, 26.6MB/s] 83%|████████▎ | 298M/360M [00:11<00:02, 27.1MB/s] 83%|████████▎ | 300M/360M [00:11<00:02, 26.7MB/s] 84%|████████▍ | 303M/360M [00:12<00:02, 26.2MB/s] 85%|████████▍ | 305M/360M [00:12<00:02, 25.3MB/s] 86%|████████▌ | 308M/360M [00:12<00:02, 26.6MB/s] 86%|████████▋ | 311M/360M [00:12<00:01, 26.8MB/s] 87%|████████▋ | 313M/360M [00:12<00:01, 26.5MB/s] 88%|████████▊ | 316M/360M [00:12<00:01, 26.0MB/s] 88%|████████▊ | 318M/360M [00:12<00:01, 25.2MB/s] 89%|████████▉ | 321M/360M [00:12<00:01, 24.4MB/s] 90%|████████▉ | 324M/360M [00:12<00:01, 25.6MB/s] 91%|█████████ | 326M/360M [00:13<00:01, 25.5MB/s] 91%|█████████▏| 329M/360M [00:13<00:01, 25.8MB/s] 92%|█████████▏| 331M/360M [00:13<00:01, 26.1MB/s] 93%|█████████▎| 334M/360M [00:13<00:01, 26.0MB/s] 93%|█████████▎| 336M/360M [00:13<00:01, 23.6MB/s] 94%|█████████▍| 339M/360M [00:13<00:00, 24.1MB/s] 95%|█████████▍| 341M/360M [00:13<00:00, 24.8MB/s] 95%|█████████▌| 344M/360M [00:13<00:00, 24.9MB/s] 96%|█████████▋| 347M/360M [00:13<00:00, 26.5MB/s] 97%|█████████▋| 349M/360M [00:13<00:00, 26.0MB/s] 98%|█████████▊| 352M/360M [00:14<00:00, 25.6MB/s] 98%|█████████▊| 354M/360M [00:14<00:00, 25.4MB/s] 99%|█████████▉| 357M/360M [00:14<00:00, 25.5MB/s]100%|█████████▉| 359M/360M [00:14<00:00, 26.4MB/s]100%|██████████| 360M/360M [00:14<00:00, 26.2MB/s]2025-04-20 21:47:09,013 - INFO - Use pytorch device_name: cpu
+2025-04-20 21:47:09,014 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches:   0%|          | 0/8 [00:00<?, ?it/s]Batches:  12%|█▎        | 1/8 [00:11<01:19, 11.35s/it]Batches:  25%|██▌       | 2/8 [00:16<00:46,  7.78s/it]Batches:  38%|███▊      | 3/8 [00:20<00:30,  6.06s/it]Batches:  50%|█████     | 4/8 [00:24<00:20,  5.15s/it]Batches:  62%|██████▎   | 5/8 [00:27<00:13,  4.36s/it]Batches:  75%|███████▌  | 6/8 [00:30<00:08,  4.03s/it]Batches:  88%|████████▊ | 7/8 [00:32<00:03,  3.43s/it]Batches: 100%|██████████| 8/8 [00:33<00:00,  2.47s/it]Batches: 100%|██████████| 8/8 [00:33<00:00,  4.17s/it]
+Traceback (most recent call last):
+  File "/app/orca.py", line 285, in <module>
+    min_segment_duration=clip.end_time - clip.start_time,
+NameError: name 'clip' is not defined

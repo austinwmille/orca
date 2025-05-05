@@ -1,0 +1,81 @@
+2025-04-26 04:56:00,661 - INFO - 
+==================================================
+
+2025-04-26 04:56:00,661 - INFO - 
+script codename: orca
+
+2025-04-26 04:56:00,662 - INFO - 
+===============================================================================
+
+2025-04-26 04:56:33,507 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-04-26 04:56:33,508 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-26 04:56:37,018 - INFO - 
+===============================================================================
+
+2025-04-26 04:56:37,018 - INFO - packages loaded
+
+2025-04-26 04:56:39,021 - INFO - setting up folders...
+
+2025-04-26 04:56:42,275 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-26 04:56:43,277 - INFO - Input folder set to '/app/processmesempai'
+2025-04-26 04:56:43,278 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-26 04:56:45,280 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-26 04:56:47,282 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-26 04:57:51,173 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-26 04:57:51,239 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-26 04:58:02,470 - INFO - next section loads pyannote auth token
+
+2025-04-26 04:58:05,473 - INFO - 
+===================================================================
+
+2025-04-26 04:58:06,914 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-26 04:58:06,939 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:07,413 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:07,874 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:10,911 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:11,034 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:11,324 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:11,462 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-26 04:58:11,815 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-26 04:58:11,842 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:11,891 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:12,138 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:12,200 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:12,257 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:12,312 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 04:58:12,425 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-26 04:58:12,572 - INFO - 
+===================================================================
+
+2025-04-26 04:58:12,572 - INFO - setup completed.
+
+2025-04-26 04:58:14,580 - INFO - 
+we will now begin processing 4 media files
+
+2025-04-26 04:58:15,581 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-26 04:58:15,583 - INFO - Good luck ;/
+
+2025-04-26 04:58:15,583 - INFO - 
+===============================
+
+2025-04-26 04:58:15,596 - INFO - 
+Processing complete
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+2025-04-26 04:58:15,680 - INFO - >>> SCRIPT IS EXITING NOW <<<

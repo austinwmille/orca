@@ -1,0 +1,298 @@
+2025-04-20 23:08:40,109 - INFO - 
+==================================================
+
+2025-04-20 23:08:40,110 - INFO - 
+script codename: orca
+
+2025-04-20 23:08:40,110 - INFO - 
+===============================================================================
+
+2025-04-20 23:09:17,211 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-04-20 23:09:17,212 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-20 23:09:25,040 - INFO - 
+===============================================================================
+
+2025-04-20 23:09:25,040 - INFO - packages loaded
+
+2025-04-20 23:09:27,674 - INFO - setting up folders...
+
+2025-04-20 23:09:28,677 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-20 23:09:29,679 - INFO - Input folder set to '/app/processmesempai'
+2025-04-20 23:09:29,680 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-20 23:09:31,683 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-20 23:09:33,686 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-20 23:10:36,096 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-20 23:10:36,164 - INFO - next section loads pyannote auth token
+
+2025-04-20 23:10:39,167 - INFO - 
+===================================================================
+
+2025-04-20 23:10:40,476 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-20 23:10:40,503 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:40,632 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:40,976 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:44,140 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:44,297 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:44,594 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:44,727 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-20 23:10:45,196 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-20 23:10:45,222 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:45,408 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:45,704 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:45,765 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:45,818 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:45,879 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 23:10:45,932 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-20 23:10:46,065 - INFO - 
+===================================================================
+
+2025-04-20 23:10:46,066 - INFO - setup completed.
+
+2025-04-20 23:10:48,073 - INFO - 
+we will now begin processing 1 media files
+
+2025-04-20 23:10:49,075 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-20 23:10:49,076 - INFO - Good luck ;/
+
+2025-04-20 23:10:49,077 - INFO - 
+===============================
+
+2025-04-20 23:10:49,094 - INFO - Processing video/audio file: /app/processmesempai/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy.mp4
+2025-04-20 23:11:00,749 - INFO - Audio extracted to: imthetrashman/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_audio.wav
+2025-04-20 23:45:38,408 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/1 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 1/1 [00:00<00:00, 7724.32it/s]2025-04-20 23:45:43,495 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+
+Downloading: "https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth" to /root/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+  0%|          | 0.00/360M [00:00<?, ?B/s]  0%|          | 1.23M/360M [00:00<00:29, 12.7MB/s]  1%|          | 4.12M/360M [00:00<00:16, 23.1MB/s]  2%|▏         | 6.60M/360M [00:00<00:15, 24.4MB/s]  3%|▎         | 9.54M/360M [00:00<00:13, 26.9MB/s]  3%|▎         | 12.3M/360M [00:00<00:13, 27.7MB/s]  4%|▍         | 15.0M/360M [00:00<00:13, 27.7MB/s]  5%|▍         | 17.6M/360M [00:00<00:12, 27.6MB/s]  6%|▌         | 20.4M/360M [00:00<00:12, 27.5MB/s]  6%|▋         | 23.2M/360M [00:00<00:12, 28.2MB/s]  7%|▋         | 25.9M/360M [00:01<00:13, 26.9MB/s]  8%|▊         | 28.5M/360M [00:01<00:13, 25.8MB/s]  9%|▊         | 31.0M/360M [00:01<00:13, 25.7MB/s]  9%|▉         | 33.4M/360M [00:01<00:14, 24.3MB/s] 10%|▉         | 35.8M/360M [00:01<00:14, 23.9MB/s] 11%|█         | 38.1M/360M [00:01<00:14, 23.1MB/s] 11%|█         | 40.3M/360M [00:01<00:15, 22.0MB/s] 12%|█▏        | 42.5M/360M [00:01<00:14, 22.5MB/s] 12%|█▏        | 44.7M/360M [00:01<00:15, 21.9MB/s] 13%|█▎        | 46.9M/360M [00:02<00:14, 22.2MB/s] 14%|█▎        | 49.2M/360M [00:02<00:14, 22.5MB/s] 14%|█▍        | 51.5M/360M [00:02<00:14, 23.0MB/s] 15%|█▌        | 54.5M/360M [00:02<00:12, 25.5MB/s] 16%|█▌        | 57.4M/360M [00:02<00:11, 26.7MB/s] 17%|█▋        | 59.9M/360M [00:02<00:12, 25.8MB/s] 17%|█▋        | 62.5M/360M [00:02<00:11, 26.1MB/s] 18%|█▊        | 65.0M/360M [00:02<00:12, 25.5MB/s] 19%|█▉        | 68.1M/360M [00:02<00:11, 27.6MB/s] 20%|█▉        | 70.9M/360M [00:02<00:10, 28.1MB/s] 20%|██        | 73.6M/360M [00:03<00:10, 27.4MB/s] 21%|██        | 76.2M/360M [00:03<00:11, 25.4MB/s] 22%|██▏       | 78.7M/360M [00:03<00:12, 24.1MB/s] 23%|██▎       | 81.3M/360M [00:03<00:11, 24.9MB/s] 23%|██▎       | 83.7M/360M [00:03<00:12, 23.8MB/s] 24%|██▍       | 86.0M/360M [00:03<00:12, 23.8MB/s] 25%|██▍       | 88.5M/360M [00:03<00:11, 23.8MB/s] 25%|██▌       | 90.8M/360M [00:03<00:12, 23.4MB/s] 26%|██▌       | 93.0M/360M [00:03<00:12, 23.1MB/s] 26%|██▋       | 95.2M/360M [00:04<00:12, 22.7MB/s] 27%|██▋       | 97.5M/360M [00:04<00:11, 23.0MB/s] 28%|██▊       | 100M/360M [00:04<00:11, 24.7MB/s]  28%|██▊       | 103M/360M [00:04<00:11, 23.7MB/s] 29%|██▉       | 105M/360M [00:04<00:11, 23.6MB/s] 30%|██▉       | 107M/360M [00:04<00:11, 23.9MB/s] 31%|███       | 110M/360M [00:04<00:10, 25.3MB/s] 31%|███▏      | 113M/360M [00:04<00:09, 26.5MB/s] 32%|███▏      | 116M/360M [00:04<00:09, 27.9MB/s] 33%|███▎      | 119M/360M [00:04<00:08, 28.8MB/s] 34%|███▍      | 122M/360M [00:05<00:09, 25.7MB/s] 35%|███▍      | 124M/360M [00:05<00:09, 25.8MB/s] 35%|███▌      | 127M/360M [00:05<00:09, 25.9MB/s] 36%|███▌      | 129M/360M [00:05<00:09, 25.0MB/s] 37%|███▋      | 132M/360M [00:05<00:09, 24.8MB/s] 37%|███▋      | 134M/360M [00:05<00:10, 23.7MB/s] 38%|███▊      | 137M/360M [00:05<00:09, 24.0MB/s] 39%|███▊      | 139M/360M [00:05<00:10, 22.0MB/s] 39%|███▉      | 141M/360M [00:05<00:09, 23.0MB/s] 40%|███▉      | 144M/360M [00:06<00:09, 23.6MB/s] 41%|████      | 146M/360M [00:06<00:09, 22.6MB/s] 41%|████      | 148M/360M [00:06<00:09, 22.8MB/s] 42%|████▏     | 150M/360M [00:06<00:09, 22.9MB/s] 42%|████▏     | 153M/360M [00:06<00:09, 22.3MB/s] 43%|████▎     | 155M/360M [00:06<00:09, 23.4MB/s] 44%|████▎     | 157M/360M [00:06<00:10, 20.7MB/s] 44%|████▍     | 160M/360M [00:06<00:09, 21.1MB/s] 45%|████▍     | 162M/360M [00:06<00:09, 21.6MB/s] 45%|████▌     | 164M/360M [00:07<00:09, 21.6MB/s] 46%|████▌     | 166M/360M [00:07<00:08, 23.3MB/s] 47%|████▋     | 169M/360M [00:07<00:08, 23.4MB/s] 47%|████▋     | 171M/360M [00:07<00:08, 22.5MB/s] 48%|████▊     | 173M/360M [00:07<00:08, 22.8MB/s] 49%|████▊     | 175M/360M [00:07<00:08, 22.6MB/s] 49%|████▉     | 178M/360M [00:07<00:08, 23.4MB/s] 50%|█████     | 180M/360M [00:07<00:07, 24.5MB/s] 51%|█████     | 183M/360M [00:07<00:06, 26.6MB/s] 52%|█████▏    | 186M/360M [00:07<00:06, 27.6MB/s] 52%|█████▏    | 189M/360M [00:08<00:06, 27.2MB/s] 53%|█████▎    | 192M/360M [00:08<00:06, 27.0MB/s] 54%|█████▍    | 194M/360M [00:08<00:06, 27.3MB/s] 55%|█████▍    | 197M/360M [00:08<00:05, 29.1MB/s] 56%|█████▌    | 200M/360M [00:08<00:05, 28.4MB/s] 56%|█████▋    | 203M/360M [00:08<00:05, 29.0MB/s] 57%|█████▋    | 206M/360M [00:08<00:05, 28.3MB/s] 58%|█████▊    | 209M/360M [00:08<00:05, 28.0MB/s] 59%|█████▊    | 211M/360M [00:09<00:10, 14.8MB/s] 60%|█████▉    | 214M/360M [00:09<00:15, 9.67MB/s] 60%|██████    | 217M/360M [00:09<00:12, 11.9MB/s] 61%|██████    | 220M/360M [00:10<00:09, 15.0MB/s] 62%|██████▏   | 223M/360M [00:10<00:08, 17.0MB/s] 63%|██████▎   | 226M/360M [00:10<00:07, 20.0MB/s] 64%|██████▎   | 229M/360M [00:10<00:06, 22.2MB/s] 64%|██████▍   | 232M/360M [00:10<00:05, 24.7MB/s] 65%|██████▌   | 235M/360M [00:10<00:04, 26.4MB/s] 66%|██████▌   | 238M/360M [00:10<00:04, 27.7MB/s] 67%|██████▋   | 241M/360M [00:10<00:04, 28.1MB/s] 68%|██████▊   | 244M/360M [00:10<00:04, 29.0MB/s] 69%|██████▊   | 247M/360M [00:10<00:03, 29.9MB/s] 69%|██████▉   | 250M/360M [00:11<00:03, 30.6MB/s] 70%|███████   | 253M/360M [00:11<00:03, 29.5MB/s] 71%|███████   | 256M/360M [00:11<00:03, 27.5MB/s] 72%|███████▏  | 259M/360M [00:11<00:03, 28.6MB/s] 73%|███████▎  | 262M/360M [00:11<00:03, 26.7MB/s] 73%|███████▎  | 265M/360M [00:11<00:03, 27.4MB/s] 74%|███████▍  | 267M/360M [00:11<00:03, 27.7MB/s] 75%|███████▍  | 270M/360M [00:11<00:03, 28.0MB/s] 76%|███████▌  | 273M/360M [00:11<00:03, 29.3MB/s] 77%|███████▋  | 276M/360M [00:11<00:02, 29.8MB/s] 77%|███████▋  | 279M/360M [00:12<00:02, 29.3MB/s] 78%|███████▊  | 282M/360M [00:12<00:02, 29.3MB/s] 79%|███████▉  | 285M/360M [00:12<00:02, 28.1MB/s] 80%|███████▉  | 288M/360M [00:12<00:02, 29.3MB/s] 81%|████████  | 291M/360M [00:12<00:02, 29.1MB/s] 82%|████████▏ | 294M/360M [00:12<00:02, 30.4MB/s] 82%|████████▏ | 297M/360M [00:12<00:02, 30.1MB/s] 83%|████████▎ | 300M/360M [00:12<00:02, 30.8MB/s] 84%|████████▍ | 303M/360M [00:12<00:02, 29.9MB/s] 85%|████████▍ | 306M/360M [00:13<00:01, 30.4MB/s] 86%|████████▌ | 309M/360M [00:13<00:01, 29.3MB/s] 87%|████████▋ | 312M/360M [00:13<00:01, 29.5MB/s] 87%|████████▋ | 315M/360M [00:13<00:01, 29.7MB/s] 88%|████████▊ | 317M/360M [00:13<00:01, 28.6MB/s] 89%|████████▉ | 321M/360M [00:13<00:01, 29.9MB/s] 90%|████████▉ | 323M/360M [00:13<00:01, 29.3MB/s] 91%|█████████ | 326M/360M [00:13<00:01, 29.7MB/s] 91%|█████████▏| 329M/360M [00:13<00:01, 29.4MB/s] 92%|█████████▏| 332M/360M [00:13<00:00, 29.5MB/s] 93%|█████████▎| 335M/360M [00:14<00:00, 28.4MB/s] 94%|█████████▍| 338M/360M [00:14<00:00, 28.8MB/s] 95%|█████████▍| 340M/360M [00:14<00:00, 28.4MB/s] 95%|█████████▌| 344M/360M [00:14<00:00, 29.2MB/s] 96%|█████████▌| 346M/360M [00:14<00:00, 29.2MB/s] 97%|█████████▋| 349M/360M [00:14<00:00, 29.1MB/s] 98%|█████████▊| 352M/360M [00:14<00:00, 28.2MB/s] 99%|█████████▊| 355M/360M [00:14<00:00, 29.5MB/s] 99%|█████████▉| 358M/360M [00:14<00:00, 29.1MB/s]100%|██████████| 360M/360M [00:14<00:00, 25.2MB/s]2025-04-21 00:07:36,919 - INFO - Use pytorch device_name: cpu
+2025-04-21 00:07:36,920 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches:   0%|          | 0/8 [00:00<?, ?it/s]Batches:  12%|█▎        | 1/8 [00:09<01:06,  9.54s/it]Batches:  25%|██▌       | 2/8 [00:13<00:38,  6.36s/it]Batches:  38%|███▊      | 3/8 [00:16<00:24,  4.85s/it]Batches:  50%|█████     | 4/8 [00:19<00:15,  3.96s/it]Batches:  62%|██████▎   | 5/8 [00:21<00:09,  3.33s/it]Batches:  75%|███████▌  | 6/8 [00:23<00:05,  2.90s/it]Batches:  88%|████████▊ | 7/8 [00:24<00:02,  2.40s/it]Batches: 100%|██████████| 8/8 [00:25<00:00,  1.71s/it]Batches: 100%|██████████| 8/8 [00:25<00:00,  3.15s/it]2025-04-21 00:09:05,859 - INFO - Clip 1: Start=1.6, End=65.866
+2025-04-21 00:09:05,860 - INFO - Clip 2: Start=62.905, End=138.425
+2025-04-21 00:09:05,860 - INFO - Clip 3: Start=128.898, End=312.842
+2025-04-21 00:09:05,860 - INFO - Clip 4: Start=309.641, End=327.605
+2025-04-21 00:09:05,861 - INFO - Clip 5: Start=324.042, End=374.465
+2025-04-21 00:09:05,861 - INFO - Clip 6: Start=359.623, End=434.052
+2025-04-21 00:09:05,862 - INFO - Clip 7: Start=425.606, End=581.171
+2025-04-21 00:09:05,863 - INFO - Clip 8: Start=575.126, End=691.867
+2025-04-21 00:09:05,864 - INFO - Clip 9: Start=691.266, End=793.88
+2025-04-21 00:09:05,865 - INFO - Clip 10: Start=791.399, End=864.583
+2025-04-21 00:09:05,866 - INFO - Clip 11: Start=857.02, End=899.549
+2025-04-21 00:09:05,866 - INFO - Clip 12: Start=896.348, End=930.952
+2025-04-21 00:09:05,867 - INFO - Clip 13: Start=925.948, End=945.215
+2025-04-21 00:09:05,868 - INFO - Clip 14: Start=943.995, End=1022.023
+2025-04-21 00:09:05,868 - INFO - Clip 15: Start=1009.212, End=1063.82
+2025-04-21 00:09:05,869 - INFO - Clip 16: Start=1056.595, End=1093.58
+2025-04-21 00:09:05,870 - INFO - Clip 17: Start=1089.796, End=1148.365
+2025-04-21 00:09:05,872 - INFO - Clip 18: Start=1144.723, End=1181.324
+2025-04-21 00:09:05,873 - INFO - Clip 19: Start=1175.08, End=1268.935
+2025-04-21 00:09:05,874 - INFO - Clip 20: Start=1258.467, End=1285.997
+2025-04-21 00:09:05,875 - INFO - Clip 21: Start=1276.369, End=1341.054
+2025-04-21 00:09:05,876 - INFO - Clip 22: Start=1258.467, End=1341.054
+2025-04-21 00:09:05,876 - INFO - Clip 23: Start=65.886, End=125.789
+2025-04-21 00:09:05,877 - INFO - Clip 24: Start=118.341, End=317.483
+2025-04-21 00:09:05,878 - INFO - Clip 25: Start=435.053, End=570.568
+2025-04-21 00:09:05,879 - INFO - Clip 26: Start=857.02, End=1022.023
+2025-04-21 00:09:05,879 - INFO - Clip 27: Start=1154.272, End=1268.935
+2025-04-21 00:09:05,880 - INFO - Clip 28: Start=1154.272, End=1341.054
+2025-04-21 00:09:05,881 - INFO - Clip 29: Start=72.488, End=353.0
+2025-04-21 00:09:05,882 - INFO - Clip 30: Start=691.266, End=874.587
+2025-04-21 00:09:05,882 - INFO - Clip 31: Start=1089.796, End=1271.084
+2025-04-21 00:09:05,883 - INFO - Processing clip 1: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip1.mp4
+2025-04-21 00:43:37,325 - INFO - Detecting scenes...
+2025-04-21 00:47:46,763 - INFO - Segments for clip 1: []
+2025-04-21 00:47:56,368 - INFO - Resized clip 1 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip1.mp4
+2025-04-21 00:47:56,368 - INFO - Processing clip 2: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip2.mp4
+2025-04-21 01:24:44,313 - INFO - Detecting scenes...
+2025-04-21 01:28:27,065 - INFO - Segments for clip 2: []
+2025-04-21 01:28:37,391 - INFO - Resized clip 2 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip2.mp4
+2025-04-21 01:28:37,391 - INFO - Processing clip 3: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip3.mp4
+2025-04-21 02:04:29,825 - INFO - Detecting scenes...
+2025-04-21 02:08:32,548 - INFO - Segments for clip 3: []
+2025-04-21 02:08:42,412 - INFO - Resized clip 3 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip3.mp4
+2025-04-21 02:08:42,413 - INFO - Processing clip 4: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip4.mp4
+2025-04-21 02:45:10,987 - INFO - Detecting scenes...
+2025-04-21 02:49:05,014 - INFO - Segments for clip 4: []
+2025-04-21 02:49:13,587 - INFO - Resized clip 4 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip4.mp4
+2025-04-21 02:49:13,588 - INFO - Processing clip 5: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip5.mp4
+2025-04-21 03:22:56,972 - INFO - Detecting scenes...
+2025-04-21 03:26:36,654 - INFO - Segments for clip 5: []
+2025-04-21 03:26:46,457 - INFO - Resized clip 5 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip5.mp4
+2025-04-21 03:26:46,458 - INFO - Processing clip 6: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip6.mp4
+2025-04-21 04:00:47,756 - INFO - Detecting scenes...
+2025-04-21 04:04:28,391 - INFO - Segments for clip 6: []
+2025-04-21 04:04:37,255 - INFO - Resized clip 6 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip6.mp4
+2025-04-21 04:04:37,256 - INFO - Processing clip 7: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip7.mp4
+2025-04-21 04:39:07,440 - INFO - Detecting scenes...
+2025-04-21 04:42:50,728 - INFO - Segments for clip 7: []
+2025-04-21 04:42:59,954 - INFO - Resized clip 7 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip7.mp4
+2025-04-21 04:42:59,954 - INFO - Processing clip 8: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip8.mp4
+2025-04-21 05:16:44,818 - INFO - Detecting scenes...
+2025-04-21 05:20:22,127 - INFO - Segments for clip 8: []
+2025-04-21 05:20:32,473 - INFO - Resized clip 8 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip8.mp4
+2025-04-21 05:20:32,473 - INFO - Processing clip 9: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip9.mp4
+2025-04-21 05:54:39,295 - INFO - Detecting scenes...
+2025-04-21 05:58:21,066 - INFO - Segments for clip 9: []
+2025-04-21 05:58:29,964 - INFO - Resized clip 9 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip9.mp4
+2025-04-21 05:58:29,965 - INFO - Processing clip 10: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip10.mp4
+2025-04-21 06:32:30,532 - INFO - Detecting scenes...
+2025-04-21 06:36:11,936 - INFO - Segments for clip 10: []
+2025-04-21 06:36:20,753 - INFO - Resized clip 10 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip10.mp4
+2025-04-21 06:36:20,754 - INFO - Processing clip 11: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip11.mp4
+2025-04-21 07:10:33,727 - INFO - Detecting scenes...
+2025-04-21 07:14:14,027 - INFO - Segments for clip 11: []
+2025-04-21 07:14:24,366 - INFO - Resized clip 11 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip11.mp4
+2025-04-21 07:14:24,366 - INFO - Processing clip 12: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip12.mp4
+2025-04-21 07:48:19,585 - INFO - Detecting scenes...
+2025-04-21 07:52:05,695 - INFO - Segments for clip 12: []
+2025-04-21 07:52:15,062 - INFO - Resized clip 12 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip12.mp4
+2025-04-21 07:52:15,063 - INFO - Processing clip 13: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip13.mp4
+2025-04-21 08:26:42,718 - INFO - Detecting scenes...
+2025-04-21 08:30:26,597 - INFO - Segments for clip 13: []
+2025-04-21 08:30:36,985 - INFO - Resized clip 13 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip13.mp4
+2025-04-21 08:30:36,986 - INFO - Processing clip 14: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip14.mp4
+2025-04-21 09:05:03,113 - INFO - Detecting scenes...
+2025-04-21 09:08:44,199 - INFO - Segments for clip 14: []
+2025-04-21 09:08:53,090 - INFO - Resized clip 14 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip14.mp4
+2025-04-21 09:08:53,091 - INFO - Processing clip 15: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip15.mp4
+2025-04-21 09:43:07,306 - INFO - Detecting scenes...
+2025-04-21 09:46:47,026 - INFO - Segments for clip 15: []
+2025-04-21 09:46:57,675 - INFO - Resized clip 15 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip15.mp4
+2025-04-21 09:46:57,676 - INFO - Processing clip 16: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip16.mp4
+2025-04-21 10:21:16,089 - INFO - Detecting scenes...
+2025-04-21 10:25:04,953 - INFO - Segments for clip 16: []
+2025-04-21 10:25:15,591 - INFO - Resized clip 16 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip16.mp4
+2025-04-21 10:25:15,592 - INFO - Processing clip 17: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip17.mp4
+2025-04-21 10:59:22,256 - INFO - Detecting scenes...
+2025-04-21 11:03:02,370 - INFO - Segments for clip 17: []
+2025-04-21 11:03:13,462 - INFO - Resized clip 17 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip17.mp4
+2025-04-21 11:03:13,463 - INFO - Processing clip 18: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip18.mp4
+2025-04-21 11:37:21,463 - INFO - Detecting scenes...
+2025-04-21 11:41:02,028 - INFO - Segments for clip 18: []
+2025-04-21 11:41:10,900 - INFO - Resized clip 18 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip18.mp4
+2025-04-21 11:41:10,901 - INFO - Processing clip 19: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip19.mp4
+2025-04-21 12:15:34,208 - INFO - Detecting scenes...
+2025-04-21 12:19:19,061 - INFO - Segments for clip 19: []
+2025-04-21 12:19:27,975 - INFO - Resized clip 19 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip19.mp4
+2025-04-21 12:19:27,975 - INFO - Processing clip 20: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip20.mp4
+2025-04-21 12:53:56,858 - INFO - Detecting scenes...
+2025-04-21 12:57:36,992 - INFO - Segments for clip 20: []
+2025-04-21 12:57:45,743 - INFO - Resized clip 20 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip20.mp4
+2025-04-21 12:57:45,744 - INFO - Processing clip 21: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip21.mp4
+2025-04-21 13:32:06,919 - INFO - Detecting scenes...
+2025-04-21 13:35:48,965 - INFO - Segments for clip 21: []
+2025-04-21 13:35:57,734 - INFO - Resized clip 21 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip21.mp4
+2025-04-21 13:35:57,735 - INFO - Processing clip 22: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip22.mp4
+2025-04-21 14:10:19,093 - INFO - Detecting scenes...
+2025-04-21 14:14:00,603 - INFO - Segments for clip 22: []
+2025-04-21 14:14:09,549 - INFO - Resized clip 22 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip22.mp4
+2025-04-21 14:14:09,549 - INFO - Processing clip 23: -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip23.mp4
+
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Traceback (most recent call last):
+  File "/app/orca.py", line 298, in <module>
+    crops = resize(
+  File "/usr/local/lib/python3.9/site-packages/clipsai/resize/resize.py", line 78, in resize
+    diarized_segments = diarizer.diarize(media, min_segment_duration, time_precision)
+  File "/usr/local/lib/python3.9/site-packages/clipsai/diarize/pyannote.py", line 107, in diarize
+    pyannote_segments: Annotation = self.pipeline({"audio": wav_file.path})
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/core/pipeline.py", line 327, in __call__
+    return self.apply(file, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/pipelines/speaker_diarization.py", line 478, in apply
+    segmentations = self.get_segmentations(file, hook=hook)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/pipelines/speaker_diarization.py", line 224, in get_segmentations
+    segmentations: SlidingWindowFeature = self._segmentation(file, hook=hook)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/core/inference.py", line 421, in __call__
+    return self.slide(waveform, sample_rate, hook=hook)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/core/inference.py", line 313, in slide
+    batch_outputs: Union[np.ndarray, Tuple[np.ndarray]] = self.infer(batch)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/core/inference.py", line 215, in infer
+    outputs = self.model(chunks.to(self.device))
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/models/segmentation/PyanNet.py", line 223, in forward
+    outputs = self.sincnet(waveforms)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/sincnet.py", line 176, in forward
+    outputs = conv1d(outputs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/asteroid_filterbanks/enc_dec.py", line 177, in forward
+    spec = multishape_conv1d(
+  File "/usr/local/lib/python3.9/site-packages/asteroid_filterbanks/scripting.py", line 37, in wrapper
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/asteroid_filterbanks/enc_dec.py", line 216, in multishape_conv1d
+    return F.conv1d(waveform, filters, stride=stride, padding=padding)
+KeyboardInterrupt

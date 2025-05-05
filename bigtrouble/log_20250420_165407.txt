@@ -1,0 +1,788 @@
+2025-04-20 16:54:07,029 - INFO - 
+==================================================
+
+2025-04-20 16:54:07,030 - INFO - 
+script codename: orca
+
+2025-04-20 16:54:07,032 - INFO - 
+===============================================================================
+
+2025-04-20 16:54:14,586 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-04-20 16:54:14,586 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-20 16:54:17,401 - INFO - 
+===============================================================================
+
+2025-04-20 16:54:17,401 - INFO - packages loaded
+
+2025-04-20 16:54:19,406 - INFO - setting up folders...
+
+2025-04-20 16:54:20,408 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-20 16:54:21,410 - INFO - Input folder set to '/app/processmesempai'
+2025-04-20 16:54:21,411 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-20 16:54:23,414 - INFO - Setting parameters for whisperX. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-20 16:54:25,417 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-20 16:55:28,935 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-20 16:55:29,173 - INFO - next section loads pyannote auth token
+
+2025-04-20 16:55:32,176 - INFO - 
+===================================================================
+
+2025-04-20 16:55:33,970 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-20 16:55:33,996 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:34,330 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:34,688 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:38,079 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:38,218 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:38,579 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:39,188 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-20 16:55:39,608 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-20 16:55:39,635 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:39,880 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:40,154 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:40,230 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:40,299 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:40,360 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-20 16:55:40,414 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-20 16:55:40,551 - INFO - 
+===================================================================
+
+2025-04-20 16:55:40,552 - INFO - setup completed.
+
+2025-04-20 16:55:42,562 - INFO - 
+we will now begin processing 2 videos
+
+2025-04-20 16:55:43,564 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-20 16:55:43,565 - INFO - Good luck ;/
+
+2025-04-20 16:55:43,566 - INFO - 
+===============================
+
+2025-04-20 16:55:43,583 - INFO - Processing video/audio file: /app/processmesempai/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy.mp4
+2025-04-20 16:55:55,170 - INFO - Audio extracted to: imthetrashman/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_audio.wav
+2025-04-20 17:33:28,357 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/1 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 1/1 [00:00<00:00, 12052.60it/s]2025-04-20 17:33:34,060 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+
+Downloading: "https://download.pytorch.org/torchaudio/models/wav2vec2_fairseq_base_ls960_asr_ls960.pth" to /root/.cache/torch/hub/checkpoints/wav2vec2_fairseq_base_ls960_asr_ls960.pth
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+  0%|          | 0.00/360M [00:00<?, ?B/s]  0%|          | 512k/360M [00:00<01:12, 5.22MB/s]  1%|          | 1.91M/360M [00:00<00:35, 10.6MB/s]  1%|          | 4.17M/360M [00:00<00:22, 16.5MB/s]  2%|▏         | 6.42M/360M [00:00<00:19, 19.2MB/s]  2%|▏         | 8.86M/360M [00:00<00:17, 21.5MB/s]  3%|▎         | 10.9M/360M [00:00<00:17, 21.0MB/s]  4%|▎         | 13.3M/360M [00:00<00:16, 22.0MB/s]  4%|▍         | 15.8M/360M [00:00<00:15, 23.4MB/s]  5%|▌         | 18.0M/360M [00:00<00:15, 22.7MB/s]  6%|▌         | 20.2M/360M [00:01<00:16, 21.2MB/s]  6%|▌         | 22.2M/360M [00:01<00:17, 20.8MB/s]  7%|▋         | 24.2M/360M [00:01<00:17, 20.5MB/s]  7%|▋         | 26.2M/360M [00:01<00:17, 20.2MB/s]  8%|▊         | 28.2M/360M [00:01<00:17, 19.4MB/s]  8%|▊         | 30.4M/360M [00:01<00:16, 20.4MB/s]  9%|▉         | 32.3M/360M [00:01<00:17, 19.8MB/s] 10%|▉         | 34.6M/360M [00:01<00:16, 21.0MB/s] 10%|█         | 36.9M/360M [00:01<00:15, 21.8MB/s] 11%|█         | 39.0M/360M [00:02<00:16, 20.1MB/s] 12%|█▏        | 41.4M/360M [00:02<00:15, 21.4MB/s] 12%|█▏        | 43.5M/360M [00:02<00:15, 21.3MB/s] 13%|█▎        | 45.6M/360M [00:02<00:15, 20.7MB/s] 13%|█▎        | 47.9M/360M [00:02<00:15, 21.4MB/s] 14%|█▍        | 50.3M/360M [00:02<00:14, 22.3MB/s] 15%|█▍        | 52.4M/360M [00:02<00:16, 20.0MB/s] 15%|█▌        | 54.7M/360M [00:02<00:15, 20.9MB/s] 16%|█▌        | 56.7M/360M [00:02<00:15, 20.9MB/s] 16%|█▋        | 58.7M/360M [00:03<00:15, 20.0MB/s] 17%|█▋        | 60.7M/360M [00:03<00:16, 19.2MB/s] 17%|█▋        | 62.9M/360M [00:03<00:15, 20.3MB/s] 18%|█▊        | 64.9M/360M [00:03<00:15, 19.6MB/s] 19%|█▊        | 66.9M/360M [00:03<00:15, 19.9MB/s] 19%|█▉        | 69.3M/360M [00:03<00:14, 21.5MB/s] 20%|█▉        | 71.4M/360M [00:03<00:14, 20.8MB/s] 20%|██        | 73.7M/360M [00:03<00:13, 21.8MB/s] 21%|██        | 75.9M/360M [00:03<00:13, 21.7MB/s] 22%|██▏       | 78.1M/360M [00:03<00:13, 22.2MB/s] 22%|██▏       | 80.4M/360M [00:04<00:13, 22.3MB/s] 23%|██▎       | 82.5M/360M [00:04<00:13, 21.5MB/s] 23%|██▎       | 84.6M/360M [00:04<00:15, 19.0MB/s] 24%|██▍       | 86.5M/360M [00:04<00:16, 17.6MB/s] 24%|██▍       | 88.2M/360M [00:04<00:17, 16.4MB/s] 25%|██▍       | 89.8M/360M [00:04<00:17, 15.9MB/s] 25%|██▌       | 91.6M/360M [00:04<00:16, 16.7MB/s] 26%|██▌       | 93.4M/360M [00:04<00:16, 17.1MB/s] 26%|██▋       | 95.1M/360M [00:05<00:15, 17.5MB/s] 27%|██▋       | 97.1M/360M [00:05<00:15, 18.3MB/s] 27%|██▋       | 99.0M/360M [00:05<00:14, 18.9MB/s] 28%|██▊       | 101M/360M [00:05<00:13, 20.0MB/s]  29%|██▊       | 103M/360M [00:05<00:13, 19.9MB/s] 29%|██▉       | 105M/360M [00:05<00:13, 19.8MB/s] 30%|██▉       | 107M/360M [00:05<00:13, 19.1MB/s] 30%|███       | 109M/360M [00:05<00:14, 17.6MB/s] 31%|███       | 111M/360M [00:05<00:13, 19.2MB/s] 31%|███▏      | 113M/360M [00:05<00:13, 19.7MB/s] 32%|███▏      | 115M/360M [00:06<00:12, 20.1MB/s] 33%|███▎      | 118M/360M [00:06<00:11, 22.6MB/s] 33%|███▎      | 120M/360M [00:06<00:10, 24.0MB/s] 34%|███▍      | 123M/360M [00:06<00:10, 23.9MB/s] 35%|███▍      | 125M/360M [00:06<00:10, 24.4MB/s] 35%|███▌      | 128M/360M [00:06<00:10, 24.2MB/s] 36%|███▌      | 130M/360M [00:06<00:09, 24.8MB/s] 37%|███▋      | 132M/360M [00:06<00:10, 23.5MB/s] 37%|███▋      | 135M/360M [00:06<00:10, 22.2MB/s] 38%|███▊      | 137M/360M [00:07<00:10, 21.9MB/s] 39%|███▊      | 139M/360M [00:07<00:11, 20.8MB/s] 39%|███▉      | 141M/360M [00:07<00:10, 21.0MB/s] 40%|███▉      | 144M/360M [00:07<00:10, 22.6MB/s] 40%|████      | 146M/360M [00:07<00:10, 22.1MB/s] 41%|████      | 148M/360M [00:07<00:10, 22.2MB/s] 42%|████▏     | 150M/360M [00:07<00:09, 23.2MB/s] 42%|████▏     | 153M/360M [00:07<00:10, 21.7MB/s] 43%|████▎     | 155M/360M [00:07<00:10, 21.0MB/s] 44%|████▎     | 157M/360M [00:07<00:09, 21.6MB/s] 44%|████▍     | 159M/360M [00:08<00:09, 22.5MB/s] 45%|████▍     | 162M/360M [00:08<00:09, 22.3MB/s] 46%|████▌     | 164M/360M [00:08<00:08, 23.6MB/s] 46%|████▌     | 166M/360M [00:08<00:09, 22.3MB/s] 47%|████▋     | 169M/360M [00:08<00:10, 18.5MB/s] 47%|████▋     | 170M/360M [00:08<00:11, 17.9MB/s] 48%|████▊     | 172M/360M [00:08<00:11, 16.9MB/s] 48%|████▊     | 174M/360M [00:08<00:10, 17.8MB/s] 49%|████▉     | 177M/360M [00:09<00:09, 20.6MB/s] 50%|████▉     | 179M/360M [00:09<00:08, 21.7MB/s] 50%|█████     | 181M/360M [00:09<00:08, 21.0MB/s] 51%|█████     | 184M/360M [00:09<00:08, 21.6MB/s] 52%|█████▏    | 186M/360M [00:09<00:08, 21.7MB/s] 52%|█████▏    | 188M/360M [00:09<00:08, 21.7MB/s] 53%|█████▎    | 190M/360M [00:09<00:08, 21.4MB/s] 53%|█████▎    | 192M/360M [00:09<00:08, 21.4MB/s] 54%|█████▍    | 194M/360M [00:09<00:08, 21.1MB/s] 54%|█████▍    | 196M/360M [00:09<00:08, 20.0MB/s] 55%|█████▍    | 198M/360M [00:10<00:09, 18.9MB/s] 55%|█████▌    | 200M/360M [00:10<00:09, 18.5MB/s] 56%|█████▌    | 202M/360M [00:10<00:09, 17.5MB/s] 56%|█████▋    | 203M/360M [00:10<00:09, 17.4MB/s] 57%|█████▋    | 206M/360M [00:10<00:08, 19.6MB/s] 58%|█████▊    | 208M/360M [00:10<00:08, 19.9MB/s] 58%|█████▊    | 210M/360M [00:10<00:08, 19.5MB/s] 59%|█████▉    | 212M/360M [00:10<00:07, 20.8MB/s] 59%|█████▉    | 214M/360M [00:10<00:06, 22.0MB/s] 60%|██████    | 216M/360M [00:11<00:07, 20.8MB/s] 61%|██████    | 219M/360M [00:11<00:06, 21.3MB/s] 61%|██████▏   | 221M/360M [00:11<00:06, 23.0MB/s] 62%|██████▏   | 224M/360M [00:11<00:06, 23.5MB/s] 63%|██████▎   | 226M/360M [00:11<00:06, 23.2MB/s] 63%|██████▎   | 228M/360M [00:11<00:05, 24.2MB/s] 64%|██████▍   | 231M/360M [00:11<00:05, 23.5MB/s] 65%|██████▍   | 233M/360M [00:11<00:06, 21.6MB/s] 65%|██████▌   | 235M/360M [00:11<00:06, 20.8MB/s] 66%|██████▌   | 238M/360M [00:12<00:05, 23.2MB/s] 67%|██████▋   | 240M/360M [00:12<00:05, 23.4MB/s] 67%|██████▋   | 242M/360M [00:12<00:05, 23.4MB/s] 68%|██████▊   | 245M/360M [00:12<00:04, 24.4MB/s] 69%|██████▊   | 247M/360M [00:12<00:04, 24.0MB/s] 69%|██████▉   | 250M/360M [00:12<00:04, 23.3MB/s] 70%|██████▉   | 252M/360M [00:12<00:04, 23.2MB/s] 71%|███████   | 254M/360M [00:12<00:04, 23.6MB/s] 71%|███████▏  | 257M/360M [00:12<00:04, 23.4MB/s] 72%|███████▏  | 259M/360M [00:13<00:05, 19.6MB/s] 72%|███████▏  | 261M/360M [00:13<00:05, 19.7MB/s] 73%|███████▎  | 263M/360M [00:13<00:05, 18.8MB/s] 74%|███████▎  | 265M/360M [00:13<00:05, 19.5MB/s] 74%|███████▍  | 267M/360M [00:13<00:04, 19.8MB/s] 75%|███████▍  | 269M/360M [00:13<00:04, 20.6MB/s] 75%|███████▌  | 271M/360M [00:13<00:04, 21.0MB/s] 76%|███████▌  | 273M/360M [00:13<00:04, 20.5MB/s] 76%|███████▋  | 275M/360M [00:13<00:04, 20.3MB/s] 77%|███████▋  | 277M/360M [00:13<00:04, 20.3MB/s] 78%|███████▊  | 279M/360M [00:14<00:03, 21.6MB/s] 78%|███████▊  | 282M/360M [00:14<00:03, 21.4MB/s] 79%|███████▊  | 284M/360M [00:14<00:03, 21.0MB/s] 79%|███████▉  | 286M/360M [00:14<00:04, 17.8MB/s] 80%|███████▉  | 287M/360M [00:14<00:04, 15.5MB/s] 81%|████████  | 292M/360M [00:14<00:02, 23.9MB/s] 82%|████████▏ | 295M/360M [00:14<00:02, 23.0MB/s] 83%|████████▎ | 297M/360M [00:14<00:03, 21.5MB/s] 83%|████████▎ | 299M/360M [00:15<00:03, 20.4MB/s] 84%|████████▍ | 302M/360M [00:15<00:02, 22.2MB/s] 84%|████████▍ | 304M/360M [00:15<00:02, 22.4MB/s] 85%|████████▌ | 307M/360M [00:15<00:02, 25.0MB/s] 86%|████████▌ | 310M/360M [00:15<00:02, 25.0MB/s] 87%|████████▋ | 312M/360M [00:15<00:02, 23.1MB/s] 87%|████████▋ | 314M/360M [00:15<00:02, 22.6MB/s] 88%|████████▊ | 317M/360M [00:15<00:02, 22.6MB/s] 89%|████████▊ | 319M/360M [00:15<00:01, 22.3MB/s] 89%|████████▉ | 321M/360M [00:16<00:01, 22.5MB/s] 90%|████████▉ | 323M/360M [00:16<00:01, 21.7MB/s] 90%|█████████ | 325M/360M [00:16<00:01, 22.3MB/s] 91%|█████████ | 328M/360M [00:16<00:01, 22.4MB/s] 92%|█████████▏| 330M/360M [00:16<00:01, 20.7MB/s] 92%|█████████▏| 332M/360M [00:16<00:01, 20.8MB/s] 93%|█████████▎| 335M/360M [00:16<00:01, 22.9MB/s] 94%|█████████▎| 337M/360M [00:16<00:00, 24.6MB/s] 94%|█████████▍| 340M/360M [00:16<00:00, 24.0MB/s] 95%|█████████▍| 342M/360M [00:17<00:00, 23.0MB/s] 96%|█████████▌| 344M/360M [00:17<00:00, 24.0MB/s] 96%|█████████▋| 347M/360M [00:17<00:00, 22.9MB/s] 97%|█████████▋| 349M/360M [00:17<00:00, 22.8MB/s] 98%|█████████▊| 351M/360M [00:17<00:00, 23.3MB/s] 98%|█████████▊| 355M/360M [00:17<00:00, 26.0MB/s] 99%|█████████▉| 357M/360M [00:17<00:00, 26.7MB/s]100%|█████████▉| 360M/360M [00:17<00:00, 27.1MB/s]100%|██████████| 360M/360M [00:17<00:00, 21.2MB/s]2025-04-20 17:58:43,857 - INFO - Use pytorch device_name: cpu
+2025-04-20 17:58:43,857 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Batches:   0%|          | 0/8 [00:00<?, ?it/s]Batches:  12%|█▎        | 1/8 [00:09<01:07,  9.66s/it]Batches:  25%|██▌       | 2/8 [00:14<00:40,  6.71s/it]Batches:  38%|███▊      | 3/8 [00:17<00:26,  5.28s/it]Batches:  50%|█████     | 4/8 [00:21<00:17,  4.49s/it]Batches:  62%|██████▎   | 5/8 [00:23<00:11,  3.85s/it]Batches:  75%|███████▌  | 6/8 [00:26<00:06,  3.37s/it]Batches:  88%|████████▊ | 7/8 [00:27<00:02,  2.77s/it]Batches: 100%|██████████| 8/8 [00:28<00:00,  1.98s/it]Batches: 100%|██████████| 8/8 [00:28<00:00,  3.52s/it]2025-04-20 18:38:42,046 - INFO - Detecting scenes...
+2025-04-20 18:43:02,017 - INFO - Clip 1: Start=1.6, End=65.866
+2025-04-20 18:43:02,018 - INFO - Clip 2: Start=62.905, End=138.425
+2025-04-20 18:43:02,018 - INFO - Clip 3: Start=128.898, End=312.842
+2025-04-20 18:43:02,019 - INFO - Clip 4: Start=309.641, End=327.605
+2025-04-20 18:43:02,019 - INFO - Clip 5: Start=324.042, End=374.465
+2025-04-20 18:43:02,019 - INFO - Clip 6: Start=359.623, End=434.052
+2025-04-20 18:43:02,020 - INFO - Clip 7: Start=425.606, End=581.171
+2025-04-20 18:43:02,020 - INFO - Clip 8: Start=575.126, End=691.867
+2025-04-20 18:43:02,021 - INFO - Clip 9: Start=691.266, End=793.88
+2025-04-20 18:43:02,021 - INFO - Clip 10: Start=791.399, End=864.583
+2025-04-20 18:43:02,022 - INFO - Clip 11: Start=857.02, End=899.549
+2025-04-20 18:43:02,022 - INFO - Clip 12: Start=896.348, End=930.952
+2025-04-20 18:43:02,022 - INFO - Clip 13: Start=925.948, End=945.215
+2025-04-20 18:43:02,023 - INFO - Clip 14: Start=943.995, End=1022.023
+2025-04-20 18:43:02,023 - INFO - Clip 15: Start=1009.212, End=1063.82
+2025-04-20 18:43:02,023 - INFO - Clip 16: Start=1056.595, End=1093.58
+2025-04-20 18:43:02,024 - INFO - Clip 17: Start=1089.796, End=1148.365
+2025-04-20 18:43:02,024 - INFO - Clip 18: Start=1144.723, End=1181.324
+2025-04-20 18:43:02,024 - INFO - Clip 19: Start=1175.08, End=1268.935
+2025-04-20 18:43:02,025 - INFO - Clip 20: Start=1258.467, End=1285.997
+2025-04-20 18:43:02,026 - INFO - Clip 21: Start=1276.369, End=1341.054
+2025-04-20 18:43:02,026 - INFO - Clip 22: Start=1258.467, End=1341.054
+2025-04-20 18:43:02,027 - INFO - Clip 23: Start=65.886, End=125.789
+2025-04-20 18:43:02,027 - INFO - Clip 24: Start=118.341, End=317.483
+2025-04-20 18:43:02,027 - INFO - Clip 25: Start=435.053, End=570.568
+2025-04-20 18:43:02,028 - INFO - Clip 26: Start=857.02, End=1022.023
+2025-04-20 18:43:02,028 - INFO - Clip 27: Start=1154.272, End=1268.935
+2025-04-20 18:43:02,029 - INFO - Clip 28: Start=1154.272, End=1341.054
+2025-04-20 18:43:02,029 - INFO - Clip 29: Start=72.488, End=353.0
+2025-04-20 18:43:02,030 - INFO - Clip 30: Start=691.266, End=874.587
+2025-04-20 18:43:02,030 - INFO - Clip 31: Start=1089.796, End=1271.084
+2025-04-20 18:43:02,031 - INFO - Processing clip 1: (1.6, 65.866) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip1.mp4
+2025-04-20 18:43:02,031 - INFO - Segments for clip 1: []
+2025-04-20 18:43:02,031 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip1.mp4
+2025-04-20 18:43:04,209 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/c6e9603edc534d28837d5a7d706112ec_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:04,209 - INFO - Resized clip 1 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip1.mp4
+2025-04-20 18:43:04,210 - INFO - Processing clip 2: (62.905, 138.425) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip2.mp4
+2025-04-20 18:43:04,211 - INFO - Segments for clip 2: []
+2025-04-20 18:43:04,211 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip2.mp4
+2025-04-20 18:43:06,438 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/9edf5db6b07f484991d0dfa358593f81_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:06,439 - INFO - Resized clip 2 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip2.mp4
+2025-04-20 18:43:06,440 - INFO - Processing clip 3: (128.898, 312.842) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip3.mp4
+2025-04-20 18:43:06,440 - INFO - Segments for clip 3: []
+2025-04-20 18:43:06,440 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip3.mp4
+2025-04-20 18:43:08,651 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/bbb18c708215408a85e9f7b1941457ce_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:08,652 - INFO - Resized clip 3 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip3.mp4
+2025-04-20 18:43:08,653 - INFO - Processing clip 4: (309.641, 327.605) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip4.mp4
+2025-04-20 18:43:08,654 - INFO - Segments for clip 4: []
+2025-04-20 18:43:08,654 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip4.mp4
+2025-04-20 18:43:10,860 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/c0609aff12484e3ea6a9e1b621e07465_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:10,861 - INFO - Resized clip 4 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip4.mp4
+2025-04-20 18:43:10,862 - INFO - Processing clip 5: (324.042, 374.465) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip5.mp4
+2025-04-20 18:43:10,862 - INFO - Segments for clip 5: []
+2025-04-20 18:43:10,863 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip5.mp4
+2025-04-20 18:43:13,039 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/6c92f1a11d8a441ab96f4f589613821b_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:13,040 - INFO - Resized clip 5 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip5.mp4
+2025-04-20 18:43:13,040 - INFO - Processing clip 6: (359.623, 434.052) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip6.mp4
+2025-04-20 18:43:13,041 - INFO - Segments for clip 6: []
+2025-04-20 18:43:13,041 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip6.mp4
+2025-04-20 18:43:15,218 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/0925d94a146e4fa491281ad46946a5ca_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:15,219 - INFO - Resized clip 6 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip6.mp4
+2025-04-20 18:43:15,220 - INFO - Processing clip 7: (425.606, 581.171) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip7.mp4
+2025-04-20 18:43:15,220 - INFO - Segments for clip 7: []
+2025-04-20 18:43:15,221 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip7.mp4
+2025-04-20 18:43:17,438 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/f7efdbb479e244a997afce33eb14cbf7_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:17,439 - INFO - Resized clip 7 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip7.mp4
+2025-04-20 18:43:17,439 - INFO - Processing clip 8: (575.126, 691.867) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip8.mp4
+2025-04-20 18:43:17,440 - INFO - Segments for clip 8: []
+2025-04-20 18:43:17,440 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip8.mp4
+2025-04-20 18:43:19,657 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/57675be0657144f380c036ec0bdfe9a9_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:19,658 - INFO - Resized clip 8 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip8.mp4
+2025-04-20 18:43:19,659 - INFO - Processing clip 9: (691.266, 793.88) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip9.mp4
+2025-04-20 18:43:19,659 - INFO - Segments for clip 9: []
+2025-04-20 18:43:19,660 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip9.mp4
+2025-04-20 18:43:21,876 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/affc2d883b714a11862e3ff0dee346c3_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:21,877 - INFO - Resized clip 9 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip9.mp4
+2025-04-20 18:43:21,877 - INFO - Processing clip 10: (791.399, 864.583) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip10.mp4
+2025-04-20 18:43:21,878 - INFO - Segments for clip 10: []
+2025-04-20 18:43:21,879 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip10.mp4
+2025-04-20 18:43:24,073 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/5ae13661f9d04490982a24e8d7ea7ba2_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:24,074 - INFO - Resized clip 10 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip10.mp4
+2025-04-20 18:43:24,075 - INFO - Processing clip 11: (857.02, 899.549) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip11.mp4
+2025-04-20 18:43:24,075 - INFO - Segments for clip 11: []
+2025-04-20 18:43:24,076 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip11.mp4
+2025-04-20 18:43:26,329 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/771add92504543b2bd3cd33ed557fcc1_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:26,330 - INFO - Resized clip 11 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip11.mp4
+2025-04-20 18:43:26,331 - INFO - Processing clip 12: (896.348, 930.952) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip12.mp4
+2025-04-20 18:43:26,332 - INFO - Segments for clip 12: []
+2025-04-20 18:43:26,332 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip12.mp4
+2025-04-20 18:43:28,517 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/86197830dd3441ff88ce65aa1414bf10_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:28,518 - INFO - Resized clip 12 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip12.mp4
+2025-04-20 18:43:28,519 - INFO - Processing clip 13: (925.948, 945.215) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip13.mp4
+2025-04-20 18:43:28,519 - INFO - Segments for clip 13: []
+2025-04-20 18:43:28,520 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip13.mp4
+2025-04-20 18:43:30,753 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/495d6dc8586a411090eabaee8f803fc8_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:30,754 - INFO - Resized clip 13 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip13.mp4
+2025-04-20 18:43:30,755 - INFO - Processing clip 14: (943.995, 1022.023) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip14.mp4
+2025-04-20 18:43:30,759 - INFO - Segments for clip 14: []
+2025-04-20 18:43:30,760 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip14.mp4
+2025-04-20 18:43:33,028 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/a5000623c1a64fb7b0cb3393dd0bb4f8_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:33,029 - INFO - Resized clip 14 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip14.mp4
+2025-04-20 18:43:33,030 - INFO - Processing clip 15: (1009.212, 1063.82) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip15.mp4
+2025-04-20 18:43:33,030 - INFO - Segments for clip 15: []
+2025-04-20 18:43:33,031 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip15.mp4
+2025-04-20 18:43:35,277 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/04314c9b76aa4b8c882c39fd3cddb18f_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:35,278 - INFO - Resized clip 15 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip15.mp4
+2025-04-20 18:43:35,278 - INFO - Processing clip 16: (1056.595, 1093.58) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip16.mp4
+2025-04-20 18:43:35,279 - INFO - Segments for clip 16: []
+2025-04-20 18:43:35,280 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip16.mp4
+2025-04-20 18:43:37,532 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/898b75f30cd44c2f8f354f40a73a8a55_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:37,533 - INFO - Resized clip 16 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip16.mp4
+2025-04-20 18:43:37,534 - INFO - Processing clip 17: (1089.796, 1148.365) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip17.mp4
+2025-04-20 18:43:37,535 - INFO - Segments for clip 17: []
+2025-04-20 18:43:37,535 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip17.mp4
+2025-04-20 18:43:39,787 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/faa7487f8dc243be8b43d94472cc67e6_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:39,788 - INFO - Resized clip 17 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip17.mp4
+2025-04-20 18:43:39,789 - INFO - Processing clip 18: (1144.723, 1181.324) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip18.mp4
+2025-04-20 18:43:39,791 - INFO - Segments for clip 18: []
+2025-04-20 18:43:39,792 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip18.mp4
+2025-04-20 18:43:42,118 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/f8f533bfebc84fd18703b52bd0c3c506_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:42,119 - INFO - Resized clip 18 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip18.mp4
+2025-04-20 18:43:42,120 - INFO - Processing clip 19: (1175.08, 1268.935) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip19.mp4
+2025-04-20 18:43:42,120 - INFO - Segments for clip 19: []
+2025-04-20 18:43:42,121 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip19.mp4
+2025-04-20 18:43:44,459 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/b5db19a1763d40b7b48a8ad515dfec05_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:44,459 - INFO - Resized clip 19 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip19.mp4
+2025-04-20 18:43:44,460 - INFO - Processing clip 20: (1258.467, 1285.997) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip20.mp4
+2025-04-20 18:43:44,460 - INFO - Segments for clip 20: []
+2025-04-20 18:43:44,461 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip20.mp4
+2025-04-20 18:43:46,762 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/291cee50549f443e83950166af4842e1_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:46,763 - INFO - Resized clip 20 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip20.mp4
+2025-04-20 18:43:46,764 - INFO - Processing clip 21: (1276.369, 1341.054) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip21.mp4
+2025-04-20 18:43:46,764 - INFO - Segments for clip 21: []
+2025-04-20 18:43:46,765 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip21.mp4
+2025-04-20 18:43:49,020 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/48f89c3d27874a4aa6957ae5a0fd3baa_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:49,021 - INFO - Resized clip 21 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip21.mp4
+2025-04-20 18:43:49,022 - INFO - Processing clip 22: (1258.467, 1341.054) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip22.mp4
+2025-04-20 18:43:49,023 - INFO - Segments for clip 22: []
+2025-04-20 18:43:49,023 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip22.mp4
+2025-04-20 18:43:51,264 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/074e7477c34c495a953587a29c6aede5_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:51,265 - INFO - Resized clip 22 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip22.mp4
+2025-04-20 18:43:51,266 - INFO - Processing clip 23: (65.886, 125.789) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip23.mp4
+2025-04-20 18:43:51,267 - INFO - Segments for clip 23: []
+2025-04-20 18:43:51,268 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip23.mp4
+2025-04-20 18:43:53,481 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/598b9e6606724cde8dcf3176f0d34583_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:53,482 - INFO - Resized clip 23 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip23.mp4
+2025-04-20 18:43:53,482 - INFO - Processing clip 24: (118.341, 317.483) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip24.mp4
+2025-04-20 18:43:53,483 - INFO - Segments for clip 24: []
+2025-04-20 18:43:53,483 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip24.mp4
+2025-04-20 18:43:55,732 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/48c31a365d07477f9a6875b686c361d3_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:55,732 - INFO - Resized clip 24 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip24.mp4
+2025-04-20 18:43:55,733 - INFO - Processing clip 25: (435.053, 570.568) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip25.mp4
+2025-04-20 18:43:55,734 - INFO - Segments for clip 25: []
+2025-04-20 18:43:55,734 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip25.mp4
+2025-04-20 18:43:57,994 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/4f5ed873d358451493f59d1756ba079f_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:43:57,995 - INFO - Resized clip 25 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip25.mp4
+2025-04-20 18:43:57,995 - INFO - Processing clip 26: (857.02, 1022.023) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip26.mp4
+2025-04-20 18:43:57,996 - INFO - Segments for clip 26: []
+2025-04-20 18:43:57,996 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip26.mp4
+2025-04-20 18:44:00,213 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/4bd2eb9dfb70453188d3bf35d7fdf678_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:44:00,214 - INFO - Resized clip 26 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip26.mp4
+2025-04-20 18:44:00,215 - INFO - Processing clip 27: (1154.272, 1268.935) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip27.mp4
+2025-04-20 18:44:00,215 - INFO - Segments for clip 27: []
+2025-04-20 18:44:00,216 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip27.mp4
+2025-04-20 18:44:02,493 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/a1299646fb5f4eaa81b94fb75f97bd6d_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:44:02,494 - INFO - Resized clip 27 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip27.mp4
+2025-04-20 18:44:02,494 - INFO - Processing clip 28: (1154.272, 1341.054) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip28.mp4
+2025-04-20 18:44:02,495 - INFO - Segments for clip 28: []
+2025-04-20 18:44:02,496 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip28.mp4
+2025-04-20 18:44:04,752 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/1c2be05625b14eda8fb9756126d987a8_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:44:04,753 - INFO - Resized clip 28 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip28.mp4
+2025-04-20 18:44:04,753 - INFO - Processing clip 29: (72.488, 353.0) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip29.mp4
+2025-04-20 18:44:04,754 - INFO - Segments for clip 29: []
+2025-04-20 18:44:04,755 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip29.mp4
+2025-04-20 18:44:07,004 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/2ecdc8e04d79443e98321a0f81c3f3d3_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:44:07,004 - INFO - Resized clip 29 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip29.mp4
+2025-04-20 18:44:07,005 - INFO - Processing clip 30: (691.266, 874.587) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip30.mp4
+2025-04-20 18:44:07,006 - INFO - Segments for clip 30: []
+2025-04-20 18:44:07,006 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip30.mp4
+2025-04-20 18:44:09,238 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/d03fcf60e7084b3f80b30ee408cb7ddb_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:44:09,239 - INFO - Resized clip 30 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip30.mp4
+2025-04-20 18:44:09,239 - INFO - Processing clip 31: (1089.796, 1271.084) -> /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip31.mp4
+2025-04-20 18:44:09,240 - INFO - Segments for clip 31: []
+2025-04-20 18:44:09,240 - INFO - FFmpeg will write to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip31.mp4
+2025-04-20 18:44:11,503 - ERROR - Error in FFmpeg command for concatenating segments. Here is some helpful troubleshooting information:
+ Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+/usr/local/lib/python3.9/site-packages/clipsai/media/94c905ee3bc748c7812f77f738222838_media_file_paths.txt: Invalid data found when processing input
+'
+
+2025-04-20 18:44:11,504 - INFO - Resized clip 31 saved to: /app/clips/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy_clip31.mp4
+2025-04-20 18:44:11,505 - INFO - Processing complete for this video.
+2025-04-20 18:44:11,509 - INFO - Processing video/audio file: /app/processmesempai/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy7e5ea3ab26634b569b08368942f97732.wav
+2025-04-20 18:44:13,332 - ERROR - '/app/processmesempai/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy7e5ea3ab26634b569b08368942f97732.wav' is a valid TemporalMediaFile but has no video stream so it is not a valid AudioVideoFile file.
+
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Traceback (most recent call last):
+  File "/app/orca.py", line 221, in <module>
+    wav_file = media_file.extract_audio(
+  File "/usr/local/lib/python3.9/site-packages/clipsai/media/audio_file.py", line 133, in extract_audio
+    self.assert_exists()
+  File "/usr/local/lib/python3.9/site-packages/clipsai/filesys/object.py", line 160, in assert_exists
+    raise FileSystemObjectError(msg)
+clipsai.filesys.exceptions.FileSystemObjectError: '/app/processmesempai/20250404-Murphy_This_Budget_Is_Just_A_Massive_Transfer_Of_Wealth_To_The_Ultra_Wealthy7e5ea3ab26634b569b08368942f97732.wav' is a valid TemporalMediaFile but has no video stream so it is not a valid AudioVideoFile file.

@@ -1,0 +1,140 @@
+2025-04-26 05:07:03,693 - INFO - 
+==================================================
+
+2025-04-26 05:07:03,694 - INFO - 
+script codename: orca
+
+2025-04-26 05:07:03,694 - INFO - 
+===============================================================================
+
+2025-04-26 05:07:11,331 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-04-26 05:07:11,332 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-26 05:07:14,730 - INFO - 
+===============================================================================
+
+2025-04-26 05:07:14,730 - INFO - packages loaded
+
+2025-04-26 05:07:16,733 - INFO - setting up folders...
+
+2025-04-26 05:07:17,734 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-04-26 05:07:18,736 - INFO - Input folder set to '/app/processmesempai'
+2025-04-26 05:07:18,737 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-04-26 05:07:20,738 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-04-26 05:07:22,741 - INFO - whisper_arch = 'medium'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-04-26 05:09:06,758 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-26 05:09:06,796 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-26 05:09:14,133 - INFO - next section loads pyannote auth token
+
+2025-04-26 05:09:17,136 - INFO - 
+===================================================================
+
+2025-04-26 05:09:18,874 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-26 05:09:18,902 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:19,010 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:19,317 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:24,279 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:24,528 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:24,862 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:25,022 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-26 05:09:25,453 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-04-26 05:09:25,482 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:25,533 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:25,803 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:25,874 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:25,944 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:25,996 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-04-26 05:09:26,060 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-04-26 05:09:26,211 - INFO - 
+===================================================================
+
+2025-04-26 05:09:26,212 - INFO - setup completed.
+
+2025-04-26 05:09:28,219 - INFO - 
+we will now begin processing 4 media files
+
+2025-04-26 05:09:29,220 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-04-26 05:09:29,221 - INFO - Good luck ;/
+
+2025-04-26 05:09:29,222 - INFO - 
+===============================
+
+2025-04-26 05:09:29,237 - INFO - Processing video/audio file: /app/processmesempai/Dragonball.GT.60.Super.Saiyan.4.Fusion.mkv
+2025-04-26 05:09:51,609 - ERROR - Terminal return code: '1'
+Output: ''
+Err Output: 'ffmpeg version 5.1.6-0+deb12u1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr --extra-version=0+deb12u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librist --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --disable-sndio --enable-libjxl --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-libplacebo --enable-librav1e --enable-shared
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+Input #0, matroska,webm, from '/app/processmesempai/Dragonball.GT.60.Super.Saiyan.4.Fusion.mkv':
+  Metadata:
+    encoder         : libebml v0.7.7 + libmatroska v0.8.1
+    creation_time   : 2009-09-07T18:17:26.000000Z
+  Duration: 00:20:44.16, start: 0.000000, bitrate: 761 kb/s
+  Stream #0:0: Video: h264 (High), yuv420p(progressive), 640x480, SAR 1:1 DAR 4:3, 23.98 fps, 23.98 tbr, 1k tbn (default)
+  Stream #0:1(ger): Audio: aac (LC), 44100 Hz, stereo, fltp (default)
+    Metadata:
+      title           : Fan Dub
+  Stream #0:2(eng): Audio: aac (HE-AAC), 48000 Hz, stereo, fltp
+  Stream #0:3(eng): Audio: aac (HE-AAC), 48000 Hz, stereo, fltp
+  Stream #0:4(jpn): Audio: aac (LC), 48000 Hz, mono, fltp
+  Stream #0:5(ger): Subtitle: subrip
+  Stream #0:6(eng): Subtitle: subrip
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+  Stream #0:2 -> #0:1 (aac (native) -> pcm_s16le (native))
+  Stream #0:3 -> #0:2 (aac (native) -> pcm_s16le (native))
+  Stream #0:4 -> #0:3 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[wav @ 0x563fadbc0f80] WAVE files have exactly one stream
+Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
+Error initializing output stream 0:3 -- 
+Conversion failed!
+'
+
+2025-04-26 05:09:51,611 - INFO - Audio extracted to: imthetrashman/Dragonball.GT.60.Super.Saiyan.4.Fusion_audio.wav
+2025-04-26 05:09:55,529 - ERROR - Error during diarization: Error opening 'imthetrashman/Dragonball.GT.60.Super.Saiyan.4.Fusion_audio.wav': Format not recognised.
+2025-04-26 05:10:01,277 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-04-26 05:10:01,310 - ERROR - 'imthetrashman/Dragonball.GT.60.Super.Saiyan.4.Fusion_audio.wav' is a valid File but is not a valid TemporalMediaFile since it has file type 'inode' which isn't one of: '['audio', 'video', 'image']'.
+2025-04-26 05:10:01,311 - ERROR - Uncaught exception, dumping traceback:
+2025-04-26 05:10:01,321 - ERROR - Traceback (most recent call last):
+  File "/app/orca.py", line 294, in <module>
+    transcription = transcriber.transcribe(audio_file_path=extracted_audio_path)
+  File "/usr/local/lib/python3.9/site-packages/clipsai/transcribe/transcriber.py", line 99, in transcribe
+    media_file = editor.instantiate_as_temporal_media_file(audio_file_path)
+  File "/usr/local/lib/python3.9/site-packages/clipsai/media/editor.py", line 1252, in instantiate_as_temporal_media_file
+    media_file.assert_exists()
+  File "/usr/local/lib/python3.9/site-packages/clipsai/filesys/object.py", line 160, in assert_exists
+    raise FileSystemObjectError(msg)
+clipsai.filesys.exceptions.FileSystemObjectError: 'imthetrashman/Dragonball.GT.60.Super.Saiyan.4.Fusion_audio.wav' is a valid File but is not a valid TemporalMediaFile since it has file type 'inode' which isn't one of: '['audio', 'video', 'image']'.
+
+2025-04-26 05:10:01,321 - INFO - 
+Processing complete
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+2025-04-26 05:10:01,369 - INFO - >>> SCRIPT IS EXITING NOW <<<
