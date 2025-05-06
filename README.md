@@ -1,4 +1,4 @@
-# nips’ orca script (previously ctr+x)
+# nips’ orca script (previously named ctr+x)
 
 This application takes a video and extracts the audio. Using [WhisperX](https://github.com/m-bain/whisperX) ([arXiv:2303.00747](https://arxiv.org/abs/2303.00747)), it transcribes the audio. It then uses ClipsAI to analyze the transcript in an attempt to determine shifts in topic and segments which could function as stand-alone, coherent clips ([ClipsAI reference](https://www.clipsai.com/references/clip), [arXiv:2106.12978](https://arxiv.org/abs/2106.12978)). After this, it performs diarization using [Pyannote Audio](https://github.com/pyannote/pyannote-audio) to determine speakers in the audio file. This data is stored in a dictionary containing speaker_number and timestamps.
 
@@ -25,8 +25,6 @@ I am certain that some of the particulars above are incorrect, but it gives a de
 - **Resource notes:** It can and will use a large amount of memory. It can and will crash for no reason.
 
 Almost the entirety of the work can be found at (clipsai.com). clipsai is an open source python package literally made to do this. I had a ton of trouble getting it to work as-posted, which is why I am putting this here at all, and I don't think there has been an update in over a year. If you follow the (only 4 or 5) lines in the quickstart section of that repo you run into dependency conflicts immediately. whisperx has had much more development than the clipsai package which I believe is related to the problem.
-
---
 
 ## Quickstart Instructions
 
@@ -78,3 +76,8 @@ docker run --rm -it --env-file .env   -v "${PWD}\processmesempai:/app/processmes
 ```
 
 ---
+
+If you have trouble with this or would like updates (or maybe are wondering why so much trash is loaded by default) please keep in mind that aside from a base-model Macbook Air (2014) running debianOS, the entirety of this development work (and the script itself) was, and still is, being done and run on the following machine:
+
+![image](https://github.com/user-attachments/assets/7c3bd146-dce0-44f7-981d-3f4b5e5b0b99).
+
