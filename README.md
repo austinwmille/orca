@@ -1,5 +1,7 @@
 # nips’ orca script (previously named ctr+x)
 
+This program is my attempt at making the [ClipsAI](https://github.com/ClipsAI/clipsai) package work. I don't know if it works for anyone, but for me it definitely doesn't as-posted, and at the very least it has major dependecy conflicts. I do not deserve any credit for this.
+
 This application takes a video and extracts the audio. Using [WhisperX](https://github.com/m-bain/whisperX) ([arXiv:2303.00747](https://arxiv.org/abs/2303.00747)), it transcribes the audio. It then uses ClipsAI to analyze the transcript in an attempt to determine shifts in topic and segments which could function as stand-alone, coherent clips ([ClipsAI reference](https://www.clipsai.com/references/clip), [arXiv:2106.12978](https://arxiv.org/abs/2106.12978)). After this, it performs diarization using [Pyannote Audio](https://github.com/pyannote/pyannote-audio) to determine speakers in the audio file. This data is stored in a dictionary containing speaker_number and timestamps.
 
 I am not totally sure what happens next, honestly, and I really don't care at the moment. Please see the arxiv papers or literally anyone else for greater insight.
