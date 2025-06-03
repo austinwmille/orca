@@ -33,19 +33,19 @@ Almost the entirety of the work can be found at (clipsai.com). clipsai is an ope
 These steps guide you through setup. You will need to request access to certain gated models on Hugging Face.
 
 1. **Create a Hugging Face account & request model access**  
-   - **Required:**  
+   - **Definitely Required:**  
      - https://huggingface.co/pyannote/segmentation  
-     - https://huggingface.co/pyannote/speaker-diarization-3.1  
-   - **Optional** (if you hit missing-model errors):  
-     - https://huggingface.co/pyannote/speaker-diarization  
+     - https://huggingface.co/pyannote/speaker-diarization-3.1
+   - **Probably also required** (I'd just do all of them):  
+     - https://huggingface.co/pyannote/speaker-diarization
      - https://huggingface.co/pyannote/speaker-segmentation  
      - https://huggingface.co/pyannote/speaker-diarization-3.0  
      - https://huggingface.co/pyannote/segmentation-3.0  
 
 2. **Clone this repo**  
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/austinwmille/orca.git
+   cd orca
    ```
 
 3. **Create your `.env` file** (in the repo root)  
