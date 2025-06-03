@@ -1,0 +1,363 @@
+2025-05-18 05:20:53,238 - INFO - 
+==================================================
+
+2025-05-18 05:20:53,239 - INFO - 
+script codename: orca v.gamma
+
+2025-05-18 05:20:53,241 - INFO - 
+===============================================================================
+
+2025-05-18 05:21:13,124 - DEBUG - Loading FFmpeg6
+2025-05-18 05:21:13,304 - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/usr/local/lib/python3.9/site-packages/torch/_ops.py", line 933, in load_library
+    ctypes.CDLL(path)
+  File "/usr/local/lib/python3.9/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-05-18 05:21:13,318 - DEBUG - Loading FFmpeg5
+2025-05-18 05:21:13,659 - DEBUG - Successfully loaded FFmpeg5
+2025-05-18 05:21:41,745 - DEBUG - matplotlib data path: /usr/local/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-18 05:21:41,773 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-05-18 05:21:41,776 - DEBUG - interactive is False
+2025-05-18 05:21:41,777 - DEBUG - platform is linux
+2025-05-18 05:22:06,578 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-05-18 05:22:06,681 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+2025-05-18 05:22:22,746 - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2025-05-18 05:22:22,747 - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2025-05-18 05:22:22,752 - DEBUG - Registered checkpoint save hook for save
+2025-05-18 05:22:22,758 - DEBUG - Registered checkpoint load hook for load
+2025-05-18 05:22:23,601 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2025-05-18 05:22:23,605 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-05-18 05:22:23,607 - DEBUG - Registered checkpoint save hook for _save
+2025-05-18 05:22:23,609 - DEBUG - Registered checkpoint load hook for _recover
+2025-05-18 05:22:53,588 - INFO - 
+===============================================================================
+
+2025-05-18 05:22:53,596 - INFO - packages loaded
+
+2025-05-18 05:22:55,600 - INFO - setting up folders...
+
+2025-05-18 05:22:56,606 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-05-18 05:22:57,608 - INFO - Input folder set to '/app/processmesempai'
+2025-05-18 05:22:57,608 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-05-18 05:22:59,610 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-05-18 05:23:01,613 - INFO - whisper_arch = 'small'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-05-18 05:23:01,654 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-18 05:23:01,991 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-small/revision/main HTTP/11" 200 1936
+2025-05-18 05:23:44,424 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-18 05:23:44,970 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-18 05:23:45,006 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-05-18 05:23:45,263 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-18 05:23:45,330 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-05-18 05:23:45,429 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-18 05:23:45,523 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+2025-05-18 05:23:45,615 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-05-18 05:23:45,713 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-18 05:23:45,976 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-18 05:23:46,273 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+2025-05-18 05:24:11,942 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-18 05:24:12,484 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6808
+2025-05-18 05:24:12,573 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6808
+2025-05-18 05:24:12,584 - INFO - Use pytorch device_name: cpu
+2025-05-18 05:24:12,586 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-05-18 05:24:12,636 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-18 05:24:12,755 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-18 05:24:12,894 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-05-18 05:24:12,997 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-18 05:24:13,124 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-18 05:24:13,248 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-18 05:24:13,339 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-05-18 05:26:45,627 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-18 05:26:46,604 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3836
+2025-05-18 05:26:46,713 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3836
+2025-05-18 05:26:46,731 - INFO - patched TextEmbedder now uses: TextEmbedder, embed_sentences from embed_with_minilm
+2025-05-18 05:26:46,732 - INFO - next section loads pyannote auth token
+
+2025-05-18 05:26:49,734 - INFO - 
+===================================================================
+
+2025-05-18 05:26:49,794 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-05-18 05:26:49,940 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 05:26:50,111 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-05-18 05:26:50,167 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-18 05:26:50,799 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-18 05:26:51,196 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-05-18 05:26:51,325 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:51,382 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-05-18 05:26:51,415 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-05-18 05:26:51,429 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:51,489 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-05-18 05:26:51,946 - DEBUG - Registered checkpoint save hook for _save
+2025-05-18 05:26:51,947 - DEBUG - Registered checkpoint load hook for _load
+2025-05-18 05:26:51,947 - DEBUG - Registered parameter transfer hook for _load
+2025-05-18 05:26:52,257 - DEBUG - Registered checkpoint save hook for save
+2025-05-18 05:26:52,258 - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-05-18 05:26:52,267 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-05-18 05:26:52,281 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:52,335 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-05-18 05:26:52,376 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-05-18 05:26:52,383 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-18 05:26:52,409 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:52,460 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-05-18 05:26:52,492 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-05-18 05:26:52,500 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-18 05:26:52,525 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:52,578 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-05-18 05:26:52,611 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-05-18 05:26:52,617 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-18 05:26:52,648 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:52,701 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-05-18 05:26:52,753 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-05-18 05:26:52,762 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-18 05:26:52,764 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-05-18 05:26:52,767 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-18 05:26:52,767 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-18 05:26:52,770 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-18 05:26:52,770 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-18 05:26:54,722 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-18 05:26:54,785 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-05-18 05:26:54,879 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 05:26:54,995 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-05-18 05:26:55,032 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-18 05:26:55,173 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-18 05:26:55,323 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-05-18 05:26:55,418 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:55,474 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-05-18 05:26:55,500 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-05-18 05:26:55,511 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:55,572 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-05-18 05:26:55,863 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-05-18 05:26:55,880 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:55,936 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-05-18 05:26:55,969 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-05-18 05:26:55,977 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-18 05:26:55,990 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:56,042 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-05-18 05:26:56,098 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-05-18 05:26:56,109 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-18 05:26:56,130 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:56,183 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-05-18 05:26:56,231 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-05-18 05:26:56,238 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-18 05:26:56,247 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-18 05:26:56,396 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-05-18 05:26:56,426 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-05-18 05:26:56,431 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-18 05:26:56,431 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-05-18 05:26:56,432 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-18 05:26:56,432 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-18 05:26:56,433 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-18 05:26:56,433 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-18 05:26:57,380 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-18 05:26:57,387 - INFO - 
+===================================================================
+
+2025-05-18 05:26:57,387 - INFO - setup completed.
+
+2025-05-18 05:26:59,468 - INFO - 
+we will now begin processing 68 media files
+
+2025-05-18 05:27:00,469 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-05-18 05:27:00,473 - INFO - Good luck ;/
+
+2025-05-18 05:27:00,474 - INFO - 
+===============================
+
+2025-05-18 05:27:00,483 - INFO - Processing video/audio file: /app/processmesempai/20240915-part034.mp4
+2025-05-18 05:27:15,358 - INFO - Audio extracted to: imthetrashman/20240915-part034_audio.wav
+2025-05-18 05:27:15,496 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 05:27:15,612 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 05:27:15,706 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 05:27:15,737 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-18 05:27:15,963 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-18 05:27:16,131 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 05:27:16,307 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 05:27:16,335 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-18 05:27:17,210 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-18 05:27:17,740 - DEBUG - Pyannote using device: cpu
+2025-05-18 05:45:56,803 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/12 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 12/12 [00:00<00:00, 34568.44it/s]2025-05-18 05:45:57,767 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-18 05:45:58,030 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/11" 200 1919
+2025-05-18 05:46:35,786 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-18 05:46:35,825 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-18 05:46:35,861 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-05-18 05:53:38,706 - INFO - Use pytorch device_name: cpu
+2025-05-18 05:53:38,706 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-05-18 05:53:38,714 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-18 05:53:38,943 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-18 05:53:39,025 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-18 05:53:39,247 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-05-18 05:53:39,437 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-18 05:53:39,589 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-18 05:53:39,678 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-18 05:53:39,752 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-05-18 05:57:26,796 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-18 05:57:27,275 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3812
+2025-05-18 05:57:27,424 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3812
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|          | 0/3 [00:00<?, ?it/s]Batches:  33%|███▎      | 1/3 [00:02<00:05,  2.71s/it]Batches:  67%|██████▋   | 2/3 [00:03<00:01,  1.40s/it]Batches: 100%|██████████| 3/3 [00:03<00:00,  1.23it/s]Batches: 100%|██████████| 3/3 [00:03<00:00,  1.10s/it]2025-05-18 05:57:31,302 - INFO - Clip 1: Start=0.031, End=45.492
+2025-05-18 05:57:31,303 - INFO - Clip 2: Start=37.929, End=116.28
+2025-05-18 05:57:31,303 - INFO - Clip 3: Start=114.198, End=228.048
+2025-05-18 05:57:31,304 - INFO - Clip 4: Start=226.067, End=247.09
+2025-05-18 05:57:31,304 - INFO - Clip 5: Start=240.849, End=306.998
+2025-05-18 05:57:31,304 - INFO - Clip 6: Start=300.615, End=349.389
+2025-05-18 05:57:31,304 - INFO - Clip 7: Start=240.849, End=349.389
+2025-05-18 05:57:31,305 - INFO - Processing clip 1: -> /app/clips/20240915-part034/20240915-part034_clip1.mp4
+2025-05-18 05:57:31,305 - INFO - → About to call resize() for clip 1
+2025-05-18 05:57:50,715 - DEBUG - DIARIZING VIDEO (20240915-part034.mp4)
+2025-05-18 05:57:50,799 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 05:57:50,967 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 05:57:51,085 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 05:57:51,136 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-18 05:57:51,425 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-18 05:57:51,571 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 05:57:51,706 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 05:57:51,735 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-18 05:57:53,345 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-18 05:57:53,664 - DEBUG - Pyannote using device: cpu
+2025-05-18 06:14:51,942 - DEBUG - File '/app/processmesempai/20240915-part034a07fe206cc514f36b34d8bd40a5106b7.wav' successfully deleted.
+2025-05-18 06:14:51,961 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part034.mp4)
+2025-05-18 06:14:54,509 - INFO - Detecting scenes...
+2025-05-18 06:17:20,424 - DEBUG - RESIZING VIDEO) (20240915-part034.mp4)
+2025-05-18 06:17:20,437 - DEBUG - FaceNet using device: cpu
+2025-05-18 06:17:27,074 - DEBUG - Video Resolution: 1920x1080
+2025-05-18 06:17:27,142 - DEBUG - Merging 12 speaker segments with 40 scene changes.
+2025-05-18 06:17:27,143 - DEBUG - Video has 47 distinct segments.
+2025-05-18 06:17:27,144 - DEBUG - Determining the first second with a face for each segment.
+2025-05-18 06:17:27,151 - DEBUG - Need 0.272 GiB to extract (at most) 47 frames
+2025-05-18 06:17:27,152 - DEBUG - Face detection dimensions: 540x960
+2025-05-18 06:17:27,152 - DEBUG - Need 0.068 GiB to detect faces from (at most) 47 frames
+2025-05-18 06:17:27,289 - DEBUG - Using 1 batches to extract and detect frames. Need 0.340 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-18 06:18:21,476 - DEBUG - Detecting faces in 47 frames.
+2025-05-18 06:18:40,833 - DEBUG - Detected faces in 47 frames.
+2025-05-18 06:18:40,834 - DEBUG - Need 0.046 GiB to extract (at most) 8 frames
+2025-05-18 06:18:40,834 - DEBUG - Face detection dimensions: 540x960
+2025-05-18 06:18:40,835 - DEBUG - Need 0.012 GiB to detect faces from (at most) 8 frames
+2025-05-18 06:18:40,836 - DEBUG - Using 1 batches to extract and detect frames. Need 0.058 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-18 06:18:51,461 - DEBUG - Detecting faces in 8 frames.
+2025-05-18 06:18:53,969 - DEBUG - Detected faces in 8 frames.
+2025-05-18 06:18:53,970 - DEBUG - Determining the region of interest for 47 segments.
+2025-05-18 06:18:53,970 - DEBUG - Need 2.995 GiB to extract (at most) 517 frames
+2025-05-18 06:18:53,971 - DEBUG - Face detection dimensions: 540x960
+2025-05-18 06:18:53,972 - DEBUG - Need 0.749 GiB to detect faces from (at most) 517 frames
+2025-05-18 06:18:53,973 - DEBUG - Using 2 batches to extract and detect frames. Need 1.872 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-18 06:18:53,974 - DEBUG - Analyzing batch 0 of 2.
+2025-05-18 06:18:53,997 - DEBUG - Extracting 187 frames
+2025-05-18 06:20:48,217 - DEBUG - Extracted 187 frames
+2025-05-18 06:20:48,217 - DEBUG - Detecting faces in 187 frames.
+2025-05-18 06:25:31,224 - DEBUG - Detected faces in 187 frames.
+2025-05-18 06:25:31,225 - DEBUG - Calculating ROI for 24 segments.
+2025-05-18 06:25:32,439 - DEBUG - Using default ROI for segment {'start_time': 46.046046, 'speakers': [3], 'end_time': 46.403469, 'first_face_sec': 47.090723874999995, 'found_face': False}
+2025-05-18 06:25:32,439 - DEBUG - Using default ROI for segment {'speakers': [4], 'start_time': 46.403469, 'end_time': 47.514181, 'first_face_sec': 47.542308, 'found_face': False}
+2025-05-18 06:25:32,440 - DEBUG - Using default ROI for segment {'start_time': 47.514181, 'speakers': [4], 'end_time': 47.764431, 'first_face_sec': 48.54546225, 'found_face': False}
+2025-05-18 06:25:33,048 - DEBUG - Using default ROI for segment {'start_time': 74.240908, 'speakers': [4], 'end_time': 75.709043, 'first_face_sec': 76.424424875, 'found_face': False}
+2025-05-18 06:25:33,049 - DEBUG - Using default ROI for segment {'start_time': 75.709043, 'speakers': [4], 'end_time': 75.959293, 'first_face_sec': 76.74032425, 'found_face': False}
+2025-05-18 06:25:34,258 - DEBUG - Using default ROI for segment {'start_time': 118.802136, 'speakers': [2], 'end_time': 120.270271, 'first_face_sec': 120.985652875, 'found_face': False}
+2025-05-18 06:25:34,259 - DEBUG - Using default ROI for segment {'start_time': 120.270271, 'speakers': [2], 'end_time': 120.520521, 'first_face_sec': 121.30155225, 'found_face': False}
+2025-05-18 06:25:34,390 - DEBUG - Calculated ROI for 24 segments.
+2025-05-18 06:25:34,395 - DEBUG - Analyzing batch 1 of 2.
+2025-05-18 06:25:34,399 - DEBUG - Extracting 220 frames
+2025-05-18 06:28:23,843 - DEBUG - Extracted 220 frames
+2025-05-18 06:28:23,844 - DEBUG - Detecting faces in 220 frames.
+2025-05-18 06:30:16,384 - DEBUG - Detected faces in 220 frames.
+2025-05-18 06:30:16,390 - DEBUG - Calculating ROI for 23 segments.
+2025-05-18 06:30:18,077 - DEBUG - Using default ROI for segment {'start_time': 231.564899, 'speakers': [2], 'end_time': 232.163469, 'first_face_sec': 232.63972024999998, 'found_face': False}
+2025-05-18 06:30:18,078 - DEBUG - Using default ROI for segment {'speakers': [3], 'start_time': 232.163469, 'end_time': 233.033034, 'first_face_sec': 233.272164625, 'found_face': False}
+2025-05-18 06:30:18,078 - DEBUG - Using default ROI for segment {'start_time': 233.033034, 'speakers': [3], 'end_time': 233.283284, 'first_face_sec': 234.06431525, 'found_face': False}
+2025-05-18 06:30:21,774 - DEBUG - Calculated ROI for 23 segments.
+2025-05-18 06:30:21,782 - DEBUG - Merging identical segments together.
+2025-05-18 06:30:21,784 - DEBUG - Merged 15 identical segments.
+2025-05-18 06:30:21,974 - INFO - ← resize() returned in 1970.7s
+2025-05-18 06:30:21,975 - INFO - Segments for clip 1: [{'start_time': 0.031, 'end_time': 3.219887, 'x': 923, 'y': 0}, {'start_time': 3.219887, 'end_time': 11.845179, 'x': 684, 'y': 0}, {'start_time': 11.845179, 'end_time': 24.591258, 'x': 1004, 'y': 0}, {'start_time': 24.591258, 'end_time': 31.231231, 'x': 676, 'y': 0}, {'start_time': 31.231231, 'end_time': 45.492, 'x': 648, 'y': 0}]
+2025-05-18 06:33:09,341 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/d18ce2ffe70f42c5b84af93ab54e751e_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/d549ff81681d47bb98a2221aa48e6552_segment_1.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/8883caf8823a493481bf308ca7984762_segment_2.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/e9f8fdc36df84f75a724ec12a3946654_segment_3.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/6fc0326840c44de6840c0a16ae5a7e54_segment_4.mp4'
+
+2025-05-18 06:33:09,342 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/79166c57d9c249618593be973faeb397_media_file_paths.txt
+2025-05-18 06:33:09,343 - DEBUG - Concatenating media files in editor
+2025-05-18 06:34:15,045 - DEBUG - Concatenation complete
+2025-05-18 06:34:15,056 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/79166c57d9c249618593be973faeb397_media_file_paths.txt' successfully deleted.
+2025-05-18 06:34:22,973 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/d18ce2ffe70f42c5b84af93ab54e751e_segment_0.mp4' successfully deleted.
+2025-05-18 06:34:26,938 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/d549ff81681d47bb98a2221aa48e6552_segment_1.mp4' successfully deleted.
+2025-05-18 06:34:29,862 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/8883caf8823a493481bf308ca7984762_segment_2.mp4' successfully deleted.
+2025-05-18 06:34:32,632 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/e9f8fdc36df84f75a724ec12a3946654_segment_3.mp4' successfully deleted.
+2025-05-18 06:34:35,892 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/6fc0326840c44de6840c0a16ae5a7e54_segment_4.mp4' successfully deleted.
+2025-05-18 06:34:41,014 - INFO - Resized clip 1 saved to: /app/clips/20240915-part034/20240915-part034_clip1.mp4
+2025-05-18 06:34:41,361 - INFO - Processing clip 2: -> /app/clips/20240915-part034/20240915-part034_clip2.mp4
+2025-05-18 06:34:41,362 - INFO - → About to call resize() for clip 2
+2025-05-18 06:35:05,128 - DEBUG - DIARIZING VIDEO (20240915-part034.mp4)
+2025-05-18 06:35:05,139 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-18 06:35:05,844 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 06:35:05,994 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 06:35:06,093 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 06:35:06,120 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-18 06:35:06,248 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-18 06:35:06,742 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-18 06:35:06,828 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-18 06:35:06,857 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-18 06:35:07,328 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-18 06:35:07,770 - DEBUG - Pyannote using device: cpu
+2025-05-18 06:47:21,933 - DEBUG - File '/app/processmesempai/20240915-part034f8d487d28a71499282797921099f479e.wav' successfully deleted.
+2025-05-18 06:47:21,933 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part034.mp4)
+2025-05-18 06:47:24,821 - INFO - Detecting scenes...
+2025-05-18 06:50:11,629 - DEBUG - RESIZING VIDEO) (20240915-part034.mp4)
+2025-05-18 06:50:11,671 - DEBUG - FaceNet using device: cpu
+2025-05-18 06:50:21,392 - DEBUG - Video Resolution: 1920x1080
+2025-05-18 06:50:21,395 - DEBUG - Merging 12 speaker segments with 40 scene changes.
+2025-05-18 06:50:21,397 - DEBUG - Video has 47 distinct segments.
+2025-05-18 06:50:21,398 - DEBUG - Determining the first second with a face for each segment.
+2025-05-18 06:50:21,404 - DEBUG - Need 0.272 GiB to extract (at most) 47 frames
+2025-05-18 06:50:21,406 - DEBUG - Face detection dimensions: 540x960
+2025-05-18 06:50:21,407 - DEBUG - Need 0.068 GiB to detect faces from (at most) 47 frames
+2025-05-18 06:50:21,431 - DEBUG - Using 1 batches to extract and detect frames. Need 0.340 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-18 06:51:23,060 - DEBUG - Detecting faces in 47 frames.
+2025-05-18 06:51:49,671 - DEBUG - Detected faces in 47 frames.
+2025-05-18 06:51:49,673 - DEBUG - Need 0.046 GiB to extract (at most) 8 frames
+2025-05-18 06:51:49,673 - DEBUG - Face detection dimensions: 540x960
+2025-05-18 06:51:49,674 - DEBUG - Need 0.012 GiB to detect faces from (at most) 8 frames
+2025-05-18 06:51:49,677 - DEBUG - Using 1 batches to extract and detect frames. Need 0.058 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-18 06:52:05,101 - DEBUG - Detecting faces in 8 frames.
+2025-05-18 06:52:09,648 - DEBUG - Detected faces in 8 frames.
+2025-05-18 06:52:09,655 - DEBUG - Determining the region of interest for 47 segments.
+2025-05-18 06:52:09,656 - DEBUG - Need 2.995 GiB to extract (at most) 517 frames
+2025-05-18 06:52:09,658 - DEBUG - Face detection dimensions: 540x960
+2025-05-18 06:52:09,659 - DEBUG - Need 0.749 GiB to detect faces from (at most) 517 frames
+2025-05-18 06:52:09,661 - DEBUG - Using 1 batches to extract and detect frames. Need 3.744 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-18 06:52:09,661 - DEBUG - Analyzing batch 0 of 1.
+2025-05-18 06:52:09,734 - DEBUG - Extracting 407 frames
+2025-05-18 06:56:59,720 - DEBUG - Extracted 407 frames
+2025-05-18 06:56:59,723 - DEBUG - Detecting faces in 407 frames.

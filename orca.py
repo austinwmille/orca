@@ -142,9 +142,9 @@ logging.info("Selecting LLMs and parameters. For more details, visit: https://gi
 time.sleep(2)
 
 # Set up custom whisperx model
-whisper_arch = "small"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
-device = "cpu"         # Device for computation: Options include "cpu", "cuda" (for GPU)
-compute_type = "int8"  # Data type for computation: Options include "float16", "float32", "int8"
+whisper_arch = "base"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
+device = "cuda" if torch.cuda.is_available() else "cpu"  # Device for computation: Options include "cpu", "cuda" (for GPU)
+compute_type = "float16" if device == "cuda" else "int8"  # Data type for computation: Options include "float16", "float32", "int8"
 language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
 
 logging.info(f"whisper_arch = '{whisper_arch}'\ndevice = '{device}' \ncompute_type = '{compute_type}'\nlanguage = '{language}'\n")
@@ -162,12 +162,17 @@ from clipsai.clip.text_embedder import TextEmbedder
 
 #large_model = SentenceTransformer("all-roberta-large-v1", device=device) # the larger model was the one used in the package by default
 small_name = "all-MiniLM-L6-v2"   # ~80 MB vs 1.9 GB
+dtype = torch.float16 if compute_type == "float16" else torch.float32
 st_model = SentenceTransformer(small_name, device=device)
+if device == "cuda" and dtype == torch.float16:
+    st_model = st_model.half()
+
+TextEmbedder._model = st_model  # Attach your mini model
 
 # override the embed_sentences method to use your MiniLM
 def embed_with_minilm(self, sentences: list[str]) -> torch.Tensor:
     # encode with your small model, then wrap in torch.Tensor
-    return torch.tensor(st_model.encode(sentences))
+    return torch.tensor(self._model.encode(sentences))
 
 TextEmbedder.embed_sentences = embed_with_minilm
 
@@ -196,7 +201,7 @@ logging.info("setup completed.\n")
 animated_loading(f"Counting files in '{input_folder}'...\n")
 time.sleep(2)
 
-# Count all video and (audio=not yet!) files in the input folder
+# Count all video files in the input folder
 file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')))
 logging.info(f"\nwe will now begin processing {file_count} media files\n")
 time.sleep(1)
@@ -331,7 +336,7 @@ try:
                         pyannote_auth_token=pyannote_auth_token,
                         aspect_ratio=(9, 16),
                         min_segment_duration=2.5,
-                        samples_per_segment=11, # 13 is standard. lower numbers are faster at cost of accuracy
+                        samples_per_segment=9, # 13 is standard. lower numbers are faster at cost of accuracy
                     )
                     logging.info(f"← resize() returned in {time.time() - start:.1f}s")
                 except Exception as e:

@@ -940,9 +940,11 @@ class MediaEditor:
                 "-i",
                 media_paths_file.path,
                 # add to remove blank screen at beginning of output
-                "-vf",
-                "setpts=PTS-STARTPTS",
-                "-c", "copy",
+                "-vf", "setpts=PTS-STARTPTS",
+                "-c:v", "libx264",
+                "-crf", "18",
+                "-preset", "veryfast",
+                "-c:a", "aac",
                 concatenated_media_file_path,
             ],
             capture_output=True,
@@ -987,7 +989,7 @@ class MediaEditor:
         audio_codec: str = "aac",
         video_codec: str = "libx264",
         crf: str = "18",
-        preset: str = "veryfast",
+        preset: str = "fast",
         num_threads: str = "0",
         overwrite: bool = True,
     ) -> VideoFile or None:
@@ -1073,13 +1075,14 @@ class MediaEditor:
                 "-c:v",
                 video_codec,
                 "-preset",
-                preset,
+                preset,  # <-- Now uses "fast"
                 "-c:a",
                 audio_codec,
                 "-map",
-                "0",  # include all streams from input file to output file
+                "0",
                 "-crf",
                 crf,
+                "-pix_fmt", "yuv420p",  # ✅ Added pixel format
                 "-threads",
                 num_threads,
                 cropped_video_file_path,
@@ -1368,7 +1371,7 @@ class MediaEditor:
         if start_time < 0:
             return "Start second ({} seconds) cannot be negative.".format(start_time)
         if end_time < 0:
-            return "End second ({} seconds) cannot be negative.".format
+            return "End second ({} seconds) cannot be negative.".format(end_time)
         if start_time > end_time:
             return (
                 "Start second ({} seconds) cannot exceed end second ({} seconds)."

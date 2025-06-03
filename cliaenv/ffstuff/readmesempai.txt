@@ -1,0 +1,1 @@
+this folder contains (or will contain) various dependencies or other useful programs which are *mostly* related to the goal of the main script

@@ -1,44 +1,43 @@
-# Use Python 3.9 slim as the base image.
-FROM python:3.9-slim
+# Use Python 3.11 slim as the base image.
+FROM python:3.11-slim
 
-# Install system dependencies (ffmpeg and ffprobe are essential).
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ffmpeg \
-    libavutil-dev \
-    libsm6 \
-    libxext6 \
-    libmagic1 \
-    libmagic-dev \
-    build-essential \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      ffmpeg \
+      libavutil-dev \
+      libavcodec-dev \
+      libavformat-dev \
+      libavfilter-dev \
+      libavdevice-dev \
+      libswscale-dev \
+      libswresample-dev \
+      libsm6 \
+      libxext6 \
+      libmagic1 \
+      libmagic-dev \
+      build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory inside the container.
 WORKDIR /app
 
-# Copy the requirements file.
-COPY requirements.txt ./
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
-# Upgrade pip and install Python dependencies.
-RUN pip install --upgrade pip && pip install -r requirements.txt
-
-# Copy patched asr.py into the container
+# Patch whisperx's asr.py
 COPY cliaenv/asr.py /tmp/patched_asr.py
-
-# Overwrite the installed whisperx/asr.py
 RUN cp /tmp/patched_asr.py \
-     "$(python3 -c 'import whisperx, os; print(os.path.dirname(whisperx.__file__))')/asr.py"
-
-# clean up
-RUN rm /tmp/patched_asr.py
+     "$(python3 -c 'import whisperx, os; print(os.path.dirname(whisperx.__file__))')/asr.py" && \
+    rm /tmp/patched_asr.py
 
 # Copy the rest of the project into the container.
 COPY . .
 
-# Expose any ports required for OAuth; for example, port 8080.
-EXPOSE 8080
-
-# Set an environment variable to prevent buffering. This allows immediate print to console during run.
+# env line for unbuffered logs & port 8080 for oauth
 ENV PYTHONUNBUFFERED=1
+EXPOSE 8080
 
 # Command to run your ctrx script.
 CMD ["python", "orca.py"]

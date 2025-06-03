@@ -1,0 +1,936 @@
+2025-05-11 00:11:02,035 - INFO - 
+==================================================
+
+2025-05-11 00:11:02,036 - INFO - 
+script codename: orca v.gamma
+
+2025-05-11 00:11:02,037 - INFO - 
+===============================================================================
+
+2025-05-11 00:11:16,177 - DEBUG - Loading FFmpeg6
+2025-05-11 00:11:16,228 - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/usr/local/lib/python3.9/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/usr/local/lib/python3.9/site-packages/torch/_ops.py", line 933, in load_library
+    ctypes.CDLL(path)
+  File "/usr/local/lib/python3.9/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-05-11 00:11:16,232 - DEBUG - Loading FFmpeg5
+2025-05-11 00:11:19,326 - DEBUG - Successfully loaded FFmpeg5
+2025-05-11 00:11:35,312 - DEBUG - matplotlib data path: /usr/local/lib/python3.9/site-packages/matplotlib/mpl-data
+2025-05-11 00:11:35,402 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-05-11 00:11:35,411 - DEBUG - interactive is False
+2025-05-11 00:11:35,413 - DEBUG - platform is linux
+2025-05-11 00:11:39,830 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-05-11 00:11:39,834 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+2025-05-11 00:11:46,167 - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2025-05-11 00:11:46,168 - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2025-05-11 00:11:46,168 - DEBUG - Registered checkpoint save hook for save
+2025-05-11 00:11:46,169 - DEBUG - Registered checkpoint load hook for load
+2025-05-11 00:11:46,605 - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2025-05-11 00:11:46,606 - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-05-11 00:11:46,607 - DEBUG - Registered checkpoint save hook for _save
+2025-05-11 00:11:46,608 - DEBUG - Registered checkpoint load hook for _recover
+2025-05-11 00:12:01,344 - INFO - 
+===============================================================================
+
+2025-05-11 00:12:01,345 - INFO - packages loaded
+
+2025-05-11 00:12:03,347 - INFO - setting up folders...
+
+2025-05-11 00:12:05,422 - INFO - 'temp' directory named 'imthetrashman'
+
+2025-05-11 00:12:08,149 - INFO - Input folder set to '/app/processmesempai'
+2025-05-11 00:12:08,150 - INFO - Clips (output) folder set to '/app/clips'
+
+2025-05-11 00:12:10,153 - INFO - Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX
+2025-05-11 00:12:12,155 - INFO - whisper_arch = 'small'
+device = 'cpu' 
+compute_type = 'int8'
+language = 'en'
+
+2025-05-11 00:12:12,180 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-05-11 00:12:12,597 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-small/revision/main HTTP/11" 200 1936
+2025-05-11 00:12:42,110 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-11 00:12:48,651 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-11 00:12:48,682 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-05-11 00:12:48,906 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-11 00:12:48,955 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 00:12:49,058 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-11 00:12:49,180 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+2025-05-11 00:12:49,333 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 00:12:49,464 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-11 00:12:49,641 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-11 00:12:49,741 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+2025-05-11 00:13:00,721 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-11 00:13:00,993 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6806
+2025-05-11 00:13:01,125 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6806
+2025-05-11 00:13:01,133 - INFO - Use pytorch device_name: cpu
+2025-05-11 00:13:01,134 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-05-11 00:13:01,248 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 00:13:01,343 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-11 00:13:01,423 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-05-11 00:13:01,494 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 00:13:01,590 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-11 00:13:01,682 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-11 00:13:01,767 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-05-11 00:15:43,657 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-11 00:15:43,972 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3793
+2025-05-11 00:15:44,045 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3793
+2025-05-11 00:15:44,058 - INFO - patched TextEmbedder now uses: TextEmbedder, embed_sentences from embed_with_minilm
+2025-05-11 00:15:44,059 - INFO - next section loads pyannote auth token
+
+2025-05-11 00:15:47,066 - INFO - 
+===================================================================
+
+2025-05-11 00:15:47,127 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-05-11 00:15:47,559 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:15:47,698 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-05-11 00:15:47,724 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-11 00:15:50,493 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-11 00:15:50,629 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-05-11 00:15:50,761 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:15:50,814 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-05-11 00:15:50,855 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-05-11 00:15:50,865 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:15:50,915 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-05-11 00:15:51,029 - DEBUG - Registered checkpoint save hook for _save
+2025-05-11 00:15:51,029 - DEBUG - Registered checkpoint load hook for _load
+2025-05-11 00:15:51,029 - DEBUG - Registered parameter transfer hook for _load
+2025-05-11 00:15:51,375 - DEBUG - Registered checkpoint save hook for save
+2025-05-11 00:15:51,376 - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-05-11 00:15:51,382 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-05-11 00:15:51,398 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:15:51,448 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-05-11 00:15:51,483 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-05-11 00:15:51,491 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-11 00:15:51,506 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:15:51,555 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-05-11 00:15:51,588 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-05-11 00:15:51,593 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-11 00:15:51,622 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:15:51,672 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-05-11 00:15:51,703 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-05-11 00:15:51,714 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-11 00:15:51,738 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:15:51,787 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-05-11 00:15:51,813 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-05-11 00:15:51,818 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-11 00:15:51,819 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-05-11 00:15:51,819 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-11 00:15:51,820 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-11 00:15:51,820 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-11 00:15:51,821 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-11 00:16:02,186 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-11 00:16:02,249 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization/resolve/2.1/config.yaml HTTP/11" 200 0
+2025-05-11 00:16:02,372 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:16:02,448 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation/resolve/2022.07/config.yaml HTTP/11" 200 0
+2025-05-11 00:16:02,475 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-11 00:16:02,609 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin
+2025-05-11 00:16:02,764 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../root/.cache/torch/pyannote/models--pyannote--segmentation/snapshots/c4c8ceafcbb3a7a280c2d357aee9fbc9b0be7f9b/pytorch_model.bin`
+2025-05-11 00:16:02,803 - INFO - Fetch hyperparams.yaml: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:16:02,857 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/hyperparams.yaml HTTP/11" 200 0
+2025-05-11 00:16:02,885 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml' -> '/root/.cache/torch/pyannote/speechbrain/hyperparams.yaml'
+2025-05-11 00:16:02,895 - INFO - Fetch custom.py: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:16:02,948 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/custom.py HTTP/11" 404 0
+2025-05-11 00:16:03,232 - DEBUG - Collecting files (or symlinks) for pretraining in /root/.cache/torch/pyannote/speechbrain.
+2025-05-11 00:16:03,245 - INFO - Fetch embedding_model.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:16:03,296 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/11" 302 0
+2025-05-11 00:16:03,325 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt'
+2025-05-11 00:16:03,332 - DEBUG - Set local path in self.paths["embedding_model"] = /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-11 00:16:03,342 - INFO - Fetch mean_var_norm_emb.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:16:03,422 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/mean_var_norm_emb.ckpt HTTP/11" 200 0
+2025-05-11 00:16:03,457 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt'
+2025-05-11 00:16:03,463 - DEBUG - Set local path in self.paths["mean_var_norm_emb"] = /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-11 00:16:03,480 - INFO - Fetch classifier.ckpt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:16:03,529 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/classifier.ckpt HTTP/11" 302 0
+2025-05-11 00:16:03,556 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt' -> '/root/.cache/torch/pyannote/speechbrain/classifier.ckpt'
+2025-05-11 00:16:03,564 - DEBUG - Set local path in self.paths["classifier"] = /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-11 00:16:03,574 - INFO - Fetch label_encoder.txt: Fetching from HuggingFace Hub 'speechbrain/spkrec-ecapa-voxceleb' if not cached
+2025-05-11 00:16:03,622 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/label_encoder.txt HTTP/11" 200 0
+2025-05-11 00:16:03,649 - DEBUG - Fetch: Local file found, creating symlink '/root/.cache/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt' -> '/root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt'
+2025-05-11 00:16:03,655 - DEBUG - Set local path in self.paths["label_encoder"] = /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-11 00:16:03,655 - INFO - Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2025-05-11 00:16:03,656 - DEBUG - Redirecting (loading from local path): embedding_model -> /root/.cache/torch/pyannote/speechbrain/embedding_model.ckpt
+2025-05-11 00:16:03,656 - DEBUG - Redirecting (loading from local path): mean_var_norm_emb -> /root/.cache/torch/pyannote/speechbrain/mean_var_norm_emb.ckpt
+2025-05-11 00:16:03,657 - DEBUG - Redirecting (loading from local path): classifier -> /root/.cache/torch/pyannote/speechbrain/classifier.ckpt
+2025-05-11 00:16:03,658 - DEBUG - Redirecting (loading from local path): label_encoder -> /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-11 00:16:04,532 - DEBUG - Loaded categorical encoding from /root/.cache/torch/pyannote/speechbrain/label_encoder.ckpt
+2025-05-11 00:16:04,538 - INFO - 
+===================================================================
+
+2025-05-11 00:16:04,539 - INFO - setup completed.
+
+2025-05-11 00:16:06,546 - INFO - 
+we will now begin processing 78 media files
+
+2025-05-11 00:16:07,547 - INFO - 
+The time required varies hugely on your computing hardware and selected parameters.
+
+2025-05-11 00:16:07,548 - INFO - Good luck ;/
+
+2025-05-11 00:16:07,548 - INFO - 
+===============================
+
+2025-05-11 00:16:07,556 - INFO - Processing video/audio file: /app/processmesempai/20240915-part024.mp4
+2025-05-11 00:16:50,124 - INFO - Audio extracted to: imthetrashman/20240915-part024_audio.wav
+2025-05-11 00:16:50,193 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:16:50,327 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:16:50,481 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:16:50,529 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 00:16:50,701 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 00:16:50,843 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:16:50,927 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:16:50,955 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 00:16:51,238 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 00:16:51,584 - DEBUG - Pyannote using device: cpu
+2025-05-11 00:26:50,615 - INFO - Diarization completed. Retrieved speaker segments.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Segmenting audio:   0%|          | 0/12 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 12/12 [00:00<00:00, 133152.51it/s]2025-05-11 00:26:50,723 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 00:26:50,866 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/11" 200 1919
+2025-05-11 00:26:55,074 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-11 00:26:55,106 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-11 00:26:55,137 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-05-11 00:31:22,932 - INFO - Use pytorch device_name: cpu
+2025-05-11 00:31:22,933 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-05-11 00:31:22,937 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 00:31:23,082 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 00:31:23,157 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-11 00:31:23,290 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-05-11 00:31:23,374 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 00:31:23,449 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-11 00:31:23,527 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-11 00:31:23,608 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-05-11 00:33:08,826 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-11 00:33:09,169 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3793
+2025-05-11 00:33:09,247 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3793
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|          | 0/3 [00:00<?, ?it/s]Batches:  33%|███▎      | 1/3 [00:01<00:02,  1.06s/it]Batches:  67%|██████▋   | 2/3 [00:01<00:00,  1.64it/s]Batches: 100%|██████████| 3/3 [00:01<00:00,  2.53it/s]Batches: 100%|██████████| 3/3 [00:01<00:00,  2.01it/s]2025-05-11 00:33:11,259 - INFO - Clip 1: Start=0.071, End=67.718
+2025-05-11 00:33:11,265 - INFO - Clip 2: Start=63.555, End=167.846
+2025-05-11 00:33:11,266 - INFO - Clip 3: Start=173.488, End=193.482
+2025-05-11 00:33:11,266 - INFO - Clip 4: Start=192.021, End=208.488
+2025-05-11 00:33:11,267 - INFO - Clip 5: Start=207.908, End=299.985
+2025-05-11 00:33:11,267 - INFO - Clip 6: Start=289.218, End=328.077
+2025-05-11 00:33:11,268 - INFO - Clip 7: Start=323.213, End=360.775
+2025-05-11 00:33:11,269 - INFO - Clip 8: Start=207.908, End=343.311
+2025-05-11 00:33:11,269 - INFO - Processing clip 1: -> /app/clips/20240915-part024/20240915-part024_clip1.mp4
+2025-05-11 00:33:11,270 - INFO - → About to call resize() for clip 1
+2025-05-11 00:33:22,649 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 00:33:22,703 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:33:22,824 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:33:22,899 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:33:22,955 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 00:33:23,009 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 00:33:23,125 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:33:23,224 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:33:23,269 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 00:33:23,422 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 00:33:23,681 - DEBUG - Pyannote using device: cpu
+2025-05-11 00:43:56,053 - DEBUG - File '/app/processmesempai/20240915-part0249ebeaaebf0314a0fad8c8d8ca3775e3e.wav' successfully deleted.
+2025-05-11 00:43:56,054 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 00:43:58,262 - INFO - Detecting scenes...
+2025-05-11 00:46:07,095 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 00:46:07,097 - DEBUG - FaceNet using device: cpu
+2025-05-11 00:46:11,677 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 00:46:11,678 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 00:46:11,678 - DEBUG - Video has 35 distinct segments.
+2025-05-11 00:46:11,679 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 00:46:11,680 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 00:46:11,680 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 00:46:11,681 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 00:46:11,686 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 00:46:39,884 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 00:46:48,251 - DEBUG - Detected faces in 35 frames.
+2025-05-11 00:46:48,252 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 00:46:48,252 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 00:46:48,253 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 00:46:48,254 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 00:46:58,539 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 00:47:01,052 - DEBUG - Detected faces in 15 frames.
+2025-05-11 00:47:01,053 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 00:47:01,054 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 00:47:01,054 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 00:47:01,055 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 00:47:10,920 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 00:47:12,087 - DEBUG - Detected faces in 6 frames.
+2025-05-11 00:47:12,089 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 00:47:12,090 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 00:47:12,090 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 00:47:12,090 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 00:47:12,091 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 00:47:12,092 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 00:47:12,102 - DEBUG - Extracting 374 frames
+2025-05-11 00:51:03,946 - DEBUG - Extracted 374 frames
+2025-05-11 00:51:03,946 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 00:55:10,777 - DEBUG - Detected faces in 374 frames.
+2025-05-11 00:55:10,788 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 00:55:12,884 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 00:55:13,558 - DEBUG - No mouth movement detected for segment.
+2025-05-11 00:55:15,762 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 00:55:15,772 - DEBUG - Merging identical segments together.
+2025-05-11 00:55:15,774 - DEBUG - Merged 5 identical segments.
+2025-05-11 00:55:15,788 - INFO - ← resize() returned in 1324.5s
+2025-05-11 00:55:15,789 - INFO - Segments for clip 1: [{'start_time': 0.071, 'end_time': 11.010986, 'x': 1439, 'y': 0}, {'start_time': 11.010986, 'end_time': 25.394094, 'x': 1052, 'y': 0}, {'start_time': 25.394094, 'end_time': 28.094698, 'x': 401, 'y': 0}, {'start_time': 28.094698, 'end_time': 34.801389, 'x': 665, 'y': 0}, {'start_time': 34.801389, 'end_time': 43.760328, 'x': 18, 'y': 77}, {'start_time': 43.760328, 'end_time': 52.917219, 'x': 657, 'y': 0}, {'start_time': 52.917219, 'end_time': 54.320865, 'x': 473, 'y': 0}, {'start_time': 54.320865, 'end_time': 58.942142, 'x': 359, 'y': 0}, {'start_time': 58.942142, 'end_time': 67.718, 'x': 648, 'y': 0}]
+2025-05-11 00:58:19,117 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/237ff58c7cec46828b8a5f0f3d207119_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/b993ac7d9aa24ffe8e3740cc1dfb34b5_segment_1.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/e714c2ea090a4ed7ba478b2ff6736a03_segment_2.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/f68eb55c67bc406d87e8146a470e382d_segment_3.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/6c4d8ed46a614100832310deabf3e5c0_segment_4.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/4b91ee3ab78744a7a88e673885ecec23_segment_5.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/70668caad1644992975baad8ad06bc20_segment_6.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/05fc3b0b4e0d4de295632926e30cf9cc_segment_7.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/63f3af8fe0f44b77ac934e57b6d06290_segment_8.mp4'
+
+2025-05-11 00:58:19,119 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/59f1e8c1eec44c289484b0aaffb328db_media_file_paths.txt
+2025-05-11 00:58:19,119 - DEBUG - Concatenating media files in editor
+2025-05-11 00:59:04,035 - DEBUG - Concatenation complete
+2025-05-11 00:59:04,036 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/59f1e8c1eec44c289484b0aaffb328db_media_file_paths.txt' successfully deleted.
+2025-05-11 00:59:08,191 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/237ff58c7cec46828b8a5f0f3d207119_segment_0.mp4' successfully deleted.
+2025-05-11 00:59:10,091 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/b993ac7d9aa24ffe8e3740cc1dfb34b5_segment_1.mp4' successfully deleted.
+2025-05-11 00:59:14,735 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/e714c2ea090a4ed7ba478b2ff6736a03_segment_2.mp4' successfully deleted.
+2025-05-11 00:59:16,520 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/f68eb55c67bc406d87e8146a470e382d_segment_3.mp4' successfully deleted.
+2025-05-11 00:59:18,318 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/6c4d8ed46a614100832310deabf3e5c0_segment_4.mp4' successfully deleted.
+2025-05-11 00:59:20,122 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/4b91ee3ab78744a7a88e673885ecec23_segment_5.mp4' successfully deleted.
+2025-05-11 00:59:21,869 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/70668caad1644992975baad8ad06bc20_segment_6.mp4' successfully deleted.
+2025-05-11 00:59:23,667 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/05fc3b0b4e0d4de295632926e30cf9cc_segment_7.mp4' successfully deleted.
+2025-05-11 00:59:25,447 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/63f3af8fe0f44b77ac934e57b6d06290_segment_8.mp4' successfully deleted.
+2025-05-11 00:59:27,599 - INFO - Resized clip 1 saved to: /app/clips/20240915-part024/20240915-part024_clip1.mp4
+2025-05-11 00:59:27,840 - INFO - Processing clip 2: -> /app/clips/20240915-part024/20240915-part024_clip2.mp4
+2025-05-11 00:59:27,841 - INFO - → About to call resize() for clip 2
+2025-05-11 00:59:41,397 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 00:59:41,472 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 00:59:42,406 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:59:42,584 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:59:42,658 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:59:42,703 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 00:59:47,236 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 00:59:47,635 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 00:59:47,756 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 00:59:47,806 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 00:59:49,486 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 00:59:50,058 - DEBUG - Pyannote using device: cpu
+2025-05-11 01:11:02,448 - DEBUG - File '/app/processmesempai/20240915-part0242afc036a0671491994741f021ff6ac8f.wav' successfully deleted.
+2025-05-11 01:11:02,449 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 01:11:05,054 - INFO - Detecting scenes...
+2025-05-11 01:13:03,508 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 01:13:03,508 - DEBUG - FaceNet using device: cpu
+2025-05-11 01:13:09,605 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 01:13:09,605 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 01:13:09,606 - DEBUG - Video has 35 distinct segments.
+2025-05-11 01:13:09,606 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 01:13:09,607 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 01:13:09,608 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:13:09,609 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 01:13:09,610 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:13:41,751 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 01:13:54,680 - DEBUG - Detected faces in 35 frames.
+2025-05-11 01:13:54,681 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 01:13:54,682 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:13:54,682 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 01:13:54,683 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:14:10,394 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 01:14:13,801 - DEBUG - Detected faces in 15 frames.
+2025-05-11 01:14:13,802 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 01:14:13,802 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:14:13,802 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 01:14:13,805 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:14:22,015 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 01:14:24,459 - DEBUG - Detected faces in 6 frames.
+2025-05-11 01:14:24,464 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 01:14:24,465 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 01:14:24,466 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:14:24,466 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 01:14:24,468 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:14:24,471 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 01:14:24,479 - DEBUG - Extracting 374 frames
+2025-05-11 01:18:17,848 - DEBUG - Extracted 374 frames
+2025-05-11 01:18:17,849 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 01:23:58,698 - DEBUG - Detected faces in 374 frames.
+2025-05-11 01:23:58,701 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 01:24:00,032 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 01:24:02,819 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 01:24:02,823 - DEBUG - Merging identical segments together.
+2025-05-11 01:24:02,824 - DEBUG - Merged 7 identical segments.
+2025-05-11 01:24:02,828 - INFO - ← resize() returned in 1475.0s
+2025-05-11 01:24:02,829 - INFO - Segments for clip 2: [{'start_time': 63.555, 'end_time': 100.08319, 'x': 644, 'y': 0}, {'start_time': 100.08319, 'end_time': 108.808563, 'x': 890, 'y': 0}, {'start_time': 108.808563, 'end_time': 118.301367, 'x': 714, 'y': 0}, {'start_time': 118.301367, 'end_time': 130.322844, 'x': 740, 'y': 64}, {'start_time': 130.322844, 'end_time': 150.404094, 'x': 700, 'y': 10}, {'start_time': 150.404094, 'end_time': 160.893864, 'x': 701, 'y': 102}, {'start_time': 160.893864, 'end_time': 167.846, 'x': 545, 'y': 2}]
+2025-05-11 01:29:29,600 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/a7728ffa04754168824a19ea54523277_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/bd8765aadf4446248228039d9ebfafb6_segment_1.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/930cc8b4f3b5475c80c3e70fa1f3e0c4_segment_2.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/ab597e5c86344685bdf5defcef680c43_segment_3.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/752b5db38ad34090a992b8fabae9c6dd_segment_4.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/40ccfb8cd32b491988078e502c931a3b_segment_5.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/2842d17a69f54e08adb652f969bd2298_segment_6.mp4'
+
+2025-05-11 01:29:29,601 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/cc7e76ef27ca406287e0b5534c97bc72_media_file_paths.txt
+2025-05-11 01:29:29,602 - DEBUG - Concatenating media files in editor
+2025-05-11 01:30:47,106 - DEBUG - Concatenation complete
+2025-05-11 01:30:47,107 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/cc7e76ef27ca406287e0b5534c97bc72_media_file_paths.txt' successfully deleted.
+2025-05-11 01:30:51,531 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/a7728ffa04754168824a19ea54523277_segment_0.mp4' successfully deleted.
+2025-05-11 01:30:53,522 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/bd8765aadf4446248228039d9ebfafb6_segment_1.mp4' successfully deleted.
+2025-05-11 01:30:55,700 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/930cc8b4f3b5475c80c3e70fa1f3e0c4_segment_2.mp4' successfully deleted.
+2025-05-11 01:30:57,858 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/ab597e5c86344685bdf5defcef680c43_segment_3.mp4' successfully deleted.
+2025-05-11 01:31:00,207 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/752b5db38ad34090a992b8fabae9c6dd_segment_4.mp4' successfully deleted.
+2025-05-11 01:31:02,431 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/40ccfb8cd32b491988078e502c931a3b_segment_5.mp4' successfully deleted.
+2025-05-11 01:31:04,607 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/2842d17a69f54e08adb652f969bd2298_segment_6.mp4' successfully deleted.
+2025-05-11 01:31:07,133 - INFO - Resized clip 2 saved to: /app/clips/20240915-part024/20240915-part024_clip2.mp4
+2025-05-11 01:31:07,393 - INFO - Processing clip 3: -> /app/clips/20240915-part024/20240915-part024_clip3.mp4
+2025-05-11 01:31:07,394 - INFO - → About to call resize() for clip 3
+2025-05-11 01:31:26,061 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 01:31:26,066 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 01:31:26,372 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 01:31:26,483 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 01:31:26,562 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 01:31:26,591 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 01:31:26,929 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 01:31:27,074 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 01:31:27,191 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 01:31:27,218 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 01:31:28,978 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 01:31:29,306 - DEBUG - Pyannote using device: cpu
+2025-05-11 01:41:25,009 - DEBUG - File '/app/processmesempai/20240915-part0243394575e70074acd9d76087d1f8390e3.wav' successfully deleted.
+2025-05-11 01:41:25,010 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 01:41:27,831 - INFO - Detecting scenes...
+2025-05-11 01:43:41,021 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 01:43:41,023 - DEBUG - FaceNet using device: cpu
+2025-05-11 01:43:46,831 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 01:43:46,832 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 01:43:46,832 - DEBUG - Video has 35 distinct segments.
+2025-05-11 01:43:46,832 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 01:43:46,837 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 01:43:46,838 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:43:46,840 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 01:43:46,842 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:44:16,414 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 01:44:27,976 - DEBUG - Detected faces in 35 frames.
+2025-05-11 01:44:27,977 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 01:44:27,977 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:44:27,978 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 01:44:27,979 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:44:39,110 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 01:44:41,246 - DEBUG - Detected faces in 15 frames.
+2025-05-11 01:44:41,247 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 01:44:41,247 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:44:41,247 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 01:44:41,248 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:44:49,121 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 01:44:50,283 - DEBUG - Detected faces in 6 frames.
+2025-05-11 01:44:50,285 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 01:44:50,286 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 01:44:50,286 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 01:44:50,287 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 01:44:50,288 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 01:44:50,289 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 01:44:50,294 - DEBUG - Extracting 374 frames
+2025-05-11 01:48:32,943 - DEBUG - Extracted 374 frames
+2025-05-11 01:48:32,944 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 01:50:29,702 - DEBUG - Detected faces in 374 frames.
+2025-05-11 01:50:29,703 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 01:50:30,822 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 01:50:33,366 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 01:50:33,371 - DEBUG - Merging identical segments together.
+2025-05-11 01:50:33,374 - DEBUG - Merged 10 identical segments.
+2025-05-11 01:50:33,379 - INFO - ← resize() returned in 1166.0s
+2025-05-11 01:50:33,380 - INFO - Segments for clip 3: [{'start_time': 173.488, 'end_time': 177.577176, 'x': 540, 'y': 2}, {'start_time': 177.577176, 'end_time': 193.482, 'x': 607, 'y': 1}]
+2025-05-11 01:52:23,601 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/ac9787a23c3146c0a2ac84becfe6bc23_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/d5a4b833d1734652af4f1e6df40eb851_segment_1.mp4'
+
+2025-05-11 01:52:23,602 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/a487934727014292bc6b103d9c651600_media_file_paths.txt
+2025-05-11 01:52:23,603 - DEBUG - Concatenating media files in editor
+2025-05-11 01:52:40,304 - DEBUG - Concatenation complete
+2025-05-11 01:52:40,304 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/a487934727014292bc6b103d9c651600_media_file_paths.txt' successfully deleted.
+2025-05-11 01:52:45,550 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/ac9787a23c3146c0a2ac84becfe6bc23_segment_0.mp4' successfully deleted.
+2025-05-11 01:52:48,184 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/d5a4b833d1734652af4f1e6df40eb851_segment_1.mp4' successfully deleted.
+2025-05-11 01:52:50,872 - INFO - Resized clip 3 saved to: /app/clips/20240915-part024/20240915-part024_clip3.mp4
+2025-05-11 01:52:51,135 - INFO - Processing clip 4: -> /app/clips/20240915-part024/20240915-part024_clip4.mp4
+2025-05-11 01:52:51,136 - INFO - → About to call resize() for clip 4
+2025-05-11 01:53:11,443 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 01:53:11,447 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 01:53:11,663 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 01:53:11,765 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 01:53:11,842 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 01:53:11,903 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 01:53:12,164 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 01:53:12,305 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 01:53:12,392 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 01:53:12,418 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 01:53:13,868 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 01:53:14,177 - DEBUG - Pyannote using device: cpu
+2025-05-11 02:02:43,749 - DEBUG - File '/app/processmesempai/20240915-part024073f65152e3a4db799f92c99bb809107.wav' successfully deleted.
+2025-05-11 02:02:43,750 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 02:02:46,801 - INFO - Detecting scenes...
+2025-05-11 02:04:50,314 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 02:04:50,315 - DEBUG - FaceNet using device: cpu
+2025-05-11 02:04:56,482 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 02:04:56,482 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 02:04:56,483 - DEBUG - Video has 35 distinct segments.
+2025-05-11 02:04:56,484 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 02:04:56,486 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 02:04:56,488 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:04:56,489 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 02:04:56,492 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:05:38,045 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 02:05:45,216 - DEBUG - Detected faces in 35 frames.
+2025-05-11 02:05:45,216 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 02:05:45,217 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:05:45,217 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 02:05:45,218 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:06:14,736 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 02:06:16,992 - DEBUG - Detected faces in 15 frames.
+2025-05-11 02:06:16,992 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 02:06:16,993 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:06:16,994 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 02:06:16,995 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:06:26,669 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 02:06:27,690 - DEBUG - Detected faces in 6 frames.
+2025-05-11 02:06:27,691 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 02:06:27,692 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 02:06:27,693 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:06:27,693 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 02:06:27,694 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:06:27,695 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 02:06:27,700 - DEBUG - Extracting 374 frames
+2025-05-11 02:10:07,116 - DEBUG - Extracted 374 frames
+2025-05-11 02:10:07,117 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 02:13:11,280 - DEBUG - Detected faces in 374 frames.
+2025-05-11 02:13:11,340 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 02:13:17,696 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 02:13:19,427 - DEBUG - No mouth movement detected for segment.
+2025-05-11 02:13:24,127 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 02:13:24,333 - DEBUG - Merging identical segments together.
+2025-05-11 02:13:24,334 - DEBUG - Merged 9 identical segments.
+2025-05-11 02:13:24,453 - INFO - ← resize() returned in 1233.3s
+2025-05-11 02:13:24,456 - INFO - Segments for clip 4: [{'start_time': 192.021, 'end_time': 199.448998, 'x': 613, 'y': 8}, {'start_time': 199.448998, 'end_time': 208.488, 'x': 208, 'y': 8}]
+2025-05-11 02:15:17,342 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/c107a5eac48348028617f42731f168f2_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/db0e2646e25f49438397fb53f8772bd8_segment_1.mp4'
+
+2025-05-11 02:15:17,344 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/e8ba36a959294c51b1224ec4751bd9ad_media_file_paths.txt
+2025-05-11 02:15:17,344 - DEBUG - Concatenating media files in editor
+2025-05-11 02:15:29,313 - DEBUG - Concatenation complete
+2025-05-11 02:15:29,314 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/e8ba36a959294c51b1224ec4751bd9ad_media_file_paths.txt' successfully deleted.
+2025-05-11 02:15:33,451 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/c107a5eac48348028617f42731f168f2_segment_0.mp4' successfully deleted.
+2025-05-11 02:15:35,349 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/db0e2646e25f49438397fb53f8772bd8_segment_1.mp4' successfully deleted.
+2025-05-11 02:15:37,789 - INFO - Resized clip 4 saved to: /app/clips/20240915-part024/20240915-part024_clip4.mp4
+2025-05-11 02:15:38,053 - INFO - Processing clip 5: -> /app/clips/20240915-part024/20240915-part024_clip5.mp4
+2025-05-11 02:15:38,053 - INFO - → About to call resize() for clip 5
+2025-05-11 02:15:56,292 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 02:15:56,299 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 02:15:56,669 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 02:15:56,848 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 02:15:56,922 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 02:15:56,973 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 02:15:57,269 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 02:15:57,993 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 02:15:58,067 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 02:15:58,090 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 02:16:00,099 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 02:16:00,689 - DEBUG - Pyannote using device: cpu
+2025-05-11 02:27:48,974 - DEBUG - File '/app/processmesempai/20240915-part0246ca62572cded4e12978b10766945eb1e.wav' successfully deleted.
+2025-05-11 02:27:48,975 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 02:27:53,424 - INFO - Detecting scenes...
+2025-05-11 02:30:38,943 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 02:30:38,944 - DEBUG - FaceNet using device: cpu
+2025-05-11 02:30:48,288 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 02:30:48,288 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 02:30:48,289 - DEBUG - Video has 35 distinct segments.
+2025-05-11 02:30:48,290 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 02:30:48,290 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 02:30:48,290 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:30:48,291 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 02:30:48,355 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:32:11,515 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 02:32:37,513 - DEBUG - Detected faces in 35 frames.
+2025-05-11 02:32:37,515 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 02:32:37,536 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:32:37,540 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 02:32:37,541 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:33:07,383 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 02:33:18,184 - DEBUG - Detected faces in 15 frames.
+2025-05-11 02:33:18,185 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 02:33:18,186 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:33:18,187 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 02:33:18,188 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:33:52,323 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 02:33:56,234 - DEBUG - Detected faces in 6 frames.
+2025-05-11 02:33:56,235 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 02:33:56,236 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 02:33:56,237 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 02:33:56,245 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 02:33:56,249 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 02:33:56,250 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 02:33:56,262 - DEBUG - Extracting 374 frames
+2025-05-11 02:37:36,831 - DEBUG - Extracted 374 frames
+2025-05-11 02:37:36,831 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 02:40:29,188 - DEBUG - Detected faces in 374 frames.
+2025-05-11 02:40:29,246 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 02:40:30,836 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 02:40:37,901 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 02:40:37,920 - DEBUG - Merging identical segments together.
+2025-05-11 02:40:37,921 - DEBUG - Merged 9 identical segments.
+2025-05-11 02:40:37,928 - INFO - ← resize() returned in 1499.9s
+2025-05-11 02:40:37,929 - INFO - Segments for clip 5: [{'start_time': 207.908, 'end_time': 224.974719, 'x': 980, 'y': 113}, {'start_time': 224.974719, 'end_time': 243.22601, 'x': 748, 'y': 0}, {'start_time': 243.22601, 'end_time': 257.205969, 'x': 243, 'y': 0}, {'start_time': 257.205969, 'end_time': 265.414815, 'x': 330, 'y': 0}, {'start_time': 265.414815, 'end_time': 278.277649, 'x': 718, 'y': 0}, {'start_time': 278.277649, 'end_time': 292.825497, 'x': 1024, 'y': 0}, {'start_time': 292.825497, 'end_time': 299.985, 'x': 918, 'y': 0}]
+2025-05-11 02:48:43,779 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/b396b5a21bc149b79fd182657b80246e_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/7a900b8c3ac94133b9d16a5c38a5e362_segment_1.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/21beba06769e40208bbfaa32cf4d2342_segment_2.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/d48545e1aa984155b93b8bd112c6a991_segment_3.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/beb6e0b0d74a4b859e4c5cee6e207ce8_segment_4.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/f3f638f0a68f4b6286b4dab176d41fc5_segment_5.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/2e13c72c1e9e40f69a40fe1ec2513325_segment_6.mp4'
+
+2025-05-11 02:48:43,781 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/2e7a5f53e63b4b869628416515a2860f_media_file_paths.txt
+2025-05-11 02:48:43,781 - DEBUG - Concatenating media files in editor
+2025-05-11 02:50:05,986 - DEBUG - Concatenation complete
+2025-05-11 02:50:05,987 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/2e7a5f53e63b4b869628416515a2860f_media_file_paths.txt' successfully deleted.
+2025-05-11 02:50:11,276 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/b396b5a21bc149b79fd182657b80246e_segment_0.mp4' successfully deleted.
+2025-05-11 02:50:13,769 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/7a900b8c3ac94133b9d16a5c38a5e362_segment_1.mp4' successfully deleted.
+2025-05-11 02:50:16,157 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/21beba06769e40208bbfaa32cf4d2342_segment_2.mp4' successfully deleted.
+2025-05-11 02:50:18,860 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/d48545e1aa984155b93b8bd112c6a991_segment_3.mp4' successfully deleted.
+2025-05-11 02:50:21,522 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/beb6e0b0d74a4b859e4c5cee6e207ce8_segment_4.mp4' successfully deleted.
+2025-05-11 02:50:24,074 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/f3f638f0a68f4b6286b4dab176d41fc5_segment_5.mp4' successfully deleted.
+2025-05-11 02:50:29,475 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/2e13c72c1e9e40f69a40fe1ec2513325_segment_6.mp4' successfully deleted.
+2025-05-11 02:50:32,271 - INFO - Resized clip 5 saved to: /app/clips/20240915-part024/20240915-part024_clip5.mp4
+2025-05-11 02:50:32,520 - INFO - Processing clip 6: -> /app/clips/20240915-part024/20240915-part024_clip6.mp4
+2025-05-11 02:50:32,521 - INFO - → About to call resize() for clip 6
+2025-05-11 02:50:50,353 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 02:50:50,362 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 02:50:50,595 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 02:50:50,689 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 02:50:50,799 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 02:50:50,833 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 02:50:50,919 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 02:50:51,091 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 02:50:51,184 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 02:50:51,210 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 02:50:51,544 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 02:50:51,984 - DEBUG - Pyannote using device: cpu
+2025-05-11 03:00:49,502 - DEBUG - File '/app/processmesempai/20240915-part0247a38533128bd46cdb2e5ca6a01ee177f.wav' successfully deleted.
+2025-05-11 03:00:49,503 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 03:00:52,914 - INFO - Detecting scenes...
+2025-05-11 03:02:51,643 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 03:02:51,644 - DEBUG - FaceNet using device: cpu
+2025-05-11 03:02:58,620 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 03:02:58,621 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 03:02:58,621 - DEBUG - Video has 35 distinct segments.
+2025-05-11 03:02:58,622 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 03:02:58,622 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 03:02:58,623 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:02:58,624 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 03:02:58,625 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:03:29,015 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 03:03:36,521 - DEBUG - Detected faces in 35 frames.
+2025-05-11 03:03:36,522 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 03:03:36,522 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:03:36,523 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 03:03:36,524 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:03:52,700 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 03:03:54,816 - DEBUG - Detected faces in 15 frames.
+2025-05-11 03:03:54,816 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 03:03:54,817 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:03:54,817 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 03:03:54,818 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:04:03,165 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 03:04:04,225 - DEBUG - Detected faces in 6 frames.
+2025-05-11 03:04:04,226 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 03:04:04,226 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 03:04:04,227 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:04:04,227 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 03:04:04,228 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:04:04,228 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 03:04:04,234 - DEBUG - Extracting 374 frames
+2025-05-11 03:07:50,898 - DEBUG - Extracted 374 frames
+2025-05-11 03:07:50,899 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 03:12:59,609 - DEBUG - Detected faces in 374 frames.
+2025-05-11 03:12:59,630 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 03:13:01,646 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 03:13:02,644 - DEBUG - No mouth movement detected for segment.
+2025-05-11 03:13:12,898 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 03:13:12,964 - DEBUG - Merging identical segments together.
+2025-05-11 03:13:12,965 - DEBUG - Merged 7 identical segments.
+2025-05-11 03:13:12,968 - INFO - ← resize() returned in 1360.4s
+2025-05-11 03:13:12,969 - INFO - Segments for clip 6: [{'start_time': 289.218, 'end_time': 292.825497, 'x': 1093, 'y': 0}, {'start_time': 292.825497, 'end_time': 301.267253, 'x': 940, 'y': 0}, {'start_time': 301.267253, 'end_time': 308.357661, 'x': 1169, 'y': 0}, {'start_time': 308.357661, 'end_time': 328.077, 'x': 1562, 'y': 509}]
+2025-05-11 03:19:55,069 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/2ad8306c5d1f48819ec11fc7bcd60ed6_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/0a08cd79aac04d699faf3f5d4e65b35c_segment_1.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/6915636103604e8a9e3d69f7c96edd76_segment_2.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/5d193f752f33435ea2ef7838ee41c6ea_segment_3.mp4'
+
+2025-05-11 03:19:55,112 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/dc87da3ae151464f90f5e53f7b413a19_media_file_paths.txt
+2025-05-11 03:19:55,113 - DEBUG - Concatenating media files in editor
+2025-05-11 03:20:21,989 - DEBUG - Concatenation complete
+2025-05-11 03:20:21,990 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/dc87da3ae151464f90f5e53f7b413a19_media_file_paths.txt' successfully deleted.
+2025-05-11 03:20:27,920 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/2ad8306c5d1f48819ec11fc7bcd60ed6_segment_0.mp4' successfully deleted.
+2025-05-11 03:20:30,651 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/0a08cd79aac04d699faf3f5d4e65b35c_segment_1.mp4' successfully deleted.
+2025-05-11 03:20:36,378 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/6915636103604e8a9e3d69f7c96edd76_segment_2.mp4' successfully deleted.
+2025-05-11 03:20:39,038 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/5d193f752f33435ea2ef7838ee41c6ea_segment_3.mp4' successfully deleted.
+2025-05-11 03:20:42,154 - INFO - Resized clip 6 saved to: /app/clips/20240915-part024/20240915-part024_clip6.mp4
+2025-05-11 03:20:42,430 - INFO - Processing clip 7: -> /app/clips/20240915-part024/20240915-part024_clip7.mp4
+2025-05-11 03:20:42,431 - INFO - → About to call resize() for clip 7
+2025-05-11 03:21:02,310 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 03:21:02,316 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 03:21:02,547 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 03:21:02,637 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 03:21:02,717 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 03:21:02,741 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 03:21:02,823 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 03:21:02,965 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 03:21:03,098 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 03:21:03,135 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 03:21:03,976 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 03:21:04,454 - DEBUG - Pyannote using device: cpu
+2025-05-11 03:31:16,391 - DEBUG - File '/app/processmesempai/20240915-part0245f29f219f69947d2a4cf494777de85e6.wav' successfully deleted.
+2025-05-11 03:31:16,392 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 03:31:20,449 - INFO - Detecting scenes...
+2025-05-11 03:33:25,482 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 03:33:25,483 - DEBUG - FaceNet using device: cpu
+2025-05-11 03:33:33,252 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 03:33:33,254 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 03:33:33,256 - DEBUG - Video has 35 distinct segments.
+2025-05-11 03:33:33,257 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 03:33:33,258 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 03:33:33,259 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:33:33,259 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 03:33:33,262 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:34:11,458 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 03:34:22,697 - DEBUG - Detected faces in 35 frames.
+2025-05-11 03:34:22,698 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 03:34:22,698 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:34:22,699 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 03:34:22,700 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:34:36,014 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 03:34:38,127 - DEBUG - Detected faces in 15 frames.
+2025-05-11 03:34:38,128 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 03:34:38,128 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:34:38,129 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 03:34:38,130 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:34:46,961 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 03:34:48,424 - DEBUG - Detected faces in 6 frames.
+2025-05-11 03:34:48,425 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 03:34:48,425 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 03:34:48,425 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:34:48,426 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 03:34:48,428 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:34:48,428 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 03:34:48,433 - DEBUG - Extracting 374 frames
+2025-05-11 03:38:32,796 - DEBUG - Extracted 374 frames
+2025-05-11 03:38:32,797 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 03:41:59,968 - DEBUG - Detected faces in 374 frames.
+2025-05-11 03:41:59,972 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 03:42:04,436 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 03:42:10,181 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 03:42:10,293 - DEBUG - Merging identical segments together.
+2025-05-11 03:42:10,294 - DEBUG - Merged 9 identical segments.
+2025-05-11 03:42:10,336 - INFO - ← resize() returned in 1287.9s
+2025-05-11 03:42:10,337 - INFO - Segments for clip 7: [{'start_time': 323.213, 'end_time': 360.775, 'x': 1563, 'y': 496}]
+2025-05-11 03:43:36,077 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/2dbf7e17b6384e9da42804a1796aadfa_segment_0.mp4'
+
+2025-05-11 03:43:36,078 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/5e478eaa5cc649e9a5274e2ed2dbb544_media_file_paths.txt
+2025-05-11 03:43:36,078 - DEBUG - Concatenating media files in editor
+2025-05-11 03:43:59,178 - DEBUG - Concatenation complete
+2025-05-11 03:43:59,179 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/5e478eaa5cc649e9a5274e2ed2dbb544_media_file_paths.txt' successfully deleted.
+2025-05-11 03:44:03,749 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/2dbf7e17b6384e9da42804a1796aadfa_segment_0.mp4' successfully deleted.
+2025-05-11 03:44:06,089 - INFO - Resized clip 7 saved to: /app/clips/20240915-part024/20240915-part024_clip7.mp4
+2025-05-11 03:44:06,301 - INFO - Processing clip 8: -> /app/clips/20240915-part024/20240915-part024_clip8.mp4
+2025-05-11 03:44:06,302 - INFO - → About to call resize() for clip 8
+2025-05-11 03:44:25,168 - DEBUG - DIARIZING VIDEO (20240915-part024.mp4)
+2025-05-11 03:44:25,175 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 03:44:25,401 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 03:44:25,517 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 03:44:25,595 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 03:44:25,626 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 03:44:25,677 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 03:44:25,815 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 03:44:25,894 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 03:44:25,925 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 03:44:26,116 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 03:44:26,437 - DEBUG - Pyannote using device: cpu
+2025-05-11 03:55:41,001 - DEBUG - File '/app/processmesempai/20240915-part024ff248c6b2d0d4c2f9d3ae8f0951f6b26.wav' successfully deleted.
+2025-05-11 03:55:41,003 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part024.mp4)
+2025-05-11 03:55:47,622 - INFO - Detecting scenes...
+2025-05-11 03:57:57,849 - DEBUG - RESIZING VIDEO) (20240915-part024.mp4)
+2025-05-11 03:57:57,849 - DEBUG - FaceNet using device: cpu
+2025-05-11 03:58:05,141 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 03:58:05,142 - DEBUG - Merging 12 speaker segments with 24 scene changes.
+2025-05-11 03:58:05,143 - DEBUG - Video has 35 distinct segments.
+2025-05-11 03:58:05,143 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 03:58:05,144 - DEBUG - Need 0.203 GiB to extract (at most) 35 frames
+2025-05-11 03:58:05,145 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:58:05,147 - DEBUG - Need 0.051 GiB to detect faces from (at most) 35 frames
+2025-05-11 03:58:05,149 - DEBUG - Using 1 batches to extract and detect frames. Need 0.253 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:58:35,994 - DEBUG - Detecting faces in 35 frames.
+2025-05-11 03:58:43,976 - DEBUG - Detected faces in 35 frames.
+2025-05-11 03:58:43,977 - DEBUG - Need 0.087 GiB to extract (at most) 15 frames
+2025-05-11 03:58:43,978 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:58:43,978 - DEBUG - Need 0.022 GiB to detect faces from (at most) 15 frames
+2025-05-11 03:58:43,980 - DEBUG - Using 1 batches to extract and detect frames. Need 0.109 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:58:57,250 - DEBUG - Detecting faces in 15 frames.
+2025-05-11 03:59:02,505 - DEBUG - Detected faces in 15 frames.
+2025-05-11 03:59:02,506 - DEBUG - Need 0.035 GiB to extract (at most) 6 frames
+2025-05-11 03:59:02,506 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:59:02,507 - DEBUG - Need 0.009 GiB to detect faces from (at most) 6 frames
+2025-05-11 03:59:02,508 - DEBUG - Using 1 batches to extract and detect frames. Need 0.043 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:59:12,172 - DEBUG - Detecting faces in 6 frames.
+2025-05-11 03:59:13,360 - DEBUG - Detected faces in 6 frames.
+2025-05-11 03:59:13,360 - DEBUG - Determining the region of interest for 35 segments.
+2025-05-11 03:59:13,361 - DEBUG - Need 2.231 GiB to extract (at most) 385 frames
+2025-05-11 03:59:13,361 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 03:59:13,361 - DEBUG - Need 0.558 GiB to detect faces from (at most) 385 frames
+2025-05-11 03:59:13,362 - DEBUG - Using 1 batches to extract and detect frames. Need 2.788 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 03:59:13,362 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 03:59:13,368 - DEBUG - Extracting 374 frames
+2025-05-11 04:02:45,980 - DEBUG - Extracted 374 frames
+2025-05-11 04:02:45,981 - DEBUG - Detecting faces in 374 frames.
+2025-05-11 04:04:40,182 - DEBUG - Detected faces in 374 frames.
+2025-05-11 04:04:40,225 - DEBUG - Calculating ROI for 35 segments.
+2025-05-11 04:04:41,447 - DEBUG - Using default ROI for segment {'start_time': 43.760328, 'speakers': [3], 'end_time': 52.917219, 'first_face_sec': 52.904939375, 'found_face': False}
+2025-05-11 04:04:44,289 - DEBUG - Calculated ROI for 35 segments.
+2025-05-11 04:04:44,363 - DEBUG - Merging identical segments together.
+2025-05-11 04:04:44,364 - DEBUG - Merged 9 identical segments.
+2025-05-11 04:04:44,369 - INFO - ← resize() returned in 1238.1s
+2025-05-11 04:04:44,370 - INFO - Segments for clip 8: [{'start_time': 207.908, 'end_time': 224.974719, 'x': 241, 'y': 0}, {'start_time': 224.974719, 'end_time': 240.179094, 'x': 824, 'y': 0}, {'start_time': 240.179094, 'end_time': 243.22601, 'x': 969, 'y': 0}, {'start_time': 243.22601, 'end_time': 257.205969, 'x': 1207, 'y': 0}, {'start_time': 257.205969, 'end_time': 265.414815, 'x': 327, 'y': 0}, {'start_time': 265.414815, 'end_time': 278.277649, 'x': 737, 'y': 0}, {'start_time': 278.277649, 'end_time': 292.825497, 'x': 1120, 'y': 0}, {'start_time': 292.825497, 'end_time': 308.357661, 'x': 919, 'y': 0}, {'start_time': 308.357661, 'end_time': 343.311, 'x': 1562, 'y': 505}]
+2025-05-11 04:14:09,764 - DEBUG - media_paths_file contents: file '/usr/local/lib/python3.9/site-packages/clipsai/media/b1f3dbe460684c0eb668532bef586e41_segment_0.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/121a0d22b5e84d5cb6f46ccffee6917c_segment_1.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/dca5ae3611304468b2f44f1d4314f791_segment_2.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/452d8bab42ea40529e8f4ccd4225f9e3_segment_3.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/223b774005e949c2ae04f879a342932c_segment_4.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/d98ff5258e084974b57ebb6b2b371533_segment_5.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/5568d452a400413796f819b55271ada5_segment_6.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/776f2b661d794164957c1d3bb48d2ede_segment_7.mp4'
+file '/usr/local/lib/python3.9/site-packages/clipsai/media/34872ec2438b4d4b8004f9873d35ba79_segment_8.mp4'
+
+2025-05-11 04:14:09,766 - DEBUG - media_paths_file path: /usr/local/lib/python3.9/site-packages/clipsai/media/50c860959ac84524a5de9da03a844bda_media_file_paths.txt
+2025-05-11 04:14:09,766 - DEBUG - Concatenating media files in editor
+2025-05-11 04:15:55,995 - DEBUG - Concatenation complete
+2025-05-11 04:15:55,996 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/50c860959ac84524a5de9da03a844bda_media_file_paths.txt' successfully deleted.
+2025-05-11 04:16:01,775 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/b1f3dbe460684c0eb668532bef586e41_segment_0.mp4' successfully deleted.
+2025-05-11 04:16:07,320 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/121a0d22b5e84d5cb6f46ccffee6917c_segment_1.mp4' successfully deleted.
+2025-05-11 04:16:09,935 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/dca5ae3611304468b2f44f1d4314f791_segment_2.mp4' successfully deleted.
+2025-05-11 04:16:12,634 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/452d8bab42ea40529e8f4ccd4225f9e3_segment_3.mp4' successfully deleted.
+2025-05-11 04:16:15,273 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/223b774005e949c2ae04f879a342932c_segment_4.mp4' successfully deleted.
+2025-05-11 04:16:17,918 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/d98ff5258e084974b57ebb6b2b371533_segment_5.mp4' successfully deleted.
+2025-05-11 04:16:20,550 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/5568d452a400413796f819b55271ada5_segment_6.mp4' successfully deleted.
+2025-05-11 04:16:23,217 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/776f2b661d794164957c1d3bb48d2ede_segment_7.mp4' successfully deleted.
+2025-05-11 04:16:25,883 - DEBUG - File '/usr/local/lib/python3.9/site-packages/clipsai/media/34872ec2438b4d4b8004f9873d35ba79_segment_8.mp4' successfully deleted.
+2025-05-11 04:16:28,881 - INFO - Resized clip 8 saved to: /app/clips/20240915-part024/20240915-part024_clip8.mp4
+2025-05-11 04:16:29,084 - INFO - Processing complete for this video.
+2025-05-11 04:16:29,113 - INFO - Deleted original video: /app/processmesempai/20240915-part024.mp4
+2025-05-11 04:16:29,115 - INFO - Processing video/audio file: /app/processmesempai/20240915-part025.mp4
+2025-05-11 04:16:43,300 - INFO - Audio extracted to: imthetrashman/20240915-part025_audio.wav
+2025-05-11 04:16:43,351 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 04:16:43,697 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 04:16:43,786 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 04:16:43,866 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 04:16:43,893 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 04:16:44,066 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 04:16:44,209 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 04:16:44,283 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 04:16:44,310 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 04:16:44,746 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 04:16:45,188 - DEBUG - Pyannote using device: cpu
+2025-05-11 04:24:47,912 - INFO - Diarization completed. Retrieved speaker segments.
+
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+/usr/local/lib/python3.9/site-packages/pyannote/audio/models/blocks/pooling.py:104: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1760.)
+  std = sequences.std(dim=-1, correction=1)
+Segmenting audio:   0%|          | 0/22 [00:00<?, ?it/s]Segmenting audio: 100%|██████████| 22/22 [00:00<00:00, 22999.67it/s]2025-05-11 04:24:48,099 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 04:24:49,357 - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/11" 200 1919
+2025-05-11 04:24:56,130 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-11 04:24:56,287 - DEBUG - open file: /usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin
+2025-05-11 04:24:56,321 - INFO - Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.4.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../usr/local/lib/python3.9/site-packages/whisperx/assets/pytorch_model.bin`
+2025-05-11 04:29:35,785 - INFO - Use pytorch device_name: cpu
+2025-05-11 04:29:35,786 - INFO - Load pretrained SentenceTransformer: all-roberta-large-v1
+2025-05-11 04:29:35,790 - DEBUG - Resetting dropped connection: huggingface.co
+2025-05-11 04:29:36,002 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 04:29:36,117 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2025-05-11 04:29:36,226 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/README.md HTTP/11" 200 0
+2025-05-11 04:29:36,340 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/modules.json HTTP/11" 200 0
+2025-05-11 04:29:36,452 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2025-05-11 04:29:36,540 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/adapter_config.json HTTP/11" 404 0
+2025-05-11 04:29:36,641 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/config.json HTTP/11" 200 0
+2025-05-11 04:30:59,391 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-roberta-large-v1/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-05-11 04:30:59,829 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1/revision/main HTTP/11" 200 3793
+2025-05-11 04:30:59,953 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-roberta-large-v1 HTTP/11" 200 3793
+
+/usr/local/lib/python3.9/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+No language specified, language will be first be detected for each audio file (increases inference time).
+Model was trained with pyannote.audio 0.0.1, yours is 3.3.2. Bad things might happen unless you revert pyannote.audio to 0.x.
+Model was trained with torch 1.10.0+cu102, yours is 2.2.0+cu121. Bad things might happen unless you revert torch to 1.x.
+Batches:   0%|          | 0/4 [00:00<?, ?it/s]Batches:  25%|██▌       | 1/4 [00:04<00:13,  4.43s/it]Batches:  50%|█████     | 2/4 [00:04<00:04,  2.06s/it]Batches:  75%|███████▌  | 3/4 [00:05<00:01,  1.31s/it]Batches: 100%|██████████| 4/4 [00:05<00:00,  1.33s/it]2025-05-11 04:31:05,880 - INFO - Clip 1: Start=0.152, End=91.308
+2025-05-11 04:31:05,882 - INFO - Clip 2: Start=85.526, End=182.309
+2025-05-11 04:31:05,884 - INFO - Clip 3: Start=179.32, End=242.002
+2025-05-11 04:31:05,886 - INFO - Clip 4: Start=253.411, End=270.839
+2025-05-11 04:31:05,886 - INFO - Clip 5: Start=268.858, End=357.968
+2025-05-11 04:31:05,887 - INFO - Clip 6: Start=254.532, End=318.429
+2025-05-11 04:31:05,887 - INFO - Clip 7: Start=307.623, End=357.968
+2025-05-11 04:31:05,888 - INFO - Processing clip 1: -> /app/clips/20240915-part025/20240915-part025_clip1.mp4
+2025-05-11 04:31:05,889 - INFO - → About to call resize() for clip 1
+2025-05-11 04:31:27,932 - DEBUG - DIARIZING VIDEO (20240915-part025.mp4)
+2025-05-11 04:31:27,999 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/speaker-diarization-3.1/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 04:31:28,126 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 04:31:28,215 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/segmentation-3.0/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 04:31:28,268 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 04:31:28,318 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--segmentation-3.0/snapshots/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin
+2025-05-11 04:31:28,443 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin HTTP/11" 302 0
+2025-05-11 04:31:28,522 - DEBUG - https://huggingface.co:443 "HEAD /pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/config.yaml HTTP/11" 200 0
+2025-05-11 04:31:28,581 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 04:31:28,764 - DEBUG - open file: /root/.cache/torch/pyannote/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+2025-05-11 04:31:29,047 - DEBUG - Pyannote using device: cpu
+2025-05-11 04:39:58,139 - DEBUG - File '/app/processmesempai/20240915-part02519424075f98a4997bb3ecc3e56776981.wav' successfully deleted.
+2025-05-11 04:39:58,140 - DEBUG - DETECTING SCENES IN VIDEO (20240915-part025.mp4)
+2025-05-11 04:40:02,252 - INFO - Detecting scenes...
+2025-05-11 04:41:40,131 - DEBUG - RESIZING VIDEO) (20240915-part025.mp4)
+2025-05-11 04:41:40,132 - DEBUG - FaceNet using device: cpu
+2025-05-11 04:41:48,098 - DEBUG - Video Resolution: 1920x1080
+2025-05-11 04:41:48,099 - DEBUG - Merging 22 speaker segments with 31 scene changes.
+2025-05-11 04:41:48,100 - DEBUG - Video has 52 distinct segments.
+2025-05-11 04:41:48,100 - DEBUG - Determining the first second with a face for each segment.
+2025-05-11 04:41:48,101 - DEBUG - Need 0.301 GiB to extract (at most) 52 frames
+2025-05-11 04:41:48,101 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 04:41:48,102 - DEBUG - Need 0.075 GiB to detect faces from (at most) 52 frames
+2025-05-11 04:41:48,103 - DEBUG - Using 1 batches to extract and detect frames. Need 0.377 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 04:42:23,388 - DEBUG - Detecting faces in 52 frames.
+2025-05-11 04:42:52,617 - DEBUG - Detected faces in 52 frames.
+2025-05-11 04:42:52,618 - DEBUG - Determining the region of interest for 52 segments.
+2025-05-11 04:42:52,619 - DEBUG - Need 3.314 GiB to extract (at most) 572 frames
+2025-05-11 04:42:52,619 - DEBUG - Face detection dimensions: 540x960
+2025-05-11 04:42:52,620 - DEBUG - Need 0.828 GiB to detect faces from (at most) 572 frames
+2025-05-11 04:42:52,621 - DEBUG - Using 1 batches to extract and detect frames. Need 4.142 GiB of CPU memory per batch and 0.000 GiB of GPU memory per batch
+2025-05-11 04:42:52,622 - DEBUG - Analyzing batch 0 of 1.
+2025-05-11 04:42:52,629 - DEBUG - Extracting 572 frames
+2025-05-11 04:47:47,749 - DEBUG - Extracted 572 frames
+2025-05-11 04:47:47,749 - DEBUG - Detecting faces in 572 frames.
