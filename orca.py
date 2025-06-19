@@ -143,8 +143,8 @@ time.sleep(2)
 
 # Set up custom whisperx model
 whisper_arch = "base"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
-device = "cuda" if torch.cuda.is_available() else "cpu"  # Device for computation: Options include "cpu", "cuda" (for GPU)
-compute_type = "float16" if device == "cuda" else "int8"  # Data type for computation: Options include "float16", "float32", "int8"
+device = "cpu"#"cuda" if torch.cuda.is_available() else "cpu"  # Device for computation: Options include "cpu", "cuda" (for GPU)
+compute_type = "int8"#"float16" if device == "cuda" else "int8"  # Data type for computation: Options include "float16", "float32", "int8"
 language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
 
 logging.info(f"whisper_arch = '{whisper_arch}'\ndevice = '{device}' \ncompute_type = '{compute_type}'\nlanguage = '{language}'\n")
