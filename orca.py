@@ -198,6 +198,7 @@ diarizer = Pipeline.from_pretrained(
 consoledivide(67)
 
 logging.info("setup completed.\n")
+logging.info(f"Contents of input folder: {os.listdir(input_folder)}")
 animated_loading(f"Counting files in '{input_folder}'...\n")
 time.sleep(2)
 
@@ -223,7 +224,7 @@ def ending_sequence(file_count, output_folder):
 # 1) scan your input folder
 for original in os.listdir(input_folder):
     # only touch media files
-    if not original.lower().endswith(('.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')):
+    if not original.lower().endswith(('.mp4', '.webm', '.mov', '.mkv', '.avi', '.mp3', '.wav')):
         continue
 
     safe_name = sanitize(original)
