@@ -70,10 +70,10 @@ original_logging_info = logging.info
 def stop_spinner():
     global spinner_running
     spinner_running = False
+    time.sleep(0.2)
 
 # Monkey-patch logging.info to stop the spinner before logging
 def new_logging_info(*args, **kwargs):
-    stop_spinner()  # Stop any active spinner
     original_logging_info(*args, **kwargs)
 
 logging.info = new_logging_info
@@ -97,17 +97,16 @@ def spinner(message="Loading"):
 def animated_loading(msg="Loading"):
     global spinner_running
     stop_spinner()          # end any existing spinner
-    spinner_running = True
+    spinner_running = False # don't worry i fixed the nonstop thread problem LOLOLOLOL
     threading.Thread(target=spinner, args=(msg,), daemon=True).start()
 
-logging.info("\nscript codename: orca v.gamma\n")
+logging.info("\nscript codename: orca v.εpsilon\n")
 
-# Animated loading with interactivity
-animated_loading("The initial loading may take a while...\n\n")
+logging.info("The initial loading may take a while...\n\n")
 
 consoledivide(79)
 
-animated_loading("***The following import block may take a while.\n")
+logging.info("***The following import block may take a while.\n")
 time.sleep(1)
 
 import whisperx
@@ -141,69 +140,43 @@ time.sleep(2)
 logging.info("Selecting LLMs and parameters. For more details, visit: https://github.com/m-bain/whisperX")
 time.sleep(2)
 
-# Set up custom whisperx model
-whisper_arch = "base"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
-device = "cpu"#"cuda" if torch.cuda.is_available() else "cpu"  # Device for computation: Options include "cpu", "cuda" (for GPU)
-compute_type = "int8"#"float16" if device == "cuda" else "int8"  # Data type for computation: Options include "float16", "float32", "int8"
-language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
-
-logging.info(f"whisper_arch = '{whisper_arch}'\ndevice = '{device}' \ncompute_type = '{compute_type}'\nlanguage = '{language}'\n")
-
-custom_model = whisperx.load_model(
-    whisper_arch=whisper_arch,
-    device=device,
-    compute_type=compute_type,
-    language=language,
-)
-
 from sentence_transformers import SentenceTransformer
 import torch
 from clipsai.clip.text_embedder import TextEmbedder
 
-#large_model = SentenceTransformer("all-roberta-large-v1", device=device) # the larger model was the one used in the package by default
-small_name = "all-MiniLM-L6-v2"   # ~80 MB vs 1.9 GB
-dtype = torch.float16 if compute_type == "float16" else torch.float32
-st_model = SentenceTransformer(small_name, device=device)
-if device == "cuda" and dtype == torch.float16:
-    st_model = st_model.half()
+# Set up custom whisperx model
+whisper_arch = "base"  # Whisper model size: Options include "tiny", "base", "small", "medium", "large"
+device = "cuda" if torch.cuda.is_available() else "cpu"  # Device for computation: Options include "cpu", "cuda" (for GPU)
+compute_type = "float16" if device == "cuda" else "int8"  # Data type for computation: Options include "float16", "float32", "int8"
+language = "en"        # {en, fr, de, es, it, ja, zh, nl, uk, pt}
 
-TextEmbedder._model = st_model  # Attach your mini model
+logging.info(f"whisper_arch = '{whisper_arch}'\ndevice = '{device}' \ncompute_type = '{compute_type}'\nlanguage = '{language}'\n")
 
-# override the embed_sentences method to use your MiniLM
-def embed_with_minilm(self, sentences: list[str]) -> torch.Tensor:
-    # encode with your small model, then wrap in torch.Tensor
-    return torch.tensor(self._model.encode(sentences))
-
-TextEmbedder.embed_sentences = embed_with_minilm
-
-logging.info(f"patched TextEmbedder now uses: {TextEmbedder().__class__.__name__}, embed_sentences from {TextEmbedder.embed_sentences.__qualname__}")
+# new block for logging cuda checks
+if device == "cuda":
+    logging.info("\n" + "="*50)
+    logging.info(f"CUDA Device: {torch.cuda.get_device_name(0)}")
+    logging.info(f"Available VRAM: {torch.cuda.mem_get_info()[1]/1e9:.2f} GB")
+    logging.info("="*50 + "\n")
+else:
+    logging.warning("Running in CPU mode - performance will be limited")
 
 logging.info("next section loads pyannote auth token\n")
-animated_loading("it gives errors often. to begin debug, maybe try checking your huggingface.co token\n")
+logging.info("it gives errors often. to begin debug, maybe try checking your huggingface.co token\n")
 time.sleep(3)
 consoledivide(67)
 
 logging.getLogger("huggingface_hub").setLevel(logging.ERROR)
-# Load diarization pipelines
-pipeline = Pipeline.from_pretrained(
-    "pyannote/speaker-diarization@2.1",
-    use_auth_token=pyannote_auth_token
-)
-
-diarizer = Pipeline.from_pretrained(
-    "pyannote/speaker-diarization@2.1",
-    use_auth_token=pyannote_auth_token
-)
 
 consoledivide(67)
 
 logging.info("setup completed.\n")
 logging.info(f"Contents of input folder: {os.listdir(input_folder)}")
-animated_loading(f"Counting files in '{input_folder}'...\n")
+logging.info(f"Counting files in '{input_folder}'...\n")
 time.sleep(2)
 
 # Count all video files in the input folder
-file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')))
+file_count = sum(1 for f in os.listdir(input_folder) if f.lower().endswith(('.webm', '.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')))
 logging.info(f"\nwe will now begin processing {file_count} media files\n")
 time.sleep(1)
 
@@ -224,7 +197,7 @@ def ending_sequence(file_count, output_folder):
 # 1) scan your input folder
 for original in os.listdir(input_folder):
     # only touch media files
-    if not original.lower().endswith(('.mp4', '.webm', '.mov', '.mkv', '.avi', '.mp3', '.wav')):
+    if not original.lower().endswith(('.webm', '.mp4', '.mov', '.mkv', '.avi', '.mp3', '.wav')):
         continue
 
     safe_name = sanitize(original)
@@ -237,8 +210,39 @@ for original in os.listdir(input_folder):
 try:
     # Process each video/audio file in the input folder
     for video_file in os.listdir(input_folder):
-        if not video_file.lower().endswith(('.mp4', '.mov', '.avi', '.mkv')):
+        if not video_file.lower().endswith(('.webm', '.mp4', '.mov', '.avi', '.mkv')):
             continue
+
+# this entire next block was moved from outside of the loop to here
+# we are hoping this helps clean up ram usage more easily after processing clips
+
+        custom_model = whisperx.load_model(
+            whisper_arch=whisper_arch,
+            device=device,
+            compute_type=compute_type,
+            language=language,
+        )
+
+        #large_model = SentenceTransformer("all-roberta-large-v1", device=device) # the larger model was the one used in the package by default
+        small_name = "all-MiniLM-L6-v2"   # ~80 MB vs 1.9 GB
+        st_model = SentenceTransformer(
+            small_name,
+            device=device,
+            #torch_dtype=torch.float16 if compute_type == "float16" else torch.float32
+        )
+
+        TextEmbedder._model = st_model  # Attach your mini model
+
+        # override the embed_sentences method to use your MiniLM
+        def embed_with_minilm(self, sentences: list[str]) -> torch.Tensor:
+            # encode with your small model, then wrap in torch.Tensor
+            return torch.tensor(self._model.encode(sentences))
+
+        TextEmbedder.embed_sentences = embed_with_minilm
+
+        logging.info(f"patched TextEmbedder now uses: {TextEmbedder().__class__.__name__}, embed_sentences from {TextEmbedder.embed_sentences.__qualname__}")
+
+# end of the moved block
 
         # Define paths for each video/audio file
         input_video_path = os.path.join(input_folder, video_file)
@@ -273,9 +277,13 @@ try:
         PyannoteDiarizer = local_pyannote.PyannoteDiarizer
 
         try:
-            animated_loading("starting diarization... this may take a while")
+            logging.info("starting diarization... this may take a while")
             
-            diarizer = PyannoteDiarizer(auth_token=pyannote_auth_token, device=device)
+            diarizer = PyannoteDiarizer(
+                    auth_token=pyannote_auth_token,
+                    device=device,
+                    use_auth_token=True
+            ) 
             
             # Wrap your extracted audio into an AudioFile object. For example:
             from clipsai.media.audio_file import AudioFile  # Make sure this class exists.
@@ -337,7 +345,7 @@ try:
                         pyannote_auth_token=pyannote_auth_token,
                         aspect_ratio=(9, 16),
                         min_segment_duration=2.5,
-                        samples_per_segment=9, # 13 is standard. lower numbers are faster at cost of accuracy
+                        samples_per_segment=13, # 13 is standard. lower numbers are faster at cost of accuracy
                     )
                     logging.info(f"← resize() returned in {time.time() - start:.1f}s")
                 except Exception as e:
@@ -383,6 +391,11 @@ try:
 
                 logging.info(f"Resized clip {i + 1} saved to: {clip_output_path}")
 
+                # newer cleanup lines for cuda specifically:
+                if device == "cuda":
+                    torch.cuda.empty_cache()
+
+                # these cleanup lines are old and fine
                 del result, segs, crops
                 gc.collect()
 
@@ -392,6 +405,12 @@ try:
 
         # Instead of moving the processed file to a separate folder, we leave it in place.
         logging.info("Processing complete for this video.")
+
+        # new after processing cleanup for cuda
+        # also added the next "del" line to help regardless of cuda option
+        del custom_model, st_model, transcriber, clipfinder, media_file, transcription, clips
+        torch.cuda.empty_cache()
+        gc.collect()
 
 #        if os.path.exists(input_video_path):
 #            os.remove(input_video_path)
